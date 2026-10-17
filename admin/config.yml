@@ -1,4 +1,3 @@
-# Cấu hình trang quản trị Decap CMS cho lyhoangmakeup.com (website nằm ở thư mục gốc của repo)
 backend:
   name: git-gateway
   branch: main
@@ -6,181 +5,71 @@ backend:
 locale: "vi"
 site_url: "https://lyhoangmakeup.com"
 display_url: "https://lyhoangmakeup.com"
-media_folder: "anh"
-public_folder: "/anh"
+media_folder: "media"
+public_folder: "/media"
 
 collections:
   - name: "trang_chu"
     label: "Trang chủ (chữ, ảnh, video, bố cục)"
-    description: "Sửa slogan, ảnh, video và đổi thứ tự các khối trang chủ"
     files:
       - name: "trang_chu"
-        label: "Trang chủ (chữ, ảnh, video, bố cục)"
+        label: "Trang chủ"
         file: "data/home.json"
-        format: "json"
         fields:
           - { label: "Slogan (tiêu đề lớn)", name: "hero_title", widget: "text", required: false }
           - { label: "Mô tả dưới slogan", name: "hero_desc", widget: "text", required: false }
           - { label: "Chữ nút 1", name: "btn_book_text", widget: "string", required: false }
           - { label: "Chữ nút 2", name: "btn_course_text", widget: "string", required: false }
-          - { label: "Video đầu trang (chạy song song)", name: "videos", widget: "list", required: false, fields: [{ label: "Video (mp4)", name: "src", widget: "file" }, { label: "Ảnh bìa", name: "poster", widget: "image", required: false, hint: "Ảnh dọc tỉ lệ 3:4 (ví dụ 900×1200 px), dưới 300 KB, WebP hoặc JPG." }, { label: "Mô tả", name: "label", widget: "string", required: false }] }
-          - { label: "Chú thích dưới video (xóa trắng = bỏ)", name: "video_note", widget: "string", required: false }
-          - { label: "Thanh số liệu uy tín", name: "stats", widget: "list", required: false, fields: [{ label: "Số", name: "num", widget: "string", required: false }, { label: "Nhãn", name: "label", widget: "string", required: false }] }
-          - { label: "Cổng 1: tiêu đề", name: "gate1_title", widget: "string", required: false }
-          - { label: "Cổng 1: mô tả", name: "gate1_text", widget: "string", required: false }
-          - { label: "Cổng 1: ảnh", name: "gate1_image", widget: "image", required: false, hint: "Ảnh dọc tỉ lệ 3:4 (ví dụ 900×1200 px), dưới 300 KB, WebP hoặc JPG." }
-          - { label: "Cổng 2 (Kỷ yếu): tiêu đề", name: "gate2_title", widget: "string", required: false }
-          - { label: "Cổng 2: mô tả", name: "gate2_text", widget: "string", required: false }
-          - { label: "Cổng 2: ảnh trái", name: "gate2_image_left", widget: "image", required: false, hint: "Ảnh dọc tỉ lệ 3:4 (ví dụ 900×1200 px), dưới 300 KB, WebP hoặc JPG." }
-          - { label: "Cổng 2: ảnh phải", name: "gate2_image_right", widget: "image", required: false, hint: "Ảnh dọc tỉ lệ 3:4 (ví dụ 900×1200 px), dưới 300 KB, WebP hoặc JPG." }
-          - { label: "Cổng 3: tiêu đề", name: "gate3_title", widget: "string", required: false }
-          - { label: "Cổng 3: mô tả", name: "gate3_text", widget: "string", required: false }
-          - { label: "Cổng 3: ảnh", name: "gate3_image", widget: "image", required: false, hint: "Ảnh dọc tỉ lệ 3:4 (ví dụ 900×1200 px), dưới 300 KB, WebP hoặc JPG." }
-          - { label: "Tiêu đề khối Phong cách", name: "styles_title", widget: "string", required: false }
-          - { label: "Các thẻ phong cách", name: "styles", widget: "list", required: false, fields: [{ label: "Tên phong cách", name: "title", widget: "string", required: false }, { label: "Ảnh", name: "image", widget: "image", hint: "Ảnh dọc tỉ lệ 3:4 (ví dụ 900×1200 px), dưới 300 KB, WebP hoặc JPG." }] }
-          - { label: "Ý kiến khách hàng & học viên", name: "reviews", widget: "list", required: false, fields: [{ label: "Nội dung", name: "text", widget: "text", required: false }, { label: "Người nhận xét", name: "author", widget: "string", required: false }] }
-          - { label: "Triết lý Master", name: "philosophy_text", widget: "text", required: false }
-          - { label: "Ký tên triết lý", name: "philosophy_author", widget: "string", required: false }
-          - { label: "Tiêu đề quy trình", name: "process_title", widget: "string", required: false }
-          - { label: "Các bước quy trình", name: "process_steps", widget: "list", required: false, field: { label: "Bước", name: "step", widget: "string" } }
-          - { label: "Tiêu đề khối Chọn layout", name: "quiz_title", widget: "string", required: false }
-          - { label: "Tiêu đề form đặt lịch", name: "form_title", widget: "string", required: false }
-          - { label: "Tiêu đề khối Đánh giá Google", name: "google_title", widget: "string", required: false }
-          - { label: "Mô tả khối đánh giá Google", name: "google_note", widget: "text", required: false }
-          - { label: "Chữ gắn sau tên người đánh giá (để trống = không gắn)", name: "google_review_mark", widget: "string", required: false }
-          - { label: "Chữ nút viết đánh giá", name: "google_btn", widget: "string", required: false }
-          - { label: "Nhận xét hiển thị ở khối Google", name: "google_reviews", widget: "list", required: false, fields: [{ label: "Nội dung", name: "text", widget: "text", required: false }, { label: "Người nhận xét", name: "author", widget: "string", required: false }] }
-          - { label: "Tiêu đề khối Tìm đến tiệm", name: "map_title", widget: "string", required: false }
-          - { label: "Chữ trên thẻ bản đồ", name: "map_card_text", widget: "string", required: false }
-          - { label: "BỐ CỤC TRANG CHỦ: thứ tự các khối (kéo để đổi thứ tự, xóa để ẩn khối)", name: "sections", widget: "list", required: false, field: { label: "Khối", name: "block", widget: "select", options: [{label: "Logo + slogan + nút", value: "hero"},{label: "Video 3 cột", value: "video"},{label: "Thanh số liệu", value: "stats"},{label: "3 cổng (Cưới / Kỷ yếu / Học viện)", value: "gates"},{label: "Phong cách đặc trưng", value: "styles"},{label: "Ý kiến khách hàng", value: "reviews"},{label: "Triết lý Master", value: "philosophy"},{label: "Quy trình 4 bước", value: "process"},{label: "Chọn layout hợp gương mặt", value: "quiz"},{label: "Form đặt lịch", value: "form"},{label: "Đánh giá Google", value: "google_reviews"},{label: "Tìm đến tiệm (bản đồ)", value: "map"}] } }
-  - name: "thong_tin"
-    label: "Thông tin chung & Chân trang"
-    description: "Hotline, địa chỉ, giờ mở cửa, mạng xã hội, thanh toán, dòng bản quyền"
-    files:
-      - name: "thong_tin"
-        label: "Thông tin chung & Chân trang"
-        file: "data/site.json"
-        format: "json"
-        fields:
-          - { label: "Tên thương hiệu (thanh menu)", name: "brand_name", widget: "string", required: false }
-          - { label: "Logo (để trống = logo mặc định)", name: "logo", widget: "image", required: false, hint: "Ảnh vuông 1:1 (800×800 px), nền trong suốt (PNG hoặc WebP)." }
-          - { label: "Hotline hiển thị", name: "hotline_display", widget: "string", required: false }
-          - { label: "Số điện thoại gọi (chỉ số, vd 0941615200)", name: "hotline_tel", widget: "string", required: false }
-          - { label: "Link Zalo", name: "zalo_url", widget: "string", required: false }
-          - { label: "Email", name: "email", widget: "string", required: false }
-          - { label: "Địa chỉ", name: "address", widget: "string", required: false }
-          - { label: "Ghi chú địa chỉ (hẻm, đường vào)", name: "address_note", widget: "string", required: false }
-          - { label: "Câu dưới hotline", name: "consult_note", widget: "string", required: false }
-          - { label: "Giờ hoạt động (xuống dòng được)", name: "hours_text", widget: "text", required: false }
-          - { label: "Link Google Maps", name: "map_url", widget: "string", required: false }
-          - { label: "Chữ nút chỉ đường", name: "map_link_text", widget: "string", required: false }
-          - { label: "Link Facebook (để trống = ẩn nút)", name: "facebook", widget: "string", required: false }
-          - { label: "Link TikTok (để trống = ẩn nút)", name: "tiktok", widget: "string", required: false }
-          - { label: "Link YouTube (để trống = ẩn nút)", name: "youtube", widget: "string", required: false }
-          - { label: "Câu giới thiệu mạng xã hội", name: "social_intro", widget: "text", required: false }
-          - { label: "Ảnh mã QR Zalo", name: "zalo_qr", widget: "image", required: false, hint: "Ảnh mã QR, rộng khoảng 600 px, giữ nguyên tỉ lệ gốc." }
-          - { label: "Chữ cạnh mã QR Zalo", name: "zalo_qr_text", widget: "string", required: false }
-          - { label: "Giới thiệu ngắn ở chân trang", name: "footer_intro", widget: "text", required: false }
-          - { label: "Tên ngân hàng", name: "bank_name", widget: "string", required: false }
-          - { label: "Số tài khoản (để trống = ẩn cả khối thanh toán)", name: "bank_number", widget: "string", required: false }
-          - { label: "Chủ tài khoản", name: "bank_owner", widget: "string", required: false }
-          - { label: "Ảnh mã QR thanh toán", name: "bank_qr", widget: "image", required: false, hint: "Ảnh mã QR, rộng khoảng 600 px, giữ nguyên tỉ lệ gốc." }
-          - { label: "Ghi chú chuyển khoản", name: "bank_note", widget: "text", required: false }
-          - { label: "Dòng bản quyền", name: "copyright_text", widget: "string", required: false }
-          - { label: "Dòng ghi chú cuối trang (để trống = không hiện)", name: "footer_note", widget: "string", required: false }
-          - { label: "Mã xác minh Google Search Console (chỉ dán phần content)", name: "google_verification", widget: "string", required: false }
-          - { label: "Mã xác minh Bing Webmaster (chỉ phần content)", name: "bing_verification", widget: "string", required: false }
-  - name: "bang_gia"
-    label: "Bảng giá dịch vụ & Học phí"
-    description: "Giá cô dâu, tiệc, kỷ yếu, học phí"
-    files:
-      - name: "bang_gia"
-        label: "Bảng giá dịch vụ & Học phí"
-        file: "data/price.json"
-        format: "json"
-        fields:
-          - { label: "Ảnh bìa trang Dịch vụ và trang Tiệc (xóa = bỏ ảnh)", name: "service_banner", widget: "image", required: false, hint: "Ảnh ngang tỉ lệ khoảng 2,7:1 (ví dụ 1800×670 px), dưới 300 KB." }
-          - { label: "Mô tả ảnh bìa (alt, giúp SEO)", name: "service_banner_alt", widget: "string", required: false }
-          - { label: "Gói cô dâu: tên", name: "signature_title", widget: "string", required: false }
-          - { label: "Gói cô dâu: giới thiệu", name: "signature_intro", widget: "text", required: false }
-          - { label: "Gói cô dâu: giá", name: "signature_price", widget: "string", required: false }
-          - { label: "Gói cô dâu: ghi chú", name: "signature_note", widget: "string", required: false }
-          - { label: "Gói cô dâu: quyền lợi", name: "signature_perks", widget: "list", required: false, field: { label: "Quyền lợi", name: "perk", widget: "string" } }
-          - { label: "Bảng giá lễ cưới (lễ hỏi, gia tiên...)", name: "ceremony", widget: "list", required: false, fields: [{ label: "Tên dịch vụ", name: "name", widget: "string", required: false }, { label: "Giá", name: "price", widget: "string", required: false }] }
-          - { label: "Ghi chú dưới bảng giá cưới", name: "included_note", widget: "text", required: false }
-          - { label: "Tiêu đề mục thử layout", name: "test_title", widget: "string", required: false }
-          - { label: "Nội dung thử layout", name: "test_text", widget: "text", required: false }
-          - { label: "Tiêu đề mục di chuyển & cọc", name: "travel_title", widget: "string", required: false }
-          - { label: "Nội dung di chuyển & cọc", name: "travel_text", widget: "text", required: false }
-          - { label: "Trang Tiệc: tiêu đề", name: "party_title", widget: "string", required: false }
-          - { label: "Bảng giá Tiệc & Sự kiện", name: "party", widget: "list", required: false, fields: [{ label: "Tên dịch vụ", name: "name", widget: "string", required: false }, { label: "Giá", name: "price", widget: "string", required: false }] }
-          - { label: "Trang Tiệc: ghi chú", name: "party_note", widget: "string", required: false }
-          - { label: "Giá makeup kỷ yếu", name: "kyyeu_price", widget: "string", required: false }
-          - { label: "Học viện: học phí Makeup Cá Nhân 1:1", name: "academy_price", widget: "string", required: false }
-          - { label: "Học viện: mô tả khóa Makeup Cá Nhân 1:1", name: "academy_note", widget: "text", required: false }
+
   - name: "blog"
     label: "Bài viết Blog"
-    description: "Thêm, sửa, xóa bài viết kèm ảnh"
-    files:
-      - name: "blog"
-        label: "Bài viết Blog"
-        file: "data/blog.json"
-        format: "json"
-        fields:
-          - { label: "Bài viết", name: "posts", widget: "list", required: false, summary: "{{fields.title}}", fields: [{ label: "Tiêu đề", name: "title", widget: "string" }, { label: "Mô tả ngắn", name: "description", widget: "text", required: false }, { label: "Ảnh bìa", name: "thumbnail", widget: "image", required: false, hint: "Ảnh ngang tỉ lệ 16:9 (ví dụ 1600×900 px), dưới 300 KB, WebP hoặc JPG." }, { label: "Mô tả ảnh bìa (alt, giúp SEO ảnh)", name: "thumbnail_alt", widget: "string", required: false }, { label: "Nội dung (chèn ảnh được)", name: "body", widget: "markdown", required: false }, { label: "Nút cuối bài", name: "cta", widget: "select", required: false, default: "cd", options: [{label: "Đặt lịch makeup", value: "cd"},{label: "Nhận tư vấn học viên", value: "hv"}] }] }
+    folder: "data/blog"
+    create: true
+    slug: "{{slug}}"
+    fields:
+      - { label: "Tiêu đề", name: "title", widget: "string" }
+      - { label: "Mô tả ngắn", name: "description", widget: "text", required: false }
+      - { label: "Ảnh bìa", name: "thumbnail", widget: "image", required: false }
+      - { label: "Nội dung", name: "body", widget: "markdown", required: false }
+
   - name: "cua_hang"
-    label: "Cửa hàng (sản phẩm, ảnh, video, giá)"
-    description: "Thêm, sửa, ẩn sản phẩm. Để trống giá thì trang hiện chữ Liên hệ."
+    label: "Cửa hàng (Sản phẩm)"
     files:
       - name: "cua_hang"
-        label: "Cửa hàng"
+        label: "Danh sách sản phẩm"
         file: "data/shop.json"
-        format: "json"
-        media_folder: "/media"
-        public_folder: "/media"
         fields:
           - { label: "Sản phẩm", name: "products", widget: "list", required: false, summary: "{{fields.code}} · {{fields.name}}", fields: [
               { label: "Mã SP", name: "code", widget: "string", required: false },
               { label: "Tên sản phẩm", name: "name", widget: "string" },
-              { label: "Địa chỉ trang (viết không dấu, nối gạch ngang)", name: "slug", widget: "string", required: false, hint: "Trang sản phẩm sẽ là lyhoangmakeup.com/cua-hang/(địa chỉ này)/. Nên giữ nguyên sau khi đã đăng. Để trống thì tự lấy từ tên." },
+              { label: "Địa chỉ trang (slug)", name: "slug", widget: "string", required: false },
               { label: "Ngành hàng", name: "category", widget: "select", options: ["Trang điểm", "Chăm sóc da", "Phụ kiện tóc", "Nước hoa"], default: "Trang điểm" },
-              { label: "Hiện trên website", name: "published", widget: "boolean", default: true, hint: "Tắt = ẩn sản phẩm khỏi cửa hàng và Google." },
-              { label: "Giá bán (VNĐ, chỉ nhập số)", name: "price", widget: "number", value_type: "int", min: 0, required: false, hint: "Để trống = hiện chữ Liên hệ." },
+              { label: "Hiện trên website", name: "published", widget: "boolean", default: true },
+              { label: "Giá bán (VNĐ)", name: "price", widget: "number", value_type: "int", min: 0, required: false },
               { label: "Mô tả ngắn", name: "short_desc", widget: "text", required: false },
-              { label: "Ảnh sản phẩm (ảnh đầu tiên là ảnh chính)", name: "images", widget: "list", required: false, fields: [
-                  { label: "Ảnh", name: "image", widget: "image", hint: "Ảnh vuông 1:1, 1024×1024 px, dưới 150 KB (JPG hoặc WebP)." },
-                  { label: "Mô tả ảnh (alt, giúp SEO)", name: "alt", widget: "string", required: false } ] },
-              { label: "Video sản phẩm (mp4, 15-30 giây)", name: "video", widget: "file", required: false },
-              { label: "ĐÃ KIỂM DUYỆT: bật để hiện mục Vì sao dùng và Cách dùng", name: "content_approved", widget: "boolean", default: false, hint: "Chỉ bật sau khi bạn đã đọc và sửa hai ô bên dưới cho đúng trải nghiệm thật." },
-              { label: "Vì sao Lý Hoàng dùng sản phẩm này", name: "reason", widget: "text", required: false },
+              { label: "Ảnh sản phẩm", name: "images", widget: "list", required: false, fields: [
+                  { label: "Ảnh", name: "image", widget: "image" },
+                  { label: "Mô tả alt", name: "alt", widget: "string", required: false } ] },
+              { label: "Video sản phẩm", name: "video", widget: "file", required: false },
+              { label: "Vì sao Lý Hoàng dùng", name: "reason", widget: "text", required: false },
               { label: "Cách dùng", name: "usage", widget: "text", required: false } ] }
+
   - name: "lookbook"
-    label: "Lookbook (kho ảnh)"
-    description: "Thêm nhóm ảnh và ảnh vào Lookbook"
+    label: "Lookbook (Kho ảnh)"
     files:
       - name: "lookbook"
-        label: "Lookbook (kho ảnh)"
+        label: "Lookbook"
         file: "data/look.json"
-        format: "json"
         fields:
-          - { label: "Nhóm ảnh", name: "categories", widget: "list", required: false, summary: "{{fields.title}}", fields: [{ label: "Tên nhóm", name: "title", widget: "string" }, { label: "Ảnh", name: "images", widget: "list", required: false, field: { label: "Ảnh", name: "image", widget: "image", hint: "Ảnh dọc tỉ lệ 3:4 (ví dụ 900×1200 px), dưới 300 KB, WebP hoặc JPG." } }] }
-  - name: "sua_chu"
-    label: "Sửa / xóa câu chữ bất kỳ"
-    description: "Dùng khi muốn đổi hoặc xóa một câu ở trang không có mục sửa riêng"
+          - { label: "Nhóm ảnh", name: "categories", widget: "list", required: false, summary: "{{fields.title}}", fields: [{ label: "Tên nhóm", name: "title", widget: "string" }, { label: "Ảnh", name: "images", widget: "list", required: false, field: { label: "Ảnh", name: "image", widget: "image" } }] }
+
+  - name: "thong_tin"
+    label: "Thông tin chung"
     files:
-      - name: "sua_chu"
-        label: "Sửa / xóa câu chữ bất kỳ"
-        file: "data/rules.json"
-        format: "json"
+      - name: "thong_tin"
+        label: "Cấu hình chung"
+        file: "data/site.json"
         fields:
-          - { label: "Quy tắc sửa / xóa câu chữ ở BẤT KỲ trang nào", name: "rules", widget: "list", required: false, hint: "Điền đúng câu cần tìm, và câu thay thế. Để trống ô thay thế = xóa câu đó.", fields: [{ label: "Tìm câu chữ này", name: "find", widget: "string" }, { label: "Thay bằng (để trống = xóa)", name: "replace", widget: "string", required: false }] }
-  - name: "seo"
-    label: "SEO từng trang (tiêu đề, mô tả Google)"
-    description: "Chỉ cần điền khi muốn tự đặt tiêu đề/mô tả riêng cho một trang. Để trống = tự động."
-    files:
-      - name: "seo"
-        label: "SEO từng trang"
-        file: "data/seo.json"
-        format: "json"
-        fields:
-          - { label: "Trang cần ghi đè", name: "pages", widget: "list", required: false, summary: "{{fields.path}}", fields: [{ label: "Đường dẫn (vd /dich-vu/co-dau)", name: "path", widget: "string" }, { label: "Tiêu đề hiện trên Google (khoảng 55-60 ký tự)", name: "title", widget: "string", required: false }, { label: "Mô tả hiện trên Google (khoảng 150-160 ký tự)", name: "description", widget: "text", required: false }, { label: "Ảnh chia sẻ (Facebook, Zalo)", name: "image", widget: "image", required: false, hint: "Ảnh chia sẻ Facebook/Zalo tỉ lệ 1,91:1 (1200×630 px)." }] }
+          - { label: "Tên thương hiệu", name: "brand_name", widget: "string", required: false }
+          - { label: "Hotline", name: "hotline_display", widget: "string", required: false }
+          - { label: "Địa chỉ", name: "address", widget: "string", required: false }
