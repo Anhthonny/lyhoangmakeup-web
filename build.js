@@ -20,7 +20,7 @@ const ctx = {
   fetch: () => new Promise(() => {}), console, Date, setTimeout, Promise
 };
 ctx.window = ctx; vm.createContext(ctx);
-vm.runInContext(script + ';globalThis.__api={P,CFG,post,posts,slug,CD,MK,applyCfg,rebuildShop,SV,H,V,LK,esc};', ctx);
+vm.runInContext(script + ';globalThis.__api={P,CFG,post,posts,slug,CD,MK,applyCfg,rebuildShop,SV,H,V,LK,esc,product,plist,pslug,pimg,pprice};', ctx);
 const A = ctx.__api;
 const arr = (o, k) => (o && Array.isArray(o[k])) ? o[k] : null;
 A.CFG.site = data.site; A.CFG.home = data.home; A.CFG.price = data.price;
@@ -46,6 +46,7 @@ const SKIP = /-old$|^\/hoc-vien\/chuyen-nghiep$|^\/hoc-vien\/master$/;
 let paths = Object.keys(A.P).filter(p => !SKIP.test(p));
 const posts = A.posts();
 posts.forEach(b => paths.push('/blog/' + A.slug(b.title)));
+A.plist().forEach(p => paths.push('/cua-hang/' + A.pslug(p)));
 paths = Array.from(new Set(paths));
 
 /* ---- tiêu đề + mô tả mặc định cho từng trang */
@@ -71,6 +72,7 @@ function defMeta(p) {
   let m;
   if ((m = p.match(/^\/hoc-vien\/(.+)$/)) && CD[m[1]]) return { t: `${CD[m[1]][0]} | Học viện ${BRS.replace(' Makeup','')} Biên Hòa`, d: cut(`${CD[m[1]][2]} Học trực tiếp cùng Master Lý Hoàng tại ${LOC}.`, 158) };
   if ((m = p.match(/^\/ve-master\/(.+)$/)) && MK[m[1]]) return { t: `${MK[m[1]][0]} | Master Lý Hoàng`, d: cut(`${MK[m[1]][1]} Master Lý Hoàng, ${BR}, ${LOC}.`, 158) };
+  if ((m = p.match(/^\/cua-hang\/(.+)$/))) { const pp = A.plist().find(x => A.pslug(x) === m[1]); if (pp) return { t: cut(pp.name, 52) + ` | ${BRS}`, d: cut((String(pp.short_desc || '').split(/(?<=\.)\s/)[0] || pp.name), 125) + ` Sản phẩm ${BRS} chọn dùng.`, img: A.pimg(pp, 0), prod: pp }; }
   if ((m = p.match(/^\/blog\/(.+)$/))) { const b = posts.find(x => A.slug(x.title) === m[1]); if (b) return { t: `${b.title} | ${BRS}`, d: cut(String(b.description || '').length < 110 ? (b.description + ' Chia sẻ từ Master Lý Hoàng, ' + BRS + ' tại ' + LOC + '.') : b.description, 158), img: b.thumbnail, post: b }; }
   return { t: BR, d: cut(HV('hero_desc'), 158) };
 }
@@ -80,6 +82,7 @@ function metaFor(p) {
   const m = defMeta(p);
   const o = seoOver.find(x => x && norm(x.path) === norm(p));
   if (o) { if (o.title) m.t = o.title; if (o.description) m.d = o.description; if (o.image) m.img = o.image; }
+  if (!m.img && p === '/dich-vu' && PV('service_banner')) m.img = PV('service_banner');
   m.u = SITE + (p === '/' ? '/' : p + '/');
   m.img = abs(m.img || SV('logo') || 'anh/logo-ly-hoang-makeup-artist-bien-hoa.webp');
   return m;
@@ -97,10 +100,11 @@ function jsonld(p, m) {
   };
   if (p === '/') return [biz, { '@context': 'https://schema.org', '@type': 'WebSite', name: BR, url: SITE + '/', inLanguage: 'vi' }];
   const out = [];
+  if (m.prod) { const pp = m.prod, pr = A.pprice(pp); const pd = { '@context': 'https://schema.org', '@type': 'Product', name: pp.name, description: cut(pp.short_desc, 300) || pp.name, sku: pp.code || undefined, category: pp.category, image: [0, 1, 2].map(i => A.pimg(pp, i)).filter(Boolean).map(abs), url: m.u }; if (pr) pd.offers = { '@type': 'Offer', url: m.u, priceCurrency: 'VND', price: String(pr), availability: 'https://schema.org/PreOrder', seller: { '@type': 'Organization', name: BR } }; out.push(pd); }
   if (m.post) out.push({ '@context': 'https://schema.org', '@type': 'BlogPosting', headline: m.post.title, description: cut(m.post.description, 200), image: m.img, mainEntityOfPage: m.u, inLanguage: 'vi', author: { '@type': 'Organization', name: BR }, publisher: { '@type': 'Organization', name: BR, logo: { '@type': 'ImageObject', url: abs(SV('logo')) } } });
   const parts = p.split('/').filter(Boolean); let acc = '';
   const items = [{ '@type': 'ListItem', position: 1, name: 'Trang chủ', item: SITE + '/' }];
-  parts.forEach((s, i) => { acc += '/' + s; const last = i === parts.length - 1; items.push({ '@type': 'ListItem', position: i + 2, name: last ? m.t.split(' | ')[0] : s.replace(/-/g, ' '), item: SITE + acc + '/' }); });
+  parts.forEach((s, i) => { acc += '/' + s; const last = i === parts.length - 1; items.push({ '@type': 'ListItem', position: i + 2, name: last ? m.t.split(' | ')[0] : ({ 'cua-hang': 'Cửa hàng', 'dich-vu': 'Dịch vụ', 'hoc-vien': 'Học viện', 've-master': 'Về Master', blog: 'Blog', lookbook: 'Lookbook' }[s] || s.replace(/-/g, ' ')), item: SITE + acc + '/' }); });
   out.push({ '@context': 'https://schema.org', '@type': 'BreadcrumbList', itemListElement: items });
   return out;
 }
@@ -130,7 +134,7 @@ paths.forEach(p => { const m = metaFor(p); seoMap[p] = { t: m.t, d: m.d, u: m.u 
 const seoScript = '<script>window.__SEO=' + JSON.stringify(seoMap).replace(/</g, '\\u003c') + ';</script>';
 const footer = applyText(els['#ft'].innerHTML);
 function renderBody(p) {
-  const h = p.indexOf('/blog/') === 0 ? A.post(p.slice(6)) : A.P[p]();
+  const h = p.indexOf('/blog/') === 0 ? A.post(p.slice(6)) : p.indexOf('/cua-hang/') === 0 ? A.product(p.slice(10)) : A.P[p]();
   return applyText(A.LK(h));
 }
 function write(file, content) { fs.mkdirSync(path.dirname(file), { recursive: true }); fs.writeFileSync(file, content); }

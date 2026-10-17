@@ -1,84 +1,784 @@
 {
-  "products": [
+ "products": [
+  {
+   "code": "LH-001",
+   "slug": "gom-xit-toc-power-point-nhat-ban",
+   "name": "Gôm xịt tóc Power Point (Nhật Bản)",
+   "category": "Phụ kiện tóc",
+   "published": true,
+   "short_desc": "Gôm xịt tóc dạng bình xịt để cố định kiểu tóc sau khi tạo kiểu. Có 2 dung tích, tiện dùng tại tiệm và mang đi makeup tại nhà.",
+   "content_approved": false,
+   "reason": "Tóc cô dâu phải giữ nếp từ lúc làm đến hết tiệc, nên mình dùng gôm này để cố định kiểu tóc ở bước cuối.",
+   "usage": "Lắc đều, xịt cách tóc khoảng 25 đến 30 cm, che mặt cô dâu khi xịt. Tránh xa lửa và nơi nhiệt độ cao (nhãn có cảnh báo).",
+   "images": [
     {
-      "code": "LH-BRUSH-01",
-      "name": "Bộ Cọ Trang Điểm Chuyên Nghiệp Lý Hoàng (14 Cây)",
-      "price": 1250000,
-      "description": "Lông thú tự nhiên & bionic, cán gỗ khắc laser Master Lý Hoàng.",
-      "category": "Trang điểm",
-      "image": ""
+     "image": "/media/gom-xit-toc-power-point-nhat-ban-1.jpg",
+     "alt": "Gôm xịt tóc Power Point (Nhật Bản) do Lý Hoàng Makeup chọn dùng"
     },
     {
-      "code": "LH-SPONGE-01",
-      "name": "Bông Mút Tán Nền Kháng Khuẩn Ruby Cell",
-      "price": 120000,
-      "description": "Ngậm nước đa chiều, đàn hồi cao, tán nền tiệp da.",
-      "category": "Trang điểm",
-      "image": ""
+     "image": "/media/gom-xit-toc-power-point-nhat-ban-2.jpg",
+     "alt": "Chi tiết nhãn và kiểu dáng Gôm xịt tóc Power Point (Nhật Bản)"
     },
     {
-      "code": "LH-SPRAY-01",
-      "name": "Xịt Khóa Nền Cố Định 16 Giờ Ultra Matte",
-      "price": 380000,
-      "description": "Tia sương nano, kiềm dầu, chống lem trôi dưới thời tiết nóng ẩm.",
-      "category": "Trang điểm",
-      "image": ""
-    },
-    {
-      "code": "LH-COLOR-01",
-      "name": "Bảng Kem Triệt Sắc & Che Khuyết Điểm Pro Palette",
-      "price": 450000,
-      "description": "6 ô màu cân chỉnh chuẩn sắc tố da châu Á.",
-      "category": "Trang điểm",
-      "image": ""
-    },
-    {
-      "code": "LH-HAIR-01",
-      "name": "Kẹp Hoa Cài Tóc Cô Dâu Pha Lê",
-      "price": 280000,
-      "description": "Thủ công, nhẹ, giữ tóc chắc cả ngày.",
-      "category": "Phụ kiện tóc",
-      "image": ""
-    },
-    {
-      "code": "LH-HAIR-02",
-      "name": "Cài Tóc Ngọc Trai Sang Trọng",
-      "price": 190000,
-      "description": "Điểm nhấn cho tóc búi thấp và tóc sóng.",
-      "category": "Phụ kiện tóc",
-      "image": ""
-    },
-    {
-      "code": "LH-SKIN-01",
-      "name": "Pre-makeup Skin Prep Kit",
-      "price": 650000,
-      "description": "Bộ làm sạch, cấp ẩm trước khi đánh nền.",
-      "category": "Chăm sóc da",
-      "image": ""
-    },
-    {
-      "code": "LH-SKIN-02",
-      "name": "Mặt Nạ Cấp Ẩm Phục Hồi (hộp 5)",
-      "price": 220000,
-      "description": "Dịu nhẹ, phù hợp trước ngày cưới 2 tuần.",
-      "category": "Chăm sóc da",
-      "image": ""
-    },
-    {
-      "code": "LH-PERF-01",
-      "name": "Nước Hoa Nữ Hương Hoa Trắng 50ml",
-      "price": 890000,
-      "description": "Hương thanh, lưu hương dịu, hợp ngày cưới.",
-      "category": "Nước hoa",
-      "image": ""
-    },
-    {
-      "code": "LH-PERF-02",
-      "name": "Nước Hoa Mini Du Lịch 10ml",
-      "price": 250000,
-      "description": "Nhỏ gọn, tiện mang theo dặm hương.",
-      "category": "Nước hoa",
-      "image": ""
+     "image": "/media/gom-xit-toc-power-point-nhat-ban-3.jpg",
+     "alt": "Gôm xịt tóc Power Point (Nhật Bản) nhìn từ góc nghiêng"
     }
-  ]
+   ],
+   "video": "/media/gom-xit-toc-power-point-nhat-ban.mp4"
+  },
+  {
+   "code": "LH-002",
+   "slug": "xit-toc-schwarzkopf-osis-sparkler-freeze",
+   "name": "Xịt tóc Schwarzkopf Professional OSiS+ Sparkler và Freeze",
+   "category": "Phụ kiện tóc",
+   "published": true,
+   "short_desc": "Hai chai xịt tóc chuyên nghiệp của Schwarzkopf Professional: Sparkler giúp tóc bóng, Freeze giúp giữ nếp. Phù hợp làm tóc cô dâu và tóc tiệc.",
+   "content_approved": false,
+   "reason": "Mình dùng Freeze để khóa nếp tóc và Sparkler để tóc lên hình bóng đẹp, vì tóc cô dâu cần vừa giữ nếp vừa có độ bóng.",
+   "usage": "Xịt Freeze sau khi tạo kiểu để giữ nếp. Xịt Sparkler lên bề mặt tóc từ khoảng cách 20 đến 30 cm để tạo độ bóng.",
+   "images": [
+    {
+     "image": "/media/xit-toc-schwarzkopf-osis-sparkler-freeze-1.jpg",
+     "alt": "Xịt tóc Schwarzkopf Professional OSiS+ Sparkler và Freeze do Lý Hoàng Makeup chọn dùng"
+    },
+    {
+     "image": "/media/xit-toc-schwarzkopf-osis-sparkler-freeze-2.jpg",
+     "alt": "Chi tiết nhãn và kiểu dáng Xịt tóc Schwarzkopf Professional OSiS+ Sparkler và Freeze"
+    },
+    {
+     "image": "/media/xit-toc-schwarzkopf-osis-sparkler-freeze-3.jpg",
+     "alt": "Xịt tóc Schwarzkopf Professional OSiS+ Sparkler và Freeze nhìn từ góc nghiêng"
+    }
+   ],
+   "video": "/media/xit-toc-schwarzkopf-osis-sparkler-freeze.mp4"
+  },
+  {
+   "code": "LH-003",
+   "slug": "xit-tao-kieu-toc-gel-long-re-f3z3",
+   "name": "Xịt tạo kiểu tóc dạng gel lỏng RE-F3Z3",
+   "category": "Phụ kiện tóc",
+   "published": true,
+   "short_desc": "Chai xịt dạng gel lỏng màu xanh ngọc dùng khi tạo kiểu tóc, vòi xịt dễ dùng.",
+   "content_approved": false,
+   "reason": "Mình dùng khi cần tạo nếp nhanh cho tóc mà không muốn tóc bị cứng như dùng gôm.",
+   "usage": "Xịt đều lên tóc ẩm hoặc khô rồi chải hoặc tạo kiểu. Tránh để dính vào mắt.",
+   "images": [
+    {
+     "image": "/media/xit-tao-kieu-toc-gel-long-re-f3z3-1.jpg",
+     "alt": "Xịt tạo kiểu tóc dạng gel lỏng RE-F3Z3 do Lý Hoàng Makeup chọn dùng"
+    },
+    {
+     "image": "/media/xit-tao-kieu-toc-gel-long-re-f3z3-2.jpg",
+     "alt": "Chi tiết nhãn và kiểu dáng Xịt tạo kiểu tóc dạng gel lỏng RE-F3Z3"
+    },
+    {
+     "image": "/media/xit-tao-kieu-toc-gel-long-re-f3z3-3.jpg",
+     "alt": "Xịt tạo kiểu tóc dạng gel lỏng RE-F3Z3 nhìn từ góc nghiêng"
+    }
+   ],
+   "video": "/media/xit-tao-kieu-toc-gel-long-re-f3z3.mp4"
+  },
+  {
+   "code": "LH-004",
+   "slug": "mousse-tao-kieu-toc-styling-mousse-250ml",
+   "name": "Mousse tạo kiểu tóc Styling Mousse 250ml",
+   "category": "Phụ kiện tóc",
+   "published": true,
+   "short_desc": "Mousse dạng bọt tạo kiểu tóc, dung tích 250 ml, giúp tóc vào nếp và có độ phồng.",
+   "content_approved": false,
+   "reason": "Mousse giúp mình tạo độ phồng và nếp mềm cho tóc trước khi sấy hoặc uốn, tóc không bị bết.",
+   "usage": "Lắc đều, lấy một lượng bọt vừa đủ, vuốt đều lên tóc rồi sấy hoặc tạo kiểu.",
+   "images": [
+    {
+     "image": "/media/mousse-tao-kieu-toc-styling-mousse-250ml-1.jpg",
+     "alt": "Mousse tạo kiểu tóc Styling Mousse 250ml do Lý Hoàng Makeup chọn dùng"
+    },
+    {
+     "image": "/media/mousse-tao-kieu-toc-styling-mousse-250ml-2.jpg",
+     "alt": "Chi tiết nhãn và kiểu dáng Mousse tạo kiểu tóc Styling Mousse 250ml"
+    },
+    {
+     "image": "/media/mousse-tao-kieu-toc-styling-mousse-250ml-3.jpg",
+     "alt": "Mousse tạo kiểu tóc Styling Mousse 250ml nhìn từ góc nghiêng"
+    }
+   ],
+   "video": "/media/mousse-tao-kieu-toc-styling-mousse-250ml.mp4"
+  },
+  {
+   "code": "LH-005",
+   "slug": "bot-tao-phong-chan-toc-volumize-pro-4g",
+   "name": "Bột tạo phồng chân tóc Volumize PRO 4g",
+   "category": "Phụ kiện tóc",
+   "published": true,
+   "short_desc": "Bột tạo phồng chân tóc dạng chai nhỏ 4 g, rắc lên chân tóc là tóc có độ phồng ngay.",
+   "content_approved": false,
+   "reason": "Chai nhỏ gọn bỏ vừa túi đồ nghề, mình dùng để tạo độ phồng cho tóc mỏng hoặc xẹp ngay tại nhà cô dâu.",
+   "usage": "Rắc một lượng nhỏ lên chân tóc rồi dùng ngón tay xoa nhẹ. Dùng ít một để tóc không bị khô.",
+   "images": [
+    {
+     "image": "/media/bot-tao-phong-chan-toc-volumize-pro-4g-1.jpg",
+     "alt": "Bột tạo phồng chân tóc Volumize PRO 4g do Lý Hoàng Makeup chọn dùng"
+    },
+    {
+     "image": "/media/bot-tao-phong-chan-toc-volumize-pro-4g-2.jpg",
+     "alt": "Chi tiết nhãn và kiểu dáng Bột tạo phồng chân tóc Volumize PRO 4g"
+    },
+    {
+     "image": "/media/bot-tao-phong-chan-toc-volumize-pro-4g-3.jpg",
+     "alt": "Bột tạo phồng chân tóc Volumize PRO 4g nhìn từ góc nghiêng"
+    }
+   ],
+   "video": "/media/bot-tao-phong-chan-toc-volumize-pro-4g.mp4"
+  },
+  {
+   "code": "LH-006",
+   "slug": "nuoc-tay-trang-garnier-micellar-700ml-nap-hong",
+   "name": "Nước tẩy trang Garnier SkinActive Micellar Cleansing Water 700ml (nắp hồng)",
+   "category": "Chăm sóc da",
+   "published": true,
+   "short_desc": "Nước tẩy trang Garnier công nghệ micellar, làm sạch và tẩy trang trong một bước, không cần rửa lại. Bản 700 ml dùng được lâu.",
+   "content_approved": false,
+   "reason": "Mình tẩy lớp nền cũ và dọn da cho cô dâu trước khi trang điểm lại. Chai lớn dùng đỡ tốn, cứ thấm bông là lau.",
+   "usage": "Thấm ra bông tẩy trang, lau nhẹ mặt, mắt và môi, không cần rửa lại với nước.",
+   "images": [
+    {
+     "image": "/media/nuoc-tay-trang-garnier-micellar-700ml-nap-hong-1.jpg",
+     "alt": "Nước tẩy trang Garnier SkinActive Micellar Cleansing Water 700ml (nắp hồng) do Lý Hoàng Makeup chọn dùng"
+    },
+    {
+     "image": "/media/nuoc-tay-trang-garnier-micellar-700ml-nap-hong-2.jpg",
+     "alt": "Chi tiết nhãn và kiểu dáng Nước tẩy trang Garnier SkinActive Micellar Cleansing Water 700ml (nắp hồng)"
+    },
+    {
+     "image": "/media/nuoc-tay-trang-garnier-micellar-700ml-nap-hong-3.jpg",
+     "alt": "Nước tẩy trang Garnier SkinActive Micellar Cleansing Water 700ml (nắp hồng) nhìn từ góc nghiêng"
+    }
+   ],
+   "video": "/media/nuoc-tay-trang-garnier-micellar-700ml-nap-hong.mp4"
+  },
+  {
+   "code": "LH-007",
+   "slug": "xit-khoang-duong-am-torriden-dive-in-glow-mist-120ml",
+   "name": "Xịt khoáng dưỡng ẩm Torriden Dive-In Glow Mist 120ml",
+   "category": "Chăm sóc da",
+   "published": true,
+   "short_desc": "Xịt dưỡng cấp ẩm Torriden của Hàn Quốc chứa phức hợp Hyaluronic Acid, hạt sương mịn, không bết dính. Dùng được như lớp mist nhẹ trước hoặc sau trang điểm.",
+   "content_approved": false,
+   "reason": "Mình xịt để da căng ẩm trước khi đánh nền và xịt nhẹ sau makeup để lớp nền bớt mốc.",
+   "usage": "Giữ chai cách mặt khoảng 20 đến 30 cm, nhắm mắt và xịt đều. Có thể dùng sau bước làm sạch hoặc sau trang điểm.",
+   "images": [
+    {
+     "image": "/media/xit-khoang-duong-am-torriden-dive-in-glow-mist-120ml-1.jpg",
+     "alt": "Xịt khoáng dưỡng ẩm Torriden Dive-In Glow Mist 120ml do Lý Hoàng Makeup chọn dùng"
+    },
+    {
+     "image": "/media/xit-khoang-duong-am-torriden-dive-in-glow-mist-120ml-2.jpg",
+     "alt": "Chi tiết nhãn và kiểu dáng Xịt khoáng dưỡng ẩm Torriden Dive-In Glow Mist 120ml"
+    },
+    {
+     "image": "/media/xit-khoang-duong-am-torriden-dive-in-glow-mist-120ml-3.jpg",
+     "alt": "Xịt khoáng dưỡng ẩm Torriden Dive-In Glow Mist 120ml nhìn từ góc nghiêng"
+    }
+   ],
+   "video": "/media/xit-khoang-duong-am-torriden-dive-in-glow-mist-120ml.mp4"
+  },
+  {
+   "code": "LH-008",
+   "slug": "xit-duong-chai-trong-nap-vang",
+   "name": "Xịt dưỡng chai trong nắp vàng (chưa rõ tên)",
+   "category": "Chăm sóc da",
+   "published": false,
+   "short_desc": "Chai xịt dạng nước trong, nắp vàng, vòi phun sương mịn.",
+   "content_approved": false,
+   "reason": "",
+   "usage": "",
+   "images": [
+    {
+     "image": "/media/xit-duong-chai-trong-nap-vang-1.jpg",
+     "alt": "Xịt dưỡng chai trong nắp vàng (chưa rõ tên) do Lý Hoàng Makeup chọn dùng"
+    },
+    {
+     "image": "/media/xit-duong-chai-trong-nap-vang-2.jpg",
+     "alt": "Chi tiết nhãn và kiểu dáng Xịt dưỡng chai trong nắp vàng (chưa rõ tên)"
+    },
+    {
+     "image": "/media/xit-duong-chai-trong-nap-vang-3.jpg",
+     "alt": "Xịt dưỡng chai trong nắp vàng (chưa rõ tên) nhìn từ góc nghiêng"
+    }
+   ],
+   "video": "/media/xit-duong-chai-trong-nap-vang.mp4"
+  },
+  {
+   "code": "LH-009",
+   "slug": "xit-khoang-aspasia-moist-up-face-mist-snail-150ml",
+   "name": "Xịt khoáng Aspasia Moist Up Face Mist Snail ốc sên 150ml",
+   "category": "Chăm sóc da",
+   "published": true,
+   "short_desc": "Xịt khoáng Hàn Quốc dòng Moist Up chiết xuất ốc sên, bổ sung độ ẩm và làm dịu da.",
+   "content_approved": false,
+   "reason": "Giá dễ chịu, xịt được nhiều lần trong ngày. Mình xịt cho da cô dâu trước khi makeup để lớp nền mịn hơn.",
+   "usage": "Xịt cách mặt khoảng 20 cm, nhắm mắt. Có thể dùng trước hoặc sau trang điểm, thấm nhẹ nếu thấy ướt.",
+   "images": [
+    {
+     "image": "/media/xit-khoang-aspasia-moist-up-face-mist-snail-150ml-1.jpg",
+     "alt": "Xịt khoáng Aspasia Moist Up Face Mist Snail ốc sên 150ml do Lý Hoàng Makeup chọn dùng"
+    },
+    {
+     "image": "/media/xit-khoang-aspasia-moist-up-face-mist-snail-150ml-2.jpg",
+     "alt": "Chi tiết nhãn và kiểu dáng Xịt khoáng Aspasia Moist Up Face Mist Snail ốc sên 150ml"
+    },
+    {
+     "image": "/media/xit-khoang-aspasia-moist-up-face-mist-snail-150ml-3.jpg",
+     "alt": "Xịt khoáng Aspasia Moist Up Face Mist Snail ốc sên 150ml nhìn từ góc nghiêng"
+    }
+   ],
+   "video": "/media/xit-khoang-aspasia-moist-up-face-mist-snail-150ml.mp4"
+  },
+  {
+   "code": "LH-010",
+   "slug": "phan-bat-sang-gege-bear-flash-ribbon",
+   "name": "Phấn bắt sáng dạng bột Gege Bear Flash Ribbon (đầu mút)",
+   "category": "Trang điểm",
+   "published": true,
+   "short_desc": "Phấn bắt sáng dạng bột nhũ của Gege Bear, chai nhỏ có đầu mút lấy phấn, dùng tạo điểm sáng trên gương mặt.",
+   "content_approved": false,
+   "reason": "Chai nhỏ, đầu mút tiện chấm đúng vị trí. Mình dùng để tạo điểm sáng cho layout trong trẻo.",
+   "usage": "Dùng đầu mút lấy một lượng nhỏ, chấm lên sống mũi, gò má và đuôi mắt rồi vỗ nhẹ cho tan.",
+   "images": [
+    {
+     "image": "/media/phan-bat-sang-gege-bear-flash-ribbon-1.jpg",
+     "alt": "Phấn bắt sáng dạng bột Gege Bear Flash Ribbon (đầu mút) do Lý Hoàng Makeup chọn dùng"
+    },
+    {
+     "image": "/media/phan-bat-sang-gege-bear-flash-ribbon-2.jpg",
+     "alt": "Chi tiết nhãn và kiểu dáng Phấn bắt sáng dạng bột Gege Bear Flash Ribbon (đầu mút)"
+    },
+    {
+     "image": "/media/phan-bat-sang-gege-bear-flash-ribbon-3.jpg",
+     "alt": "Phấn bắt sáng dạng bột Gege Bear Flash Ribbon (đầu mút) nhìn từ góc nghiêng"
+    }
+   ],
+   "video": "/media/phan-bat-sang-gege-bear-flash-ribbon.mp4"
+  },
+  {
+   "code": "LH-011",
+   "slug": "xit-duong-am-maycreate-150ml",
+   "name": "Xịt dưỡng ẩm M'AYCREATE 150ml",
+   "category": "Chăm sóc da",
+   "published": false,
+   "short_desc": "Xịt dưỡng ẩm M'AYCREATE dung tích 150 ml, chai màu hồng tím chuyển sắc.",
+   "content_approved": false,
+   "reason": "Mình dùng để cấp ẩm nhanh cho da khi trời nóng hoặc phòng máy lạnh.",
+   "usage": "Xịt đều lên mặt từ khoảng cách 20 đến 30 cm, nhắm mắt.",
+   "images": [
+    {
+     "image": "/media/xit-duong-am-maycreate-150ml-1.jpg",
+     "alt": "Xịt dưỡng ẩm M'AYCREATE 150ml do Lý Hoàng Makeup chọn dùng"
+    },
+    {
+     "image": "/media/xit-duong-am-maycreate-150ml-2.jpg",
+     "alt": "Chi tiết nhãn và kiểu dáng Xịt dưỡng ẩm M'AYCREATE 150ml"
+    },
+    {
+     "image": "/media/xit-duong-am-maycreate-150ml-3.jpg",
+     "alt": "Xịt dưỡng ẩm M'AYCREATE 150ml nhìn từ góc nghiêng"
+    }
+   ],
+   "video": "/media/xit-duong-am-maycreate-150ml.mp4"
+  },
+  {
+   "code": "LH-012",
+   "slug": "xit-khoang-aspasia-moist-up-face-mist-aloe-150ml",
+   "name": "Xịt khoáng Aspasia Moist Up Face Mist Aloe nha đam 150ml",
+   "category": "Chăm sóc da",
+   "published": true,
+   "short_desc": "Xịt khoáng Hàn Quốc dòng Moist Up chiết xuất nha đam, làm dịu mát và cấp ẩm tức thì cho da.",
+   "content_approved": false,
+   "reason": "Bản nha đam mát và nhẹ, mình xịt để làm dịu da cô dâu sau khi tẩy trang hoặc khi da hơi nóng.",
+   "usage": "Xịt cách mặt khoảng 20 cm, nhắm mắt. Dùng bất cứ lúc nào da cần cấp ẩm.",
+   "images": [
+    {
+     "image": "/media/xit-khoang-aspasia-moist-up-face-mist-aloe-150ml-1.jpg",
+     "alt": "Xịt khoáng Aspasia Moist Up Face Mist Aloe nha đam 150ml do Lý Hoàng Makeup chọn dùng"
+    },
+    {
+     "image": "/media/xit-khoang-aspasia-moist-up-face-mist-aloe-150ml-2.jpg",
+     "alt": "Chi tiết nhãn và kiểu dáng Xịt khoáng Aspasia Moist Up Face Mist Aloe nha đam 150ml"
+    },
+    {
+     "image": "/media/xit-khoang-aspasia-moist-up-face-mist-aloe-150ml-3.jpg",
+     "alt": "Xịt khoáng Aspasia Moist Up Face Mist Aloe nha đam 150ml nhìn từ góc nghiêng"
+    }
+   ],
+   "video": "/media/xit-khoang-aspasia-moist-up-face-mist-aloe-150ml.mp4"
+  },
+  {
+   "code": "LH-013",
+   "slug": "xit-khoa-nen-urban-decay-all-nighter",
+   "name": "Xịt khóa nền Urban Decay All Nighter Long-Lasting Makeup Setting Spray",
+   "category": "Trang điểm",
+   "published": true,
+   "short_desc": "Xịt khóa nền Urban Decay giúp lớp trang điểm giữ lâu, không trôi, không xỉn màu, phù hợp mọi loại da.",
+   "content_approved": false,
+   "reason": "Cô dâu phải giữ makeup từ sáng đến tối, nên mình xịt khóa nền ở bước cuối để lớp nền bền hơn.",
+   "usage": "Lắc đều, nhắm mắt, xịt theo hình chữ X và T ở khoảng cách khoảng 20 cm rồi để khô tự nhiên.",
+   "images": [
+    {
+     "image": "/media/xit-khoa-nen-urban-decay-all-nighter-1.jpg",
+     "alt": "Xịt khóa nền Urban Decay All Nighter Long-Lasting Makeup Setting Spray do Lý Hoàng Makeup chọn dùng"
+    },
+    {
+     "image": "/media/xit-khoa-nen-urban-decay-all-nighter-2.jpg",
+     "alt": "Chi tiết nhãn và kiểu dáng Xịt khóa nền Urban Decay All Nighter Long-Lasting Makeup Setting Spray"
+    },
+    {
+     "image": "/media/xit-khoa-nen-urban-decay-all-nighter-3.jpg",
+     "alt": "Xịt khóa nền Urban Decay All Nighter Long-Lasting Makeup Setting Spray nhìn từ góc nghiêng"
+    }
+   ],
+   "video": "/media/xit-khoa-nen-urban-decay-all-nighter.mp4"
+  },
+  {
+   "code": "LH-014",
+   "slug": "gel-tay-te-bao-chet-arrahan-aloe-vera-peeling-gel-180ml",
+   "name": "Gel tẩy tế bào chết Arrahan Aloe Vera Peeling Gel 180ml",
+   "category": "Chăm sóc da",
+   "published": true,
+   "short_desc": "Gel tẩy tế bào chết chiết xuất nha đam của Arrahan, dung tích 180 ml, giúp da sạch và mịn.",
+   "content_approved": false,
+   "reason": "Da mịn thì lớp nền mới đều. Mình dùng để chăm da định kỳ trước ngày makeup quan trọng.",
+   "usage": "Thoa lên da khô, massage nhẹ theo vòng tròn đến khi vón thành cặn rồi rửa sạch. Dùng 1 đến 2 lần mỗi tuần.",
+   "images": [
+    {
+     "image": "/media/gel-tay-te-bao-chet-arrahan-aloe-vera-peeling-gel-180ml-1.jpg",
+     "alt": "Gel tẩy tế bào chết Arrahan Aloe Vera Peeling Gel 180ml do Lý Hoàng Makeup chọn dùng"
+    },
+    {
+     "image": "/media/gel-tay-te-bao-chet-arrahan-aloe-vera-peeling-gel-180ml-2.jpg",
+     "alt": "Chi tiết nhãn và kiểu dáng Gel tẩy tế bào chết Arrahan Aloe Vera Peeling Gel 180ml"
+    },
+    {
+     "image": "/media/gel-tay-te-bao-chet-arrahan-aloe-vera-peeling-gel-180ml-3.jpg",
+     "alt": "Gel tẩy tế bào chết Arrahan Aloe Vera Peeling Gel 180ml nhìn từ góc nghiêng"
+    }
+   ],
+   "video": "/media/gel-tay-te-bao-chet-arrahan-aloe-vera-peeling-gel-180ml.mp4"
+  },
+  {
+   "code": "LH-015",
+   "slug": "nuoc-tay-trang-loreal-revitalift-hyaluronic-acid-micellar",
+   "name": "Nước tẩy trang L'Oréal Paris Revitalift Hyaluronic Acid Micellar Water",
+   "category": "Chăm sóc da",
+   "published": true,
+   "short_desc": "Nước tẩy trang L'Oréal Paris dòng Revitalift Hyaluronic Acid, làm sạch, cấp ẩm và tẩy trang trong một bước.",
+   "content_approved": false,
+   "reason": "Chai nhỏ gọn, mình mang theo đi makeup tại nhà để lau nhanh khi cần chỉnh sửa.",
+   "usage": "Thấm ra bông tẩy trang, lau nhẹ mặt, mắt và môi. Dùng cho bước làm sạch.",
+   "images": [
+    {
+     "image": "/media/nuoc-tay-trang-loreal-revitalift-hyaluronic-acid-micellar-1.jpg",
+     "alt": "Nước tẩy trang L'Oréal Paris Revitalift Hyaluronic Acid Micellar Water do Lý Hoàng Makeup chọn dùng"
+    },
+    {
+     "image": "/media/nuoc-tay-trang-loreal-revitalift-hyaluronic-acid-micellar-2.jpg",
+     "alt": "Chi tiết nhãn và kiểu dáng Nước tẩy trang L'Oréal Paris Revitalift Hyaluronic Acid Micellar Water"
+    },
+    {
+     "image": "/media/nuoc-tay-trang-loreal-revitalift-hyaluronic-acid-micellar-3.jpg",
+     "alt": "Nước tẩy trang L'Oréal Paris Revitalift Hyaluronic Acid Micellar Water nhìn từ góc nghiêng"
+    }
+   ],
+   "video": "/media/nuoc-tay-trang-loreal-revitalift-hyaluronic-acid-micellar.mp4"
+  },
+  {
+   "code": "LH-016",
+   "slug": "lotion-duong-am-clinique-dramatically-different-moisturizing-lotion-plus",
+   "name": "Lotion dưỡng ẩm Clinique Dramatically Different Moisturizing Lotion+ (chai vòi pump)",
+   "category": "Chăm sóc da",
+   "published": true,
+   "short_desc": "Lotion dưỡng ẩm không chứa dầu của Clinique, chai có vòi pump dễ lấy. Thường dùng cho da khô đến hỗn hợp thiên khô.",
+   "content_approved": false,
+   "reason": "Da cô dâu cần đủ ẩm thì lớp nền mới mịn, nên mình dùng lotion này để dưỡng trước khi trang điểm.",
+   "usage": "Sau bước làm sạch và toner, bơm một lượng vừa đủ, thoa đều lên mặt và cổ, sáng và tối.",
+   "images": [
+    {
+     "image": "/media/lotion-duong-am-clinique-dramatically-different-moisturizing-lotion-plus-1.jpg",
+     "alt": "Lotion dưỡng ẩm Clinique Dramatically Different Moisturizing Lotion+ (chai vòi pump) do Lý Hoàng Makeup chọn dùng"
+    },
+    {
+     "image": "/media/lotion-duong-am-clinique-dramatically-different-moisturizing-lotion-plus-2.jpg",
+     "alt": "Chi tiết nhãn và kiểu dáng Lotion dưỡng ẩm Clinique Dramatically Different Moisturizing Lotion+ (chai vòi pump)"
+    },
+    {
+     "image": "/media/lotion-duong-am-clinique-dramatically-different-moisturizing-lotion-plus-3.jpg",
+     "alt": "Lotion dưỡng ẩm Clinique Dramatically Different Moisturizing Lotion+ (chai vòi pump) nhìn từ góc nghiêng"
+    }
+   ],
+   "video": "/media/lotion-duong-am-clinique-dramatically-different-moisturizing-lotion-plus.mp4"
+  },
+  {
+   "code": "LH-017",
+   "slug": "gel-duong-am-clinique-dramatically-different-moisturizing-gel-50ml",
+   "name": "Gel dưỡng ẩm Clinique Dramatically Different Moisturizing Gel 50ml",
+   "category": "Chăm sóc da",
+   "published": true,
+   "short_desc": "Gel dưỡng ẩm dạng tuýp 50 ml của Clinique, kết cấu mỏng nhẹ, thường dùng cho da hỗn hợp thiên dầu.",
+   "content_approved": false,
+   "reason": "Tuýp nhỏ gọn, mình mang đi makeup tại nhà để dưỡng nhanh cho cô dâu da dầu trước khi đánh nền.",
+   "usage": "Lấy một lượng nhỏ, thoa đều lên mặt sau bước làm sạch hoặc toner.",
+   "images": [
+    {
+     "image": "/media/gel-duong-am-clinique-dramatically-different-moisturizing-gel-50ml-1.jpg",
+     "alt": "Gel dưỡng ẩm Clinique Dramatically Different Moisturizing Gel 50ml do Lý Hoàng Makeup chọn dùng"
+    },
+    {
+     "image": "/media/gel-duong-am-clinique-dramatically-different-moisturizing-gel-50ml-2.jpg",
+     "alt": "Chi tiết nhãn và kiểu dáng Gel dưỡng ẩm Clinique Dramatically Different Moisturizing Gel 50ml"
+    },
+    {
+     "image": "/media/gel-duong-am-clinique-dramatically-different-moisturizing-gel-50ml-3.jpg",
+     "alt": "Gel dưỡng ẩm Clinique Dramatically Different Moisturizing Gel 50ml nhìn từ góc nghiêng"
+    }
+   ],
+   "video": "/media/gel-duong-am-clinique-dramatically-different-moisturizing-gel-50ml.mp4"
+  },
+  {
+   "code": "LH-018",
+   "slug": "nuoc-can-bang-klairs-supple-preparation-unscented-toner-mini",
+   "name": "Nước cân bằng Klairs Supple Preparation Unscented Toner (chai mini)",
+   "category": "Chăm sóc da",
+   "published": true,
+   "short_desc": "Toner dưỡng ẩm của Klairs không mùi, nhãn ghi không chứa tinh dầu, cân bằng độ pH và thuần chay. Đây là chai kích thước nhỏ.",
+   "content_approved": false,
+   "reason": "Chai mini gọn, mình dùng để cấp ẩm cho da trước khi dưỡng và trang điểm khi đi làm ngoài.",
+   "usage": "Thấm ra bông hoặc vỗ trực tiếp lên da sau bước làm sạch.",
+   "images": [
+    {
+     "image": "/media/nuoc-can-bang-klairs-supple-preparation-unscented-toner-mini-1.jpg",
+     "alt": "Nước cân bằng Klairs Supple Preparation Unscented Toner (chai mini) do Lý Hoàng Makeup chọn dùng"
+    },
+    {
+     "image": "/media/nuoc-can-bang-klairs-supple-preparation-unscented-toner-mini-2.jpg",
+     "alt": "Chi tiết nhãn và kiểu dáng Nước cân bằng Klairs Supple Preparation Unscented Toner (chai mini)"
+    },
+    {
+     "image": "/media/nuoc-can-bang-klairs-supple-preparation-unscented-toner-mini-3.jpg",
+     "alt": "Nước cân bằng Klairs Supple Preparation Unscented Toner (chai mini) nhìn từ góc nghiêng"
+    }
+   ],
+   "video": "/media/nuoc-can-bang-klairs-supple-preparation-unscented-toner-mini.mp4"
+  },
+  {
+   "code": "LH-019",
+   "slug": "kem-nen-espoir-be-glow-foundation-spf27-30g",
+   "name": "Kem nền Espoir Be Glow Foundation SPF27 PA++ 30g",
+   "category": "Trang điểm",
+   "published": true,
+   "short_desc": "Kem nền của Espoir cho lớp nền căng sáng, nhãn ghi hiệu ứng da sáng khỏe 24 giờ và có chống nắng SPF27 PA++. Dung tích 30 g.",
+   "content_approved": false,
+   "reason": "Với cô dâu thích da căng bóng tự nhiên, mình chọn nền này cho layout trong trẻo.",
+   "usage": "Lấy lượng nhỏ, chấm lên các điểm trên mặt và tán đều bằng mút hoặc cọ.",
+   "images": [
+    {
+     "image": "/media/kem-nen-espoir-be-glow-foundation-spf27-30g-1.jpg",
+     "alt": "Kem nền Espoir Be Glow Foundation SPF27 PA++ 30g do Lý Hoàng Makeup chọn dùng"
+    },
+    {
+     "image": "/media/kem-nen-espoir-be-glow-foundation-spf27-30g-2.jpg",
+     "alt": "Chi tiết nhãn và kiểu dáng Kem nền Espoir Be Glow Foundation SPF27 PA++ 30g"
+    },
+    {
+     "image": "/media/kem-nen-espoir-be-glow-foundation-spf27-30g-3.jpg",
+     "alt": "Kem nền Espoir Be Glow Foundation SPF27 PA++ 30g nhìn từ góc nghiêng"
+    }
+   ],
+   "video": "/media/kem-nen-espoir-be-glow-foundation-spf27-30g.mp4"
+  },
+  {
+   "code": "LH-020",
+   "slug": "kem-nen-espoir-be-velvet-foundation-spf22-30g",
+   "name": "Kem nền Espoir Be Velvet Foundation SPF22 PA++ 30g",
+   "category": "Trang điểm",
+   "published": true,
+   "short_desc": "Kem nền Espoir che phủ lỗ chân lông, nhãn ghi bền 72 giờ, độ che phủ thoáng, có chống nắng SPF22 PA++. Dung tích 30 g.",
+   "content_approved": false,
+   "reason": "Khi cô dâu da nhiều lỗ chân lông hoặc cần nền lì mịn, mình dùng dòng Be Velvet vì lớp nền lên mịn và giữ lâu.",
+   "usage": "Lấy lượng nhỏ, tán từ giữa mặt ra ngoài bằng mút ẩm hoặc cọ.",
+   "images": [
+    {
+     "image": "/media/kem-nen-espoir-be-velvet-foundation-spf22-30g-1.jpg",
+     "alt": "Kem nền Espoir Be Velvet Foundation SPF22 PA++ 30g do Lý Hoàng Makeup chọn dùng"
+    },
+    {
+     "image": "/media/kem-nen-espoir-be-velvet-foundation-spf22-30g-2.jpg",
+     "alt": "Chi tiết nhãn và kiểu dáng Kem nền Espoir Be Velvet Foundation SPF22 PA++ 30g"
+    },
+    {
+     "image": "/media/kem-nen-espoir-be-velvet-foundation-spf22-30g-3.jpg",
+     "alt": "Kem nền Espoir Be Velvet Foundation SPF22 PA++ 30g nhìn từ góc nghiêng"
+    }
+   ],
+   "video": "/media/kem-nen-espoir-be-velvet-foundation-spf22-30g.mp4"
+  },
+  {
+   "code": "LH-021",
+   "slug": "kem-nen-dang-long-dopi-foundation",
+   "name": "Kem nền dạng lỏng Dopi Foundation (nút tròn)",
+   "category": "Trang điểm",
+   "published": false,
+   "short_desc": "Kem nền dạng lỏng của Dopi, chai nhám đầu nút tròn, dùng tạo lớp nền.",
+   "content_approved": false,
+   "reason": "",
+   "usage": "",
+   "images": [
+    {
+     "image": "/media/kem-nen-dang-long-dopi-foundation-1.jpg",
+     "alt": "Kem nền dạng lỏng Dopi Foundation (nút tròn) do Lý Hoàng Makeup chọn dùng"
+    },
+    {
+     "image": "/media/kem-nen-dang-long-dopi-foundation-2.jpg",
+     "alt": "Chi tiết nhãn và kiểu dáng Kem nền dạng lỏng Dopi Foundation (nút tròn)"
+    },
+    {
+     "image": "/media/kem-nen-dang-long-dopi-foundation-3.jpg",
+     "alt": "Kem nền dạng lỏng Dopi Foundation (nút tròn) nhìn từ góc nghiêng"
+    }
+   ],
+   "video": "/media/kem-nen-dang-long-dopi-foundation.mp4"
+  },
+  {
+   "code": "LH-022",
+   "slug": "kem-lot-duong-bobbi-brown-vitamin-enriched-face-base",
+   "name": "Kem lót dưỡng Bobbi Brown Vitamin Enriched Face Base",
+   "category": "Trang điểm",
+   "published": true,
+   "short_desc": "Kem lót kiêm dưỡng ẩm của Bobbi Brown, nhãn ghi là primer và moisturizer trong một, giúp da mềm trước khi đánh nền.",
+   "content_approved": false,
+   "reason": "Mình dùng như bước lót dưỡng để lớp nền lên đều và không bị khô.",
+   "usage": "Sau dưỡng da, lấy một lượng nhỏ thoa đều lên mặt rồi chờ vài phút trước khi đánh nền.",
+   "images": [
+    {
+     "image": "/media/kem-lot-duong-bobbi-brown-vitamin-enriched-face-base-1.jpg",
+     "alt": "Kem lót dưỡng Bobbi Brown Vitamin Enriched Face Base do Lý Hoàng Makeup chọn dùng"
+    },
+    {
+     "image": "/media/kem-lot-duong-bobbi-brown-vitamin-enriched-face-base-2.jpg",
+     "alt": "Chi tiết nhãn và kiểu dáng Kem lót dưỡng Bobbi Brown Vitamin Enriched Face Base"
+    },
+    {
+     "image": "/media/kem-lot-duong-bobbi-brown-vitamin-enriched-face-base-3.jpg",
+     "alt": "Kem lót dưỡng Bobbi Brown Vitamin Enriched Face Base nhìn từ góc nghiêng"
+    }
+   ],
+   "video": "/media/kem-lot-duong-bobbi-brown-vitamin-enriched-face-base.mp4"
+  },
+  {
+   "code": "LH-023",
+   "slug": "phan-phu-bot-aery-jo-loose-translucent-face-powder",
+   "name": "Phấn phủ dạng bột AERY JO Loose Translucent Face Powder",
+   "category": "Trang điểm",
+   "published": true,
+   "short_desc": "Phấn phủ dạng bột trong suốt của Aery Jo, dùng cố định lớp nền và kiềm dầu nhẹ.",
+   "content_approved": false,
+   "reason": "Phấn bột trong suốt không đổi màu nền, mình dùng ở bước cuối để khóa nền cho cô dâu.",
+   "usage": "Lấy một ít bằng mút hoặc cọ to, dặm nhẹ lên vùng chữ T và cả mặt.",
+   "images": [
+    {
+     "image": "/media/phan-phu-bot-aery-jo-loose-translucent-face-powder-1.jpg",
+     "alt": "Phấn phủ dạng bột AERY JO Loose Translucent Face Powder do Lý Hoàng Makeup chọn dùng"
+    },
+    {
+     "image": "/media/phan-phu-bot-aery-jo-loose-translucent-face-powder-2.jpg",
+     "alt": "Chi tiết nhãn và kiểu dáng Phấn phủ dạng bột AERY JO Loose Translucent Face Powder"
+    },
+    {
+     "image": "/media/phan-phu-bot-aery-jo-loose-translucent-face-powder-3.jpg",
+     "alt": "Phấn phủ dạng bột AERY JO Loose Translucent Face Powder nhìn từ góc nghiêng"
+    }
+   ],
+   "video": "/media/phan-phu-bot-aery-jo-loose-translucent-face-powder.mp4"
+  },
+  {
+   "code": "LH-024",
+   "slug": "phan-phu-bot-make-up-for-ever-hd-skin-setting-powder",
+   "name": "Phấn phủ dạng bột Make Up For Ever HD Skin Setting Powder",
+   "category": "Trang điểm",
+   "published": true,
+   "short_desc": "Phấn phủ dạng bột của Make Up For Ever, nhãn ghi HD Skin Setting Powder, dùng cố định lớp nền.",
+   "content_approved": false,
+   "reason": "Mình dùng khi cần lớp nền mịn và lên hình đẹp ở bước phủ phấn cuối.",
+   "usage": "Lấy một ít bằng mút hoặc cọ, phủ nhẹ lên mặt, nhất là vùng chữ T.",
+   "images": [
+    {
+     "image": "/media/phan-phu-bot-make-up-for-ever-hd-skin-setting-powder-1.jpg",
+     "alt": "Phấn phủ dạng bột Make Up For Ever HD Skin Setting Powder do Lý Hoàng Makeup chọn dùng"
+    },
+    {
+     "image": "/media/phan-phu-bot-make-up-for-ever-hd-skin-setting-powder-2.jpg",
+     "alt": "Chi tiết nhãn và kiểu dáng Phấn phủ dạng bột Make Up For Ever HD Skin Setting Powder"
+    },
+    {
+     "image": "/media/phan-phu-bot-make-up-for-ever-hd-skin-setting-powder-3.jpg",
+     "alt": "Phấn phủ dạng bột Make Up For Ever HD Skin Setting Powder nhìn từ góc nghiêng"
+    }
+   ],
+   "video": "/media/phan-phu-bot-make-up-for-ever-hd-skin-setting-powder.mp4"
+  },
+  {
+   "code": "LH-025",
+   "slug": "san-pham-judydoll-dang-binh-dau-mut",
+   "name": "Sản phẩm Judydoll dạng bình có đầu mút (chưa rõ loại)",
+   "category": "Trang điểm",
+   "published": false,
+   "short_desc": "Sản phẩm trang điểm của Judydoll dạng bình trụ màu be, có nắp mở và đầu mút.",
+   "content_approved": false,
+   "reason": "",
+   "usage": "",
+   "images": [
+    {
+     "image": "/media/san-pham-judydoll-dang-binh-dau-mut-1.jpg",
+     "alt": "Sản phẩm Judydoll dạng bình có đầu mút (chưa rõ loại) do Lý Hoàng Makeup chọn dùng"
+    },
+    {
+     "image": "/media/san-pham-judydoll-dang-binh-dau-mut-2.jpg",
+     "alt": "Chi tiết nhãn và kiểu dáng Sản phẩm Judydoll dạng bình có đầu mút (chưa rõ loại)"
+    },
+    {
+     "image": "/media/san-pham-judydoll-dang-binh-dau-mut-3.jpg",
+     "alt": "Sản phẩm Judydoll dạng bình có đầu mút (chưa rõ loại) nhìn từ góc nghiêng"
+    }
+   ],
+   "video": "/media/san-pham-judydoll-dang-binh-dau-mut.mp4"
+  },
+  {
+   "code": "LH-026",
+   "slug": "san-pham-rock-sweet-dang-ong-hong",
+   "name": "Sản phẩm Rock Sweet dạng ống hồng (chưa rõ loại)",
+   "category": "Trang điểm",
+   "published": false,
+   "short_desc": "Sản phẩm dạng ống màu hồng chuyển sắc của Rock Sweet.",
+   "content_approved": false,
+   "reason": "",
+   "usage": "",
+   "images": [
+    {
+     "image": "/media/san-pham-rock-sweet-dang-ong-hong-1.jpg",
+     "alt": "Sản phẩm Rock Sweet dạng ống hồng (chưa rõ loại) do Lý Hoàng Makeup chọn dùng"
+    },
+    {
+     "image": "/media/san-pham-rock-sweet-dang-ong-hong-2.jpg",
+     "alt": "Chi tiết nhãn và kiểu dáng Sản phẩm Rock Sweet dạng ống hồng (chưa rõ loại)"
+    },
+    {
+     "image": "/media/san-pham-rock-sweet-dang-ong-hong-3.jpg",
+     "alt": "Sản phẩm Rock Sweet dạng ống hồng (chưa rõ loại) nhìn từ góc nghiêng"
+    }
+   ],
+   "video": "/media/san-pham-rock-sweet-dang-ong-hong.mp4"
+  },
+  {
+   "code": "LH-027",
+   "slug": "san-pham-rb-red-black-5ml-chai-trong",
+   "name": "Sản phẩm R&B Red & Black 5ml dạng chai trong (chưa rõ loại)",
+   "category": "Trang điểm",
+   "published": false,
+   "short_desc": "Sản phẩm dạng lỏng trong 5 ml của R&B Red & Black, chai trong nắp đen vuông có que thoa.",
+   "content_approved": false,
+   "reason": "",
+   "usage": "",
+   "images": [
+    {
+     "image": "/media/san-pham-rb-red-black-5ml-chai-trong-1.jpg",
+     "alt": "Sản phẩm R&B Red & Black 5ml dạng chai trong (chưa rõ loại) do Lý Hoàng Makeup chọn dùng"
+    },
+    {
+     "image": "/media/san-pham-rb-red-black-5ml-chai-trong-2.jpg",
+     "alt": "Chi tiết nhãn và kiểu dáng Sản phẩm R&B Red & Black 5ml dạng chai trong (chưa rõ loại)"
+    },
+    {
+     "image": "/media/san-pham-rb-red-black-5ml-chai-trong-3.jpg",
+     "alt": "Sản phẩm R&B Red & Black 5ml dạng chai trong (chưa rõ loại) nhìn từ góc nghiêng"
+    }
+   ],
+   "video": "/media/san-pham-rb-red-black-5ml-chai-trong.mp4"
+  },
+  {
+   "code": "LH-028",
+   "slug": "son-kem-romand-blur-fudge-tint-cam-dao",
+   "name": "Son kem rom&nd Blur Fudge Tint (màu cam đào)",
+   "category": "Trang điểm",
+   "published": true,
+   "short_desc": "Son kem tint của rom&nd dòng Blur Fudge Tint, màu cam đào, thân nhám mờ.",
+   "content_approved": false,
+   "reason": "Tông cam đào tươi, hợp layout cô dâu trong trẻo và dễ dặm lại khi ăn uống.",
+   "usage": "Chấm lên môi, tán bằng đầu cọ hoặc ngón tay, có thể tán mỏng hoặc đánh dày tùy độ đậm.",
+   "images": [
+    {
+     "image": "/media/son-kem-romand-blur-fudge-tint-cam-dao-1.jpg",
+     "alt": "Son kem rom&nd Blur Fudge Tint (màu cam đào) do Lý Hoàng Makeup chọn dùng"
+    },
+    {
+     "image": "/media/son-kem-romand-blur-fudge-tint-cam-dao-2.jpg",
+     "alt": "Chi tiết nhãn và kiểu dáng Son kem rom&nd Blur Fudge Tint (màu cam đào)"
+    },
+    {
+     "image": "/media/son-kem-romand-blur-fudge-tint-cam-dao-3.jpg",
+     "alt": "Son kem rom&nd Blur Fudge Tint (màu cam đào) nhìn từ góc nghiêng"
+    }
+   ],
+   "video": "/media/son-kem-romand-blur-fudge-tint-cam-dao.mp4"
+  },
+  {
+   "code": "LH-029",
+   "slug": "son-kem-romand-tint-hong-nau",
+   "name": "Son kem rom&nd tint màu hồng nâu (cần xác nhận dòng)",
+   "category": "Trang điểm",
+   "published": false,
+   "short_desc": "Son kem tint của rom&nd, thân nhám mờ, màu hồng nâu.",
+   "content_approved": false,
+   "reason": "Tông hồng nâu nhẹ nhàng, hợp cô dâu muốn môi tự nhiên.",
+   "usage": "Chấm lên môi, tán đều bằng đầu cọ hoặc ngón tay.",
+   "images": [
+    {
+     "image": "/media/son-kem-romand-tint-hong-nau-1.jpg",
+     "alt": "Son kem rom&nd tint màu hồng nâu (cần xác nhận dòng) do Lý Hoàng Makeup chọn dùng"
+    },
+    {
+     "image": "/media/son-kem-romand-tint-hong-nau-2.jpg",
+     "alt": "Chi tiết nhãn và kiểu dáng Son kem rom&nd tint màu hồng nâu (cần xác nhận dòng)"
+    },
+    {
+     "image": "/media/son-kem-romand-tint-hong-nau-3.jpg",
+     "alt": "Son kem rom&nd tint màu hồng nâu (cần xác nhận dòng) nhìn từ góc nghiêng"
+    }
+   ],
+   "video": "/media/son-kem-romand-tint-hong-nau.mp4"
+  },
+  {
+   "code": "LH-030",
+   "slug": "son-kem-romand-zero-velvet-tint-05-witty",
+   "name": "Son kem rom&nd Zero Velvet Tint #05 Witty (cam đỏ gạch) 5.5g",
+   "category": "Trang điểm",
+   "published": true,
+   "short_desc": "Son kem lì rom&nd Zero Velvet Tint, màu 05 Witty cam đỏ gạch, kết cấu nhung mềm, nhẹ môi. Dung tích 5.5 g.",
+   "content_approved": false,
+   "reason": "Màu đỏ gạch dễ lên hình và hợp nhiều tông da, mình dùng cho cô dâu muốn môi nổi bật nhưng không quá đậm.",
+   "usage": "Chấm lên môi, tán từ giữa ra ngoài. Tán mỏng cho môi lì mờ, thoa dày hơn cho màu đậm.",
+   "images": [
+    {
+     "image": "/media/son-kem-romand-zero-velvet-tint-05-witty-1.jpg",
+     "alt": "Son kem rom&nd Zero Velvet Tint #05 Witty (cam đỏ gạch) 5.5g do Lý Hoàng Makeup chọn dùng"
+    },
+    {
+     "image": "/media/son-kem-romand-zero-velvet-tint-05-witty-2.jpg",
+     "alt": "Chi tiết nhãn và kiểu dáng Son kem rom&nd Zero Velvet Tint #05 Witty (cam đỏ gạch) 5.5g"
+    },
+    {
+     "image": "/media/son-kem-romand-zero-velvet-tint-05-witty-3.jpg",
+     "alt": "Son kem rom&nd Zero Velvet Tint #05 Witty (cam đỏ gạch) 5.5g nhìn từ góc nghiêng"
+    }
+   ],
+   "video": "/media/son-kem-romand-zero-velvet-tint-05-witty.mp4"
+  }
+ ]
 }

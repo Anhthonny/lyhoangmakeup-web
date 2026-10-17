@@ -1,6 +1,4 @@
-# Cấu hình trang quản trị Decap CMS cho lyhoangmakeup.com
-# Các đường dẫn bắt đầu bằng "lyhoang-netlify/" vì thư mục website nằm trong thư mục "lyhoang-netlify" của repo GitHub.
-# Nếu sau này chuyển toàn bộ file ra thư mục gốc repo, hãy xóa phần "lyhoang-netlify/" ở đầu mỗi đường dẫn.
+# Cấu hình trang quản trị Decap CMS cho lyhoangmakeup.com (website nằm ở thư mục gốc của repo)
 backend:
   name: git-gateway
   branch: main
@@ -8,7 +6,7 @@ backend:
 locale: "vi"
 site_url: "https://lyhoangmakeup.com"
 display_url: "https://lyhoangmakeup.com"
-media_folder: "lyhoang-netlify/anh"
+media_folder: "anh"
 public_folder: "/anh"
 
 collections:
@@ -18,7 +16,7 @@ collections:
     files:
       - name: "trang_chu"
         label: "Trang chủ (chữ, ảnh, video, bố cục)"
-        file: "lyhoang-netlify/data/home.json"
+        file: "data/home.json"
         format: "json"
         fields:
           - { label: "Slogan (tiêu đề lớn)", name: "hero_title", widget: "text", required: false }
@@ -61,7 +59,7 @@ collections:
     files:
       - name: "thong_tin"
         label: "Thông tin chung & Chân trang"
-        file: "lyhoang-netlify/data/site.json"
+        file: "data/site.json"
         format: "json"
         fields:
           - { label: "Tên thương hiệu (thanh menu)", name: "brand_name", widget: "string", required: false }
@@ -98,9 +96,11 @@ collections:
     files:
       - name: "bang_gia"
         label: "Bảng giá dịch vụ & Học phí"
-        file: "lyhoang-netlify/data/price.json"
+        file: "data/price.json"
         format: "json"
         fields:
+          - { label: "Ảnh bìa trang Dịch vụ và trang Tiệc (xóa = bỏ ảnh)", name: "service_banner", widget: "image", required: false, hint: "Ảnh ngang tỉ lệ khoảng 2,7:1 (ví dụ 1800×670 px), dưới 300 KB." }
+          - { label: "Mô tả ảnh bìa (alt, giúp SEO)", name: "service_banner_alt", widget: "string", required: false }
           - { label: "Gói cô dâu: tên", name: "signature_title", widget: "string", required: false }
           - { label: "Gói cô dâu: giới thiệu", name: "signature_intro", widget: "text", required: false }
           - { label: "Gói cô dâu: giá", name: "signature_price", widget: "string", required: false }
@@ -124,27 +124,43 @@ collections:
     files:
       - name: "blog"
         label: "Bài viết Blog"
-        file: "lyhoang-netlify/data/blog.json"
+        file: "data/blog.json"
         format: "json"
         fields:
           - { label: "Bài viết", name: "posts", widget: "list", required: false, summary: "{{fields.title}}", fields: [{ label: "Tiêu đề", name: "title", widget: "string" }, { label: "Mô tả ngắn", name: "description", widget: "text", required: false }, { label: "Ảnh bìa", name: "thumbnail", widget: "image", required: false, hint: "Ảnh ngang tỉ lệ 16:9 (ví dụ 1600×900 px), dưới 300 KB, WebP hoặc JPG." }, { label: "Mô tả ảnh bìa (alt, giúp SEO ảnh)", name: "thumbnail_alt", widget: "string", required: false }, { label: "Nội dung (chèn ảnh được)", name: "body", widget: "markdown", required: false }, { label: "Nút cuối bài", name: "cta", widget: "select", required: false, default: "cd", options: [{label: "Đặt lịch makeup", value: "cd"},{label: "Nhận tư vấn học viên", value: "hv"}] }] }
   - name: "cua_hang"
-    label: "Cửa hàng"
-    description: "Thêm, sửa, xóa sản phẩm, giá và ảnh"
+    label: "Cửa hàng (sản phẩm, ảnh, video, giá)"
+    description: "Thêm, sửa, ẩn sản phẩm. Để trống giá thì trang hiện chữ Liên hệ."
     files:
       - name: "cua_hang"
         label: "Cửa hàng"
-        file: "lyhoang-netlify/data/shop.json"
+        file: "data/shop.json"
         format: "json"
+        media_folder: "/media"
+        public_folder: "/media"
         fields:
-          - { label: "Sản phẩm", name: "products", widget: "list", required: false, summary: "{{fields.name}}", fields: [{ label: "Mã sản phẩm", name: "code", widget: "string", required: false }, { label: "Tên sản phẩm", name: "name", widget: "string" }, { label: "Giá (VNĐ)", name: "price", widget: "number", value_type: "int", min: 0 }, { label: "Mô tả", name: "description", widget: "text", required: false }, { label: "Danh mục", name: "category", widget: "select", options: ["Trang điểm","Phụ kiện tóc","Chăm sóc da","Nước hoa"], default: "Trang điểm" }, { label: "Ảnh sản phẩm (để trống = dùng hình biểu tượng mặc định)", name: "image", widget: "image", required: false, hint: "Ảnh vuông tỉ lệ 1:1 (ví dụ 1000×1000 px), dưới 300 KB." }] }
+          - { label: "Sản phẩm", name: "products", widget: "list", required: false, summary: "{{fields.code}} · {{fields.name}}", fields: [
+              { label: "Mã SP", name: "code", widget: "string", required: false },
+              { label: "Tên sản phẩm", name: "name", widget: "string" },
+              { label: "Địa chỉ trang (viết không dấu, nối gạch ngang)", name: "slug", widget: "string", required: false, hint: "Trang sản phẩm sẽ là lyhoangmakeup.com/cua-hang/(địa chỉ này)/. Nên giữ nguyên sau khi đã đăng. Để trống thì tự lấy từ tên." },
+              { label: "Ngành hàng", name: "category", widget: "select", options: ["Trang điểm", "Chăm sóc da", "Phụ kiện tóc", "Nước hoa"], default: "Trang điểm" },
+              { label: "Hiện trên website", name: "published", widget: "boolean", default: true, hint: "Tắt = ẩn sản phẩm khỏi cửa hàng và Google." },
+              { label: "Giá bán (VNĐ, chỉ nhập số)", name: "price", widget: "number", value_type: "int", min: 0, required: false, hint: "Để trống = hiện chữ Liên hệ." },
+              { label: "Mô tả ngắn", name: "short_desc", widget: "text", required: false },
+              { label: "Ảnh sản phẩm (ảnh đầu tiên là ảnh chính)", name: "images", widget: "list", required: false, fields: [
+                  { label: "Ảnh", name: "image", widget: "image", hint: "Ảnh vuông 1:1, 1024×1024 px, dưới 150 KB (JPG hoặc WebP)." },
+                  { label: "Mô tả ảnh (alt, giúp SEO)", name: "alt", widget: "string", required: false } ] },
+              { label: "Video sản phẩm (mp4, 15-30 giây)", name: "video", widget: "file", required: false },
+              { label: "ĐÃ KIỂM DUYỆT: bật để hiện mục Vì sao dùng và Cách dùng", name: "content_approved", widget: "boolean", default: false, hint: "Chỉ bật sau khi bạn đã đọc và sửa hai ô bên dưới cho đúng trải nghiệm thật." },
+              { label: "Vì sao Lý Hoàng dùng sản phẩm này", name: "reason", widget: "text", required: false },
+              { label: "Cách dùng", name: "usage", widget: "text", required: false } ] }
   - name: "lookbook"
     label: "Lookbook (kho ảnh)"
     description: "Thêm nhóm ảnh và ảnh vào Lookbook"
     files:
       - name: "lookbook"
         label: "Lookbook (kho ảnh)"
-        file: "lyhoang-netlify/data/look.json"
+        file: "data/look.json"
         format: "json"
         fields:
           - { label: "Nhóm ảnh", name: "categories", widget: "list", required: false, summary: "{{fields.title}}", fields: [{ label: "Tên nhóm", name: "title", widget: "string" }, { label: "Ảnh", name: "images", widget: "list", required: false, field: { label: "Ảnh", name: "image", widget: "image", hint: "Ảnh dọc tỉ lệ 3:4 (ví dụ 900×1200 px), dưới 300 KB, WebP hoặc JPG." } }] }
@@ -154,7 +170,7 @@ collections:
     files:
       - name: "sua_chu"
         label: "Sửa / xóa câu chữ bất kỳ"
-        file: "lyhoang-netlify/data/rules.json"
+        file: "data/rules.json"
         format: "json"
         fields:
           - { label: "Quy tắc sửa / xóa câu chữ ở BẤT KỲ trang nào", name: "rules", widget: "list", required: false, hint: "Điền đúng câu cần tìm, và câu thay thế. Để trống ô thay thế = xóa câu đó.", fields: [{ label: "Tìm câu chữ này", name: "find", widget: "string" }, { label: "Thay bằng (để trống = xóa)", name: "replace", widget: "string", required: false }] }
@@ -164,7 +180,7 @@ collections:
     files:
       - name: "seo"
         label: "SEO từng trang"
-        file: "lyhoang-netlify/data/seo.json"
+        file: "data/seo.json"
         format: "json"
         fields:
           - { label: "Trang cần ghi đè", name: "pages", widget: "list", required: false, summary: "{{fields.path}}", fields: [{ label: "Đường dẫn (vd /dich-vu/co-dau)", name: "path", widget: "string" }, { label: "Tiêu đề hiện trên Google (khoảng 55-60 ký tự)", name: "title", widget: "string", required: false }, { label: "Mô tả hiện trên Google (khoảng 150-160 ký tự)", name: "description", widget: "text", required: false }, { label: "Ảnh chia sẻ (Facebook, Zalo)", name: "image", widget: "image", required: false, hint: "Ảnh chia sẻ Facebook/Zalo tỉ lệ 1,91:1 (1200×630 px)." }] }
