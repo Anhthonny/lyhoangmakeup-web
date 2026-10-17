@@ -1,0 +1,20 @@
+<!doctype html>
+<html lang="vi"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><meta name="robots" content="noindex"><title>Quản trị Lý Hoàng Makeup</title>
+<script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script></head>
+<body><script src="https://unpkg.com/decap-cms@^3.0.0/dist/decap-cms.js"></script>
+<script>
+/* Hỏi đặt tên file (không dấu, có từ khóa) mỗi khi tải ảnh/video lên trang quản trị */
+(function(){
+function slug(s){return String(s||'').toLowerCase().replace(/đ/g,'d').normalize('NFD').replace(/[\u0300-\u036f]/g,'').replace(/[^a-z0-9]+/g,'-').replace(/^-+|-+$/g,'')}
+document.addEventListener('change',function(e){
+var i=e.target;if(!i||i.type!=='file'||!i.files||!i.files.length||typeof DataTransfer==='undefined')return;
+var dt=new DataTransfer(),changed=false;
+Array.prototype.forEach.call(i.files,function(f){
+if(!/^(image|video)\//.test(f.type)){dt.items.add(f);return}
+var m=f.name.match(/\.([a-z0-9]+)$/i),ext=m?m[1].toLowerCase():'',base=f.name.replace(/\.[a-z0-9]+$/i,'');
+var n=window.prompt('Đặt tên file cho SEO: viết không dấu, nối bằng gạch ngang.\nVí dụ: trang-diem-co-dau-mat-tron-ly-hoang-makeup-bien-hoa-dong-nai\n(Bấm Hủy để giữ tên gốc)',slug(base));
+if(n===null||!slug(n)){dt.items.add(f);return}
+dt.items.add(new File([f],slug(n)+(ext?'.'+ext:''),{type:f.type,lastModified:f.lastModified}));changed=true});
+if(changed)i.files=dt.files},true);
+})();
+</script></body></html>

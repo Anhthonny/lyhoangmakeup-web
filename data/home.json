@@ -1,0 +1,113 @@
+{
+  "hero_title": "Đánh Thức Vẻ Đẹp Tiềm Ẩn, Tôn Vinh Khí Chất Riêng",
+  "hero_desc": "Trang điểm cô dâu, tiệc và sự kiện theo từng gương mặt. Đào tạo học viên từ số 0 đến nhận khách thực tế.",
+  "btn_book_text": "Đặt lịch makeup",
+  "btn_course_text": "Xem khóa học",
+  "videos": [
+    {
+      "src": "videos/video-co-dau-ao-dai-ren-do-bien-hoa.mp4",
+      "poster": "anh/anh-bia-video-co-dau-ao-dai-ren-do-bien-hoa.jpg",
+      "label": "Cô dâu áo dài ren đỏ"
+    },
+    {
+      "src": "videos/video-makeup-ngoc-trai-bien-hoa.mp4",
+      "poster": "anh/anh-bia-video-makeup-ngoc-trai-bien-hoa.jpg",
+      "label": "Layout trong trẻo ngọc trai"
+    },
+    {
+      "src": "videos/video-makeup-hoa-tuoi-bien-hoa.mp4",
+      "poster": "anh/anh-bia-video-makeup-hoa-tuoi-bien-hoa.jpg",
+      "label": "Layout hoa tươi"
+    }
+  ],
+  "video_note": "Chạm vào video để bật hoặc tắt tiếng",
+  "stats": [
+    {
+      "num": "10",
+      "label": "năm làm nghề"
+    },
+    {
+      "num": "500+",
+      "label": "cô dâu đã phục vụ"
+    },
+    {
+      "num": "15+",
+      "label": "học viên tốt nghiệp"
+    },
+    {
+      "num": "5",
+      "label": "giải thưởng/chứng chỉ"
+    }
+  ],
+  "gate1_title": "Tỏa Sáng Ngày Cưới",
+  "gate1_text": "Dịch vụ cô dâu & tiệc →",
+  "gate1_image": "anh/trang-diem-co-dau-vay-guong-toc-buoc-thap-bien-hoa.webp",
+  "gate2_title": "Kỷ Yếu & Chụp Ảnh",
+  "gate2_text": "Makeup kỷ yếu, tốt nghiệp →",
+  "gate2_image_left": "anh/makeup-ky-yeu-dong-phuc-hoc-sinh-bien-hoa.webp",
+  "gate2_image_right": "anh/makeup-ky-yeu-le-tot-nghiep-bien-hoa.webp",
+  "gate3_title": "Khởi Nghiệp Nghề Cầm Cọ",
+  "gate3_text": "Học viện makeup 1:1 →",
+  "gate3_image": "anh/makeup-trong-treo-ao-dai-trang-hoa-ly-bien-hoa.webp",
+  "styles_title": "Phong cách đặc trưng",
+  "styles": [
+    {
+      "title": "Trong trẻo Hàn Quốc kết hợp nắn chỉnh nét Douyin",
+      "image": "anh/trang-diem-co-dau-han-quoc-toc-dai-bien-hoa.webp"
+    },
+    {
+      "title": "Douyin sắc sảo thời thượng",
+      "image": "anh/trang-diem-co-dau-douyin-voan-hoa-bien-hoa.webp"
+    },
+    {
+      "title": "Cô dâu truyền thống sang trọng quý phái",
+      "image": "anh/trang-diem-co-dau-toc-song-voi-nau-dong-bien-hoa.webp"
+    },
+    {
+      "title": "Tone Tây / Âu Mỹ quyến rũ",
+      "image": "anh/makeup-concept-ao-dai-do-hoa-cuc-toc-bup-bien-hoa.webp"
+    }
+  ],
+  "reviews": [
+    {
+      "text": "Mình cực kỳ sợ bị mốc phấn ngày cưới, nhưng Master Lý Hoàng xử lý nền mỏng nhẹ mà giữ nguyên vẹn từ sáng sớm đến tận hết tiệc tối. Cảm ơn tiệm rất nhiều!",
+      "author": "Cô dâu"
+    },
+    {
+      "text": "Từ một người run tay chưa từng biết kẻ mắt, sau 5 buổi kèm 1:1 mình đã tự tin tự trang điểm và làm tóc đi sự kiện. Cô dạy cực kỳ có tâm!",
+      "author": "Học viên"
+    }
+  ],
+  "philosophy_text": "Mỗi gương mặt đều mang một nét đẹp riêng biệt. Việc của tôi không phải biến bạn thành một người khác, mà là làm cho điều đẹp nhất vốn có ở bạn được nhìn thấy và tỏa sáng.",
+  "philosophy_author": "Master Lý Hoàng",
+  "process_title": "Quy trình 4 bước",
+  "process_steps": [
+    "Tư vấn dáng mặt & làn da",
+    "Thử layout chuyên sâu",
+    "Thực hiện ngày lễ chính",
+    "Chăm sóc, dặm nền suốt sự kiện"
+  ],
+  "quiz_title": "Chọn layout hợp gương mặt",
+  "form_title": "Điền thông tin đặt lịch",
+  "google_title": "Đánh giá trên Google",
+  "google_note": "Xem đánh giá thật của khách hàng trực tiếp trên Google Maps.",
+  "google_review_mark": "",
+  "google_btn": "Viết đánh giá trên Google",
+  "google_reviews": [],
+  "map_title": "Tìm đến tiệm",
+  "map_card_text": "Mở bản đồ Google",
+  "sections": [
+    "hero",
+    "video",
+    "stats",
+    "gates",
+    "styles",
+    "reviews",
+    "philosophy",
+    "process",
+    "quiz",
+    "form",
+    "google_reviews",
+    "map"
+  ]
+}

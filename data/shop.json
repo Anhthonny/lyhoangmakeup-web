@@ -1,0 +1,84 @@
+{
+  "products": [
+    {
+      "code": "LH-BRUSH-01",
+      "name": "Bộ Cọ Trang Điểm Chuyên Nghiệp Lý Hoàng (14 Cây)",
+      "price": 1250000,
+      "description": "Lông thú tự nhiên & bionic, cán gỗ khắc laser Master Lý Hoàng.",
+      "category": "Trang điểm",
+      "image": ""
+    },
+    {
+      "code": "LH-SPONGE-01",
+      "name": "Bông Mút Tán Nền Kháng Khuẩn Ruby Cell",
+      "price": 120000,
+      "description": "Ngậm nước đa chiều, đàn hồi cao, tán nền tiệp da.",
+      "category": "Trang điểm",
+      "image": ""
+    },
+    {
+      "code": "LH-SPRAY-01",
+      "name": "Xịt Khóa Nền Cố Định 16 Giờ Ultra Matte",
+      "price": 380000,
+      "description": "Tia sương nano, kiềm dầu, chống lem trôi dưới thời tiết nóng ẩm.",
+      "category": "Trang điểm",
+      "image": ""
+    },
+    {
+      "code": "LH-COLOR-01",
+      "name": "Bảng Kem Triệt Sắc & Che Khuyết Điểm Pro Palette",
+      "price": 450000,
+      "description": "6 ô màu cân chỉnh chuẩn sắc tố da châu Á.",
+      "category": "Trang điểm",
+      "image": ""
+    },
+    {
+      "code": "LH-HAIR-01",
+      "name": "Kẹp Hoa Cài Tóc Cô Dâu Pha Lê",
+      "price": 280000,
+      "description": "Thủ công, nhẹ, giữ tóc chắc cả ngày.",
+      "category": "Phụ kiện tóc",
+      "image": ""
+    },
+    {
+      "code": "LH-HAIR-02",
+      "name": "Cài Tóc Ngọc Trai Sang Trọng",
+      "price": 190000,
+      "description": "Điểm nhấn cho tóc búi thấp và tóc sóng.",
+      "category": "Phụ kiện tóc",
+      "image": ""
+    },
+    {
+      "code": "LH-SKIN-01",
+      "name": "Pre-makeup Skin Prep Kit",
+      "price": 650000,
+      "description": "Bộ làm sạch, cấp ẩm trước khi đánh nền.",
+      "category": "Chăm sóc da",
+      "image": ""
+    },
+    {
+      "code": "LH-SKIN-02",
+      "name": "Mặt Nạ Cấp Ẩm Phục Hồi (hộp 5)",
+      "price": 220000,
+      "description": "Dịu nhẹ, phù hợp trước ngày cưới 2 tuần.",
+      "category": "Chăm sóc da",
+      "image": ""
+    },
+    {
+      "code": "LH-PERF-01",
+      "name": "Nước Hoa Nữ Hương Hoa Trắng 50ml",
+      "price": 890000,
+      "description": "Hương thanh, lưu hương dịu, hợp ngày cưới.",
+      "category": "Nước hoa",
+      "image": ""
+    },
+    {
+      "code": "LH-PERF-02",
+      "name": "Nước Hoa Mini Du Lịch 10ml",
+      "price": 250000,
+      "description": "Nhỏ gọn, tiện mang theo dặm hương.",
+      "category": "Nước hoa",
+      "image": ""
+    }
+  ]
+}

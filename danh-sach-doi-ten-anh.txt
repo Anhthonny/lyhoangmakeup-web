@@ -1,0 +1,41 @@
+DANH SÁCH ĐỔI TÊN ẢNH VÀ VIDEO (tên cũ -> tên mới)
+Thư mục ảnh mới: lyhoang-netlify/anh/   |   Video: lyhoang-netlify/videos/
+
+uploads/a5.webp  ->  anh/makeup-tiec-su-kien-vay-do-toc-bup-cao-bien-hoa.webp
+uploads/a6.webp  ->  anh/makeup-di-tiec-vay-xanh-ngoc-toc-bup-roi-bien-hoa.webp
+uploads/a7.webp  ->  anh/trang-diem-co-dau-ao-dai-ren-voan-bien-hoa.webp
+uploads/a8.webp  ->  anh/makeup-me-co-dau-ao-dai-do-bien-hoa.webp
+uploads/a9.webp  ->  anh/makeup-me-co-dau-ao-dai-xanh-bien-hoa.webp
+uploads/a10.webp  ->  anh/lam-toc-song-voi-nang-trong-treo-ly-hoang-makeup-bien-hoa.webp
+uploads/a11.webp  ->  anh/makeup-concept-hoa-do-toc-xoan-bup-bien-hoa.webp
+uploads/a12.webp  ->  anh/toc-song-voi-vong-hoa-co-dau-tone-tay-bien-hoa.webp
+uploads/a13.webp  ->  anh/makeup-trong-treo-han-quoc-ao-dai-trang-bien-hoa.webp
+uploads/a14.webp  ->  anh/trang-diem-co-dau-ao-dai-non-la-truyen-thong-bien-hoa.webp
+uploads/a15.webp  ->  anh/makeup-douyin-mat-nhu-bien-long-mi-ma-hong-bien-hoa.webp
+uploads/a16.webp  ->  anh/khong-gian-tiem-ly-hoang-makeup-bien-hoa.webp
+uploads/a18.webp  ->  anh/makeup-ky-yeu-ao-dai-trang-toc-xoan-bien-hoa.webp
+uploads/a19.webp  ->  anh/makeup-ao-dai-hong-toc-xoan-vang-bien-hoa.webp
+uploads/a21.webp  ->  anh/makeup-trong-treo-han-quoc-vay-ren-toc-nua-bup-bien-hoa.webp
+uploads/a22.webp  ->  anh/makeup-douyin-tan-nhang-toc-den-dai-bien-hoa.webp
+uploads/a25.webp  ->  anh/makeup-douyin-son-do-toc-bup-cao-bien-hoa.webp
+uploads/k1.webp  ->  anh/trang-diem-co-dau-vay-guong-toc-buoc-thap-bien-hoa.webp
+uploads/k2.webp  ->  anh/makeup-ky-yeu-dong-phuc-hoc-sinh-bien-hoa.webp
+uploads/k3.webp  ->  anh/makeup-ky-yeu-le-tot-nghiep-bien-hoa.webp
+uploads/k4.webp  ->  anh/makeup-trong-treo-ao-dai-trang-hoa-ly-bien-hoa.webp
+uploads/dark.webp  ->  anh/trang-diem-co-dau-han-quoc-toc-dai-bien-hoa.webp
+uploads/pink.webp  ->  anh/trang-diem-co-dau-douyin-voan-hoa-bien-hoa.webp
+uploads/red.webp  ->  anh/trang-diem-co-dau-toc-song-voi-nau-dong-bien-hoa.webp
+uploads/brown.webp  ->  anh/makeup-concept-ao-dai-do-hoa-cuc-toc-bup-bien-hoa.webp
+uploads/bdark.webp  ->  anh/truoc-khi-trang-diem-co-dau-han-quoc-bien-hoa.webp
+uploads/bpink.webp  ->  anh/truoc-khi-trang-diem-co-dau-douyin-bien-hoa.webp
+uploads/bred.webp  ->  anh/truoc-khi-trang-diem-toc-song-voi-bien-hoa.webp
+uploads/bbrown.webp  ->  anh/truoc-khi-trang-diem-concept-ao-dai-do-bien-hoa.webp
+uploads/logo.webp  ->  anh/logo-ly-hoang-makeup-artist-bien-hoa.webp
+uploads/bank-qr.webp  ->  anh/ma-qr-thanh-toan-vietcombank-ly-hoang-makeup.webp
+uploads/zalo-qr.webp  ->  anh/ma-qr-zalo-ly-hoang-makeup.webp
+uploads/poster-r2.jpg  ->  anh/anh-bia-video-co-dau-ao-dai-ren-do-bien-hoa.jpg
+uploads/poster-r3.jpg  ->  anh/anh-bia-video-makeup-ngoc-trai-bien-hoa.jpg
+uploads/poster-r4.jpg  ->  anh/anh-bia-video-makeup-hoa-tuoi-bien-hoa.jpg
+videos/r2.mp4  ->  videos/video-co-dau-ao-dai-ren-do-bien-hoa.mp4
+videos/r3.mp4  ->  videos/video-makeup-ngoc-trai-bien-hoa.mp4
+videos/r4.mp4  ->  videos/video-makeup-hoa-tuoi-bien-hoa.mp4
