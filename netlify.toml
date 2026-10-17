@@ -1,4 +1,3 @@
 [build]
-  base = "lyhoang-netlify"
   command = "node build.js"
   publish = "."
