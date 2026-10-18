@@ -17,4 +17,99 @@ if(n===null||!slug(n)){dt.items.add(f);return}
 dt.items.add(new File([f],slug(n)+(ext?'.'+ext:''),{type:f.type,lastModified:f.lastModified}));changed=true});
 if(changed)i.files=dt.files},true);
 })();
-</script></body></html>
+</script>
+
+<!-- Thư viện SheetJS xử lý Excel trực tiếp trên trình duyệt -->
+<script src="https://cdn.sheetjs.com/xlsx-0.20.1/package/dist/xlsx.full.min.js"></script>
+
+<div id="excel-admin-bar" style="position:fixed; bottom:20px; right:20px; z-index:99999; background:#1e1e2f; color:#fff; padding:12px 16px; border-radius:12px; box-shadow:0 8px 24px rgba(0,0,0,0.25); font-family:sans-serif; display:flex; gap:10px; align-items:center; font-size:13px;">
+  <strong style="color:#f5c542;">⚡ Quản lý SP bằng Excel:</strong>
+  <button id="btn-export-excel" style="background:#28a745; color:#fff; border:none; padding:7px 12px; border-radius:6px; cursor:pointer; font-weight:600;">
+    📥 Xuất Excel
+  </button>
+  <label style="background:#007bff; color:#fff; padding:7px 12px; border-radius:6px; cursor:pointer; font-weight:600; margin:0;">
+    📤 Nhập Excel
+    <input type="file" id="input-import-excel" accept=".xlsx,.xls" style="display:none;" />
+  </label>
+</div>
+
+<script>
+// 1. XUẤT FILE EXCEL
+document.getElementById('btn-export-excel').addEventListener('click', async () => {
+  try {
+    const res = await fetch('/data/shop.json?t=' + Date.now());
+    const data = await res.json();
+    const rows = (data.products || []).map(p => ({
+      'Mã SP': p.code || '',
+      'Tên sản phẩm': p.name || '',
+      'Slug': p.slug || '',
+      'Ngành hàng': p.category || 'Trang điểm',
+      'Hiện trên web (TRUE/FALSE)': p.published !== false,
+      'Giá bán (VNĐ)': p.price !== undefined && p.price !== null ? p.price : '',
+      'Mô tả ngắn': p.short_desc || '',
+      'Danh sách Ảnh': (p.images || []).map(i => i.image).join(', '),
+      'Video': p.video || '',
+      'Đã kiểm duyệt (TRUE/FALSE)': Boolean(p.content_approved),
+      'Vì sao Lý Hoàng dùng': p.reason || '',
+      'Cách dùng': p.usage || ''
+    }));
+
+    const ws = XLSX.utils.json_to_sheet(rows);
+    const wb = XLSX.utils.book_new();
+    XLSX.utils.book_append_sheet(wb, ws, 'San_Pham');
+    XLSX.writeFile(wb, 'Danh_sach_san_pham_LyHoang.xlsx');
+  } catch (err) {
+    alert('Lỗi xuất Excel: ' + err.message);
+  }
+});
+
+// 2. NHẬP FILE EXCEL -> TẢI SHOP.JSON MỚI
+document.getElementById('input-import-excel').addEventListener('change', async (e) => {
+  const file = e.target.files[0];
+  if (!file) return;
+
+  try {
+    const buf = await file.arrayBuffer();
+    const wb = XLSX.read(buf);
+    const sheet = wb.Sheets[wb.SheetNames[0]];
+    const rows = XLSX.utils.sheet_to_json(sheet, { defval: '' });
+
+    const products = rows.map(r => {
+      const name = String(r['Tên sản phẩm'] || '').trim();
+      const rawPrice = r['Giá bán (VNĐ)'];
+      const price = rawPrice !== '' && rawPrice !== undefined ? parseInt(String(rawPrice).replace(/[^0-9]/g, ''), 10) : null;
+      const imgs = String(r['Danh sách Ảnh'] || '')
+        .split(',').map(s => s.trim()).filter(Boolean)
+        .map(img => ({ image: img, alt: name + ' do Lý Hoàng Makeup chọn dùng' }));
+
+      return {
+        code: String(r['Mã SP'] || '').trim(),
+        name,
+        slug: String(r['Slug'] || '').trim(),
+        category: String(r['Ngành hàng'] || 'Trang điểm').trim(),
+        published: String(r['Hiện trên web (TRUE/FALSE)']).toLowerCase() !== 'false',
+        ...(price !== null && !isNaN(price) ? { price } : {}),
+        short_desc: String(r['Mô tả ngắn'] || '').trim(),
+        images: imgs,
+        ...(r['Video'] ? { video: String(r['Video']).trim() } : {}),
+        content_approved: String(r['Đã kiểm duyệt (TRUE/FALSE)']).toLowerCase() === 'true',
+        reason: String(r['Vì sao Lý Hoàng dùng'] || '').trim(),
+        usage: String(r['Cách dùng'] || '').trim()
+      };
+    }).filter(p => p.name);
+
+    const jsonStr = JSON.stringify({ products }, null, 2);
+    const blob = new Blob([jsonStr], { type: 'application/json' });
+    const url = URL.createObjectURL(blob);
+    const a = document.createElement('a');
+    a.href = url;
+    a.download = 'shop.json';
+    a.click();
+    alert(`✅ Đã tạo file shop.json với ${products.length} sản phẩm!\nChép đè file này vào thư mục data/ trên máy và chạy Git để cập nhật.`);
+  } catch (err) {
+    alert('Lỗi nhập Excel: ' + err.message);
+  }
+  e.target.value = '';
+});
+</script>
+</body></html>
