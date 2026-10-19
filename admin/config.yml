@@ -143,7 +143,8 @@ collections:
               { label: "Mã SP", name: "code", widget: "string", required: false },
               { label: "Tên sản phẩm", name: "name", widget: "string" },
               { label: "Địa chỉ trang (viết không dấu, nối gạch ngang)", name: "slug", widget: "string", required: false, hint: "Trang sản phẩm sẽ là lyhoangmakeup.com/cua-hang/(địa chỉ này)/. Nên giữ nguyên sau khi đã đăng. Để trống thì tự lấy từ tên." },
-              { label: "Ngành hàng", name: "category", widget: "select", options: ["Trang điểm", "Chăm sóc da", "Phụ kiện tóc", "Nước hoa"], default: "Trang điểm" },
+              { label: "Ngành hàng", name: "category", widget: "select", options: ["Trang điểm", "Chăm sóc da", "Phụ kiện tóc", "Nước hoa"]
+              - { label: "Phân loại con (VD: Son môi, Kem nền, Máy làm tóc...)", name: "subcategory", widget: "string", required: false }, default: "Trang điểm" },
               { label: "Hiện trên website", name: "published", widget: "boolean", default: true, hint: "Tắt = ẩn sản phẩm khỏi cửa hàng và Google." },
               { label: "Giá bán (VNĐ, chỉ nhập số)", name: "price", widget: "number", value_type: "int", min: 0, required: false, hint: "Để trống = hiện chữ Liên hệ." },
               { label: "Mô tả ngắn", name: "short_desc", widget: "text", required: false },

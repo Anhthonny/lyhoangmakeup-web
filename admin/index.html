@@ -44,6 +44,7 @@ document.getElementById('btn-export-excel').addEventListener('click', async () =
       'Tên sản phẩm': p.name || '',
       'Slug': p.slug || '',
       'Ngành hàng': p.category || 'Trang điểm',
+            'Phân loại con': p.subcategory || '',
       'Hiện trên web (TRUE/FALSE)': p.published !== false,
       'Giá bán (VNĐ)': p.price !== undefined && p.price !== null ? p.price : '',
       'Mô tả ngắn': p.short_desc || '',

@@ -24,7 +24,8 @@
       "video": "/media/gom-xit-toc-power-point-nhat-ban.mp4",
       "content_approved": false,
       "reason": "Tóc cô dâu phải giữ nếp từ lúc làm đến hết tiệc, nên mình dùng gôm này để cố định kiểu tóc ở bước cuối.",
-      "usage": "Lắc đều, xịt cách tóc khoảng 25 đến 30 cm, che mặt cô dâu khi xịt. Tránh xa lửa và nơi nhiệt độ cao (nhãn có cảnh báo)."
+      "usage": "Lắc đều, xịt cách tóc khoảng 25 đến 30 cm, che mặt cô dâu khi xịt. Tránh xa lửa và nơi nhiệt độ cao (nhãn có cảnh báo).",
+      "subcategory": "Gôm & Xịt tạo kiểu"
     },
     {
       "code": "LH-002",
@@ -50,7 +51,8 @@
       "video": "/media/xit-toc-schwarzkopf-osis-sparkler-freeze.mp4",
       "content_approved": false,
       "reason": "Mình dùng Freeze để khóa nếp tóc và Sparkler để tóc lên hình bóng đẹp, vì tóc cô dâu cần vừa giữ nếp vừa có độ bóng.",
-      "usage": "Xịt Freeze sau khi tạo kiểu để giữ nếp. Xịt Sparkler lên bề mặt tóc từ khoảng cách 20 đến 30 cm để tạo độ bóng."
+      "usage": "Xịt Freeze sau khi tạo kiểu để giữ nếp. Xịt Sparkler lên bề mặt tóc từ khoảng cách 20 đến 30 cm để tạo độ bóng.",
+      "subcategory": "Gôm & Xịt tạo kiểu"
     },
     {
       "code": "LH-003",
@@ -76,7 +78,8 @@
       "video": "/media/xit-tao-kieu-toc-gel-long-re-f3z3.mp4",
       "content_approved": false,
       "reason": "Mình dùng khi cần tạo nếp nhanh cho tóc mà không muốn tóc bị cứng như dùng gôm.",
-      "usage": "Xịt đều lên tóc ẩm hoặc khô rồi chải hoặc tạo kiểu. Tránh để dính vào mắt."
+      "usage": "Xịt đều lên tóc ẩm hoặc khô rồi chải hoặc tạo kiểu. Tránh để dính vào mắt.",
+      "subcategory": "Gôm & Xịt tạo kiểu"
     },
     {
       "code": "LH-004",
@@ -102,7 +105,8 @@
       "video": "/media/mousse-tao-kieu-toc-styling-mousse-250ml.mp4",
       "content_approved": false,
       "reason": "Mousse giúp mình tạo độ phồng và nếp mềm cho tóc trước khi sấy hoặc uốn, tóc không bị bết.",
-      "usage": "Lắc đều, lấy một lượng bọt vừa đủ, vuốt đều lên tóc rồi sấy hoặc tạo kiểu."
+      "usage": "Lắc đều, lấy một lượng bọt vừa đủ, vuốt đều lên tóc rồi sấy hoặc tạo kiểu.",
+      "subcategory": "Gôm & Xịt tạo kiểu"
     },
     {
       "code": "LH-005",
@@ -128,7 +132,8 @@
       "video": "/media/bot-tao-phong-chan-toc-volumize-pro-4g.mp4",
       "content_approved": false,
       "reason": "Chai nhỏ gọn bỏ vừa túi đồ nghề, mình dùng để tạo độ phồng cho tóc mỏng hoặc xẹp ngay tại nhà cô dâu.",
-      "usage": "Rắc một lượng nhỏ lên chân tóc rồi dùng ngón tay xoa nhẹ. Dùng ít một để tóc không bị khô."
+      "usage": "Rắc một lượng nhỏ lên chân tóc rồi dùng ngón tay xoa nhẹ. Dùng ít một để tóc không bị khô.",
+      "subcategory": "Gôm & Xịt tạo kiểu"
     },
     {
       "code": "LH-006",
@@ -155,7 +160,8 @@
       "content_approved": false,
       "reason": "Mình tẩy lớp nền cũ và dọn da cho cô dâu trước khi trang điểm lại. Chai lớn dùng đỡ tốn, cứ thấm bông là lau.",
       "usage": "Thấm ra bông tẩy trang, lau nhẹ mặt, mắt và môi, không cần rửa lại với nước.",
-      "price": 449000
+      "price": 449000,
+      "subcategory": "Tẩy trang & Làm sạch"
     },
     {
       "code": "LH-007",
@@ -182,7 +188,8 @@
       "content_approved": false,
       "reason": "Mình xịt để da căng ẩm trước khi đánh nền và xịt nhẹ sau makeup để lớp nền bớt mốc.",
       "usage": "Giữ chai cách mặt khoảng 20 đến 30 cm, nhắm mắt và xịt đều. Có thể dùng sau bước làm sạch hoặc sau trang điểm.",
-      "price": 275000
+      "price": 275000,
+      "subcategory": "Xịt khoáng & Dưỡng ẩm"
     },
     {
       "code": "LH-008",
@@ -208,7 +215,8 @@
       "video": "/media/xit-duong-chai-trong-nap-vang.mp4",
       "content_approved": false,
       "reason": "",
-      "usage": "Cần bạn bổ sung cách dùng theo nhãn."
+      "usage": "Cần bạn bổ sung cách dùng theo nhãn.",
+      "subcategory": "Xịt khoáng & Dưỡng ẩm"
     },
     {
       "code": "LH-009",
@@ -235,7 +243,8 @@
       "content_approved": false,
       "reason": "Giá dễ chịu, xịt được nhiều lần trong ngày. Mình xịt cho da cô dâu trước khi makeup để lớp nền mịn hơn.",
       "usage": "Xịt cách mặt khoảng 20 cm, nhắm mắt. Có thể dùng trước hoặc sau trang điểm, thấm nhẹ nếu thấy ướt.",
-      "price": 75000
+      "price": 75000,
+      "subcategory": "Xịt khoáng & Dưỡng ẩm"
     },
     {
       "code": "LH-010",
@@ -261,7 +270,8 @@
       "video": "/media/phan-bat-sang-gege-bear-flash-ribbon.mp4",
       "content_approved": false,
       "reason": "Chai nhỏ, đầu mút tiện chấm đúng vị trí. Mình dùng để tạo điểm sáng cho layout trong trẻo.",
-      "usage": "Dùng đầu mút lấy một lượng nhỏ, chấm lên sống mũi, gò má và đuôi mắt rồi vỗ nhẹ cho tan."
+      "usage": "Dùng đầu mút lấy một lượng nhỏ, chấm lên sống mũi, gò má và đuôi mắt rồi vỗ nhẹ cho tan.",
+      "subcategory": "Mắt - Má - Tạo khối"
     },
     {
       "code": "LH-011",
@@ -287,7 +297,8 @@
       "video": "/media/xit-duong-am-maycreate-150ml.mp4",
       "content_approved": false,
       "reason": "Mình dùng để cấp ẩm nhanh cho da khi trời nóng hoặc phòng máy lạnh.",
-      "usage": "Xịt đều lên mặt từ khoảng cách 20 đến 30 cm, nhắm mắt."
+      "usage": "Xịt đều lên mặt từ khoảng cách 20 đến 30 cm, nhắm mắt.",
+      "subcategory": "Xịt khoáng & Dưỡng ẩm"
     },
     {
       "code": "LH-012",
@@ -314,7 +325,8 @@
       "content_approved": false,
       "reason": "Bản nha đam mát và nhẹ, mình xịt để làm dịu da cô dâu sau khi tẩy trang hoặc khi da hơi nóng.",
       "usage": "Xịt cách mặt khoảng 20 cm, nhắm mắt. Dùng bất cứ lúc nào da cần cấp ẩm.",
-      "price": 72000
+      "price": 72000,
+      "subcategory": "Xịt khoáng & Dưỡng ẩm"
     },
     {
       "code": "LH-013",
@@ -340,7 +352,8 @@
       "video": "/media/xit-khoa-nen-urban-decay-all-nighter.mp4",
       "content_approved": false,
       "reason": "Cô dâu phải giữ makeup từ sáng đến tối, nên mình xịt khóa nền ở bước cuối để lớp nền bền hơn.",
-      "usage": "Lắc đều, nhắm mắt, xịt theo hình chữ X và T ở khoảng cách khoảng 20 cm rồi để khô tự nhiên."
+      "usage": "Lắc đều, nhắm mắt, xịt theo hình chữ X và T ở khoảng cách khoảng 20 cm rồi để khô tự nhiên.",
+      "subcategory": "Nền & Che khuyết điểm"
     },
     {
       "code": "LH-014",
@@ -366,7 +379,8 @@
       "video": "/media/gel-tay-te-bao-chet-arrahan-aloe-vera-peeling-gel-180ml.mp4",
       "content_approved": false,
       "reason": "Da mịn thì lớp nền mới đều. Mình dùng để chăm da định kỳ trước ngày makeup quan trọng.",
-      "usage": "Thoa lên da khô, massage nhẹ theo vòng tròn đến khi vón thành cặn rồi rửa sạch. Dùng 1 đến 2 lần mỗi tuần."
+      "usage": "Thoa lên da khô, massage nhẹ theo vòng tròn đến khi vón thành cặn rồi rửa sạch. Dùng 1 đến 2 lần mỗi tuần.",
+      "subcategory": "Tẩy trang & Làm sạch"
     },
     {
       "code": "LH-015",
@@ -392,7 +406,8 @@
       "video": "/media/nuoc-tay-trang-loreal-revitalift-hyaluronic-acid-micellar.mp4",
       "content_approved": false,
       "reason": "Chai nhỏ gọn, mình mang theo đi makeup tại nhà để lau nhanh khi cần chỉnh sửa.",
-      "usage": "Thấm ra bông tẩy trang, lau nhẹ mặt, mắt và môi. Dùng cho bước làm sạch."
+      "usage": "Thấm ra bông tẩy trang, lau nhẹ mặt, mắt và môi. Dùng cho bước làm sạch.",
+      "subcategory": "Tẩy trang & Làm sạch"
     },
     {
       "code": "LH-016",
@@ -419,7 +434,8 @@
       "content_approved": false,
       "reason": "Da cô dâu cần đủ ẩm thì lớp nền mới mịn, nên mình dùng lotion này để dưỡng trước khi trang điểm.",
       "usage": "Sau bước làm sạch và toner, bơm một lượng vừa đủ, thoa đều lên mặt và cổ, sáng và tối.",
-      "price": 770000
+      "price": 770000,
+      "subcategory": "Xịt khoáng & Dưỡng ẩm"
     },
     {
       "code": "LH-017",
@@ -445,7 +461,8 @@
       "video": "/media/gel-duong-am-clinique-dramatically-different-moisturizing-gel-50ml.mp4",
       "content_approved": false,
       "reason": "Tuýp nhỏ gọn, mình mang đi makeup tại nhà để dưỡng nhanh cho cô dâu da dầu trước khi đánh nền.",
-      "usage": "Lấy một lượng nhỏ, thoa đều lên mặt sau bước làm sạch hoặc toner."
+      "usage": "Lấy một lượng nhỏ, thoa đều lên mặt sau bước làm sạch hoặc toner.",
+      "subcategory": "Xịt khoáng & Dưỡng ẩm"
     },
     {
       "code": "LH-018",
@@ -471,7 +488,8 @@
       "video": "/media/nuoc-can-bang-klairs-supple-preparation-unscented-toner-mini.mp4",
       "content_approved": false,
       "reason": "Chai mini gọn, mình dùng để cấp ẩm cho da trước khi dưỡng và trang điểm khi đi làm ngoài.",
-      "usage": "Thấm ra bông hoặc vỗ trực tiếp lên da sau bước làm sạch."
+      "usage": "Thấm ra bông hoặc vỗ trực tiếp lên da sau bước làm sạch.",
+      "subcategory": "Xịt khoáng & Dưỡng ẩm"
     },
     {
       "code": "LH-019",
@@ -497,7 +515,8 @@
       "video": "/media/kem-nen-espoir-be-glow-foundation-spf27-30g.mp4",
       "content_approved": false,
       "reason": "Với cô dâu thích da căng bóng tự nhiên, mình chọn nền này cho layout trong trẻo.",
-      "usage": "Lấy lượng nhỏ, chấm lên các điểm trên mặt và tán đều bằng mút hoặc cọ."
+      "usage": "Lấy lượng nhỏ, chấm lên các điểm trên mặt và tán đều bằng mút hoặc cọ.",
+      "subcategory": "Nền & Che khuyết điểm"
     },
     {
       "code": "LH-020",
@@ -524,7 +543,8 @@
       "content_approved": false,
       "reason": "Khi cô dâu da nhiều lỗ chân lông hoặc cần nền lì mịn, mình dùng dòng Be Velvet vì lớp nền lên mịn và giữ lâu.",
       "usage": "Lấy lượng nhỏ, tán từ giữa mặt ra ngoài bằng mút ẩm hoặc cọ.",
-      "price": 509000
+      "price": 509000,
+      "subcategory": "Nền & Che khuyết điểm"
     },
     {
       "code": "LH-021",
@@ -550,7 +570,8 @@
       "video": "/media/kem-nen-dang-long-dopi-foundation.mp4",
       "content_approved": false,
       "reason": "",
-      "usage": "Cần bạn bổ sung cách dùng theo nhãn."
+      "usage": "Cần bạn bổ sung cách dùng theo nhãn.",
+      "subcategory": "Nền & Che khuyết điểm"
     },
     {
       "code": "LH-022",
@@ -576,7 +597,8 @@
       "video": "/media/kem-lot-duong-bobbi-brown-vitamin-enriched-face-base.mp4",
       "content_approved": false,
       "reason": "Mình dùng như bước lót dưỡng để lớp nền lên đều và không bị khô.",
-      "usage": "Sau dưỡng da, lấy một lượng nhỏ thoa đều lên mặt rồi chờ vài phút trước khi đánh nền."
+      "usage": "Sau dưỡng da, lấy một lượng nhỏ thoa đều lên mặt rồi chờ vài phút trước khi đánh nền.",
+      "subcategory": "Nền & Che khuyết điểm"
     },
     {
       "code": "LH-023",
@@ -602,7 +624,8 @@
       "video": "/media/phan-phu-bot-aery-jo-loose-translucent-face-powder.mp4",
       "content_approved": false,
       "reason": "Phấn bột trong suốt không đổi màu nền, mình dùng ở bước cuối để khóa nền cho cô dâu.",
-      "usage": "Lấy một ít bằng mút hoặc cọ to, dặm nhẹ lên vùng chữ T và cả mặt."
+      "usage": "Lấy một ít bằng mút hoặc cọ to, dặm nhẹ lên vùng chữ T và cả mặt.",
+      "subcategory": "Nền & Che khuyết điểm"
     },
     {
       "code": "LH-024",
@@ -628,7 +651,8 @@
       "video": "/media/phan-phu-bot-make-up-for-ever-hd-skin-setting-powder.mp4",
       "content_approved": false,
       "reason": "Mình dùng khi cần lớp nền mịn và lên hình đẹp ở bước phủ phấn cuối.",
-      "usage": "Lấy một ít bằng mút hoặc cọ, phủ nhẹ lên mặt, nhất là vùng chữ T."
+      "usage": "Lấy một ít bằng mút hoặc cọ, phủ nhẹ lên mặt, nhất là vùng chữ T.",
+      "subcategory": "Nền & Che khuyết điểm"
     },
     {
       "code": "LH-025",
@@ -654,7 +678,8 @@
       "video": "/media/san-pham-judydoll-dang-binh-dau-mut.mp4",
       "content_approved": false,
       "reason": "",
-      "usage": "Cần bạn bổ sung cách dùng."
+      "usage": "Cần bạn bổ sung cách dùng.",
+      "subcategory": "Mỹ phẩm khác"
     },
     {
       "code": "LH-026",
@@ -680,7 +705,8 @@
       "video": "/media/san-pham-rock-sweet-dang-ong-hong.mp4",
       "content_approved": false,
       "reason": "",
-      "usage": "Cần bạn bổ sung cách dùng."
+      "usage": "Cần bạn bổ sung cách dùng.",
+      "subcategory": "Mỹ phẩm khác"
     },
     {
       "code": "LH-027",
@@ -706,7 +732,8 @@
       "video": "/media/san-pham-rb-red-black-5ml-chai-trong.mp4",
       "content_approved": false,
       "reason": "",
-      "usage": "Cần bạn bổ sung cách dùng."
+      "usage": "Cần bạn bổ sung cách dùng.",
+      "subcategory": "Mỹ phẩm khác"
     },
     {
       "code": "LH-028",
@@ -732,7 +759,8 @@
       "video": "/media/son-kem-romand-blur-fudge-tint-cam-dao.mp4",
       "content_approved": false,
       "reason": "Tông cam đào tươi, hợp layout cô dâu trong trẻo và dễ dặm lại khi ăn uống.",
-      "usage": "Chấm lên môi, tán bằng đầu cọ hoặc ngón tay, có thể tán mỏng hoặc đánh dày tùy độ đậm."
+      "usage": "Chấm lên môi, tán bằng đầu cọ hoặc ngón tay, có thể tán mỏng hoặc đánh dày tùy độ đậm.",
+      "subcategory": "Son môi"
     },
     {
       "code": "LH-029",
@@ -758,7 +786,8 @@
       "video": "/media/son-kem-romand-tint-hong-nau.mp4",
       "content_approved": false,
       "reason": "Tông hồng nâu nhẹ nhàng, hợp cô dâu muốn môi tự nhiên.",
-      "usage": "Chấm lên môi, tán đều bằng đầu cọ hoặc ngón tay."
+      "usage": "Chấm lên môi, tán đều bằng đầu cọ hoặc ngón tay.",
+      "subcategory": "Son môi"
     },
     {
       "code": "LH-030",
@@ -785,7 +814,8 @@
       "content_approved": false,
       "reason": "Màu đỏ gạch dễ lên hình và hợp nhiều tông da, mình dùng cho cô dâu muốn môi nổi bật nhưng không quá đậm.",
       "usage": "Chấm lên môi, tán từ giữa ra ngoài. Tán mỏng cho môi lì mờ, thoa dày hơn cho màu đậm.",
-      "price": 149000
+      "price": 149000,
+      "subcategory": "Son môi"
     },
     {
       "code": "LH-031",
@@ -811,7 +841,8 @@
       "content_approved": true,
       "reason": "",
       "usage": "Cần bạn bổ sung cách dùng.",
-      "video": "/media/son-kem-than-nham-mo-do-gach.mp4"
+      "video": "/media/son-kem-than-nham-mo-do-gach.mp4",
+      "subcategory": "Son môi"
     },
     {
       "code": "LH-032",
@@ -838,7 +869,8 @@
       "reason": "",
       "usage": "Chấm lên vùng cần che, dùng đầu cọ hoặc mút vỗ nhẹ cho tiệp vào da, không kéo mạnh.",
       "video": "/media/kem-che-khuyet-diem-the-saem-cover-perfection-tip-concealer.mp4",
-      "price": 109000
+      "price": 109000,
+      "subcategory": "Nền & Che khuyết điểm"
     },
     {
       "code": "LH-033",
@@ -864,7 +896,8 @@
       "content_approved": true,
       "reason": "",
       "usage": "Dùng cọ lấy màu nâu tạo khối ở hai bên mặt, màu sáng chấm lên sống mũi và gò má rồi tán đều.",
-      "video": "/media/bang-tao-khoi-bat-sang-judydoll-4-o.mp4"
+      "video": "/media/bang-tao-khoi-bat-sang-judydoll-4-o.mp4",
+      "subcategory": "Mắt - Má - Tạo khối"
     },
     {
       "code": "LH-034",
@@ -889,7 +922,8 @@
       ],
       "content_approved": true,
       "reason": "",
-      "usage": "Cần bạn bổ sung cách dùng."
+      "usage": "Cần bạn bổ sung cách dùng.",
+      "subcategory": "Mắt - Má - Tạo khối"
     },
     {
       "code": "LH-035",
@@ -906,7 +940,8 @@
       ],
       "content_approved": true,
       "reason": "",
-      "usage": "Cần bạn bổ sung cách dùng."
+      "usage": "Cần bạn bổ sung cách dùng.",
+      "subcategory": "Mắt - Má - Tạo khối"
     },
     {
       "code": "LH-036",
@@ -923,7 +958,8 @@
       ],
       "content_approved": true,
       "reason": "",
-      "usage": "Cần bạn bổ sung cách dùng."
+      "usage": "Cần bạn bổ sung cách dùng.",
+      "subcategory": "Mắt - Má - Tạo khối"
     },
     {
       "code": "LH-037",
@@ -940,7 +976,8 @@
       ],
       "content_approved": true,
       "reason": "",
-      "usage": "Cần bạn bổ sung cách dùng."
+      "usage": "Cần bạn bổ sung cách dùng.",
+      "subcategory": "Mắt - Má - Tạo khối"
     },
     {
       "code": "LH-038",
@@ -966,7 +1003,8 @@
       "content_approved": true,
       "reason": "",
       "usage": "Cần bạn bổ sung cách dùng.",
-      "video": "/media/bo-4-bang-phan-mat-nhieu-tong-mau.mp4"
+      "video": "/media/bo-4-bang-phan-mat-nhieu-tong-mau.mp4",
+      "subcategory": "Mắt - Má - Tạo khối"
     },
     {
       "code": "LH-039",
@@ -992,7 +1030,8 @@
       "content_approved": true,
       "reason": "",
       "usage": "Dùng cọ lấy phấn, đánh lên gò má, sống mũi và đuôi mắt rồi tán nhẹ.",
-      "video": "/media/bang-bat-sang-golden-rose-strobing-highlighter-baked-trio.mp4"
+      "video": "/media/bang-bat-sang-golden-rose-strobing-highlighter-baked-trio.mp4",
+      "subcategory": "Mắt - Má - Tạo khối"
     },
     {
       "code": "LH-040",
@@ -1018,7 +1057,8 @@
       "content_approved": true,
       "reason": "",
       "usage": "Cần bạn bổ sung cách dùng.",
-      "video": "/media/bang-phan-mat-vo-cam-do-14-o.mp4"
+      "video": "/media/bang-phan-mat-vo-cam-do-14-o.mp4",
+      "subcategory": "Mắt - Má - Tạo khối"
     },
     {
       "code": "LH-041",
@@ -1044,7 +1084,8 @@
       "content_approved": true,
       "reason": "",
       "usage": "Dùng cọ phấn mắt lấy màu, tán từ khoảng gần mí lên, dặm nhũ ở giữa mí.",
-      "video": "/media/bang-phan-mat-perfect-diary-hoa-tiet-buom-12-o.mp4"
+      "video": "/media/bang-phan-mat-perfect-diary-hoa-tiet-buom-12-o.mp4",
+      "subcategory": "Mắt - Má - Tạo khối"
     },
     {
       "code": "LH-042",
@@ -1070,7 +1111,8 @@
       "content_approved": true,
       "reason": "",
       "usage": "Dùng cọ lấy màu, tán từ ngoài vào trong, dặm nhũ ở giữa mí.",
-      "video": "/media/bang-phan-mat-lemonade-aesthetic-16-o.mp4"
+      "video": "/media/bang-phan-mat-lemonade-aesthetic-16-o.mp4",
+      "subcategory": "Mắt - Má - Tạo khối"
     },
     {
       "code": "LH-043",
@@ -1096,7 +1138,8 @@
       "content_approved": true,
       "reason": "",
       "usage": "Lấy bằng đầu ngón tay hoặc mút, vỗ lên gò má và tán đều ra phía thái dương.",
-      "video": "/media/bang-ma-hong-mona-blush-palette-3-o.mp4"
+      "video": "/media/bang-ma-hong-mona-blush-palette-3-o.mp4",
+      "subcategory": "Mắt - Má - Tạo khối"
     },
     {
       "code": "LH-044",
@@ -1122,7 +1165,8 @@
       "content_approved": true,
       "reason": "",
       "usage": "Rửa cọ định kỳ, để khô tự nhiên, cất vào túi khi cọ đã khô hẳn.",
-      "video": "/media/bo-co-trang-diem-laha-make-up-tools-kem-tui-da.mp4"
+      "video": "/media/bo-co-trang-diem-laha-make-up-tools-kem-tui-da.mp4",
+      "subcategory": "Cọ & Cốp đồ nghề"
     },
     {
       "code": "LH-045",
@@ -1148,7 +1192,8 @@
       "content_approved": true,
       "reason": "",
       "usage": "Phân loại ghim, kẹp vào từng ngăn, đóng nắp khi mang đi.",
-      "video": "/media/hop-dung-kep-ghim-toc-nhieu-ngan.mp4"
+      "video": "/media/hop-dung-kep-ghim-toc-nhieu-ngan.mp4",
+      "subcategory": "Lược & Kẹp chia tóc"
     },
     {
       "code": "LH-046",
@@ -1174,7 +1219,8 @@
       "content_approved": true,
       "reason": "",
       "usage": "Phân loại đồ trước khi cho vào túi, lau túi bằng khăn ẩm khi bẩn.",
-      "video": "/media/tui-pvc-trong-suot-dung-do-trang-diem-co-quai.mp4"
+      "video": "/media/tui-pvc-trong-suot-dung-do-trang-diem-co-quai.mp4",
+      "subcategory": "Cọ & Cốp đồ nghề"
     },
     {
       "code": "LH-047",
@@ -1200,7 +1246,8 @@
       "content_approved": true,
       "reason": "",
       "usage": "Cho đồ vào, kéo khóa, lau sạch bằng khăn ẩm khi cần.",
-      "video": "/media/tui-pvc-trong-suot-dang-pouch-dung-do-trang-diem.mp4"
+      "video": "/media/tui-pvc-trong-suot-dang-pouch-dung-do-trang-diem.mp4",
+      "subcategory": "Cọ & Cốp đồ nghề"
     },
     {
       "code": "LH-048",
@@ -1226,7 +1273,8 @@
       "content_approved": true,
       "reason": "",
       "usage": "Thấm đủ nước tẩy trang hoặc toner rồi lau nhẹ theo chiều từ trong ra ngoài.",
-      "video": "/media/bong-tay-trang-lersii-organic-cotton-201-mieng.mp4"
+      "video": "/media/bong-tay-trang-lersii-organic-cotton-201-mieng.mp4",
+      "subcategory": "Tẩy trang & Làm sạch"
     },
     {
       "code": "LH-049",
@@ -1252,7 +1300,8 @@
       "content_approved": true,
       "reason": "",
       "usage": "Chải từ ngọn lên gốc, giữ cán chắc tay. Gỡ tóc rụng giữa răng lược sau mỗi lần dùng.",
-      "video": "/media/luoc-dem-khi-paddle-den-ban-lon-chai-toc.mp4"
+      "video": "/media/luoc-dem-khi-paddle-den-ban-lon-chai-toc.mp4",
+      "subcategory": "Lược & Kẹp chia tóc"
     },
     {
       "code": "LH-050",
@@ -1278,7 +1327,8 @@
       "content_approved": true,
       "reason": "",
       "usage": "Chải nhẹ theo chiều tóc để tóc vào nếp và bóng mượt. Làm sạch lông lược định kỳ.",
-      "video": "/media/luoc-chai-bong-toc-long-mem-can-den.mp4"
+      "video": "/media/luoc-chai-bong-toc-long-mem-can-den.mp4",
+      "subcategory": "Lược & Kẹp chia tóc"
     },
     {
       "code": "LH-051",
@@ -1304,7 +1354,8 @@
       "content_approved": true,
       "reason": "",
       "usage": "Dùng phần cán nhọn để chia ngôi và chia lớp, phần răng để chải mịn. Tránh để cán kim loại gần mắt.",
-      "video": "/media/luoc-duoi-chuot-can-kim-loai-chia-toc.mp4"
+      "video": "/media/luoc-duoi-chuot-can-kim-loai-chia-toc.mp4",
+      "subcategory": "Lược & Kẹp chia tóc"
     },
     {
       "code": "LH-052",
@@ -1330,7 +1381,8 @@
       "content_approved": true,
       "reason": "",
       "usage": "Luồn các răng dài vào gốc tóc, nâng nhẹ lên để tạo phồng, chải phần ngọn cho mượt.",
-      "video": "/media/luoc-carbon-4-rang-chia-toc-tao-phong-chan-toc.mp4"
+      "video": "/media/luoc-carbon-4-rang-chia-toc-tao-phong-chan-toc.mp4",
+      "subcategory": "Lược & Kẹp chia tóc"
     },
     {
       "code": "LH-053",
@@ -1356,7 +1408,8 @@
       "content_approved": true,
       "reason": "",
       "usage": "Cuốn từng lọn tóc quanh lược, sấy đều rồi để nguội vài giây trước khi nhả lược để nếp giữ lâu.",
-      "video": "/media/luoc-tron-say-toc-loi-nhom-nano-technology.mp4"
+      "video": "/media/luoc-tron-say-toc-loi-nhom-nano-technology.mp4",
+      "subcategory": "Lược & Kẹp chia tóc"
     },
     {
       "code": "LH-054",
@@ -1382,7 +1435,8 @@
       "content_approved": true,
       "reason": "",
       "usage": "Cắm cọ khô hẳn vào ống, đặt trên mặt phẳng. Nên để cọ lông xuống dưới nếu cần phơi khô.",
-      "video": "/media/ong-luoi-kim-loai-dung-co-va-luoc-cap-2-ong.mp4"
+      "video": "/media/ong-luoi-kim-loai-dung-co-va-luoc-cap-2-ong.mp4",
+      "subcategory": "Cọ & Cốp đồ nghề"
     },
     {
       "code": "LH-055",
@@ -1409,7 +1463,8 @@
       "reason": "",
       "usage": "Xịt vào cổ tay, sau tai và cổ, cách da khoảng 15 cm, không chà xát hai tay.",
       "video": "/media/nuoc-hoa-nu-jean-paul-gaultier-so-scandal-edp.mp4",
-      "price": 3492000
+      "price": 3492000,
+      "subcategory": "Nước hoa Nữ"
     },
     {
       "code": "LH-056",
@@ -1435,7 +1490,8 @@
       "content_approved": true,
       "reason": "",
       "usage": "Xịt vào cổ tay, sau tai và cổ, cách da khoảng 15 cm.",
-      "video": "/media/nuoc-hoa-maison-alhambra-bad-femme.mp4"
+      "video": "/media/nuoc-hoa-maison-alhambra-bad-femme.mp4",
+      "subcategory": "Nước hoa Nữ"
     },
     {
       "code": "LH-057",
@@ -1461,7 +1517,8 @@
       "content_approved": true,
       "reason": "",
       "usage": "Xịt vào cổ tay, sau tai và cổ, cách da khoảng 15 cm.",
-      "video": "/media/nuoc-hoa-yves-saint-laurent-libre-edp.mp4"
+      "video": "/media/nuoc-hoa-yves-saint-laurent-libre-edp.mp4",
+      "subcategory": "Nước hoa Nữ"
     },
     {
       "code": "LH-058",
@@ -1487,7 +1544,8 @@
       "content_approved": true,
       "reason": "",
       "usage": "Xịt vào cổ tay, sau tai và cổ, cách da khoảng 15 cm.",
-      "video": "/media/nuoc-hoa-yves-saint-laurent-black-opium-over-red.mp4"
+      "video": "/media/nuoc-hoa-yves-saint-laurent-black-opium-over-red.mp4",
+      "subcategory": "Nước hoa Nữ"
     },
     {
       "code": "LH-059",
@@ -1513,7 +1571,8 @@
       "content_approved": true,
       "reason": "",
       "usage": "Xịt vào cổ tay, sau tai và cổ, cách da khoảng 15 cm.",
-      "video": "/media/nuoc-hoa-nam-bleu-de-chanel-eau-de-parfum.mp4"
+      "video": "/media/nuoc-hoa-nam-bleu-de-chanel-eau-de-parfum.mp4",
+      "subcategory": "Nước hoa Nam & Unisex"
     },
     {
       "code": "LH-060",
@@ -1539,7 +1598,8 @@
       "content_approved": true,
       "reason": "",
       "usage": "Xịt vào cổ tay, sau tai và cổ, cách da khoảng 15 cm.",
-      "video": "/media/nuoc-hoa-nam-polo-blue-eau-de-parfum-ralph-lauren.mp4"
+      "video": "/media/nuoc-hoa-nam-polo-blue-eau-de-parfum-ralph-lauren.mp4",
+      "subcategory": "Nước hoa Nam & Unisex"
     },
     {
       "code": "LH-061",
@@ -1566,7 +1626,8 @@
       "reason": "",
       "usage": "Xịt vào cổ tay và sau tai, cách da khoảng 15 cm.",
       "video": "/media/nuoc-hoa-le-labo-another-13-chai-chiet-ong-nho.mp4",
-      "price": 785000
+      "price": 785000,
+      "subcategory": "Nước hoa Chiết / Mini"
     },
     {
       "code": "LH-062",
@@ -1593,7 +1654,8 @@
       "reason": "",
       "usage": "Xịt vào cổ tay và sau tai, cách da khoảng 15 cm.",
       "video": "/media/nuoc-hoa-le-labo-another-13-eau-de-parfum-30ml.mp4",
-      "price": 3800000
+      "price": 3800000,
+      "subcategory": "Nước hoa Nam & Unisex"
     },
     {
       "code": "LH-063",
@@ -1619,7 +1681,8 @@
       "content_approved": true,
       "reason": "",
       "usage": "Rửa mặt sạch, đắp mặt nạ khoảng 15 đến 20 phút, bỏ ra và vỗ nhẹ cho tinh chất thấm.",
-      "video": "/media/mat-na-giay-banobagi-stem-cell-vitamin-mask-whitening-aqua-hydrating.mp4"
+      "video": "/media/mat-na-giay-banobagi-stem-cell-vitamin-mask-whitening-aqua-hydrating.mp4",
+      "subcategory": "Mặt nạ dưỡng da"
     },
     {
       "code": "LH-064",
@@ -1645,7 +1708,8 @@
       "content_approved": true,
       "reason": "",
       "usage": "Rửa mặt sạch, đắp mặt nạ khoảng 15 đến 20 phút, bỏ ra và vỗ nhẹ cho tinh chất thấm.",
-      "video": "/media/mat-na-giay-lbb-soothing-care-in-serum-mask.mp4"
+      "video": "/media/mat-na-giay-lbb-soothing-care-in-serum-mask.mp4",
+      "subcategory": "Mặt nạ dưỡng da"
     },
     {
       "code": "LH-065",
@@ -1671,7 +1735,8 @@
       "content_approved": true,
       "reason": "",
       "usage": "Rửa mặt sạch, đắp mặt nạ khoảng 15 đến 20 phút, bỏ ra và vỗ nhẹ cho tinh chất thấm.",
-      "video": "/media/mat-na-giay-lucenbase-377-whitening-moisturizing-mask.mp4"
+      "video": "/media/mat-na-giay-lucenbase-377-whitening-moisturizing-mask.mp4",
+      "subcategory": "Mặt nạ dưỡng da"
     },
     {
       "code": "LH-066",
@@ -1697,7 +1762,8 @@
       "content_approved": true,
       "reason": "",
       "usage": "Đặt trên mặt phẳng, xếp đồ đứng thẳng vào từng ngăn, lau bằng khăn ẩm khi bám bụi.",
-      "video": "/media/ke-acrylic-nhieu-ngan-dung-kem-nen-che-khuyet-diem.mp4"
+      "video": "/media/ke-acrylic-nhieu-ngan-dung-kem-nen-che-khuyet-diem.mp4",
+      "subcategory": "Nền & Che khuyết điểm"
     },
     {
       "code": "LH-067",
@@ -1723,7 +1789,8 @@
       "content_approved": true,
       "reason": "",
       "usage": "Xếp son đứng thẳng vào từng ngăn, đặt nơi tránh nắng, lau sạch khi cần.",
-      "video": "/media/ke-acrylic-nhieu-ngan-dung-son-va-tint.mp4"
+      "video": "/media/ke-acrylic-nhieu-ngan-dung-son-va-tint.mp4",
+      "subcategory": "Son môi"
     },
     {
       "code": "LH-068",
@@ -1749,7 +1816,8 @@
       "content_approved": true,
       "reason": "",
       "usage": "Xếp bảng phấn đứng vào từng khe, hộp nhỏ để ngăn dưới, lau sạch bằng khăn khô.",
-      "video": "/media/ke-acrylic-dung-dung-bang-phan-mat-phan-ma.mp4"
+      "video": "/media/ke-acrylic-dung-dung-bang-phan-mat-phan-ma.mp4",
+      "subcategory": "Mắt - Má - Tạo khối"
     },
     {
       "code": "LH-069",
@@ -1775,7 +1843,8 @@
       "content_approved": true,
       "reason": "",
       "usage": "Cắm cọ khô hẳn vào ống, lau bằng khăn mềm khi bám bụi.",
-      "video": "/media/cap-ong-pha-le-dung-co-trang-diem.mp4"
+      "video": "/media/cap-ong-pha-le-dung-co-trang-diem.mp4",
+      "subcategory": "Cọ & Cốp đồ nghề"
     },
     {
       "code": "LH-070",
@@ -1802,7 +1871,8 @@
       "reason": "",
       "usage": "Dùng trên tóc khô, kẹp từng lọn nhỏ và kéo từ gốc đến ngọn. Để máy nguội hẳn trước khi cất.",
       "video": "/media/may-duoi-toc-may-young-ban-lon-mau-vang.mp4",
-      "price": 520000
+      "price": 520000,
+      "subcategory": "Máy làm tóc"
     },
     {
       "code": "LH-071",
@@ -1828,7 +1898,8 @@
       "content_approved": true,
       "reason": "",
       "usage": "Kẹp từng lọn tóc ở chân tóc hoặc thân tóc, giữ vài giây rồi nhả. Để máy nguội trước khi cất.",
-      "video": "/media/may-dap-xu-tao-song-toc-ruida.mp4"
+      "video": "/media/may-dap-xu-tao-song-toc-ruida.mp4",
+      "subcategory": "Máy làm tóc"
     },
     {
       "code": "LH-072",
@@ -1855,7 +1926,8 @@
       "reason": "",
       "usage": "Quấn lọn tóc vào trục uốn, giữ vài giây rồi nhả. Chỉnh nhiệt thấp cho tóc yếu.",
       "video": "/media/may-uon-toc-may-young-mau-vang-truc-uon.mp4",
-      "price": 369000
+      "price": 369000,
+      "subcategory": "Máy làm tóc"
     },
     {
       "code": "LH-073",
@@ -1881,7 +1953,8 @@
       "content_approved": true,
       "reason": "",
       "usage": "Cần bạn bổ sung cách dùng.",
-      "video": "/media/may-kep-duoi-toc-mini-mau-den-do.mp4"
+      "video": "/media/may-kep-duoi-toc-mini-mau-den-do.mp4",
+      "subcategory": "Máy làm tóc"
     },
     {
       "code": "LH-074",
@@ -1908,7 +1981,8 @@
       "reason": "",
       "usage": "Chọn nhiệt phù hợp, quấn lọn tóc vào trục uốn, giữ vài giây rồi nhả.",
       "video": "/media/may-uon-toc-may-young-mau-vang-man-hinh-nhiet.mp4",
-      "price": 369000
+      "price": 369000,
+      "subcategory": "Máy làm tóc"
     },
     {
       "code": "LH-075",
@@ -1934,7 +2008,8 @@
       "content_approved": true,
       "reason": "",
       "usage": "Xếp đồ nặng ở tầng dưới, khóa bánh xe khi đang làm việc.",
-      "video": "/media/xe-day-3-tang-dung-do-lam-toc-va-makeup.mp4"
+      "video": "/media/xe-day-3-tang-dung-do-lam-toc-va-makeup.mp4",
+      "subcategory": "Cọ & Cốp đồ nghề"
     },
     {
       "code": "LH-076",
@@ -1960,7 +2035,8 @@
       "content_approved": true,
       "reason": "",
       "usage": "Xếp đồ vào, khóa kéo, lau bằng khăn ẩm khi bẩn.",
-      "video": "/media/ba-lo-pvc-trong-suot-dung-do-makeup.mp4"
+      "video": "/media/ba-lo-pvc-trong-suot-dung-do-makeup.mp4",
+      "subcategory": "Cọ & Cốp đồ nghề"
     },
     {
       "code": "LH-077",
@@ -1986,7 +2062,8 @@
       "content_approved": true,
       "reason": "",
       "usage": "Chia ngăn cho từng nhóm đồ, kéo tay kéo lên hết cỡ khi di chuyển.",
-      "video": "/media/vali-keo-den-dung-do-makeup.mp4"
+      "video": "/media/vali-keo-den-dung-do-makeup.mp4",
+      "subcategory": "Cọ & Cốp đồ nghề"
     },
     {
       "code": "LH-078",
@@ -2012,7 +2089,8 @@
       "content_approved": true,
       "reason": "",
       "usage": "Gắp từng cụm, chấm keo vào chân mi, đặt sát chân mi thật và giữ vài giây.",
-      "video": "/media/mi-gia-cum-faneyes-cute-hop-vang.mp4"
+      "video": "/media/mi-gia-cum-faneyes-cute-hop-vang.mp4",
+      "subcategory": "Mắt - Má - Tạo khối"
     },
     {
       "code": "LH-079",
@@ -2038,7 +2116,8 @@
       "content_approved": true,
       "reason": "",
       "usage": "Cần bạn bổ sung cách dùng.",
-      "video": "/media/kinh-ap-trong-mau-kem-hop-dung-va-kep-gap.mp4"
+      "video": "/media/kinh-ap-trong-mau-kem-hop-dung-va-kep-gap.mp4",
+      "subcategory": "Mắt - Má - Tạo khối"
     },
     {
       "code": "LH-080",
@@ -2064,7 +2143,8 @@
       "content_approved": true,
       "reason": "",
       "usage": "Xếp phụ kiện vào túi, kéo khóa, cất vào hộp hoặc vali.",
-      "video": "/media/tui-luoi-khoa-keo-dung-phu-kien-co-dau.mp4"
+      "video": "/media/tui-luoi-khoa-keo-dung-phu-kien-co-dau.mp4",
+      "subcategory": "Cọ & Cốp đồ nghề"
     },
     {
       "code": "LH-081",
@@ -2090,7 +2170,8 @@
       "content_approved": true,
       "reason": "",
       "usage": "Mở nắp, đặt gương nghiêng khi dùng, lau mặt gương bằng khăn mềm.",
-      "video": "/media/guong-hop-gap-hello-kitty.mp4"
+      "video": "/media/guong-hop-gap-hello-kitty.mp4",
+      "subcategory": "Cọ & Cốp đồ nghề"
     },
     {
       "code": "LH-082",
@@ -2116,7 +2197,8 @@
       "content_approved": true,
       "reason": "",
       "usage": "Kẹp chắc từng lớp tóc, bỏ lại vào ống khi dùng xong.",
-      "video": "/media/kep-vit-kim-loai-kem-ong-luoi-dung.mp4"
+      "video": "/media/kep-vit-kim-loai-kem-ong-luoi-dung.mp4",
+      "subcategory": "Lược & Kẹp chia tóc"
     },
     {
       "code": "LH-083",
@@ -2142,7 +2224,8 @@
       "content_approved": true,
       "reason": "",
       "usage": "Giữ máy cách tóc khoảng 10 đến 15 cm, di chuyển liên tục, không bịt cửa hút gió.",
-      "video": "/media/may-say-toc-cwell-mau-xam-anh-tim.mp4"
+      "video": "/media/may-say-toc-cwell-mau-xam-anh-tim.mp4",
+      "subcategory": "Máy làm tóc"
     },
     {
       "code": "LH-084",
@@ -2168,7 +2251,8 @@
       "content_approved": true,
       "reason": "",
       "usage": "Cuốn lọn tóc vào lô, giữ vài phút rồi gỡ. Dùng với tóc khô hoặc vừa sấy xong.",
-      "video": "/media/lo-cuon-toc-ban-lon-mat-gai-bam.mp4"
+      "video": "/media/lo-cuon-toc-ban-lon-mat-gai-bam.mp4",
+      "subcategory": "Lược & Kẹp chia tóc"
     },
     {
       "code": "LH-085",
@@ -2194,7 +2278,8 @@
       "content_approved": true,
       "reason": "",
       "usage": "Kẹp từng phần chân tóc ở nhiệt độ vừa phải, giữ vài giây rồi nhả.",
-      "video": "/media/may-kep-tao-phong-chan-toc-mau-hong.mp4"
+      "video": "/media/may-kep-tao-phong-chan-toc-mau-hong.mp4",
+      "subcategory": "Máy làm tóc"
     },
     {
       "code": "LH-086",
@@ -2220,7 +2305,8 @@
       "content_approved": true,
       "reason": "",
       "usage": "Mở chân tripod, chỉnh độ cao, bật đèn và chỉnh độ sáng theo nhu cầu.",
-      "video": "/media/den-vong-led-kem-chan-tripod.mp4"
+      "video": "/media/den-vong-led-kem-chan-tripod.mp4",
+      "subcategory": "Cọ & Cốp đồ nghề"
     },
     {
       "code": "LH-087",
@@ -2246,7 +2332,8 @@
       "content_approved": true,
       "reason": "",
       "usage": "Cài vào chân búi tóc, xoay nhẹ để giữ chắc.",
-      "video": "/media/tram-cai-toc-ngoc-trai-va-hoa-co-dau.mp4"
+      "video": "/media/tram-cai-toc-ngoc-trai-va-hoa-co-dau.mp4",
+      "subcategory": "Phụ kiện tóc cô dâu"
     },
     {
       "code": "LH-088",
@@ -2272,7 +2359,8 @@
       "content_approved": true,
       "reason": "",
       "usage": "Cài chắc vào chân búi tóc hoặc bên tóc đã búi.",
-      "video": "/media/phu-kien-cai-toc-pha-le-bac-co-dau.mp4"
+      "video": "/media/phu-kien-cai-toc-pha-le-bac-co-dau.mp4",
+      "subcategory": "Phụ kiện tóc cô dâu"
     },
     {
       "code": "LH-089",
@@ -2298,7 +2386,8 @@
       "content_approved": true,
       "reason": "",
       "usage": "Đội lên đỉnh đầu, cố định bằng kẹp nhỏ nếu cần.",
-      "video": "/media/bang-do-pha-le-co-dau.mp4"
+      "video": "/media/bang-do-pha-le-co-dau.mp4",
+      "subcategory": "Phụ kiện tóc cô dâu"
     }
   ]
 }

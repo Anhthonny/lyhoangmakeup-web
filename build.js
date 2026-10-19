@@ -1,6 +1,4 @@
 'use strict';
-/* Tạo trang tĩnh có địa chỉ riêng, tiêu đề/mô tả riêng, sitemap.xml, robots.txt.
-   Netlify chạy "node build.js" mỗi lần đăng; nội dung lấy từ data/*.json (do trang /admin chỉnh). */
 const fs = require('fs'), path = require('path'), vm = require('vm');
 const ROOT = __dirname;
 const SITE = 'https://lyhoangmakeup.com';
@@ -8,7 +6,6 @@ const rd = f => { try { return JSON.parse(fs.readFileSync(path.join(ROOT, f), 'u
 const tpl = fs.readFileSync(path.join(ROOT, 'template.html'), 'utf8');
 const data = { site: rd('data/site.json'), home: rd('data/home.json'), price: rd('data/price.json'), blog: rd('data/blog.json'), shop: rd('data/shop.json'), look: rd('data/look.json'), rules: rd('data/rules.json'), seo: rd('data/seo.json') };
 
-/* ---- chạy mã giao diện của trang trong môi trường giả lập để lấy HTML */
 const script = tpl.match(/<script>([\s\S]*?)<\/script>\s*<\/body>/)[1];
 const els = {};
 const mk = () => ({ innerHTML: '', textContent: '', classList: { add() {}, remove() {}, toggle() {} }, style: {}, dataset: {}, setAttribute() {}, addEventListener() {}, nextElementSibling: null });
@@ -20,7 +17,7 @@ const ctx = {
   fetch: () => new Promise(() => {}), console, Date, setTimeout, Promise
 };
 ctx.window = ctx; vm.createContext(ctx);
-vm.runInContext(script + ';globalThis.__api={P,CFG,post,posts,slug,CD,MK,applyCfg,rebuildShop,SV,H,V,LK,esc,product,plist,pslug,pimg,pprice};', ctx);
+vm.runInContext(script + ';globalThis.__api={P,CFG,post,posts,slug,CD,MK,applyCfg,rebuildShop,SV,H,V,LK,esc,product,shop,plist,pslug,pimg,pprice,CAT_META};', ctx);
 const A = ctx.__api;
 const arr = (o, k) => (o && Array.isArray(o[k])) ? o[k] : null;
 A.CFG.site = data.site; A.CFG.home = data.home; A.CFG.price = data.price;
@@ -41,11 +38,35 @@ function applyText(html) {
 const abs = u => !u ? '' : /^https?:/.test(u) ? u : SITE + '/' + String(u).replace(/^\/+/, '');
 const cut = (s, n) => { s = String(s || '').replace(/\s+/g, ' ').trim(); return s.length > n ? s.slice(0, n - 1).replace(/\s+\S*$/, '') + '…' : s; };
 
+const CAT_SEO = {
+  'trang-diem': {
+    name: 'Trang điểm',
+    title: `Mỹ phẩm & Dụng cụ Trang điểm chuyên nghiệp | ${BRS}`,
+    desc: `Kem nền, che khuyết điểm, phấn phủ, bảng mắt, má hồng, son môi và cốp đồ nghề makeup do ${BRS} tuyển chọn tại Biên Hòa, Đồng Nai.`
+  },
+  'phu-kien-toc': {
+    name: 'Phụ kiện tóc',
+    title: `Phụ kiện tóc cô dâu, Máy làm tóc & Gôm xịt tạo kiểu | ${BRS}`,
+    desc: `Gôm xịt tóc, máy uốn duỗi, lược chia tóc chuyên nghiệp và trâm cài, băng đô pha lê cô dâu do ${BRS} chọn dùng tại Biên Hòa.`
+  },
+  'cham-soc-da': {
+    name: 'Chăm sóc da',
+    title: `Chăm sóc da & Cấp ẩm tiền Makeup (Skin Prep) | ${BRS}`,
+    desc: `Nước tẩy trang, xịt khoáng, toner, kem dưỡng ẩm và mặt nạ phục hồi da trước khi đánh nền do ${BRS} khuyên dùng.`
+  },
+  'nuoc-hoa': {
+    name: 'Nước hoa',
+    title: `Nước hoa Nữ, Nam & Nước hoa chiết chính hãng | ${BRS}`,
+    desc: `Tuyển tập nước hoa nữ, nam, unisex và ống chiết mini lưu hương quyến rũ cho cô dâu và đi tiệc tại ${BRS} Biên Hòa.`
+  }
+};
+
 /* ---- danh sách trang */
-const SKIP = /-old$|^\/hoc-vien\/chuyen-nghiep$\vert{}^\/hoc-vien\/master$/;
+const SKIP = /-old$|^\/hoc-vien\/chuyen-nghiep$|^\/hoc-vien\/master$/;
 let paths = Object.keys(A.P).filter(p => !SKIP.test(p));
 const posts = A.posts();
 posts.forEach(b => paths.push('/blog/' + A.slug(b.title)));
+Object.keys(CAT_SEO).forEach(k => paths.push('/cua-hang/' + k));
 A.plist().forEach(p => paths.push('/cua-hang/' + A.pslug(p)));
 paths = Array.from(new Set(paths));
 
@@ -72,7 +93,15 @@ function defMeta(p) {
   let m;
   if ((m = p.match(/^\/hoc-vien\/(.+)$/)) && CD[m[1]]) return { t: `${CD[m[1]][0]} | Học viện ${BRS.replace(' Makeup','')} Biên Hòa`, d: cut(`${CD[m[1]][2]} Học trực tiếp cùng Master Lý Hoàng tại ${LOC}.`, 158) };
   if ((m = p.match(/^\/ve-master\/(.+)$/)) && MK[m[1]]) return { t: `${MK[m[1]][0]} | Master Lý Hoàng`, d: cut(`${MK[m[1]][1]} Master Lý Hoàng, ${BR}, ${LOC}.`, 158) };
-  if ((m = p.match(/^\/cua-hang\/(.+)$/))) { const pp = A.plist().find(x => A.pslug(x) === m[1]); if (pp) return { t: cut(pp.name, 52) + ` | ${BRS}`, d: cut((String(pp.short_desc || '').split(/(?<=\.)\s/)[0] || pp.name), 125) + ` Sản phẩm ${BRS} chọn dùng.`, img: A.pimg(pp, 0), prod: pp }; }
+  if ((m = p.match(/^\/cua-hang\/(.+)$/))) {
+    if (CAT_SEO[m[1]]) {
+      const c = CAT_SEO[m[1]];
+      const firstProd = A.plist().find(x => x.category === c.name);
+      return { t: c.title, d: cut(c.desc, 158), img: firstProd ? A.pimg(firstProd, 0) : null, cat: c, catSlug: m[1] };
+    }
+    const pp = A.plist().find(x => A.pslug(x) === m[1]);
+    if (pp) return { t: cut(pp.name, 52) + ` | ${BRS}`, d: cut((String(pp.short_desc || '').split(/(?<=\.)\s/)[0] || pp.name), 125) + ` Sản phẩm ${BRS} chọn dùng.`, img: A.pimg(pp, 0), prod: pp };
+  }
   if ((m = p.match(/^\/blog\/(.+)$/))) { const b = posts.find(x => A.slug(x.title) === m[1]); if (b) return { t: `${b.title} | ${BRS}`, d: cut(String(b.description || '').length < 110 ? (b.description + ' Chia sẻ từ Master Lý Hoàng, ' + BRS + ' tại ' + LOC + '.') : b.description, 158), img: b.thumbnail, post: b }; }
   return { t: BR, d: cut(HV('hero_desc'), 158) };
 }
@@ -100,11 +129,49 @@ function jsonld(p, m) {
   };
   if (p === '/') return [biz, { '@context': 'https://schema.org', '@type': 'WebSite', name: BR, url: SITE + '/', inLanguage: 'vi' }];
   const out = [];
-  if (m.prod) { const pp = m.prod, pr = A.pprice(pp); const pd = { '@context': 'https://schema.org', '@type': 'Product', name: pp.name, description: cut(pp.short_desc, 300) || pp.name, sku: pp.code || undefined, category: pp.category, brand: { '@type': 'Brand', name: BR }, image: [0, 1, 2].map(i => A.pimg(pp, i)).filter(Boolean).map(abs), url: m.u, offers: { '@type': 'Offer', url: m.u, priceCurrency: 'VND', price: pr ? String(pr) : "0", availability: 'https://schema.org/InStock', itemCondition: 'https://schema.org/NewCondition', seller: { '@type': 'Organization', name: BR } } }; out.push(pd); }
+  if (m.cat) {
+    const cProds = A.plist().filter(x => x.category === m.cat.name);
+    out.push({
+      '@context': 'https://schema.org',
+      '@type': 'CollectionPage',
+      name: m.cat.title,
+      description: m.cat.desc,
+      url: m.u,
+      mainEntity: {
+        '@type': 'ItemList',
+        numberOfItems: cProds.length,
+        itemListElement: cProds.map((x, idx) => ({
+          '@type': 'ListItem',
+          position: idx + 1,
+          url: SITE + '/cua-hang/' + A.pslug(x) + '/',
+          name: x.name
+        }))
+      }
+    });
+  }
+  if (m.prod) {
+    const pp = m.prod, pr = A.pprice(pp);
+    const pd = {
+      '@context': 'https://schema.org', '@type': 'Product', name: pp.name,
+      description: cut(pp.short_desc, 300) || pp.name, sku: pp.code || undefined,
+      category: pp.subcategory ? `${pp.category} > ${pp.subcategory}` : pp.category,
+      brand: { '@type': 'Brand', name: BR },
+      image: [0, 1, 2].map(i => A.pimg(pp, i)).filter(Boolean).map(abs), url: m.u,
+      offers: { '@type': 'Offer', url: m.u, priceCurrency: 'VND', price: pr ? String(pr) : "0", availability: 'https://schema.org/InStock', itemCondition: 'https://schema.org/NewCondition', seller: { '@type': 'Organization', name: BR } }
+    };
+    out.push(pd);
+  }
   if (m.post) out.push({ '@context': 'https://schema.org', '@type': 'BlogPosting', headline: m.post.title, description: cut(m.post.description, 200), image: m.img, mainEntityOfPage: m.u, inLanguage: 'vi', author: { '@type': 'Organization', name: BR }, publisher: { '@type': 'Organization', name: BR, logo: { '@type': 'ImageObject', url: abs(SV('logo')) } } });
   const parts = p.split('/').filter(Boolean); let acc = '';
   const items = [{ '@type': 'ListItem', position: 1, name: 'Trang chủ', item: SITE + '/' }];
-  parts.forEach((s, i) => { acc += '/' + s; const last = i === parts.length - 1; items.push({ '@type': 'ListItem', position: i + 2, name: last ? m.t.split(' | ')[0] : ({ 'cua-hang': 'Cửa hàng', 'dich-vu': 'Dịch vụ', 'hoc-vien': 'Học viện', 've-master': 'Về Master', blog: 'Blog', lookbook: 'Lookbook' }[s] || s.replace(/-/g, ' ')), item: SITE + acc + '/' }); });
+  if (m.prod && m.prod.category) {
+    const cSlug = A.slug(m.prod.category);
+    items.push({ '@type': 'ListItem', position: 2, name: 'Cửa hàng', item: SITE + '/cua-hang/' });
+    items.push({ '@type': 'ListItem', position: 3, name: m.prod.category, item: SITE + '/cua-hang/' + cSlug + '/' });
+    items.push({ '@type': 'ListItem', position: 4, name: m.prod.name, item: m.u });
+  } else {
+    parts.forEach((s, i) => { acc += '/' + s; const last = i === parts.length - 1; items.push({ '@type': 'ListItem', position: i + 2, name: last ? (m.cat ? m.cat.name : m.t.split(' | ')[0]) : ({ 'cua-hang': 'Cửa hàng', 'dich-vu': 'Dịch vụ', 'hoc-vien': 'Học viện', 've-master': 'Về Master', blog: 'Blog', lookbook: 'Lookbook' }[s] || s.replace(/-/g, ' ')), item: SITE + acc + '/' }); });
+  }
   out.push({ '@context': 'https://schema.org', '@type': 'BreadcrumbList', itemListElement: items });
   return out;
 }
@@ -153,7 +220,7 @@ paths.forEach(p => {
 
 /* ---- sitemap, robots, 404 */
 const today = new Date().toISOString().slice(0, 10);
-const pri = p => p === '/' ? '1.0' : /^\/(dich-vu|hoc-vien|lookbook)(\/[^/]+)?$/.test(p) ? '0.8' : '0.6';
+const pri = p => p === '/' ? '1.0' : /^\/(dich-vu|hoc-vien|lookbook|cua-hang\/(trang-diem|phu-kien-toc|cham-soc-da|nuoc-hoa))(\/[^/]+)?$/.test(p) ? '0.8' : '0.6';
 const urls = paths.filter(p => !NOINDEX.has(p)).map(p => `  <url><loc>${SITE}${p === '/' ? '/' : p + '/'}</loc><lastmod>${today}</lastmod><priority>${pri(p)}</priority></url>`);
 write(path.join(ROOT, 'sitemap.xml'), `<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n${urls.join('\n')}\n</urlset>\n`);
 write(path.join(ROOT, 'robots.txt'), `User-agent: *\nAllow: /\nDisallow: /admin/\n\nSitemap: ${SITE}/sitemap.xml\n`);
