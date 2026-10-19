@@ -57,15 +57,19 @@ function done(e,t){
   fd.forEach(function(v,k){d[k]=v});
   var hv=t=='hv';
   var summary = hv 
-    ? '[ĐĂng KÝ HỌC VIỆN]\nHọ tên: ' + d.Ho_va_ten + '\nSĐT/Zalo: ' + d.So_dien_thoai + '\nKhóa học: ' + d.Ngay_dat_hoac_Khoa_hoc + '\nCa học: ' + d.Hinh_thuc_hoac_Ca_hoc
+    ? '[ĐĂNG KÝ HỌC VIỆN]\nHọ tên: ' + d.Ho_va_ten + '\nSĐT/Zalo: ' + d.So_dien_thoai + '\nKhóa học: ' + d.Ngay_dat_hoac_Khoa_hoc + '\nCa học: ' + d.Hinh_thuc_hoac_Ca_hoc
     : '[ĐẶT LỊCH MAKEUP]\nHọ tên: ' + d.Ho_va_ten + '\nSĐT/Zalo: ' + d.So_dien_thoai + '\nNgày đặt: ' + d.Ngay_dat_hoac_Khoa_hoc + '\nHình thức: ' + d.Hinh_thuc_hoac_Ca_hoc + (d.Dia_chi_tai_nha ? ' ('+d.Dia_chi_tai_nha+')' : '') + '\nDịch vụ: ' + d.Goi_dich_vu;
   
-  var fbUrl = SV('facebook') || 'https://facebook.com/profile.php?id=61583350533355';
+  if(navigator.clipboard && navigator.clipboard.writeText){
+    navigator.clipboard.writeText(summary).catch(function(){});
+  }
+
   var zaloMsgUrl = Z + '?text=' + encodeURIComponent(summary);
+  var fbUrl = SV('facebook') || 'https://facebook.com/profile.php?id=61583350533355';
 
   f.outerHTML = '<div class="card" style="text-align:left;line-height:1.6">' +
     '<h3 style="margin-top:0">' + (hv ? 'Đã ghi nhận đăng ký tư vấn 🌿' : 'Đã ghi nhận thông tin đặt lịch ✨') + '</h3>' +
-    '<p>Cảm ơn bạn! Vui lòng bấm vào nút bên dưới để gửi thông tin qua Zalo hoặc Facebook cho tiệm:</p>' +
+    '<p>Hệ thống đã sao chép sẵn thông tin của bạn. Vلي lòng bấm nút bên dưới để gửi tin nhắn thẳng qua Zalo hoặc Facebook cho tiệm:</p>' +
     '<pre style="background:#fdfbf4;padding:12px;border-radius:10px;border:1px solid var(--line);white-space:pre-wrap;font-family:inherit;font-size:14px;margin:10px 0">' + esc(summary) + '</pre>' +
     '<div style="display:flex;gap:10px;flex-wrap:wrap;margin-top:16px">' +
       '<a class="btn" href="' + zaloMsgUrl + '" target="_blank" rel="noopener">💬 Gửi qua Zalo ngay</a>' +
