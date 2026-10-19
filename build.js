@@ -42,7 +42,7 @@ const abs = u => !u ? '' : /^https?:/.test(u) ? u : SITE + '/' + String(u).repla
 const cut = (s, n) => { s = String(s || '').replace(/\s+/g, ' ').trim(); return s.length > n ? s.slice(0, n - 1).replace(/\s+\S*$/, '') + '…' : s; };
 
 /* ---- danh sách trang */
-const SKIP = /-old$|^\/hoc-vien\/chuyen-nghiep$|^\/hoc-vien\/master$/;
+const SKIP = /-old$|^\/hoc-vien\/chuyen-nghiep$\vert{}^\/hoc-vien\/master$/;
 let paths = Object.keys(A.P).filter(p => !SKIP.test(p));
 const posts = A.posts();
 posts.forEach(b => paths.push('/blog/' + A.slug(b.title)));
@@ -100,7 +100,7 @@ function jsonld(p, m) {
   };
   if (p === '/') return [biz, { '@context': 'https://schema.org', '@type': 'WebSite', name: BR, url: SITE + '/', inLanguage: 'vi' }];
   const out = [];
-  if (m.prod) { const pp = m.prod, pr = A.pprice(pp); const pd = { '@context': 'https://schema.org', '@type': 'Product', name: pp.name, description: cut(pp.short_desc, 300) || pp.name, sku: pp.code || undefined, category: pp.category, image: [0, 1, 2].map(i => A.pimg(pp, i)).filter(Boolean).map(abs), url: m.u }; if (pr) pd.offers = { '@type': 'Offer', url: m.u, priceCurrency: 'VND', price: String(pr), availability: 'https://schema.org/PreOrder', seller: { '@type': 'Organization', name: BR } }; out.push(pd); }
+  if (m.prod) { const pp = m.prod, pr = A.pprice(pp); const pd = { '@context': 'https://schema.org', '@type': 'Product', name: pp.name, description: cut(pp.short_desc, 300) || pp.name, sku: pp.code || undefined, category: pp.category, brand: { '@type': 'Brand', name: BR }, image: [0, 1, 2].map(i => A.pimg(pp, i)).filter(Boolean).map(abs), url: m.u, offers: { '@type': 'Offer', url: m.u, priceCurrency: 'VND', price: pr ? String(pr) : "0", availability: 'https://schema.org/InStock', itemCondition: 'https://schema.org/NewCondition', seller: { '@type': 'Organization', name: BR } } }; out.push(pd); }
   if (m.post) out.push({ '@context': 'https://schema.org', '@type': 'BlogPosting', headline: m.post.title, description: cut(m.post.description, 200), image: m.img, mainEntityOfPage: m.u, inLanguage: 'vi', author: { '@type': 'Organization', name: BR }, publisher: { '@type': 'Organization', name: BR, logo: { '@type': 'ImageObject', url: abs(SV('logo')) } } });
   const parts = p.split('/').filter(Boolean); let acc = '';
   const items = [{ '@type': 'ListItem', position: 1, name: 'Trang chủ', item: SITE + '/' }];
