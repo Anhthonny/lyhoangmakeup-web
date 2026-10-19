@@ -154,7 +154,8 @@
       "video": "/media/nuoc-tay-trang-garnier-micellar-700ml-nap-hong.mp4",
       "content_approved": false,
       "reason": "Mình tẩy lớp nền cũ và dọn da cho cô dâu trước khi trang điểm lại. Chai lớn dùng đỡ tốn, cứ thấm bông là lau.",
-      "usage": "Thấm ra bông tẩy trang, lau nhẹ mặt, mắt và môi, không cần rửa lại với nước."
+      "usage": "Thấm ra bông tẩy trang, lau nhẹ mặt, mắt và môi, không cần rửa lại với nước.",
+      "price": 449000
     },
     {
       "code": "LH-007",
@@ -180,7 +181,8 @@
       "video": "/media/xit-khoang-duong-am-torriden-dive-in-glow-mist-120ml.mp4",
       "content_approved": false,
       "reason": "Mình xịt để da căng ẩm trước khi đánh nền và xịt nhẹ sau makeup để lớp nền bớt mốc.",
-      "usage": "Giữ chai cách mặt khoảng 20 đến 30 cm, nhắm mắt và xịt đều. Có thể dùng sau bước làm sạch hoặc sau trang điểm."
+      "usage": "Giữ chai cách mặt khoảng 20 đến 30 cm, nhắm mắt và xịt đều. Có thể dùng sau bước làm sạch hoặc sau trang điểm.",
+      "price": 275000
     },
     {
       "code": "LH-008",
@@ -232,7 +234,8 @@
       "video": "/media/xit-khoang-aspasia-moist-up-face-mist-snail-150ml.mp4",
       "content_approved": false,
       "reason": "Giá dễ chịu, xịt được nhiều lần trong ngày. Mình xịt cho da cô dâu trước khi makeup để lớp nền mịn hơn.",
-      "usage": "Xịt cách mặt khoảng 20 cm, nhắm mắt. Có thể dùng trước hoặc sau trang điểm, thấm nhẹ nếu thấy ướt."
+      "usage": "Xịt cách mặt khoảng 20 cm, nhắm mắt. Có thể dùng trước hoặc sau trang điểm, thấm nhẹ nếu thấy ướt.",
+      "price": 75000
     },
     {
       "code": "LH-010",
@@ -310,7 +313,8 @@
       "video": "/media/xit-khoang-aspasia-moist-up-face-mist-aloe-150ml.mp4",
       "content_approved": false,
       "reason": "Bản nha đam mát và nhẹ, mình xịt để làm dịu da cô dâu sau khi tẩy trang hoặc khi da hơi nóng.",
-      "usage": "Xịt cách mặt khoảng 20 cm, nhắm mắt. Dùng bất cứ lúc nào da cần cấp ẩm."
+      "usage": "Xịt cách mặt khoảng 20 cm, nhắm mắt. Dùng bất cứ lúc nào da cần cấp ẩm.",
+      "price": 72000
     },
     {
       "code": "LH-013",
@@ -414,7 +418,8 @@
       "video": "/media/lotion-duong-am-clinique-dramatically-different-moisturizing-lotion-plus.mp4",
       "content_approved": false,
       "reason": "Da cô dâu cần đủ ẩm thì lớp nền mới mịn, nên mình dùng lotion này để dưỡng trước khi trang điểm.",
-      "usage": "Sau bước làm sạch và toner, bơm một lượng vừa đủ, thoa đều lên mặt và cổ, sáng và tối."
+      "usage": "Sau bước làm sạch và toner, bơm một lượng vừa đủ, thoa đều lên mặt và cổ, sáng và tối.",
+      "price": 770000
     },
     {
       "code": "LH-017",
@@ -518,7 +523,8 @@
       "video": "/media/kem-nen-espoir-be-velvet-foundation-spf22-30g.mp4",
       "content_approved": false,
       "reason": "Khi cô dâu da nhiều lỗ chân lông hoặc cần nền lì mịn, mình dùng dòng Be Velvet vì lớp nền lên mịn và giữ lâu.",
-      "usage": "Lấy lượng nhỏ, tán từ giữa mặt ra ngoài bằng mút ẩm hoặc cọ."
+      "usage": "Lấy lượng nhỏ, tán từ giữa mặt ra ngoài bằng mút ẩm hoặc cọ.",
+      "price": 509000
     },
     {
       "code": "LH-021",
@@ -778,7 +784,8 @@
       "video": "/media/son-kem-romand-zero-velvet-tint-05-witty.mp4",
       "content_approved": false,
       "reason": "Màu đỏ gạch dễ lên hình và hợp nhiều tông da, mình dùng cho cô dâu muốn môi nổi bật nhưng không quá đậm.",
-      "usage": "Chấm lên môi, tán từ giữa ra ngoài. Tán mỏng cho môi lì mờ, thoa dày hơn cho màu đậm."
+      "usage": "Chấm lên môi, tán từ giữa ra ngoài. Tán mỏng cho môi lì mờ, thoa dày hơn cho màu đậm.",
+      "price": 149000
     },
     {
       "code": "LH-031",
@@ -830,7 +837,8 @@
       "content_approved": true,
       "reason": "",
       "usage": "Chấm lên vùng cần che, dùng đầu cọ hoặc mút vỗ nhẹ cho tiệp vào da, không kéo mạnh.",
-      "video": "/media/kem-che-khuyet-diem-the-saem-cover-perfection-tip-concealer.mp4"
+      "video": "/media/kem-che-khuyet-diem-the-saem-cover-perfection-tip-concealer.mp4",
+      "price": 109000
     },
     {
       "code": "LH-033",
@@ -1400,7 +1408,8 @@
       "content_approved": true,
       "reason": "",
       "usage": "Xịt vào cổ tay, sau tai và cổ, cách da khoảng 15 cm, không chà xát hai tay.",
-      "video": "/media/nuoc-hoa-nu-jean-paul-gaultier-so-scandal-edp.mp4"
+      "video": "/media/nuoc-hoa-nu-jean-paul-gaultier-so-scandal-edp.mp4",
+      "price": 3492000
     },
     {
       "code": "LH-056",
@@ -1556,7 +1565,8 @@
       "content_approved": true,
       "reason": "",
       "usage": "Xịt vào cổ tay và sau tai, cách da khoảng 15 cm.",
-      "video": "/media/nuoc-hoa-le-labo-another-13-chai-chiet-ong-nho.mp4"
+      "video": "/media/nuoc-hoa-le-labo-another-13-chai-chiet-ong-nho.mp4",
+      "price": 785000
     },
     {
       "code": "LH-062",
@@ -1582,7 +1592,8 @@
       "content_approved": true,
       "reason": "",
       "usage": "Xịt vào cổ tay và sau tai, cách da khoảng 15 cm.",
-      "video": "/media/nuoc-hoa-le-labo-another-13-eau-de-parfum-30ml.mp4"
+      "video": "/media/nuoc-hoa-le-labo-another-13-eau-de-parfum-30ml.mp4",
+      "price": 3800000
     },
     {
       "code": "LH-063",
@@ -1790,7 +1801,8 @@
       "content_approved": true,
       "reason": "",
       "usage": "Dùng trên tóc khô, kẹp từng lọn nhỏ và kéo từ gốc đến ngọn. Để máy nguội hẳn trước khi cất.",
-      "video": "/media/may-duoi-toc-may-young-ban-lon-mau-vang.mp4"
+      "video": "/media/may-duoi-toc-may-young-ban-lon-mau-vang.mp4",
+      "price": 520000
     },
     {
       "code": "LH-071",
@@ -1842,7 +1854,8 @@
       "content_approved": true,
       "reason": "",
       "usage": "Quấn lọn tóc vào trục uốn, giữ vài giây rồi nhả. Chỉnh nhiệt thấp cho tóc yếu.",
-      "video": "/media/may-uon-toc-may-young-mau-vang-truc-uon.mp4"
+      "video": "/media/may-uon-toc-may-young-mau-vang-truc-uon.mp4",
+      "price": 369000
     },
     {
       "code": "LH-073",
@@ -1894,7 +1907,8 @@
       "content_approved": true,
       "reason": "",
       "usage": "Chọn nhiệt phù hợp, quấn lọn tóc vào trục uốn, giữ vài giây rồi nhả.",
-      "video": "/media/may-uon-toc-may-young-mau-vang-man-hinh-nhiet.mp4"
+      "video": "/media/may-uon-toc-may-young-mau-vang-man-hinh-nhiet.mp4",
+      "price": 369000
     },
     {
       "code": "LH-075",
