@@ -238,9 +238,9 @@ if(/^[-*] /.test(b))return'<ul>'+b.split('\n').map(x=>`<li>${inl(x.replace(/^[-*
 var im=b.match(/^!\[(.*?)\]\((.*?)(?:\s+"(.*?)")?\)/);if(im)return`<figure style="margin:18px 0"><img class="im im16" src="${im[2]}" alt="${im[1]}" loading="lazy">${im[3]?`<figcaption class="c mute" style="font-size:13px;margin-top:6px">${im[3]}</figcaption>`:''}</figure>`;
 return`<p>${inl(b).replace(/\n/g,'<br>')}</p>`}).join('')}
 function posts(){return (Array.isArray(CFG.blog)?CFG.blog:DEF.blog).filter(function(b){return b&&b.title&&b.published!==false})}
-function bcard(b){
+function bcard(b, hide){
   var cat=b.category||'Trang điểm Cô dâu',sub=b.subcategory||'';
-  return `<a class="card bc" href="#/blog/${slug(b.title)}" data-c="${esc(cat)}" data-sub="${esc(sub)}" data-k="${slug(b.title+' '+(b.description||'')+' '+cat+' '+sub)}" style="padding:0;overflow:hidden;display:flex;flex-direction:column">${b.thumbnail?`<img class="im im16" src="${b.thumbnail}" alt="${esc(b.thumbnail_alt||b.title)}" loading="lazy" style="border-radius:0;object-position:center 25%">`:''}<div style="padding:18px;flex:1;display:flex;flex-direction:column"><small class="mute" style="margin-bottom:6px">${esc(cat)}${sub?' · <span class="gold">'+esc(sub)+'</span>':''}</small><h3 style="font-size:18px;margin:0 0 8px;line-height:1.4">${esc(b.title.replace(/\s*\|\s*Lý Hoàng.*$/i,''))}</h3><p class="mute" style="font-size:14px;margin:0">${esc(clip(b.description,115))}</p></div></a>`;
+  return `<a class="card bc" href="#/blog/${slug(b.title)}" data-c="${esc(cat)}" data-sub="${esc(sub)}" data-k="${slug(b.title+' '+(b.description||'')+' '+cat+' '+sub)}" style="padding:0;overflow:hidden${hide?';display:none':''}">${b.thumbnail?`<img class="im im16" src="${IM(b.thumbnail)}" alt="${esc(b.thumbnail_alt||b.title)}" loading="lazy" style="border-radius:0;object-position:center 25%">`:''}<div style="padding:18px"><small class="mute" style="display:block;margin-bottom:6px">${esc(cat)}${sub?' · <span class="gold">'+esc(sub)+'</span>':''}</small><h3 style="font-size:18px;margin:0 0 8px;line-height:1.4">${esc(String(b.title||'').replace(/\s*\|\s*Lý Hoàng.*$/i,''))}</h3><p class="mute" style="font-size:14px;margin:0">${esc(clip(b.description,115))}</p></div></a>`;
 }
 var blogC='Tất cả',blogSub='Tất cả',blogLim=9;
 function blog(catKey){
@@ -270,9 +270,9 @@ function blog(catKey){
     <input id="bsq" type="search" placeholder="Tìm chủ đề, bài viết..." oninput="blogLim=9;blogF()" style="max-width:230px;margin:0 8px 0 0;background:#fff">
     ${subCats.map(function(sc,i){var cnt=sc==='Tất cả'?L.length:L.filter(b=>b.subcategory===sc).length;return `<button class="btn ${i?'b2':''} bcb" data-sub="${esc(sc)}" onclick="blogSubCat(this)" style="padding:7px 14px;font-size:13px">${esc(sc)} (${cnt})</button>`}).join('')}
   </div>
-  <div class="gr" id="bg">${L.map(function(b,idx){return bcard(b).replace('class="card bc"','class="card bc"'+(idx>=9?' hidden':''))}).join('')}</div>
-  <p id="bn" class="c mute" hidden>Không tìm thấy bài viết phù hợp.</p>
-  <div class="c" style="margin-top:28px" id="bmoreWrap" ${L.length>9?'':'hidden'}><button class="btn b2" onclick="blogMore()">Xem thêm bài viết ↓</button></div>
+  <div class="gr" id="bg">${L.map(function(b,idx){return bcard(b, idx>=9)}).join('')}</div>
+  <p id="bn" class="c mute" style="display:none">Không tìm thấy bài viết phù hợp.</p>
+  <div class="c" style="margin-top:28px;${L.length>9?'':'display:none'}" id="bmoreWrap"><button class="btn b2" onclick="blogMore()">Xem thêm bài viết ↓</button></div>
   </div></div>`;
 }
 function blogSubCat(b){blogSub=b.dataset.sub;blogLim=9;var bs=document.querySelectorAll('.bcb');for(var i=0;i<bs.length;i++)bs[i].classList.toggle('b2',bs[i]!==b);blogF()}
@@ -281,10 +281,10 @@ function blogF(){
   var q=slug((document.getElementById('bsq')||{}).value||''),n=0,shown=0,cs=document.querySelectorAll('#bg .bc');
   for(var i=0;i<cs.length;i++){
     var c=cs[i],match=(blogSub=='Tất cả'||c.dataset.sub==blogSub)&&(!q||c.dataset.k.indexOf(q)>-1);
-    if(match){n++;if(shown<blogLim){c.hidden=false;shown++}else{c.hidden=true}}else{c.hidden=true}
+    if(match){n++;if(shown<blogLim){c.style.display='';shown++}else{c.style.display='none'}}else{c.style.display='none'}
   }
-  var e=document.getElementById('bn');if(e)e.hidden=n>0;
-  var mw=document.getElementById('bmoreWrap');if(mw)mw.hidden=shown>=n;
+  var e=document.getElementById('bn');if(e)e.style.display=n>0?'none':'block';
+  var mw=document.getElementById('bmoreWrap');if(mw)mw.style.display=shown>=n?'none':'block';
 }
 function post(key){
   if(BLOG_CAT_META[key])return blog(key);
@@ -371,7 +371,7 @@ function lookbook(){var C=Array.isArray(CFG.look)?CFG.look:DEF.look;return `<div
 function applyCfg(){Z=SV('zalo_url')||Z;var t=SV('hotline_tel');ctas=`<a class="btn" href="${Z}" target="_blank">Nhắn Tin Zalo</a> <a class="btn b2" href="tel:${t}">Gọi Hotline</a>`;applyHeader();renderFooter()}
 function boot(){
 extra();addEventListener('popstate',route);document.addEventListener('click',function(e){if(e.defaultPrevented||e.metaKey||e.ctrlKey||e.shiftKey||e.button)return;var a=e.target.closest&&e.target.closest('a');if(!a)return;var h=a.getAttribute('href');if(!h||h.charAt(0)!=='/'||h.charAt(1)==='/'||a.target||h.indexOf('/admin')==0)return;e.preventDefault();history.pushState(null,'',h);route()});fab();rc();
-var F=[['site','data/site.json'],['home','data/home.json'],['price','data/price.json'],['blog','data/blog.json'],['shop','data/shop.json'],['look','data/look.json'],['rules','data/rules.json']];
+var F=[['site','/data/site.json'],['home','/data/home.json'],['price','/data/price.json'],['blog','/data/blog.json'],['shop','/data/shop.json'],['look','/data/look.json'],['rules','/data/rules.json']];
 Promise.all(F.map(function(f){return fetch(f[1]+'?v='+Date.now()).then(r=>r.ok?r.json():null).catch(()=>null).then(function(j){
 if(!j||typeof j!=='object'){CFG[f[0]]=null;return}
 CFG[f[0]]=f[0]=='blog'?(Array.isArray(j.posts)?j.posts:null):f[0]=='shop'?(Array.isArray(j.products)?j.products:null):f[0]=='look'?(Array.isArray(j.categories)?j.categories:null):f[0]=='rules'?(Array.isArray(j.rules)?j.rules:null):j})})).then(function(){applyCfg();rebuildShop();route()})}
