@@ -217,7 +217,7 @@ function md(s){
     return '<p>'+inl(b).replace(/\n/g,'<br>')+'</p>';
   }).join('');
 }
-var DEF = { blog: [], shop: [], look: [], rules: [] };
+if (typeof DEF === 'undefined') { var DEF = { blog: [], shop: [], look: [], rules: [] }; }
 function posts(){
   var raw = (typeof CFG !== 'undefined' && Array.isArray(CFG.blog)) ? CFG.blog : ((typeof DEF !== 'undefined' && DEF && Array.isArray(DEF.blog)) ? DEF.blog : []);
   return raw.filter(function(b){ return b && b.title; });
