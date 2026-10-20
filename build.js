@@ -257,7 +257,7 @@ paths.forEach(p => { const m = metaFor(p); seoMap[p] = { t: m.t, d: m.d, u: m.u 
 const seoScript = '<script>window.__SEO=' + JSON.stringify(seoMap).replace(/</g, '\\u003c') + ';</script>';
 const footer = applyText(els['#ft'].innerHTML);
 function renderBody(p) {
-  const h = p.indexOf('/blog/') === 0 ? A.post(p.slice(6)) : p.indexOf('/cua-hang/') === 0 ? A.product(p.slice(10)) : A.P[p]();
+  const h = p.indexOf('/blog') === 0 ? A.post(p.slice(5).replace(/^\//, '')) : p.indexOf('/cua-hang') === 0 ? A.product(p.slice(9).replace(/^\//, '')) : A.P[p]();
   return applyText(A.LK(h));
 }
 function write(file, content) { fs.mkdirSync(path.dirname(file), { recursive: true }); fs.writeFileSync(file, content); }

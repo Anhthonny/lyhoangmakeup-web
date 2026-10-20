@@ -217,9 +217,11 @@ function md(s){
     return '<p>'+inl(b).replace(/\n/g,'<br>')+'</p>';
   }).join('');
 }
+var DEF = { blog: [], shop: [], look: [], rules: [] };
 function posts(){
-  var raw = Array.isArray(CFG.blog) ? CFG.blog : DEF.blog;
+  var raw = (typeof CFG !== 'undefined' && Array.isArray(CFG.blog)) ? CFG.blog : ((typeof DEF !== 'undefined' && DEF && Array.isArray(DEF.blog)) ? DEF.blog : []);
   return raw.filter(function(b){ return b && b.title; });
+});
 }
 function bimg(u){
   if(!u) return '';
@@ -384,7 +386,15 @@ function rc(){$('#cc').textContent=cartL.length;$('#ci').innerHTML=cartL.length?
 function route(){
 if(location.hash.indexOf('#/')==0){var hh=location.hash.slice(1),q='',i=hh.indexOf('?');if(i>-1){q=hh.slice(i);hh=hh.slice(0,i)}history.replaceState(null,'',(hh.replace(/\/+$/,'')||'')+'/'+q)}
 var p=curPath(),h;
-if(p.indexOf('/blog/')==0)h=post(decodeURIComponent(p.slice(6)));else if(p.indexOf('/cua-hang/')==0)h=product(decodeURIComponent(p.slice(10)));else h=(P[p]||P['/'])();
+if(p.indexOf('/blog')==0){
+    var key = p.slice(5).replace(/^\//,'');
+    h = post(decodeURIComponent(key));
+  } else if(p.indexOf('/cua-hang')==0){
+    var key = p.slice(9).replace(/^\//,'');
+    h = product(decodeURIComponent(key));
+  } else {
+    h = (P[p] || P['/'])();
+  }
 $('#app').innerHTML=LK(h);
 nav.classList.remove('o');
 document.querySelectorAll('nav a').forEach(a=>{var x=a.getAttribute('href');a.classList.toggle('on',p=='/'?x=='/':x=='/'+p.replace(/^\//,'').replace(/\/$/,'')+'/')});
