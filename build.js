@@ -17,7 +17,7 @@ const ctx = {
   fetch: () => new Promise(() => {}), console, Date, setTimeout, Promise
 };
 ctx.window = ctx; vm.createContext(ctx);
-vm.runInContext(script + ';globalThis.__api={P,CFG,post,posts,slug,CD,MK,applyCfg,rebuildShop,SV,H,V,LK,esc,product,shop,plist,pslug,pimg,pprice,CAT_META};', ctx);
+vm.runInContext(script + ';globalThis.__api={P,CFG,post,posts,slug,CD,MK,applyCfg,rebuildShop,SV,H,V,LK,esc,product,shop,plist,pslug,pimg,pprice,CAT_META,BLOG_CAT_META,bcatSlug};', ctx);
 const A = ctx.__api;
 const arr = (o, k) => (o && Array.isArray(o[k])) ? o[k] : null;
 A.CFG.site = data.site; A.CFG.home = data.home; A.CFG.price = data.price;
@@ -61,10 +61,35 @@ const CAT_SEO = {
   }
 };
 
+
+const BLOG_CAT_SEO = {
+  'trang-diem-co-dau': {
+    name: 'Trang điểm Cô dâu',
+    title: `Cẩm nang Trang điểm & Làm tóc Cô dâu đẹp tự nhiên | ${BRS}`,
+    desc: `Bí quyết chọn layout makeup cô dâu, kiểu tóc cưới, trang điểm mẹ cô dâu và kinh nghiệm chuẩn bị trước ngày cưới tại ${BRS} Biên Hòa.`
+  },
+  'ky-thuat-trang-diem': {
+    name: 'Kỹ thuật & Xu hướng',
+    title: `Kỹ thuật Trang điểm mắt, đánh nền & Xu hướng Makeup | ${BRS}`,
+    desc: `Hướng dẫn cách đánh phấn mắt một mí, mí lót, kẻ eyeliner, xử lý lớp nền bị mốc và xu hướng trang điểm mới nhất từ Master Lý Hoàng.`
+  },
+  'cham-soc-da': {
+    name: 'Chăm sóc da & Tóc',
+    title: `Chăm sóc da tiền Makeup (Skin Prep) & Phục hồi da | ${BRS}`,
+    desc: `Các bước skincare trước khi trang điểm giúp nền mịn mướt và lộ trình phục hồi da cấp tốc cho cô dâu trước ngày cưới.`
+  },
+  'goc-hoc-vien': {
+    name: 'Học nghề & Dịch vụ',
+    title: `Kinh nghiệm Học nghề Makeup, Đi tiệc & Chụp kỷ yếu | ${BRS}`,
+    desc: `Danh sách dụng cụ cho người mới bắt đầu học trang điểm, kinh nghiệm makeup đi tiệc và chụp ảnh kỷ yếu bền màu tại Biên Hòa, Đồng Nai.`
+  }
+};
+
 /* ---- danh sách trang */
 const SKIP = /-old$|^\/hoc-vien\/chuyen-nghiep$|^\/hoc-vien\/master$/;
 let paths = Object.keys(A.P).filter(p => !SKIP.test(p));
 const posts = A.posts();
+Object.keys(BLOG_CAT_SEO).forEach(k => paths.push('/blog/' + k));
 posts.forEach(b => paths.push('/blog/' + A.slug(b.title)));
 Object.keys(CAT_SEO).forEach(k => paths.push('/cua-hang/' + k));
 A.plist().forEach(p => paths.push('/cua-hang/' + A.pslug(p)));
@@ -102,7 +127,12 @@ function defMeta(p) {
     const pp = A.plist().find(x => A.pslug(x) === m[1]);
     if (pp) return { t: cut(pp.name, 52) + ` | ${BRS}`, d: cut((String(pp.short_desc || '').split(/(?<=\.)\s/)[0] || pp.name), 125) + ` Sản phẩm ${BRS} chọn dùng.`, img: A.pimg(pp, 0), prod: pp };
   }
-  if ((m = p.match(/^\/blog\/(.+)$/))) { const b = posts.find(x => A.slug(x.title) === m[1]); if (b) return { t: (String(b.title).indexOf(BRS) > -1 ? String(b.title) : `${b.title} | ${BRS}`), d: cut(String(b.description || '').length < 110 ? (b.description + ' Chia sẻ từ Master Lý Hoàng, ' + BRS + ' tại ' + LOC + '.') : b.description, 158), img: b.thumbnail, post: b }; }
+  if ((m = p.match(/^\/blog\/(.+)$/))) {
+    if (BLOG_CAT_SEO[m[1]]) {
+      const bc = BLOG_CAT_SEO[m[1]];
+      const firstPost = posts.find(x => (x.category || 'Trang điểm Cô dâu') === bc.name);
+      return { t: bc.title, d: cut(bc.desc, 158), img: firstPost ? firstPost.thumbnail : null, bcat: bc, bcatSlug: m[1] };
+    } const b = posts.find(x => A.slug(x.title) === m[1]); if (b) return { t: (String(b.title).indexOf(BRS) > -1 ? String(b.title) : `${b.title} | ${BRS}`), d: cut(String(b.description || '').length < 110 ? (b.description + ' Chia sẻ từ Master Lý Hoàng, ' + BRS + ' tại ' + LOC + '.') : b.description, 158), img: b.thumbnail, post: b }; }
   return { t: BR, d: cut(HV('hero_desc'), 158) };
 }
 const seoOver = (data.seo && Array.isArray(data.seo.pages)) ? data.seo.pages : [];
@@ -161,6 +191,26 @@ function jsonld(p, m) {
     };
     out.push(pd);
   }
+  if (m.bcat) {
+    const cPosts = posts.filter(x => (x.category || 'Trang điểm Cô dâu') === m.bcat.name);
+    out.push({
+      '@context': 'https://schema.org',
+      '@type': 'CollectionPage',
+      name: m.bcat.title,
+      description: m.bcat.desc,
+      url: m.u,
+      mainEntity: {
+        '@type': 'ItemList',
+        numberOfItems: cPosts.length,
+        itemListElement: cPosts.map((x, idx) => ({
+          '@type': 'ListItem',
+          position: idx + 1,
+          url: SITE + '/blog/' + A.slug(x.title) + '/',
+          name: x.title
+        }))
+      }
+    });
+  }
   if (m.post) out.push({ '@context': 'https://schema.org', '@type': 'BlogPosting', headline: m.post.title, description: cut(m.post.description, 200), image: m.img, mainEntityOfPage: m.u, inLanguage: 'vi', author: { '@type': 'Organization', name: BR }, publisher: { '@type': 'Organization', name: BR, logo: { '@type': 'ImageObject', url: abs(SV('logo')) } } });
   const parts = p.split('/').filter(Boolean); let acc = '';
   const items = [{ '@type': 'ListItem', position: 1, name: 'Trang chủ', item: SITE + '/' }];
@@ -169,8 +219,14 @@ function jsonld(p, m) {
     items.push({ '@type': 'ListItem', position: 2, name: 'Cửa hàng', item: SITE + '/cua-hang/' });
     items.push({ '@type': 'ListItem', position: 3, name: m.prod.category, item: SITE + '/cua-hang/' + cSlug + '/' });
     items.push({ '@type': 'ListItem', position: 4, name: m.prod.name, item: m.u });
+  } else if (m.post) {
+    const bCat = m.post.category || 'Trang điểm Cô dâu';
+    const bSlug = A.bcatSlug ? A.bcatSlug(bCat) : A.slug(bCat);
+    items.push({ '@type': 'ListItem', position: 2, name: 'Blog', item: SITE + '/blog/' });
+    items.push({ '@type': 'ListItem', position: 3, name: bCat, item: SITE + '/blog/' + bSlug + '/' });
+    items.push({ '@type': 'ListItem', position: 4, name: m.post.title.split(' | ')[0], item: m.u });
   } else {
-    parts.forEach((s, i) => { acc += '/' + s; const last = i === parts.length - 1; items.push({ '@type': 'ListItem', position: i + 2, name: last ? (m.cat ? m.cat.name : m.t.split(' | ')[0]) : ({ 'cua-hang': 'Cửa hàng', 'dich-vu': 'Dịch vụ', 'hoc-vien': 'Học viện', 've-master': 'Về Master', blog: 'Blog', lookbook: 'Lookbook' }[s] || s.replace(/-/g, ' ')), item: SITE + acc + '/' }); });
+    parts.forEach((s, i) => { acc += '/' + s; const last = i === parts.length - 1; items.push({ '@type': 'ListItem', position: i + 2, name: last ? (m.cat ? m.cat.name : m.bcat ? m.bcat.name : m.t.split(' | ')[0]) : ({ 'cua-hang': 'Cửa hàng', 'dich-vu': 'Dịch vụ', 'hoc-vien': 'Học viện', 've-master': 'Về Master', blog: 'Blog', lookbook: 'Lookbook' }[s] || s.replace(/-/g, ' ')), item: SITE + acc + '/' }); });
   }
   out.push({ '@context': 'https://schema.org', '@type': 'BreadcrumbList', itemListElement: items });
   return out;

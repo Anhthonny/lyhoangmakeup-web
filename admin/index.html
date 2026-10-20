@@ -22,7 +22,8 @@ if(changed)i.files=dt.files},true);
 <!-- Thư viện SheetJS xử lý Excel trực tiếp trên trình duyệt -->
 <script src="https://cdn.sheetjs.com/xlsx-0.20.1/package/dist/xlsx.full.min.js"></script>
 
-<div id="excel-admin-bar" style="position:fixed; bottom:20px; right:20px; z-index:99999; background:#1e1e2f; color:#fff; padding:12px 16px; border-radius:12px; box-shadow:0 8px 24px rgba(0,0,0,0.25); font-family:sans-serif; display:flex; gap:10px; align-items:center; font-size:13px;">
+<!-- 1. THANH CÔNG CỤ EXCEL: CHỈ HIỆN KHI Ở MỤC CỬA HÀNG -->
+<div id="excel-admin-bar" style="position:fixed; bottom:20px; right:20px; z-index:99999; background:#1e1e2f; color:#fff; padding:12px 16px; border-radius:12px; box-shadow:0 8px 24px rgba(0,0,0,0.25); font-family:sans-serif; display:none; gap:10px; align-items:center; font-size:13px;">
   <strong style="color:#f5c542;">⚡ Quản lý SP bằng Excel:</strong>
   <button id="btn-export-excel" style="background:#28a745; color:#fff; border:none; padding:7px 12px; border-radius:6px; cursor:pointer; font-weight:600;">
     📥 Xuất Excel
@@ -33,8 +34,74 @@ if(changed)i.files=dt.files},true);
   </label>
 </div>
 
+<!-- 2. THANH CÔNG CỤ VIẾT BÀI NHANH: CHỈ HIỆN KHI Ở MỤC BLOG -->
+<div id="blog-admin-bar" style="position:fixed; bottom:20px; right:20px; z-index:99999; background:#1e1e2f; color:#fff; padding:12px 16px; border-radius:12px; box-shadow:0 8px 24px rgba(0,0,0,0.25); font-family:sans-serif; display:none; gap:10px; align-items:center; font-size:13px;">
+  <strong style="color:#f5c542;">📝 Trợ lý Blog:</strong>
+  <button id="btn-quick-add-blog" style="background:#d9b64a; color:#1e1e2f; border:none; padding:8px 14px; border-radius:6px; cursor:pointer; font-weight:700;">
+    ✍️ + Viết bài Blog mới ngay
+  </button>
+  <button id="btn-collapse-blog" style="background:#3a3a52; color:#fff; border:none; padding:8px 12px; border-radius:6px; cursor:pointer; font-weight:600;" title="Thu gọn hoặc mở rộng danh sách bài viết">
+    📁 Thu gọn / Mở rộng
+  </button>
+</div>
+
 <script>
-// 1. XUẤT FILE EXCEL
+// Tự động kiểm tra trang hiện tại trong Admin để chỉ hiển thị đúng nút cần thiết
+function updateAdminFloatingBars() {
+  const h = window.location.hash || '';
+  const excelBar = document.getElementById('excel-admin-bar');
+  const blogBar = document.getElementById('blog-admin-bar');
+
+  // Chỉ hiện nút Excel khi người dùng đang mở trang chỉnh sửa Cửa hàng (cua_hang)
+  const isShopPage = h.includes('/collections/cua_hang/entries/');
+  // Chỉ hiện nút Viết bài nhanh khi người dùng đang mở trang chỉnh sửa Blog (blog)
+  const isBlogPage = h.includes('/collections/blog/entries/');
+
+  if (excelBar) excelBar.style.display = isShopPage ? 'flex' : 'none';
+  if (blogBar) blogBar.style.display = isBlogPage ? 'flex' : 'none';
+}
+
+window.addEventListener('hashchange', updateAdminFloatingBars);
+setInterval(updateAdminFloatingBars, 600);
+updateAdminFloatingBars();
+
+// Nút "+ Viết bài Blog mới ngay": Tự động bấm nút Add, cuộn thẳng tới khung soạn thảo bài mới
+document.getElementById('btn-quick-add-blog').addEventListener('click', () => {
+  const buttons = Array.from(document.querySelectorAll('button, a, div[role="button"]'));
+  const addBtn = buttons.find(el => {
+    const txt = (el.textContent || '').trim().toLowerCase();
+    return txt.includes('add bài viết') || txt.includes('thêm bài viết') || (txt.startsWith('add ') && txt.includes('bài'));
+  });
+
+  if (addBtn) {
+    addBtn.click();
+    setTimeout(() => {
+      // Tìm tất cả các ô nhập Tiêu đề đang mở và cuộn tới ô mới nhất
+      const inputs = Array.from(document.querySelectorAll('input[type="text"]')).filter(inp => inp.offsetParent !== null);
+      if (inputs.length > 0) {
+        const targetInput = inputs[inputs.length - 1];
+        targetInput.scrollIntoView({ behavior: 'smooth', block: 'center' });
+        setTimeout(() => targetInput.focus(), 300);
+      } else {
+        window.scrollTo({ top: document.body.scrollHeight, behavior: 'smooth' });
+      }
+    }, 250);
+  } else {
+    alert('Đang tải danh sách bài viết, anh vui lòng đợi 1 giây rồi bấm lại nhé!');
+  }
+});
+
+// Nút "Thu gọn / Mở rộng" danh sách bài viết trong Admin
+document.getElementById('btn-collapse-blog').addEventListener('click', () => {
+  const toggleBtns = Array.from(document.querySelectorAll('button[aria-label*="collapse"], button[aria-label*="expand"], [class*="TopBarButton"]'));
+  if (toggleBtns.length > 0) {
+    toggleBtns.forEach(b => b.click());
+  } else {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  }
+});
+
+// 1. XUẤT FILE EXCEL CỬA HÀNG
 document.getElementById('btn-export-excel').addEventListener('click', async () => {
   try {
     const res = await fetch('/data/shop.json?t=' + Date.now());
@@ -44,7 +111,7 @@ document.getElementById('btn-export-excel').addEventListener('click', async () =
       'Tên sản phẩm': p.name || '',
       'Slug': p.slug || '',
       'Ngành hàng': p.category || 'Trang điểm',
-            'Phân loại con': p.subcategory || '',
+      'Phân loại con': p.subcategory || '',
       'Hiện trên web (TRUE/FALSE)': p.published !== false,
       'Giá bán (VNĐ)': p.price !== undefined && p.price !== null ? p.price : '',
       'Mô tả ngắn': p.short_desc || '',
@@ -88,6 +155,7 @@ document.getElementById('input-import-excel').addEventListener('change', async (
         name,
         slug: String(r['Slug'] || '').trim(),
         category: String(r['Ngành hàng'] || 'Trang điểm').trim(),
+        subcategory: String(r['Phân loại con'] || '').trim(),
         published: String(r['Hiện trên web (TRUE/FALSE)']).toLowerCase() !== 'false',
         ...(price !== null && !isNaN(price) ? { price } : {}),
         short_desc: String(r['Mô tả ngắn'] || '').trim(),

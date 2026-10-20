@@ -135,7 +135,7 @@ collections:
         file: "data/blog.json"
         format: "json"
         fields:
-          - { label: "Bài viết", name: "posts", widget: "list", required: false, summary: "{{fields.title}}", fields: [{ label: "Tiêu đề", name: "title", widget: "string" }, { label: "Mô tả ngắn", name: "description", widget: "text", required: false }, { label: "Ảnh bìa", name: "thumbnail", widget: "image", required: false, hint: "Ảnh ngang tỉ lệ 16:9 (ví dụ 1600×900 px), dưới 300 KB, WebP hoặc JPG." }, { label: "Mô tả ảnh bìa (alt, giúp SEO ảnh)", name: "thumbnail_alt", widget: "string", required: false }, { label: "Nội dung (chèn ảnh được)", name: "body", widget: "markdown", required: false }, { label: "Nút cuối bài", name: "cta", widget: "select", required: false, default: "cd", options: [{label: "Đặt lịch makeup", value: "cd"},{label: "Nhận tư vấn học viên", value: "hv"}] }] }
+          - { label: "Bài viết", name: "posts", widget: "list", collapsed: true, minimize_collapsed: true, required: false, summary: "{{fields.category}} · {{fields.subcategory}} — {{fields.title}}", fields: [{ label: "Tiêu đề", name: "title", widget: "string" }, { label: "Chuyên mục chính", name: "category", widget: "select", default: "Kỹ thuật & Xu hướng", options: ["Trang điểm Cô dâu", "Kỹ thuật & Xu hướng", "Chăm sóc da & Tóc", "Học nghề & Dịch vụ"] }, { label: "Chuyên mục con (VD: Trang điểm Mắt, Nền & Che khuyết điểm, Layout & Phong cách...)", name: "subcategory", widget: "string", required: false, default: "Trang điểm Mắt" }, { label: "Mô tả ngắn (Chuẩn SEO Google)", name: "description", widget: "text", required: false }, { label: "Ảnh bìa", name: "thumbnail", widget: "image", required: false, hint: "Ảnh ngang tỉ lệ 16:9 (ví dụ 1600×900 px), dưới 300 KB, WebP hoặc JPG." }, { label: "Mô tả ảnh bìa (alt, giúp SEO ảnh)", name: "thumbnail_alt", widget: "string", required: false }, { label: "Nội dung (chèn ảnh được)", name: "body", widget: "markdown", required: false }, { label: "Nút cuối bài", name: "cta", widget: "select", required: false, default: "cd", options: [{label: "Đặt lịch makeup", value: "cd"},{label: "Nhận tư vấn học viên", value: "hv"}] }, { label: "Hiện trên website", name: "published", widget: "boolean", default: true, required: false }] }
   - name: "cua_hang"
     label: "Cửa hàng (sản phẩm, ảnh, video, giá)"
     description: "Thêm, sửa, ẩn sản phẩm. Để trống giá thì trang hiện chữ Liên hệ."
@@ -147,7 +147,7 @@ collections:
         media_folder: "/media"
         public_folder: "/media"
         fields:
-          - { label: "Sản phẩm", name: "products", widget: "list", required: false, summary: "{{fields.code}} · {{fields.name}}", fields: [
+          - { label: "Sản phẩm", name: "products", widget: "list", collapsed: true, minimize_collapsed: true, required: false, summary: "{{fields.code}} · [{{fields.category}} - {{fields.subcategory}}] {{fields.name}}", fields: [
               { label: "Mã SP", name: "code", widget: "string", required: false },
               { label: "Tên sản phẩm", name: "name", widget: "string" },
               { label: "Địa chỉ trang (viết không dấu, nối gạch ngang)", name: "slug", widget: "string", required: false, hint: "Trang sản phẩm sẽ là lyhoangmakeup.com/cua-hang/(địa chỉ này)/. Nên giữ nguyên sau khi đã đăng. Để trống thì tự lấy từ tên." },
