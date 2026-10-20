@@ -2,6 +2,14 @@
 backend:
   name: git-gateway
   branch: main
+  # Mỗi lần bấm "Publish" trong Admin chỉ LƯU bài, KHÔNG tự deploy (tiết kiệm credit Netlify).
+  # Khi muốn đưa lên web: Netlify > Deploys > Trigger deploy (xem hướng dẫn).
+  commit_messages:
+    create: 'Create {{collection}} "{{slug}}" [skip ci]'
+    update: 'Update {{collection}} "{{slug}}" [skip ci]'
+    delete: 'Delete {{collection}} "{{slug}}" [skip ci]'
+    uploadMedia: 'Upload "{{path}}" [skip ci]'
+    deleteMedia: 'Delete "{{path}}" [skip ci]'
 
 locale: "vi"
 site_url: "https://lyhoangmakeup.com"

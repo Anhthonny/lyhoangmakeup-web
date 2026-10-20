@@ -102,7 +102,7 @@ function defMeta(p) {
     const pp = A.plist().find(x => A.pslug(x) === m[1]);
     if (pp) return { t: cut(pp.name, 52) + ` | ${BRS}`, d: cut((String(pp.short_desc || '').split(/(?<=\.)\s/)[0] || pp.name), 125) + ` Sản phẩm ${BRS} chọn dùng.`, img: A.pimg(pp, 0), prod: pp };
   }
-  if ((m = p.match(/^\/blog\/(.+)$/))) { const b = posts.find(x => A.slug(x.title) === m[1]); if (b) return { t: `${b.title} | ${BRS}`, d: cut(String(b.description || '').length < 110 ? (b.description + ' Chia sẻ từ Master Lý Hoàng, ' + BRS + ' tại ' + LOC + '.') : b.description, 158), img: b.thumbnail, post: b }; }
+  if ((m = p.match(/^\/blog\/(.+)$/))) { const b = posts.find(x => A.slug(x.title) === m[1]); if (b) return { t: (String(b.title).indexOf(BRS) > -1 ? String(b.title) : `${b.title} | ${BRS}`), d: cut(String(b.description || '').length < 110 ? (b.description + ' Chia sẻ từ Master Lý Hoàng, ' + BRS + ' tại ' + LOC + '.') : b.description, 158), img: b.thumbnail, post: b }; }
   return { t: BR, d: cut(HV('hero_desc'), 158) };
 }
 const seoOver = (data.seo && Array.isArray(data.seo.pages)) ? data.seo.pages : [];

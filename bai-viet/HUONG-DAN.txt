@@ -1,0 +1,12 @@
+ĐĂNG BÀI HÀNG LOẠT
+1. Mỗi bài = 1 file .md trong thư mục này. Sao chép _mau-bai-viet.md rồi đổi tên (ví dụ bai-01.md).
+2. Ảnh đại diện: bỏ file ảnh vào thư mục anh/ rồi ghi đường dẫn vào dòng thumbnail: (vd /anh/abc.jpg).
+3. cta: cd = nút đặt lịch makeup, hv = nút tư vấn học viện.
+4. Terminal, trong thư mục dự án:
+     node import-blog.js --thu     (chạy thử, kiểm tra cảnh báo)
+     node import-blog.js           (ghi vào data/blog.json)
+5. Đưa lên web (1 lần deploy cho tất cả bài):
+     git add .
+     git commit -m "Dang bai blog"
+     git push
+Sửa lại bài: sửa file .md rồi chạy lại lệnh (bài trùng tiêu đề sẽ được cập nhật).
