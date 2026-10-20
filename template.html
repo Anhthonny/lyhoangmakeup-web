@@ -210,7 +210,10 @@ return s.split(/\n{2,}/).map(b=>{b=b.trim();if(!b)return'';var h=b.match(/^(#{1,
 if(/^[-*] /.test(b))return'<ul>'+b.split('\n').map(x=>`<li>${inl(x.replace(/^[-*] /,''))}</li>`).join('')+'</ul>';
 var im=b.match(/^!\[(.*?)\]\((.*?)(?:\s+"(.*?)")?\)/);if(im)return`<figure style="margin:18px 0"><img class="im im16" src="${im[2]}" alt="${im[1]}" loading="lazy">${im[3]?`<figcaption class="c mute" style="font-size:13px;margin-top:6px">${im[3]}</figcaption>`:''}</figure>`;
 return`<p>${inl(b).replace(/\n/g,'<br>')}</p>`}).join('')}
-function posts(){return (Array.isArray(CFG.blog)?CFG.blog:DEF.blog).filter(function(b){return b&&b.title&&b.published!==false})}
+function posts(){
+  var raw = Array.isArray(CFG.blog) ? CFG.blog : DEF.blog;
+  return raw.filter(function(b){ return b && b.title; });
+})}
 function bimg(u){if(!u)return '';return /^https?:|^\//.test(u)?u:'/'+String(u).replace(/^\/+/, '')}
 function bcard(b, hide){
   var cat=b.category||'Trang điểm Cô dâu',sub=b.subcategory||'',im=bimg(b.thumbnail);
