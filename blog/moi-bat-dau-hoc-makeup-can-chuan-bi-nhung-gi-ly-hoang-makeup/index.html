@@ -69,8 +69,43 @@ let Z='https://zalo.me/0941615200';
 let ctas=`<a class="btn" href="${Z}" target="_blank">Nhắn Tin Zalo</a> <a class="btn b2" href="tel:0941615200">Gọi Hotline</a>`;
 function setGate(g){gate=g;try{localStorage.setItem('gate',g)}catch(e){}fab()}
 function fab(){const f=$('#fab');f.textContent=gate=='hv'?'Nhận tư vấn lộ trình':gate=='cd'?'Đặt Lịch Makeup':'Đặt Lịch Makeup';f.href=gate=='hv'?'/dat-lich/?hv':'/dat-lich/?cd'}
-function form(t){const hv=t=='hv';return `<form onsubmit="return done(event,'${t}')"><input required placeholder="Họ và tên"><input required placeholder="Số điện thoại / Zalo">${hv?'<select><option>Makeup Cá Nhân 1:1</option><option>Khóa Chuyên nghiệp (danh sách chờ)</option><option>Khóa Master (danh sách chờ)</option></select><select><option>Ca sáng 10h–13h</option><option>Ca tối 18h–20h30</option></select>':'<input type="date" required><select onchange="var i=this.nextElementSibling,h=this.selectedIndex==1;i.hidden=!h;i.required=h"><option>Makeup tại tiệm</option><option>Makeup tại nhà</option></select><input hidden placeholder="Nhập vị trí / địa chỉ makeup tại nhà"><select><option>Thử layout cô dâu</option><option>Cô dâu Signature</option><option>Tiệc / sự kiện</option></select>'}<button class="btn" style="display:block;margin:10px auto 0;font-size:18px;padding:15px 48px;text-align:center">${hv?'Nhận tư vấn lộ trình':'Đặt ngay'}</button></form>`}
-function done(e,t){e.preventDefault();e.target.outerHTML=t=='hv'?`<div class="card"><h3>Cảm ơn bạn đã quan tâm 🌿</h3><p>Master sẽ gọi tư vấn lộ trình phù hợp trong 24h. Đặt cọc 500.000đ để giữ lịch học.</p></div>`:`<div class="card"><h3>Cảm ơn bạn đã đặt lịch ✨</h3><p>Tiệm sẽ liên hệ xác nhận qua Zalo kèm hướng dẫn đặt cọc (cô dâu 500k, tiệc 100k).</p></div>`;return false}
+function form(t){const hv=t=='hv';
+const fld=(n,ph,ty,rq)=>`<input name="${n}" type="${ty||'text'}"${rq?' required':''} placeholder="${ph}">`;
+return `<form name="dat-lich-lyhoang" onsubmit="return done(event,'${t}')"><input type="hidden" name="Loai_form" value="${hv?'Đăng ký Học viện':'Đặt lịch Makeup'}"><p style="position:absolute;left:-9999px" aria-hidden="true"><label>Đừng điền ô này <input name="bot-field" tabindex="-1" autocomplete="off"></label></p>${fld('Ho_va_ten','Họ và tên *','text',1)}${fld('So_dien_thoai','Số điện thoại *','tel',1)}${fld('Email','Email (không bắt buộc)','email')}${fld('Facebook','Link hoặc tên Facebook (không bắt buộc)')}${fld('Zalo','Số Zalo (nếu khác số điện thoại)','tel')}${hv?'<select name="Ngay_dat_hoac_Khoa_hoc"><option>Makeup Cá Nhân 1:1</option><option>Khóa Chuyên nghiệp (danh sách chờ)</option><option>Khóa Master (danh sách chờ)</option></select><select name="Hinh_thuc_hoac_Ca_hoc"><option>Ca sáng 10h–13h</option><option>Ca tối 18h–20h30</option></select>':'<input name="Ngay_dat_hoac_Khoa_hoc" type="date" required><select name="Hinh_thuc_hoac_Ca_hoc" onchange="var i=this.nextElementSibling,h=this.selectedIndex==1;i.hidden=!h;i.required=h"><option>Makeup tại tiệm</option><option>Makeup tại nhà</option></select><input name="Dia_chi_tai_nha" hidden placeholder="Nhập vị trí / địa chỉ makeup tại nhà"><select name="Goi_dich_vu"><option>Thử layout cô dâu</option><option>Cô dâu Signature</option><option>Tiệc / sự kiện</option></select>'}<button class="btn" style="display:block;margin:10px auto 0;font-size:18px;padding:15px 48px;text-align:center">${hv?'Nhận tư vấn lộ trình':'Đặt ngay'}</button></form>`}
+function done(e,t){
+  e.preventDefault();
+  var f=e.target, fd=new FormData(f), d={}, hv=t=='hv';
+  fd.forEach(function(v,k){d[k]=v});
+  if(d['bot-field'])return false; /* bot điền ô ẩn -> bỏ qua */
+  var L=function(k,v){return v?'\n'+k+': '+v:''};
+  var summary=(hv?'[ĐĂNG KÝ HỌC VIỆN]':'[ĐẶT LỊCH MAKEUP]')
+    +L('Họ tên',d.Ho_va_ten)+L('SĐT',d.So_dien_thoai)+L('Zalo',d.Zalo)+L('Email',d.Email)+L('Facebook',d.Facebook)
+    +(hv?L('Khóa học',d.Ngay_dat_hoac_Khoa_hoc)+L('Ca học',d.Hinh_thuc_hoac_Ca_hoc)
+        :L('Ngày đặt',d.Ngay_dat_hoac_Khoa_hoc)+L('Hình thức',d.Hinh_thuc_hoac_Ca_hoc+(d.Dia_chi_tai_nha?' ('+d.Dia_chi_tai_nha+')':''))+L('Dịch vụ',d.Goi_dich_vu));
+  /* sao chép sẵn để khách dán vào Zalo (Zalo không tự điền sẵn nội dung) */
+  try{navigator.clipboard.writeText(summary).catch(function(){})}catch(x){}
+
+  var fb=SV('facebook')||'https://facebook.com/profile.php?id=61583350533355';
+  var m=fb.match(/profile\.php\?id=(\d+)/)||fb.match(/facebook\.com\/([^\/?#]+)/);
+  var msg=SV('messenger_url')||(m?'https://m.me/'+m[1]:fb);
+
+  var btn=f.querySelector('button');btn.disabled=true;btn.textContent='Đang gửi...';
+  var body=new URLSearchParams();body.append('form-name','dat-lich-lyhoang');
+  Object.keys(d).forEach(function(k){body.append(k,d[k])});
+  var show=function(ok){
+    f.outerHTML='<div class="card" style="text-align:left;line-height:1.6">'+
+      '<h3 style="margin-top:0">'+(ok?(hv?'Đã gửi đăng ký tư vấn 🌿':'Đã gửi thông tin đặt lịch ✨'):'Chưa gửi tự động được 🙏')+'</h3>'+
+      '<p>'+(ok?'Tiệm đã nhận được thông tin và sẽ liên hệ lại sớm. Để được phản hồi nhanh hơn, bạn có thể nhắn thêm cho tiệm qua Zalo hoặc Messenger (nội dung đã được sao chép sẵn, chỉ cần dán):':'Bạn vui lòng bấm gửi trực tiếp qua Zalo hoặc Messenger bên dưới (nội dung đã được sao chép sẵn, chỉ cần dán):')+'</p>'+
+      '<pre style="background:#fdfbf4;padding:12px;border-radius:10px;border:1px solid var(--line);white-space:pre-wrap;font-family:inherit;font-size:14px;margin:10px 0">'+esc(summary)+'</pre>'+
+      '<div style="display:flex;gap:10px;flex-wrap:wrap;margin-top:16px">'+
+        '<a class="btn" href="'+Z+'" target="_blank" rel="noopener">💬 Gửi qua Zalo</a>'+
+        '<a class="btn b2" href="'+msg+'" target="_blank" rel="noopener">📘 Gửi qua Messenger</a>'+
+      '</div></div>';
+  };
+  fetch('/',{method:'POST',headers:{'Content-Type':'application/x-www-form-urlencoded'},body:body.toString()})
+    .then(function(r){show(r.ok)}).catch(function(){show(false)});
+  return false;
+};
 const tt=(r,c)=>`<tr><td>${r}</td><td>${c}</td></tr>`;
 const P={
 '/':()=>home(),
@@ -218,4 +253,7 @@ document.querySelectorAll('nav a').forEach(a=>{var x=a.getAttribute('href');a.cl
 seoMeta(p);
 if(!keep)scrollTo(0,0);keep=0;initV();applyRules($('#app'));applyRules($('header'))}
 boot();
-</script></body></html>
+</script><form name="dat-lich-lyhoang" data-netlify="true" netlify-honeypot="bot-field" hidden>
+<input type="text" name="Loai_form"><input type="text" name="Ho_va_ten"><input type="text" name="So_dien_thoai"><input type="text" name="Email"><input type="text" name="Facebook"><input type="text" name="Zalo"><input type="text" name="Ngay_dat_hoac_Khoa_hoc"><input type="text" name="Hinh_thuc_hoac_Ca_hoc"><input type="text" name="Dia_chi_tai_nha"><input type="text" name="Goi_dich_vu"><input type="text" name="bot-field">
+</form>
+</body></html>
