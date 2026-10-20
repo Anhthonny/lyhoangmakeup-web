@@ -238,9 +238,10 @@ if(/^[-*] /.test(b))return'<ul>'+b.split('\n').map(x=>`<li>${inl(x.replace(/^[-*
 var im=b.match(/^!\[(.*?)\]\((.*?)(?:\s+"(.*?)")?\)/);if(im)return`<figure style="margin:18px 0"><img class="im im16" src="${im[2]}" alt="${im[1]}" loading="lazy">${im[3]?`<figcaption class="c mute" style="font-size:13px;margin-top:6px">${im[3]}</figcaption>`:''}</figure>`;
 return`<p>${inl(b).replace(/\n/g,'<br>')}</p>`}).join('')}
 function posts(){return (Array.isArray(CFG.blog)?CFG.blog:DEF.blog).filter(function(b){return b&&b.title&&b.published!==false})}
+function bimg(u){if(!u)return '';return /^https?:|^\//.test(u)?u:'/'+String(u).replace(/^\/+/, '')}
 function bcard(b, hide){
-  var cat=b.category||'Trang điểm Cô dâu',sub=b.subcategory||'';
-  return `<a class="card bc" href="#/blog/${slug(b.title)}" data-c="${esc(cat)}" data-sub="${esc(sub)}" data-k="${slug(b.title+' '+(b.description||'')+' '+cat+' '+sub)}" style="padding:0;overflow:hidden${hide?';display:none':''}">${b.thumbnail?`<img class="im im16" src="${IM(b.thumbnail)}" alt="${esc(b.thumbnail_alt||b.title)}" loading="lazy" style="border-radius:0;object-position:center 25%">`:''}<div style="padding:18px"><small class="mute" style="display:block;margin-bottom:6px">${esc(cat)}${sub?' · <span class="gold">'+esc(sub)+'</span>':''}</small><h3 style="font-size:18px;margin:0 0 8px;line-height:1.4">${esc(String(b.title||'').replace(/\s*\|\s*Lý Hoàng.*$/i,''))}</h3><p class="mute" style="font-size:14px;margin:0">${esc(clip(b.description,115))}</p></div></a>`;
+  var cat=b.category||'Trang điểm Cô dâu',sub=b.subcategory||'',im=bimg(b.thumbnail);
+  return `<a class="card bpost" href="#/blog/${slug(b.title)}" data-c="${esc(cat)}" data-sub="${esc(sub)}" data-k="${slug(b.title+' '+(b.description||'')+' '+cat+' '+sub)}" style="padding:0;overflow:hidden${hide?';display:none':''}">${im?`<img class="im im16" src="${im}" alt="${esc(b.thumbnail_alt||b.title)}" loading="lazy" style="border-radius:0;object-position:center 25%">`:''}<div style="padding:18px"><small class="mute" style="display:block;margin-bottom:6px">${esc(cat)}${sub?' · <span class="gold">'+esc(sub)+'</span>':''}</small><h3 style="font-size:18px;margin:0 0 8px;line-height:1.4">${esc(String(b.title||'').replace(/\s*\|\s*Lý Hoàng.*$/i,''))}</h3><p class="mute" style="font-size:14px;margin:0">${esc(clip(b.description,115))}</p></div></a>`;
 }
 var blogC='Tất cả',blogSub='Tất cả',blogLim=9;
 function blog(catKey){
@@ -278,7 +279,7 @@ function blog(catKey){
 function blogSubCat(b){blogSub=b.dataset.sub;blogLim=9;var bs=document.querySelectorAll('.bcb');for(var i=0;i<bs.length;i++)bs[i].classList.toggle('b2',bs[i]!==b);blogF()}
 function blogMore(){blogLim+=9;blogF()}
 function blogF(){
-  var q=slug((document.getElementById('bsq')||{}).value||''),n=0,shown=0,cs=document.querySelectorAll('#bg .bc');
+  var q=slug((document.getElementById('bsq')||{}).value||''),n=0,shown=0,cs=document.querySelectorAll('#bg .bpost');
   for(var i=0;i<cs.length;i++){
     var c=cs[i],match=(blogSub=='Tất cả'||c.dataset.sub==blogSub)&&(!q||c.dataset.k.indexOf(q)>-1);
     if(match){n++;if(shown<blogLim){c.style.display='';shown++}else{c.style.display='none'}}else{c.style.display='none'}
@@ -297,7 +298,7 @@ function post(key){
   <p class="mute" style="font-size:13px;margin:0 0 14px"><a class="gold" href="#/">Trang chủ</a> / <a class="gold" href="#/blog">Blog</a> / <a class="gold" href="#/blog/${cSlug}">${esc(cat)}</a>${sub?' / '+esc(sub):''}</p>
   <small class="mute"><a class="gold" href="#/blog/${cSlug}">${esc(cat)}</a>${sub?' · <span class="gold">'+esc(sub)+'</span>':''}</small>
   <h1 style="margin-top:8px">${esc(b.title)}</h1>
-  ${b.thumbnail?`<figure style="margin:0 0 24px"><img class="im im16" src="${b.thumbnail}" alt="${esc(b.thumbnail_alt||b.title)}" style="object-position:center 25%"></figure>`:''}
+  ${b.thumbnail?`<figure style="margin:0 0 24px"><img class="im im16" src="${bimg(b.thumbnail)}" alt="${esc(b.thumbnail_alt||b.title)}" style="object-position:center 25%"></figure>`:''}
   ${md(b.body)}
   <div class="card c" style="margin-top:36px"><h3>${hv?'Muốn học makeup bài bản 1:1?':'Muốn đặt lịch makeup cho gương mặt của bạn?'}</h3><a class="btn" href="/dat-lich/?${hv?'hv':'cd'}">${hv?'Nhận tư vấn lộ trình':'Đặt lịch makeup'}</a> <a class="btn b2" href="${Z}" target="_blank">Nhắn Zalo</a></div>
   ${rel.length?`<h2 style="font-size:24px;margin-top:44px">Bài viết cùng chủ đề</h2><div class="gr">${rel.map(bcard).join('')}</div>`:''}
