@@ -3,7 +3,7 @@
   "btn_book_text": "Đặt lịch makeup",
   "gate2_image_right": "anh/makeup-ky-yeu-le-tot-nghiep-bien-hoa.webp",
   "gate3_title": "Khởi Nghiệp Nghề Cầm Cọ",
-  "gate1_image": "/anh/anh-bia-video-co-dau-ao-dai-ren-do-bien-hoa.jpg",
+  "gate1_image": "/anh/makeup-concept-hoa-do-toc-xoan-bup-bien-hoa.webp",
   "styles": [
     {
       "title": "Trong trẻo Hàn Quốc kết hợp nắn chỉnh nét Douyin",
@@ -22,12 +22,17 @@
       "image": "anh/makeup-concept-ao-dai-do-hoa-cuc-toc-bup-bien-hoa.webp"
     }
   ],
+  "price_title": "Bảng giá tham khảo",
   "gate2_image_left": "anh/makeup-ky-yeu-dong-phuc-hoc-sinh-bien-hoa.webp",
   "gate3_text": "Học viện makeup 1:1 →",
   "gate3_image": "/anh/makeup-concept-ao-dai-do-hoa-cuc-toc-bup-bien-hoa.webp",
   "gate2_text": "Makeup kỷ yếu, tốt nghiệp →",
   "gate1_text": "Dịch vụ cô dâu & tiệc →",
   "process_title": "Quy trình 4 bước",
+  "price_note": "Giá mang tính tham khảo, có thể thay đổi theo layout và thời điểm. Nhắn Zalo để được báo giá chính xác.",
+  "hero_image_1": "",
+  "hero_image_2": "",
+  "hero_image_3": "",
   "btn_course_text": "Xem khóa học",
   "sections": [
     "hero",
@@ -47,6 +52,7 @@
   ],
   "google_review_mark": "",
   "quiz_title": "Chọn layout hợp gương mặt",
+  "feedback_images": [],
   "google_title": "Đánh giá trên Google",
   "hero_title": "Đánh Thức Vẻ Đẹp Tiềm Ẩn, Tôn Vinh Khí Chất Riêng",
   "google_reviews": [],
@@ -93,6 +99,7 @@
   "styles_title": "Phong cách đặc trưng",
   "philosophy_text": "Mỗi gương mặt đều mang một nét đẹp riêng biệt. Việc của tôi không phải biến bạn thành một người khác, mà là làm cho điều đẹp nhất vốn có ở bạn được nhìn thấy và tỏa sáng.",
   "form_title": "Điền thông tin đặt lịch",
+  "feedback_title": "Feedback thực tế từ khách hàng",
   "stats": [
     {
       "num": "10",
@@ -111,12 +118,5 @@
       "label": "giải thưởng/chứng chỉ"
     }
   ],
-  "gate1_title": "Tỏa Sáng Ngày Cưới",
-  "hero_image_1": "",
-  "hero_image_2": "",
-  "hero_image_3": "",
-  "feedback_title": "Feedback thực tế từ khách hàng",
-  "feedback_images": [],
-  "price_title": "Bảng giá tham khảo",
-  "price_note": "Giá mang tính tham khảo, có thể thay đổi theo layout và thời điểm. Nhắn Zalo để được báo giá chính xác."
+  "gate1_title": "Tỏa Sáng Ngày Cưới"
 }
