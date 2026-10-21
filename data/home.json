@@ -31,6 +31,8 @@
   "btn_course_text": "Xem khóa học",
   "sections": [
     "hero",
+    "feedback",
+    "price",
     "video",
     "stats",
     "gates",
@@ -109,5 +111,12 @@
       "label": "giải thưởng/chứng chỉ"
     }
   ],
-  "gate1_title": "Tỏa Sáng Ngày Cưới"
+  "gate1_title": "Tỏa Sáng Ngày Cưới",
+  "hero_image_1": "",
+  "hero_image_2": "",
+  "hero_image_3": "",
+  "feedback_title": "Feedback thực tế từ khách hàng",
+  "feedback_images": [],
+  "price_title": "Bảng giá tham khảo",
+  "price_note": "Giá mang tính tham khảo, có thể thay đổi theo layout và thời điểm. Nhắn Zalo để được báo giá chính xác."
 }
