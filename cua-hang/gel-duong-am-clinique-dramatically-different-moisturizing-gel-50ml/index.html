@@ -45,9 +45,52 @@ table{width:100%;border-collapse:collapse}td{padding:10px 4px;border-bottom:1px 
 .pi{aspect-ratio:1;border-radius:22px;background:linear-gradient(135deg,var(--blush),var(--bg2));display:grid;place-items:center;margin-bottom:12px}
 @media(prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}.vid img:first-child{opacity:1}}
 
-#bg { display: grid !important; grid-template-columns: repeat(auto-fill, minmax(290px, 1fr)) !important; gap: 22px !important; width: 100% !important; min-height: 100px; margin-top: 16px; }
-#bg .bpost { opacity: 1 !important; visibility: visible !important; transform: none !important; background: #fff; border: 1px solid rgba(217,182,74,0.28); border-radius: 16px; box-shadow: 0 6px 20px rgba(0,0,0,0.05); transition: transform .2s, box-shadow .2s; }
-#bg .bpost:hover { transform: translateY(-3px) !important; box-shadow: 0 12px 28px rgba(0,0,0,0.09); }
+
+
+
+/* --- Sửa lỗi vỡ Header trên Desktop --- */
+header .mb, .nav .mb, button.mb, [onclick*="menu"] { width: auto !important; flex: 0 0 auto !important; }
+@media (min-width: 861px) {
+  .mb { display: none !important; }
+}
+header nav a, .nav a, .menu a { white-space: nowrap !important; }
+
+/* --- Giao diện Blog Luxury Editorial --- */
+.blog-hero { text-align: center; max-width: 720px; margin: 0 auto 28px; }
+.blog-hero h1 { font-size: clamp(30px, 4.2vw, 44px); margin: 0 0 10px; line-height: 1.2; letter-spacing: -0.01em; }
+.blog-hero p { font-size: 15.5px; color: #6e6259; margin: 0; line-height: 1.6; }
+
+.blog-toolbar { display: flex; flex-wrap: wrap; gap: 12px; align-items: center; justify-content: space-between; margin: 0 0 18px; padding-bottom: 16px; border-bottom: 1px solid rgba(217,182,74,0.22); }
+.blog-cats { display: flex; gap: 8px; flex-wrap: wrap; align-items: center; }
+.blog-cat-pill { display: inline-flex; align-items: center; gap: 6px; padding: 9px 16px; border-radius: 999px; font-size: 13.5px; font-weight: 500; text-decoration: none; color: #3a3028; background: #fff; border: 1px solid rgba(217,182,74,0.35); transition: all .2s ease; white-space: nowrap; }
+.blog-cat-pill:hover { border-color: #c9a227; color: #1a1410; transform: translateY(-1px); }
+.blog-cat-pill.active { background: linear-gradient(135deg, #d9b64a, #b88917); color: #fff; border-color: transparent; font-weight: 600; box-shadow: 0 4px 14px rgba(184,137,23,0.25); }
+.blog-cat-pill span.cnt { font-size: 11.5px; opacity: 0.82; font-weight: 400; }
+
+.blog-search-wrap { position: relative; min-width: 240px; flex: 0 1 260px; }
+.blog-search-wrap input { width: 100% !important; margin: 0 !important; padding: 9px 14px 9px 34px !important; border-radius: 999px !important; border: 1px solid rgba(217,182,74,0.38) !important; background: #fff !important; font-size: 13.5px !important; outline: none; transition: border-color .2s, box-shadow .2s; }
+.blog-search-wrap input:focus { border-color: #b88917 !important; box-shadow: 0 0 0 3px rgba(217,182,74,0.16); }
+.blog-search-icon { position: absolute; left: 12px; top: 50%; transform: translateY(-50%); font-size: 13px; color: #8c7b6b; pointer-events: none; }
+
+.blog-subbar { display: flex; gap: 8px; align-items: center; overflow-x: auto; padding: 4px 2px 14px; margin-bottom: 12px; scrollbar-width: none; }
+.blog-subbar::-webkit-scrollbar { display: none; }
+.blog-sub-chip { width: auto !important; flex: 0 0 auto; padding: 6px 13px; border-radius: 999px; font-size: 12.5px; background: rgba(217,182,74,0.09); color: #5a4b3c; border: 1px solid transparent; cursor: pointer; transition: all .18s ease; white-space: nowrap; }
+.blog-sub-chip:hover { background: rgba(217,182,74,0.18); color: #1f1914; }
+.blog-sub-chip.active { background: #231c16; color: #f6e3a4; border-color: #231c16; font-weight: 500; }
+
+#bg { display: grid !important; grid-template-columns: repeat(auto-fill, minmax(310px, 1fr)) !important; gap: 26px !important; width: 100% !important; margin-top: 10px; }
+#bg .bpost { opacity: 1 !important; visibility: visible !important; transform: none !important; background: #fff !important; border: 1px solid rgba(217,182,74,0.22) !important; border-radius: 20px !important; padding: 0 !important; overflow: hidden !important; box-shadow: 0 8px 24px rgba(28,22,16,0.04) !important; transition: transform .25s ease, box-shadow .25s ease, border-color .25s ease !important; display: flex; flex-direction: column; justify-content: space-between; }
+#bg .bpost:hover { transform: translateY(-5px) !important; box-shadow: 0 16px 36px rgba(28,22,16,0.1) !important; border-color: rgba(217,182,74,0.55) !important; }
+#bg .bpost .bpost-img-wrap { display: block; overflow: hidden; aspect-ratio: 16 / 10; background: #f5efe6; position: relative; }
+#bg .bpost .bpost-img-wrap img { width: 100%; height: 100%; object-fit: cover; object-position: center 25%; display: block; transition: transform .45s ease; border-radius: 0 !important; }
+#bg .bpost:hover .bpost-img-wrap img { transform: scale(1.04); }
+#bg .bpost .bpost-body { padding: 20px 22px 22px; flex: 1; display: flex; flex-direction: column; }
+#bg .bpost .bpost-meta { display: flex; align-items: center; gap: 6px; flex-wrap: wrap; font-size: 11.5px; text-transform: uppercase; letter-spacing: 0.05em; color: #9a7b2c; font-weight: 600; margin-bottom: 8px; }
+#bg .bpost .bpost-title { font-size: 18.5px; line-height: 1.42; margin: 0 0 10px; font-weight: 600; color: #1f1914; display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden; }
+#bg .bpost .bpost-title a { color: inherit; text-decoration: none; transition: color .18s; }
+#bg .bpost:hover .bpost-title a { color: #9a7b2c; }
+#bg .bpost .bpost-desc { font-size: 14px; line-height: 1.6; color: #665c52; margin: 0 0 16px; flex: 1; display: -webkit-box; -webkit-line-clamp: 3; -webkit-box-orient: vertical; overflow: hidden; }
+#bg .bpost .bpost-foot { display: flex; align-items: center; justify-content: space-between; padding-top: 12px; border-top: 1px solid rgba(217,182,74,0.15); font-size: 13px; font-weight: 600; color: #9a7b2c; }
 
 </style><script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script></head><body>
 <header><a href="/"><img class="lg" id="hlg" src="anh/logo-ly-hoang-makeup-artist-bien-hoa.webp" alt="Logo Lý Hoàng Makeup Artist"></a><b id="hbn">Lý Hoàng Makeup &amp; Academy</b><button id="bg" onclick="nav.classList.toggle('o')">☰</button>
@@ -263,19 +306,19 @@ function bimg(u){
 function bcard(b, hide){
   var cat = b.category || 'Trang điểm Cô dâu', sub = b.subcategory || '', im = bimg(b.thumbnail);
   var postHref = '/blog/' + slug(b.title) + '/';
-  var imgHtml = im ? '<a href="' + postHref + '" style="display:block"><img class="im im16" src="' + im + '" alt="' + esc(b.thumbnail_alt || b.title) + '" loading="lazy" style="border-radius:0;object-position:center 25%;width:100%;height:200px;object-fit:cover;display:block"></a>' : '';
-  var subHtml = sub ? ' · <span class="gold">' + esc(sub) + '</span>' : '';
+  var imgHtml = im ? '<a class="bpost-img-wrap" href="' + postHref + '"><img src="' + im + '" alt="' + esc(b.thumbnail_alt || b.title) + '" loading="lazy"></a>' : '';
+  var subHtml = sub ? '<span>·</span><span style="color:#6e6259;text-transform:none;letter-spacing:0;font-weight:500">' + esc(sub) + '</span>' : '';
   var cleanTitle = esc(String(b.title || '').replace(/\s*\|\s*Lý Hoàng.*$/i, ''));
   var rawDesc = String(b.description || '');
-  var descText = rawDesc.length > 115 ? rawDesc.slice(0, 115) + '…' : rawDesc;
-  var styleAttr = 'padding:0;overflow:hidden;display:' + (hide ? 'none' : 'flex') + ';flex-direction:column;justify-content:space-between;background:#fff;border-radius:16px;border:1px solid rgba(217,182,74,0.28)';
+  var descText = rawDesc.length > 120 ? rawDesc.slice(0, 120) + '…' : rawDesc;
+  var styleAttr = hide ? 'display:none' : 'display:flex';
   return '<article class="card bpost" data-c="' + slug(cat) + '" data-sub="' + slug(sub || 'all') + '" data-k="' + slug(b.title + ' ' + rawDesc + ' ' + cat + ' ' + sub) + '" style="' + styleAttr + '">' +
     imgHtml +
-    '<div style="padding:18px;flex:1;display:flex;flex-direction:column">' +
-      '<small class="mute" style="display:block;margin-bottom:6px">' + esc(cat) + subHtml + '</small>' +
-      '<h3 style="font-size:18px;margin:0 0 8px;line-height:1.4;color:#1a1a1a"><a href="' + postHref + '" style="color:inherit;text-decoration:none">' + cleanTitle + '</a></h3>' +
-      '<p class="mute" style="font-size:14px;margin:0 0 12px;flex:1;color:#555">' + esc(descText) + '</p>' +
-      '<a class="gold" href="' + postHref + '" style="font-size:13px;font-weight:600">Đọc chi tiết →</a>' +
+    '<div class="bpost-body">' +
+      '<div class="bpost-meta"><span>' + esc(cat) + '</span>' + subHtml + '</div>' +
+      '<h3 class="bpost-title"><a href="' + postHref + '">' + cleanTitle + '</a></h3>' +
+      '<p class="bpost-desc">' + esc(descText) + '</p>' +
+      '<div class="bpost-foot"><a href="' + postHref + '" style="color:inherit;text-decoration:none">Xem bài viết</a><span>→</span></div>' +
     '</div>' +
   '</article>';
 }
@@ -289,13 +332,13 @@ function blog(catKey){
   var allB = posts();
   var L = info ? allB.filter(function(b){ return slug(b.category || 'Trang điểm Cô dâu') === slug(info.name); }) : allB;
   var mainCats = [
-    {label: 'Tất cả (' + allB.length + ')', href: '/blog/', active: !info},
-    {label: 'Trang điểm Cô dâu (' + allB.filter(function(b){ return slug(b.category || 'Trang điểm Cô dâu') === slug('Trang điểm Cô dâu'); }).length + ')', href: '/blog/trang-diem-co-dau/', active: cleanKey === 'trang-diem-co-dau'},
-    {label: 'Kỹ thuật & Xu hướng (' + allB.filter(function(b){ return slug(b.category || '') === slug('Kỹ thuật & Xu hướng'); }).length + ')', href: '/blog/ky-thuat-trang-diem/', active: cleanKey === 'ky-thuat-trang-diem'},
-    {label: 'Chăm sóc da & Tóc (' + allB.filter(function(b){ return slug(b.category || '') === slug('Chăm sóc da & Tóc'); }).length + ')', href: '/blog/cham-soc-da/', active: cleanKey === 'cham-soc-da'},
-    {label: 'Học nghề & Dịch vụ (' + allB.filter(function(b){ return slug(b.category || '') === slug('Học nghề & Dịch vụ'); }).length + ')', href: '/blog/goc-hoc-vien/', active: cleanKey === 'goc-hoc-vien'}
+    {label: 'Tất cả', cnt: allB.length, href: '/blog/', active: !info},
+    {label: 'Trang điểm Cô dâu', cnt: allB.filter(function(b){ return slug(b.category || 'Trang điểm Cô dâu') === slug('Trang điểm Cô dâu'); }).length, href: '/blog/trang-diem-co-dau/', active: cleanKey === 'trang-diem-co-dau'},
+    {label: 'Kỹ thuật & Xu hướng', cnt: allB.filter(function(b){ return slug(b.category || '') === slug('Kỹ thuật & Xu hướng'); }).length, href: '/blog/ky-thuat-trang-diem/', active: cleanKey === 'ky-thuat-trang-diem'},
+    {label: 'Chăm sóc da & Tóc', cnt: allB.filter(function(b){ return slug(b.category || '') === slug('Chăm sóc da & Tóc'); }).length, href: '/blog/cham-soc-da/', active: cleanKey === 'cham-soc-da'},
+    {label: 'Học nghề & Dịch vụ', cnt: allB.filter(function(b){ return slug(b.category || '') === slug('Học nghề & Dịch vụ'); }).length, href: '/blog/goc-hoc-vien/', active: cleanKey === 'goc-hoc-vien'}
   ];
-  var subCats = [{name: 'Tất cả', key: 'all'}];
+  var subCats = [{name: 'Tất cả chủ đề', key: 'all'}];
   L.forEach(function(b){
     if(b.subcategory){
       var sk = slug(b.subcategory);
@@ -304,26 +347,30 @@ function blog(catKey){
   });
   var h1 = info ? info.h1 : 'Blog Làm Đẹp & Cẩm Nang Makeup';
   var desc = info ? info.desc : 'Chia sẻ kiến thức trang điểm cô dâu, kỹ thuật đánh nền, kẻ mắt, chăm sóc da và kinh nghiệm học nghề thực tế từ Master Lý Hoàng.';
-  var bread = info ? '<p class="mute" style="font-size:13px;margin:0 0 12px"><a class="gold" href="/">Trang chủ</a> / <a class="gold" href="/blog/">Blog</a> / ' + esc(info.name) + '</p>' : '';
-  var mainCatsHtml = mainCats.map(function(c){ return '<a class="btn ' + (c.active ? '' : 'b2') + '" href="' + c.href + '" style="padding:10px 18px;font-size:14px">' + esc(c.label) + '</a>'; }).join('');
-  var subCatsHtml = subCats.map(function(sc, i){
-    var cnt = sc.key === 'all' ? L.length : L.filter(function(b){ return slug(b.subcategory || '') === sc.key; }).length;
-    return '<button type="button" class="btn ' + (i ? 'b2' : '') + ' bcb" data-sub="' + sc.key + '" onclick="blogSubCat(this)" style="padding:7px 14px;font-size:13px">' + esc(sc.name) + ' (' + cnt + ')</button>';
+  var bread = info ? '<p class="mute" style="font-size:13px;margin:0 0 10px"><a class="gold" href="/">Trang chủ</a> / <a class="gold" href="/blog/">Blog</a> / ' + esc(info.name) + '</p>' : '';
+  var mainCatsHtml = mainCats.map(function(c){
+    return '<a class="blog-cat-pill' + (c.active ? ' active' : '') + '" href="' + c.href + '">' + esc(c.label) + ' <span class="cnt">(' + c.cnt + ')</span></a>';
   }).join('');
+  var subCatsHtml = subCats.length > 2 ? '<div class="blog-subbar">' + subCats.map(function(sc, i){
+    var cnt = sc.key === 'all' ? L.length : L.filter(function(b){ return slug(b.subcategory || '') === sc.key; }).length;
+    return '<button type="button" class="blog-sub-chip' + (i === 0 ? ' active' : '') + ' bcb" data-sub="' + sc.key + '" onclick="blogSubCat(this)">' + esc(sc.name) + ' (' + cnt + ')</button>';
+  }).join('') + '</div>' : '';
   var cardsHtml = L.map(function(b){ return bcard(b, false); }).join('');
-  return '<div class="w"><div class="in">' + bread + '<h1>' + esc(h1) + '</h1><p class="mute">' + esc(desc) + '</p>' +
-    '<div style="display:flex;gap:8px;flex-wrap:wrap;align-items:center;margin:18px 0 12px">' + mainCatsHtml + '</div>' +
-    '<div style="display:flex;gap:8px;flex-wrap:wrap;align-items:center;margin:0 0 22px;padding:12px 14px;background:rgba(217,182,74,0.08);border-radius:14px">' +
-    '<input id="bsq" type="search" placeholder="Tìm chủ đề, bài viết..." oninput="blogF()" style="max-width:230px;margin:0 8px 0 0;background:#fff">' +
-    subCatsHtml + '</div>' +
-    '<div class="gr" id="bg" style="display:grid;grid-template-columns:repeat(auto-fill,minmax(290px,1fr));gap:22px;margin-top:20px">' + cardsHtml + '</div>' +
-    '<p id="bn" class="c mute" style="display:' + (L.length ? 'none' : 'block') + '">Không tìm thấy bài viết phù hợp.</p>' +
+  return '<div class="w"><div class="in">' +
+    '<div class="blog-hero">' + bread + '<h1>' + esc(h1) + '</h1><p>' + esc(desc) + '</p></div>' +
+    '<div class="blog-toolbar">' +
+      '<div class="blog-cats">' + mainCatsHtml + '</div>' +
+      '<div class="blog-search-wrap"><span class="blog-search-icon">🔍</span><input id="bsq" type="search" placeholder="Tìm bài viết, chủ đề..." oninput="blogF()"></div>' +
+    '</div>' +
+    subCatsHtml +
+    '<div class="gr" id="bg">' + cardsHtml + '</div>' +
+    '<p id="bn" class="c mute" style="display:' + (L.length ? 'none' : 'block') + ';padding:40px 0">Không tìm thấy bài viết phù hợp.</p>' +
     '</div></div>';
 }
 function blogSubCat(b){
   blogSub = b.getAttribute('data-sub') || 'all';
   var bs = document.querySelectorAll('.bcb');
-  for(var i=0; i<bs.length; i++) bs[i].classList.toggle('b2', bs[i] !== b);
+  for(var i=0; i<bs.length; i++) bs[i].classList.toggle('active', bs[i] === b);
   blogF();
 }
 function blogMore(){ blogLim += 16; blogF(); }
@@ -348,15 +395,15 @@ function post(key){
   var b = L[i]; if(!b) return blog();
   var hv = b.cta == 'hv', cat = b.category || 'Trang điểm Cô dâu', sub = b.subcategory || '', cSlug = bcatSlug(cat);
   var rel = L.filter(function(x, idx){ return idx !== i && slug(x.category || 'Trang điểm Cô dâu') === slug(cat); }).slice(0, 3);
-  var relHtml = rel.length ? '<h2 style="font-size:24px;margin-top:44px">Bài viết cùng chủ đề</h2><div class="gr" style="display:grid;grid-template-columns:repeat(auto-fill,minmax(260px,1fr));gap:18px">' + rel.map(function(x){ return bcard(x, false); }).join('') + '</div>' : '';
-  var nextHtml = i < L.length - 1 ? '<p class="c" style="margin-top:32px"><a class="gold" href="/blog/' + slug(L[i+1].title) + '/">Bài tiếp theo →</a></p>' : '';
-  var thumbHtml = b.thumbnail ? '<figure style="margin:0 0 24px"><img class="im im16" src="' + bimg(b.thumbnail) + '" alt="' + esc(b.thumbnail_alt || b.title) + '" style="object-position:center 25%"></figure>' : '';
-  return '<article class="w"><div class="in" style="max-width:760px">' +
+  var relHtml = rel.length ? '<h2 style="font-size:24px;margin-top:48px;margin-bottom:20px">Bài viết cùng chủ đề</h2><div class="gr" id="bg">' + rel.map(function(x){ return bcard(x, false); }).join('') + '</div>' : '';
+  var nextHtml = i < L.length - 1 ? '<p class="c" style="margin-top:36px"><a class="gold" href="/blog/' + slug(L[i+1].title) + '/">Bài tiếp theo: ' + esc(L[i+1].title) + ' →</a></p>' : '';
+  var thumbHtml = b.thumbnail ? '<figure style="margin:0 0 28px"><img class="im im16" src="' + bimg(b.thumbnail) + '" alt="' + esc(b.thumbnail_alt || b.title) + '" style="object-position:center 25%;border-radius:18px"></figure>' : '';
+  return '<article class="w"><div class="in" style="max-width:780px">' +
     '<p class="mute" style="font-size:13px;margin:0 0 14px"><a class="gold" href="/">Trang chủ</a> / <a class="gold" href="/blog/">Blog</a> / <a class="gold" href="/blog/' + cSlug + '/">' + esc(cat) + '</a>' + (sub ? ' / ' + esc(sub) : '') + '</p>' +
-    '<small class="mute"><a class="gold" href="/blog/' + cSlug + '/">' + esc(cat) + '</a>' + (sub ? ' · <span class="gold">' + esc(sub) + '</span>' : '') + '</small>' +
-    '<h1 style="margin-top:8px">' + esc(b.title) + '</h1>' +
-    thumbHtml + md(b.body) +
-    '<div class="card c" style="margin-top:36px"><h3>' + (hv ? 'Muốn học makeup bài bản 1:1?' : 'Muốn đặt lịch makeup cho gương mặt của bạn?') + '</h3><a class="btn" href="/dat-lich/?' + (hv ? 'hv' : 'cd') + '">' + (hv ? 'Nhận tư vấn lộ trình' : 'Đặt lịch makeup') + '</a> <a class="btn b2" href="' + Z + '" target="_blank">Nhắn Zalo</a></div>' +
+    '<div style="font-size:12px;text-transform:uppercase;letter-spacing:0.05em;color:#9a7b2c;font-weight:600;margin-bottom:8px"><a class="gold" href="/blog/' + cSlug + '/">' + esc(cat) + '</a>' + (sub ? ' · <span>' + esc(sub) + '</span>' : '') + '</div>' +
+    '<h1 style="margin-top:4px;font-size:clamp(26px,3.6vw,38px);line-height:1.28">' + esc(b.title) + '</h1>' +
+    thumbHtml + '<div style="font-size:16px;line-height:1.8;color:#2c251f">' + md(b.body) + '</div>' +
+    '<div class="card c" style="margin-top:42px;border-radius:20px;background:linear-gradient(135deg,#fdfbf7,#f7f0e0)"><h3>' + (hv ? 'Muốn học makeup bài bản 1:1?' : 'Muốn đặt lịch makeup cho gương mặt của bạn?') + '</h3><p class="mute" style="margin:0 0 16px">Master Lý Hoàng trực tiếp tư vấn tone makeup và lộ trình phù hợp nhất với bạn.</p><a class="btn" href="/dat-lich/?' + (hv ? 'hv' : 'cd') + '">' + (hv ? 'Nhận tư vấn lộ trình' : 'Đặt lịch makeup') + '</a> <a class="btn b2" href="' + Z + '" target="_blank">Nhắn Zalo</a></div>' +
     relHtml + nextHtml +
     '</div></article>';
 }
