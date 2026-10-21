@@ -82,6 +82,56 @@ header nav a, .nav a, .menu a { white-space: nowrap !important; }
 #bg .bpost .bpost-desc { font-size: 14px; line-height: 1.6; color: #665c52; margin: 0 0 16px; flex: 1; display: -webkit-box; -webkit-line-clamp: 3; -webkit-box-orient: vertical; overflow: hidden; }
 #bg .bpost .bpost-foot { display: flex; align-items: center; justify-content: space-between; padding-top: 12px; border-top: 1px solid rgba(217,182,74,0.15); font-size: 13px; font-weight: 600; color: #9a7b2c; }
 
+
+/* --- Sửa triệt để lỗi méo Logo & nút 3 gạch (≡) trên Header --- */
+header, .hd, header > div, .hd > div {
+  display: flex !important;
+  align-items: center !important;
+  justify-content: space-between !important;
+}
+header a:first-child, .logo, .brand {
+  display: inline-flex !important;
+  align-items: center !important;
+  gap: 10px !important;
+  flex-shrink: 0 !important;
+  white-space: nowrap !important;
+}
+header img, .logo img, .brand img {
+  width: 44px !important;
+  height: 44px !important;
+  min-width: 44px !important;
+  min-height: 44px !important;
+  max-width: 44px !important;
+  max-height: 44px !important;
+  border-radius: 50% !important;
+  object-fit: cover !important;
+  flex-shrink: 0 !important;
+  aspect-ratio: 1 / 1 !important;
+}
+header button, .hd button, .tgl, .mb, #mb, [onclick*="nav"], [onclick*="menu"], [onclick*="classList"] {
+  width: auto !important;
+  min-width: 42px !important;
+  max-width: 46px !important;
+  height: 42px !important;
+  padding: 0 12px !important;
+  margin: 0 0 0 auto !important;
+  flex: 0 0 auto !important;
+  display: inline-flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+}
+@media (min-width: 861px) {
+  header button, .hd button, .tgl, .mb, #mb {
+    display: none !important;
+  }
+  header nav, .hd nav, #nv, .nv, .menu {
+    display: flex !important;
+    align-items: center !important;
+    gap: 20px !important;
+    flex-wrap: nowrap !important;
+  }
+}
+
 </style><script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script></head><body>
 <header><a href="/"><img class="lg" id="hlg" src="anh/logo-ly-hoang-makeup-artist-bien-hoa.webp" alt="Logo Lý Hoàng Makeup Artist"></a><b id="hbn">Lý Hoàng Makeup &amp; Academy</b><button id="bg" onclick="nav.classList.toggle('o')">☰</button>
 <nav id="nav"><a href="/">Trang chủ</a><a href="/ve-master/">Về Master</a><a href="/dich-vu/">Dịch vụ Cưới & Tiệc</a><a href="/hoc-vien/">Học viện</a><a href="/lookbook/">Lookbook</a><a href="/blog/">Blog</a><a href="/cua-hang/">Cửa hàng</a><a href="#" onclick="openCart();return false">Giỏ (<span id="cc">0</span>)</a></nav></header>
