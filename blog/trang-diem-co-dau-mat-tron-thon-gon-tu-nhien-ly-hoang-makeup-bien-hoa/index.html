@@ -19,8 +19,8 @@ a{color:inherit;text-decoration:none}img{max-width:100%;display:block}
 header{position:sticky;top:0;z-index:20;background:color-mix(in srgb,var(--bg) 92%,transparent);backdrop-filter:blur(8px);border-bottom:1px solid var(--line);display:flex;align-items:center;gap:18px;padding:8px 5vw}
 header .lg{width:48px;height:48px;border-radius:50%;background:#fff}header b{font:500 15px 'Bodoni Moda',serif;white-space:nowrap}
 nav{margin-left:auto;display:flex;gap:18px;align-items:center;font-size:13px;letter-spacing:.04em}nav a{color:var(--mute);transition:color .2s}nav a:hover,nav a.on{color:var(--gold)}
-#bg{display:none;margin-left:auto;background:none;border:1px solid var(--line);border-radius:8px;padding:6px 10px;color:var(--ink)}
-@media(max-width:900px){#bg{display:block}nav{display:none;position:absolute;top:100%;left:0;right:0;background:var(--bg);flex-direction:column;padding:16px;border-bottom:1px solid var(--line)}nav.o{display:flex}}
+#mbtn{display:none;margin-left:auto;cursor:pointer;font-size:18px;line-height:1;background:none;border:1px solid var(--line);border-radius:8px;padding:6px 10px;color:var(--ink)}
+@media(max-width:900px){#mbtn{display:block}nav{display:none;position:absolute;top:100%;left:0;right:0;background:var(--bg);flex-direction:column;padding:16px;border-bottom:1px solid var(--line)}nav.o{display:flex}}
 .btn{display:inline-block;border:0;cursor:pointer;border-radius:999px;padding:12px 26px;background:var(--g);color:#2a2112;font:500 14px Montserrat;transition:transform .25s}.btn:hover{transform:translateY(-2px)}
 .b2{background:transparent;border:1px solid var(--gold);color:var(--gold)}
 section,.w{padding:64px 5vw}.alt{background:var(--bg2)}.in{max-width:1100px;margin:auto}.c{text-align:center}
@@ -48,12 +48,7 @@ table{width:100%;border-collapse:collapse}td{padding:10px 4px;border-bottom:1px 
 
 
 
-/* --- Sửa lỗi vỡ Header trên Desktop --- */
-header .mb, .nav .mb, button.mb, [onclick*="menu"] { width: auto !important; flex: 0 0 auto !important; }
-@media (min-width: 861px) {
-  .mb { display: none !important; }
-}
-header nav a, .nav a, .menu a { white-space: nowrap !important; }
+header nav a{white-space:nowrap}
 
 /* --- Giao diện Blog Luxury Editorial --- */
 .blog-hero { text-align: center; max-width: 720px; margin: 0 auto 28px; }
@@ -93,57 +88,45 @@ header nav a, .nav a, .menu a { white-space: nowrap !important; }
 #bg .bpost .bpost-foot { display: flex; align-items: center; justify-content: space-between; padding-top: 12px; border-top: 1px solid rgba(217,182,74,0.15); font-size: 13px; font-weight: 600; color: #9a7b2c; }
 
 
-/* --- Sửa triệt để lỗi méo Logo & nút 3 gạch (≡) trên Header --- */
-header, .hd, header > div, .hd > div {
-  display: flex !important;
-  align-items: center !important;
-  justify-content: space-between !important;
-}
-header a:first-child, .logo, .brand {
-  display: inline-flex !important;
-  align-items: center !important;
-  gap: 10px !important;
-  flex-shrink: 0 !important;
-  white-space: nowrap !important;
-}
-header img, .logo img, .brand img {
-  width: 44px !important;
-  height: 44px !important;
-  min-width: 44px !important;
-  min-height: 44px !important;
-  max-width: 44px !important;
-  max-height: 44px !important;
-  border-radius: 50% !important;
-  object-fit: cover !important;
-  flex-shrink: 0 !important;
-  aspect-ratio: 1 / 1 !important;
-}
-header button, .hd button, .tgl, .mb, #mb, [onclick*="nav"], [onclick*="menu"], [onclick*="classList"] {
-  width: auto !important;
-  min-width: 42px !important;
-  max-width: 46px !important;
-  height: 42px !important;
-  padding: 0 12px !important;
-  margin: 0 0 0 auto !important;
-  flex: 0 0 auto !important;
-  display: inline-flex !important;
-  align-items: center !important;
-  justify-content: center !important;
-}
-@media (min-width: 861px) {
-  header button, .hd button, .tgl, .mb, #mb {
-    display: none !important;
-  }
-  header nav, .hd nav, #nv, .nv, .menu {
-    display: flex !important;
-    align-items: center !important;
-    gap: 20px !important;
-    flex-wrap: nowrap !important;
-  }
-}
+/* --- Header: logo tròn, menu desktop, nút ☰ chỉ hiện trên mobile --- */
+header .lg{object-fit:cover;flex-shrink:0;aspect-ratio:1/1}
+header a:first-child{display:inline-flex;align-items:center;flex-shrink:0}
+header nav a{white-space:nowrap}
+#mbtn{min-width:42px;height:42px;align-items:center;justify-content:center}
+@media(min-width:901px){#mbtn{display:none}nav{display:flex!important;flex-wrap:nowrap}}
+@media(max-width:900px){#mbtn{display:inline-flex}}
+
+/* --- UX/UI Trang Cửa hàng (Shop) Chuyên nghiệp --- */
+.shop-hero { text-align: center; max-width: 720px; margin: 0 auto 26px; }
+.shop-hero h1 { font-size: clamp(30px, 4.2vw, 42px); margin: 0 0 10px; font-weight: 600; }
+.shop-hero p { font-size: 15px; color: #6e6259; margin: 0; line-height: 1.6; }
+
+.shop-toolbar { display: flex; flex-wrap: wrap; gap: 12px; align-items: center; justify-content: space-between; margin: 0 0 18px; padding-bottom: 16px; border-bottom: 1px solid rgba(217,182,74,0.22); }
+.shop-cats { display: flex; gap: 8px; flex-wrap: wrap; align-items: center; }
+.shop-cat-pill { display: inline-flex; align-items: center; gap: 6px; padding: 9px 18px; border-radius: 999px; font-size: 13.5px; font-weight: 500; text-decoration: none; color: #3a3028; background: #fff; border: 1px solid rgba(217,182,74,0.35); transition: all .2s ease; white-space: nowrap; }
+.shop-cat-pill:hover { border-color: #c9a227; color: #1a1410; transform: translateY(-1px); }
+.shop-cat-pill.active { background: linear-gradient(135deg, #d9b64a, #b88917); color: #fff; border-color: transparent; font-weight: 600; box-shadow: 0 4px 14px rgba(184,137,23,0.25); }
+.shop-cat-pill span.cnt { font-size: 11.5px; opacity: 0.82; font-weight: 400; }
+
+.shop-search-wrap { position: relative; min-width: 240px; flex: 0 1 260px; }
+.shop-search-wrap input { width: 100% !important; margin: 0 !important; padding: 9px 14px 9px 34px !important; border-radius: 999px !important; border: 1px solid rgba(217,182,74,0.38) !important; background: #fff !important; font-size: 13.5px !important; outline: none; }
+.shop-search-wrap input:focus { border-color: #b88917 !important; box-shadow: 0 0 0 3px rgba(217,182,74,0.16); }
+.shop-search-icon { position: absolute; left: 12px; top: 50%; transform: translateY(-50%); font-size: 13px; color: #8c7b6b; pointer-events: none; }
+
+.shop-subbar { display: flex; gap: 8px; align-items: center; overflow-x: auto; padding: 4px 2px 14px; margin-bottom: 12px; scrollbar-width: none; }
+.shop-subbar::-webkit-scrollbar { display: none; }
+.shop-sub-chip { width: auto !important; flex: 0 0 auto; padding: 6px 14px; border-radius: 999px; font-size: 12.5px; background: rgba(217,182,74,0.09); color: #5a4b3c; border: 1px solid transparent; cursor: pointer; transition: all .18s ease; white-space: nowrap; }
+.shop-sub-chip:hover { background: rgba(217,182,74,0.18); color: #1f1914; }
+.shop-sub-chip.active { background: #231c16; color: #f6e3a4; border-color: #231c16; font-weight: 500; }
+
+#sg { display: grid !important; grid-template-columns: repeat(auto-fill, minmax(260px, 1fr)) !important; gap: 24px !important; width: 100% !important; margin-top: 10px; }
+#sg .spost, #sg .card { opacity: 1 !important; visibility: visible !important; transform: none !important; background: #fff !important; border: 1px solid rgba(217,182,74,0.22) !important; border-radius: 18px !important; padding: 0 !important; overflow: hidden !important; box-shadow: 0 6px 20px rgba(28,22,16,0.04) !important; transition: transform .25s ease, box-shadow .25s ease, border-color .25s ease !important; display: flex; flex-direction: column; justify-content: space-between; }
+#sg .spost:hover, #sg .card:hover { transform: translateY(-4px) !important; box-shadow: 0 14px 32px rgba(28,22,16,0.09) !important; border-color: rgba(217,182,74,0.5) !important; }
+#sg .spost img, #sg .card img { width: 100% !important; aspect-ratio: 1 / 1 !important; object-fit: cover !important; display: block !important; border-radius: 0 !important; background: #f9f6f0; }
+#sg .spost-body, #sg .card > div:not(:has(img)) { padding: 18px 20px 20px !important; flex: 1; display: flex; flex-direction: column; justify-content: space-between; }
 
 </style><script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script></head><body>
-<header><a href="/"><img class="lg" id="hlg" src="anh/logo-ly-hoang-makeup-artist-bien-hoa.webp" alt="Logo Lý Hoàng Makeup Artist"></a><b id="hbn">Lý Hoàng Makeup &amp; Academy</b><button id="bg" onclick="nav.classList.toggle('o')">☰</button>
+<header><a href="/"><img class="lg" id="hlg" src="anh/logo-ly-hoang-makeup-artist-bien-hoa.webp" alt="Logo Lý Hoàng Makeup Artist"></a><b id="hbn">Lý Hoàng Makeup &amp; Academy</b><button id="mbtn" type="button" aria-label="Mở menu" aria-controls="nav" onclick="nav.classList.toggle('o')">☰</button>
 <nav id="nav"><a href="/">Trang chủ</a><a href="/ve-master/">Về Master</a><a href="/dich-vu/">Dịch vụ Cưới & Tiệc</a><a href="/hoc-vien/">Học viện</a><a href="/lookbook/">Lookbook</a><a href="/blog/">Blog</a><a href="/cua-hang/">Cửa hàng</a><a href="#" onclick="openCart();return false">Giỏ (<span id="cc">0</span>)</a></nav></header>
 <main id="app"><article class="w"><div class="in" style="max-width:780px"><p class="mute" style="font-size:13px;margin:0 0 14px"><a class="gold" href="/">Trang chủ</a> / <a class="gold" href="/blog/">Blog</a> / <a class="gold" href="/blog/trang-diem-co-dau/">Trang điểm Cô dâu</a> / Layout &amp; Phong cách</p><div style="font-size:12px;text-transform:uppercase;letter-spacing:0.05em;color:#9a7b2c;font-weight:600;margin-bottom:8px"><a class="gold" href="/blog/trang-diem-co-dau/">Trang điểm Cô dâu</a> · <span>Layout &amp; Phong cách</span></div><h1 style="margin-top:4px;font-size:clamp(26px,3.6vw,38px);line-height:1.28">Trang Điểm Cô Dâu Mặt Tròn Thon Gọn Tự Nhiên | Lý Hoàng Makeup Biên Hòa</h1><figure style="margin:0 0 28px"><img class="im im16" src="/anh/makeup-ao-dai-hong-toc-xoan-vang-bien-hoa.webp" alt="Trang Điểm Cô Dâu Mặt Tròn Thon Gọn Tự Nhiên | Lý Hoàng Makeup Biên Hòa" style="object-position:center 25%;border-radius:18px"></figure><div style="font-size:16px;line-height:1.8;color:#2c251f"><p>Sở hữu gương mặt tròn mang lại cho nàng dâu nét đẹp phúc hậu, trẻ trung và đáng yêu. Tuy nhiên, khi lên hình cưới hoặc đứng dưới ánh đèn sân khấu, gương mặt tròn đôi khi dễ tạo cảm giác đầy đặn hơn thực tế.</p><p>Qua kinh nghiệm trang điểm thực tế cho hàng trăm nàng dâu tại Phường Tân Triều, TP. Đồng Nai (khu vực Tân Phong, Biên Hòa), Lý Hoàng Makeup hiểu rằng chỉ cần áp dụng đúng kỹ thuật tạo khối, định hình chân mày và chọn kiểu tóc phù hợp, gương mặt tròn sẽ lập tức trở nên thanh thoát, sắc sảo mà vẫn giữ trọn nét mềm mại tự nhiên. Hãy cùng khám phá ngay những bí quyết trang điểm chuyên sâu dành riêng cho cô dâu mặt tròn dưới đây!</p><h3 style="font-size:20px;margin-top:28px">1. Đặc điểm của cô dâu sở hữu gương mặt tròn và nguyên tắc trang điểm</h3><p>Gương mặt tròn thường có chiều dài và chiều rộng khuôn mặt gần bằng nhau, hai bên gò má đầy đặn, phần xương hàm bo tròn mềm mại và chiếc cằm hơi ngắn. Để giúp gương mặt cô dâu trở nên cân đối và thon dài hơn khi lên hình, người thợ trang điểm cần nắm vững 3 nguyên tắc cốt lõi sau:</p><ul><li><b>Tạo chiều sâu thay vì đánh khối đen sạm</b>: Tuyệt đối tránh dùng phấn tạo khối (contour) màu nâu quá tối quẹt thành hai vệt rõ rệt bên má. Thay vào đó, hãy kết hợp giữa kem nền hai sắc độ (sáng ở trung tâm và trầm hơn một tông ở viền mặt) để thu gọn khuôn mặt một cách vô hình.</li><li><b>Kéo dài tỷ lệ dọc của khuôn mặt:</b> Tập trung hiệu ứng bắt sáng (highlight) theo trục dọc chính giữa gồm giữa trán, sống mũi và đỉnh cằm để đánh lừa thị giác, giúp khuôn mặt trông dài và thanh tú hơn.</li><li><b>Tạo điểm nhấn sắc nét ở chân mày và mắt:</b> Những đường nét hơi có độ gấp khúc nhẹ ở đỉnh chân mày sẽ giúp phá vỡ sự tròn trịa đơn điệu, tạo nét kiêu kỳ và cuốn hút cho nàng dâu.</li></ul><h3 style="font-size:20px;margin-top:28px">2. Kỹ thuật đánh khối, bắt sáng và tán má hồng thu gọn mặt tròn</h3><figure style="margin:18px 0"><img class="im im16" src="/anh/ky-thuat-tao-khoi-danh-ma-hong-mat-tron-ly-hoang.webp" alt="Kỹ thuật tạo khối chữ số 3 và tán má hồng xéo giúp thu gọn gương mặt tròn cho cô dâu tại Lý Hoàng Makeup." loading="lazy"><figcaption class="c mute" style="font-size:13px;margin-top:6px">Cách tạo khối và đánh má hồng thon gọn cho mặt tròn</figcaption></figure><p>Bước tạo khối (Contouring), bắt sáng (Highlighting) và đánh má hồng chính là "phép thuật" giúp định hình lại cấu trúc xương mặt cho cô dâu mặt tròn:</p><p><b>Kỹ thuật tạo khối hình số 3 dọc viền mặt:</b> Dùng cọ vát xéo lấy một lượng phấn khối tông nâu xám lạnh (ash brown) tán nhẹ từ hai bên thái dương, lướt xuống hốc xương gò má và ôm trọn xuống dưới xương quai hàm theo hình chữ số 3. Thao tác này giúp che đi phần má bầu bĩnh và chiếc nọng cằm cực kỳ hiệu quả.</p><p><b>Đánh bắt sáng (Highlight) tập trung vùng chữ T:</b> Phẩy nhẹ phấn bắt sáng ánh ngọc trai mịn ở dọc sống mũi, chóp mũi, nhân trung và chính giữa cằm. Lưu ý không đánh highlight lan rộng ra hai bên đầu gò má vì độ bóng sẽ làm má trông phúng phính hơn dưới đèn flash máy ảnh.</p><p><b>Tán má hồng theo đường xéo hướng lên thái dương:</b> Khác với mặt dài cần đánh má hồng ngang, cô dâu mặt tròn nên được tán phấn má hồng (tông cam đào, hồng đất hoặc cam san hô) theo đường chéo từ đỉnh gò má vuốt xéo lên phía thái dương. Cách đánh này vừa tạo hiệu ứng nâng cơ mặt (lifting), vừa giúp gương mặt thon gọn tức thì.</p><h3 style="font-size:20px;margin-top:28px">3. Bí quyết kẻ chân mày cánh cung và chọn kiểu tóc che khuyết điểm</h3><figure style="margin:18px 0"><img class="im im16" src="/anh/kieu-toc-va-dang-chan-may-cho-co-dau-mat-tron.webp" alt="Kiểu tóc búi thấp thả tóc mai chữ S kết hợp chân mày cánh cung giúp cô dâu mặt tròn thanh thoát hơn." loading="lazy"><figcaption class="c mute" style="font-size:13px;margin-top:6px">Kiểu tóc và dáng chân mày chuẩn đẹp cho cô dâu mặt tròn</figcaption></figure><p>Bên cạnh lớp nền, dáng chân mày và kiểu tóc đóng góp đến 50% hiệu quả tạo hiệu ứng mặt V-line cho nàng dâu:</p><p><b>Dáng chân mày cánh cung có đỉnh cao nhẹ (Soft Arch Brows):</b> Tuyệt đối không kẻ chân mày ngang thẳng tắp vì sẽ chia ngắn khuôn mặt. Hãy gẩy sợi dáng chân mày cong nhẹ với phần đỉnh hơi nhô cao ở vị trí 2/3 chiều dài mày và vuốt đuôi mảnh sắc nét để gương mặt trông thanh thoát, hiện đại.</p><p><b>Kiểu tóc uốn sóng lơi hoặc búi thấp phồng đỉnh đầu:</b> Khi làm tóc, chuyên viên sẽ đánh phồng nhẹ phần chân tóc trên đỉnh đầu để ăn gian chiều dài khuôn mặt.</p><p><b>Tuyệt chiêu thả tóc mai uốn chữ S (Side Bangs):</b> Luôn chừa lại vài lọn tóc mai mỏng hai bên thái dương và uốn xoăn nhẹ hình chữ S ôm sát dọc theo gò má xuống xương hàm. Lọn tóc nhỏ này sẽ che đi 1/3 bề ngang khuôn mặt, giúp mọi góc chụp nghiêng hay chính diện của cô dâu đều thon gọn hoàn hảo.</p><h3 style="font-size:20px;margin-top:28px">4. Dịch vụ trang điểm cô dâu cá nhân hóa từng dáng mặt tại Biên Hòa</h3><figure style="margin:18px 0"><img class="im im16" src="/anh/dich-vu-makeup-co-dau-mat-tron-bien-hoa-ly-hoang.webp" alt="Chuyên viên tại Lý Hoàng Makeup Biên Hòa đang thực hiện trang điểm thon gọn gương mặt cho cô dâu." loading="lazy"><figcaption class="c mute" style="font-size:13px;margin-top:6px">Dịch vụ trang điểm cô dâu uy tín tại Lý Hoàng Makeup Biên Hòa</figcaption></figure><p>Mỗi dáng mặt đều có vẻ đẹp riêng nếu biết cách tôn vinh đúng chỗ và che khuyết điểm tinh tế. Tại <b>Lý Hoàng Makeup</b>, chúng tôi không bao giờ áp dụng một kiểu trang điểm công nghiệp cho mọi khách hàng. Trước khi bắt đầu, chuyên viên sẽ quan sát kỹ lưỡng cấu trúc xương mặt, dáng mắt và lắng nghe sở thích của cô dâu để thiết kế layout hài hòa nhất.</p><p>Chúng tôi cung cấp dịch vụ trang điểm và làm tóc cô dâu trọn gói tại Studio hoặc phục vụ tận nhà tại khắp các khu vực Phường Tân Triều, Tân Phong, toàn thành phố Biên Hòa và các vùng lân cận thuộc tỉnh Đồng Nai, cam kết sử dụng 100% mỹ phẩm cao cấp chính hãng giúp lớp nền bền đẹp suốt 12 giờ.</p><h3 style="font-size:20px;margin-top:28px">Câu Hỏi Thường Gặp (FAQ)</h3><p><b>Hỏi: Cô dâu mặt tròn có nên để tóc mái bằng (mái ngố) trong ngày cưới không?</b></p><p><b>Trả lời:</b> Không nên để mái bằng quá dày vì sẽ che kín trán, làm khuôn mặt trông ngắn và tròn hơn. Thay vào đó, cô dâu nên chọn mái mưa thưa nhẹ kết hợp mái bay dài ôm hai bên gò má, hoặc rẽ ngôi lệch 7/3 tạo độ phồng chân tóc để gương mặt sáng sủa và thon dài.</p><p><b>Hỏi: Mặt tròn thì nên chọn phụ kiện hoa tai cưới như thế nào để trông thon gọn hơn?</b></p><p><b>Trả lời:</b> Cô dâu mặt tròn nên ưu tiên các mẫu khuyên tai dáng dài, mảnh (như khuyên tai tua rua đính đá, ngọc trai thả rơi) để tạo đường thẳng đứng kéo dài khuôn mặt. Tránh đeo các loại hoa tai bản tròn to hoặc dáng chùm sát dái tai.</p><p><b>THÔNG TIN LIÊN HỆ LÝ HOÀNG MAKEUP:</b></p><ul><li><b>Địa chỉ:</b> M1/1 Khu Phố 5, Phường Tân Triều, TP. Đồng Nai (Phường Tân Phong, Biên Hòa cũ)</li><li><b>Chỉ dẫn đường đi:</b> Hẻm 1374 đường Nguyễn Ái Quốc (Vào hẻm 4 căn nhà, nhìn phía bên tay phải là tới Studio)</li><li><b>Hotline / Zalo:</b> 094.1615.200</li><li><b>Giờ mở cửa: 07:00 – 21:00</b> (Tất cả các ngày trong tuần)</li><li><b>Website</b>: <a class="gold" href="https://lyhoangmakeup.com/">lyhoangmakeup.com</a></li></ul><p>Xem thêm bài viết liên quan:</p><p><a class="gold" href="https://www.google.com/search?q=https://lyhoangmakeup.com/blog/cach-danh-phan-mat-chuan-tung-dang-mat-ly-hoang-makeup/">Cách đánh phấn mắt chuẩn từng dáng mắt: Mắt một mí, mí lót, mắt sâu</a></p><p><a class="gold" href="https://lyhoangmakeup.com/blog/5-buoc-skincare-truoc-khi-trang-diem-giup-nen-min-ly-hoang-makeup/">5 bước skincare trước khi trang điểm giúp nền mịn suốt cả ngày</a></p><p><a class="gold" href="https://www.google.com/search?q=https://lyhoangmakeup.com/blog/dich-vu-makeup-co-dau-bien-hoa-uy-tin/">Dịch vụ makeup cô dâu Biên Hòa uy tín tại Lý Hoàng Makeup</a></p><p><a class="gold" href="https://www.google.com/search?q=https://lyhoangmakeup.com/blog/makeup-co-dau-mua-cuoi-thu-dong-am-ap/">Bí quyết chọn layout makeup cô dâu mùa cưới Thu Đông rạng rỡ, ấm áp</a></p><p><a class="gold" href="https://www.google.com/search?q=https://lyhoangmakeup.com/blog/trang-diem-me-co-dau-dep-quy-phai-tre-hoa/">Kỹ thuật trang điểm cho mẹ cô dâu đẹp quý phái, trẻ hóa tự nhiên</a></p></div><div class="card c" style="margin-top:42px;border-radius:20px;background:linear-gradient(135deg,#fdfbf7,#f7f0e0)"><h3>Muốn đặt lịch makeup cho gương mặt của bạn?</h3><p class="mute" style="margin:0 0 16px">Master Lý Hoàng trực tiếp tư vấn tone makeup và lộ trình phù hợp nhất với bạn.</p><a class="btn" href="/dat-lich/?cd">Đặt lịch makeup</a> <a class="btn b2" href="https://zalo.me/0941615200" target="_blank">Nhắn Zalo</a></div><h2 style="font-size:24px;margin-top:48px;margin-bottom:20px">Bài viết cùng chủ đề</h2><div class="gr" id="bg"><article class="card bpost" data-c="trang-diem-co-dau" data-sub="kinh-nghiem-ngay-cuoi" data-k="nen-thu-layout-makeup-truoc-ngay-cuoi-bao-lau-ly-hoang-makeup-giai-dap-thac-mac-co-dau-nen-thu-layout-makeup-truoc-ngay-cuoi-bao-lau-de-chon-duoc-phong-cach-hoan-hao-nhat-tu-van-trang-diem-co-dau-uy-tin-tai-tan-trieu-dong-nai-trang-diem-co-dau-kinh-nghiem-ngay-cuoi" style="display:flex"><a class="bpost-img-wrap" href="/blog/nen-thu-layout-makeup-truoc-ngay-cuoi-bao-lau-ly-hoang-makeup/"><img src="/anh/makeup-trong-treo-han-quoc-vay-ren-toc-nua-bup-bien-hoa.webp" alt="thu-layout-makeup-truoc-ngay-cuoi-ly-hoang-makeup-dong-nai" loading="lazy"></a><div class="bpost-body"><div class="bpost-meta"><span>Trang điểm Cô dâu</span><span>·</span><span style="color:#6e6259;text-transform:none;letter-spacing:0;font-weight:500">Kinh nghiệm ngày cưới</span></div><h3 class="bpost-title"><a href="/blog/nen-thu-layout-makeup-truoc-ngay-cuoi-bao-lau-ly-hoang-makeup/">Nên Thử Layout Makeup Trước Ngày Cưới Bao Lâu?</a></h3><p class="bpost-desc">Giải đáp thắc mắc cô dâu nên thử layout makeup trước ngày cưới bao lâu để chọn được phong cách hoàn hảo nhất. Tư vấn tra…</p><div class="bpost-foot"><a href="/blog/nen-thu-layout-makeup-truoc-ngay-cuoi-bao-lau-ly-hoang-makeup/" style="color:inherit;text-decoration:none">Xem bài viết</a><span>→</span></div></div></article><article class="card bpost" data-c="trang-diem-co-dau" data-sub="toc-cuoi-phu-kien" data-k="3-kieu-toc-co-dau-don-gian-sang-trong-xu-huong-moi-ly-hoang-makeup-goi-y-3-kieu-toc-co-dau-don-gian-sang-trong-va-thanh-lich-dan-dau-xu-huong-mua-cuoi-dich-vu-lam-toc-va-trang-diem-co-dau-tai-tan-trieu-dong-nai-trang-diem-co-dau-toc-cuoi-phu-kien" style="display:flex"><a class="bpost-img-wrap" href="/blog/3-kieu-toc-co-dau-don-gian-sang-trong-xu-huong-moi-ly-hoang-makeup/"><img src="/anh/toc-song-voi-vong-hoa-co-dau-tone-tay-bien-hoa.webp" alt="3-kieu-toc-co-dau-don-gian-sang-trong-ly-hoang-makeup-dong-nai" loading="lazy"></a><div class="bpost-body"><div class="bpost-meta"><span>Trang điểm Cô dâu</span><span>·</span><span style="color:#6e6259;text-transform:none;letter-spacing:0;font-weight:500">Tóc cưới &amp; Phụ kiện</span></div><h3 class="bpost-title"><a href="/blog/3-kieu-toc-co-dau-don-gian-sang-trong-xu-huong-moi-ly-hoang-makeup/">3 Kiểu Tóc Cô Dâu Đơn Giản Sang Trọng Xu Hướng Mới</a></h3><p class="bpost-desc">Gợi ý 3 kiểu tóc cô dâu đơn giản, sang trọng và thanh lịch dẫn đầu xu hướng mùa cưới. Dịch vụ làm tóc và trang điểm cô d…</p><div class="bpost-foot"><a href="/blog/3-kieu-toc-co-dau-don-gian-sang-trong-xu-huong-moi-ly-hoang-makeup/" style="color:inherit;text-decoration:none">Xem bài viết</a><span>→</span></div></div></article><article class="card bpost" data-c="trang-diem-co-dau" data-sub="layout-phong-cach" data-k="lo-trinh-phuc-hoi-da-cho-co-dau-truoc-cuoi-2-tuan-ly-hoang-makeup-huong-dan-chi-tiet-lo-trinh-cham-soc-va-phuc-hoi-da-cap-toc-cho-co-dau-2-tuan-truoc-ngay-cuoi-bi-quyet-de-co-lop-nen-trang-diem-hoan-hao-tu-ly-hoang-makeup-trang-diem-co-dau-layout-phong-cach" style="display:flex"><a class="bpost-img-wrap" href="/blog/lo-trinh-phuc-hoi-da-cho-co-dau-truoc-cuoi-2-tuan-ly-hoang-makeup/"><img src="/anh/makeup-trong-treo-han-quoc-ao-dai-trang-bien-hoa.webp" alt="lo-trinh-phuc-hoi-da-cho-co-dau-truoc-2-tuan-ly-hoang-makeup-dong-nai" loading="lazy"></a><div class="bpost-body"><div class="bpost-meta"><span>Trang điểm Cô dâu</span><span>·</span><span style="color:#6e6259;text-transform:none;letter-spacing:0;font-weight:500">Layout &amp; Phong cách</span></div><h3 class="bpost-title"><a href="/blog/lo-trinh-phuc-hoi-da-cho-co-dau-truoc-cuoi-2-tuan-ly-hoang-makeup/">Lộ Trình Phục Hồi Da Cho Cô Dâu Trước Cưới 2 Tuần</a></h3><p class="bpost-desc">Hướng dẫn chi tiết lộ trình chăm sóc và phục hồi da cấp tốc cho cô dâu 2 tuần trước ngày cưới. Bí quyết để có lớp nền tr…</p><div class="bpost-foot"><a href="/blog/lo-trinh-phuc-hoi-da-cho-co-dau-truoc-cuoi-2-tuan-ly-hoang-makeup/" style="color:inherit;text-decoration:none">Xem bài viết</a><span>→</span></div></div></article></div><p class="c" style="margin-top:36px"><a class="gold" href="/blog/nen-thu-layout-makeup-truoc-ngay-cuoi-bao-lau-ly-hoang-makeup/">Bài tiếp theo: Nên Thử Layout Makeup Trước Ngày Cưới Bao Lâu? | Lý Hoàng Makeup →</a></p></div></article></main>
 <a id="fab" class="btn" href="/dat-lich/">Đặt lịch</a>
@@ -455,7 +438,7 @@ function post(key){
     '</div></article>';
 }
 
-/* ---- shop */
+/* ---- shop (khôi phục theo cấu trúc dữ liệu data/shop.json: name/images/slug) */
 const CAT_META = {
   'trang-diem': { name: 'Trang điểm', h1: 'Mỹ Phẩm & Dụng Cụ Trang Điểm Chuyên Nghiệp', desc: 'Kem nền, phấn phủ, che khuyết điểm, bảng mắt, má hồng, son môi và cốp đồ nghề do Master Lý Hoàng tuyển chọn và sử dụng thực tế.' },
   'phu-kien-toc': { name: 'Phụ kiện tóc', h1: 'Phụ Kiện Tóc Cô Dâu, Máy Làm Tóc & Tạo Kiểu', desc: 'Gôm xịt giữ nếp, máy uốn duỗi chuyên nghiệp, lược chia tóc và phụ kiện cài tóc cô dâu sang trọng tại Lý Hoàng Makeup.' },

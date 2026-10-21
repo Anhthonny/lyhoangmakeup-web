@@ -19,8 +19,8 @@ a{color:inherit;text-decoration:none}img{max-width:100%;display:block}
 header{position:sticky;top:0;z-index:20;background:color-mix(in srgb,var(--bg) 92%,transparent);backdrop-filter:blur(8px);border-bottom:1px solid var(--line);display:flex;align-items:center;gap:18px;padding:8px 5vw}
 header .lg{width:48px;height:48px;border-radius:50%;background:#fff}header b{font:500 15px 'Bodoni Moda',serif;white-space:nowrap}
 nav{margin-left:auto;display:flex;gap:18px;align-items:center;font-size:13px;letter-spacing:.04em}nav a{color:var(--mute);transition:color .2s}nav a:hover,nav a.on{color:var(--gold)}
-#bg{display:none;margin-left:auto;background:none;border:1px solid var(--line);border-radius:8px;padding:6px 10px;color:var(--ink)}
-@media(max-width:900px){#bg{display:block}nav{display:none;position:absolute;top:100%;left:0;right:0;background:var(--bg);flex-direction:column;padding:16px;border-bottom:1px solid var(--line)}nav.o{display:flex}}
+#mbtn{display:none;margin-left:auto;cursor:pointer;font-size:18px;line-height:1;background:none;border:1px solid var(--line);border-radius:8px;padding:6px 10px;color:var(--ink)}
+@media(max-width:900px){#mbtn{display:block}nav{display:none;position:absolute;top:100%;left:0;right:0;background:var(--bg);flex-direction:column;padding:16px;border-bottom:1px solid var(--line)}nav.o{display:flex}}
 .btn{display:inline-block;border:0;cursor:pointer;border-radius:999px;padding:12px 26px;background:var(--g);color:#2a2112;font:500 14px Montserrat;transition:transform .25s}.btn:hover{transform:translateY(-2px)}
 .b2{background:transparent;border:1px solid var(--gold);color:var(--gold)}
 section,.w{padding:64px 5vw}.alt{background:var(--bg2)}.in{max-width:1100px;margin:auto}.c{text-align:center}
@@ -48,12 +48,7 @@ table{width:100%;border-collapse:collapse}td{padding:10px 4px;border-bottom:1px 
 
 
 
-/* --- Sửa lỗi vỡ Header trên Desktop --- */
-header .mb, .nav .mb, button.mb, [onclick*="menu"] { width: auto !important; flex: 0 0 auto !important; }
-@media (min-width: 861px) {
-  .mb { display: none !important; }
-}
-header nav a, .nav a, .menu a { white-space: nowrap !important; }
+header nav a{white-space:nowrap}
 
 /* --- Giao diện Blog Luxury Editorial --- */
 .blog-hero { text-align: center; max-width: 720px; margin: 0 auto 28px; }
@@ -93,57 +88,45 @@ header nav a, .nav a, .menu a { white-space: nowrap !important; }
 #bg .bpost .bpost-foot { display: flex; align-items: center; justify-content: space-between; padding-top: 12px; border-top: 1px solid rgba(217,182,74,0.15); font-size: 13px; font-weight: 600; color: #9a7b2c; }
 
 
-/* --- Sửa triệt để lỗi méo Logo & nút 3 gạch (≡) trên Header --- */
-header, .hd, header > div, .hd > div {
-  display: flex !important;
-  align-items: center !important;
-  justify-content: space-between !important;
-}
-header a:first-child, .logo, .brand {
-  display: inline-flex !important;
-  align-items: center !important;
-  gap: 10px !important;
-  flex-shrink: 0 !important;
-  white-space: nowrap !important;
-}
-header img, .logo img, .brand img {
-  width: 44px !important;
-  height: 44px !important;
-  min-width: 44px !important;
-  min-height: 44px !important;
-  max-width: 44px !important;
-  max-height: 44px !important;
-  border-radius: 50% !important;
-  object-fit: cover !important;
-  flex-shrink: 0 !important;
-  aspect-ratio: 1 / 1 !important;
-}
-header button, .hd button, .tgl, .mb, #mb, [onclick*="nav"], [onclick*="menu"], [onclick*="classList"] {
-  width: auto !important;
-  min-width: 42px !important;
-  max-width: 46px !important;
-  height: 42px !important;
-  padding: 0 12px !important;
-  margin: 0 0 0 auto !important;
-  flex: 0 0 auto !important;
-  display: inline-flex !important;
-  align-items: center !important;
-  justify-content: center !important;
-}
-@media (min-width: 861px) {
-  header button, .hd button, .tgl, .mb, #mb {
-    display: none !important;
-  }
-  header nav, .hd nav, #nv, .nv, .menu {
-    display: flex !important;
-    align-items: center !important;
-    gap: 20px !important;
-    flex-wrap: nowrap !important;
-  }
-}
+/* --- Header: logo tròn, menu desktop, nút ☰ chỉ hiện trên mobile --- */
+header .lg{object-fit:cover;flex-shrink:0;aspect-ratio:1/1}
+header a:first-child{display:inline-flex;align-items:center;flex-shrink:0}
+header nav a{white-space:nowrap}
+#mbtn{min-width:42px;height:42px;align-items:center;justify-content:center}
+@media(min-width:901px){#mbtn{display:none}nav{display:flex!important;flex-wrap:nowrap}}
+@media(max-width:900px){#mbtn{display:inline-flex}}
+
+/* --- UX/UI Trang Cửa hàng (Shop) Chuyên nghiệp --- */
+.shop-hero { text-align: center; max-width: 720px; margin: 0 auto 26px; }
+.shop-hero h1 { font-size: clamp(30px, 4.2vw, 42px); margin: 0 0 10px; font-weight: 600; }
+.shop-hero p { font-size: 15px; color: #6e6259; margin: 0; line-height: 1.6; }
+
+.shop-toolbar { display: flex; flex-wrap: wrap; gap: 12px; align-items: center; justify-content: space-between; margin: 0 0 18px; padding-bottom: 16px; border-bottom: 1px solid rgba(217,182,74,0.22); }
+.shop-cats { display: flex; gap: 8px; flex-wrap: wrap; align-items: center; }
+.shop-cat-pill { display: inline-flex; align-items: center; gap: 6px; padding: 9px 18px; border-radius: 999px; font-size: 13.5px; font-weight: 500; text-decoration: none; color: #3a3028; background: #fff; border: 1px solid rgba(217,182,74,0.35); transition: all .2s ease; white-space: nowrap; }
+.shop-cat-pill:hover { border-color: #c9a227; color: #1a1410; transform: translateY(-1px); }
+.shop-cat-pill.active { background: linear-gradient(135deg, #d9b64a, #b88917); color: #fff; border-color: transparent; font-weight: 600; box-shadow: 0 4px 14px rgba(184,137,23,0.25); }
+.shop-cat-pill span.cnt { font-size: 11.5px; opacity: 0.82; font-weight: 400; }
+
+.shop-search-wrap { position: relative; min-width: 240px; flex: 0 1 260px; }
+.shop-search-wrap input { width: 100% !important; margin: 0 !important; padding: 9px 14px 9px 34px !important; border-radius: 999px !important; border: 1px solid rgba(217,182,74,0.38) !important; background: #fff !important; font-size: 13.5px !important; outline: none; }
+.shop-search-wrap input:focus { border-color: #b88917 !important; box-shadow: 0 0 0 3px rgba(217,182,74,0.16); }
+.shop-search-icon { position: absolute; left: 12px; top: 50%; transform: translateY(-50%); font-size: 13px; color: #8c7b6b; pointer-events: none; }
+
+.shop-subbar { display: flex; gap: 8px; align-items: center; overflow-x: auto; padding: 4px 2px 14px; margin-bottom: 12px; scrollbar-width: none; }
+.shop-subbar::-webkit-scrollbar { display: none; }
+.shop-sub-chip { width: auto !important; flex: 0 0 auto; padding: 6px 14px; border-radius: 999px; font-size: 12.5px; background: rgba(217,182,74,0.09); color: #5a4b3c; border: 1px solid transparent; cursor: pointer; transition: all .18s ease; white-space: nowrap; }
+.shop-sub-chip:hover { background: rgba(217,182,74,0.18); color: #1f1914; }
+.shop-sub-chip.active { background: #231c16; color: #f6e3a4; border-color: #231c16; font-weight: 500; }
+
+#sg { display: grid !important; grid-template-columns: repeat(auto-fill, minmax(260px, 1fr)) !important; gap: 24px !important; width: 100% !important; margin-top: 10px; }
+#sg .spost, #sg .card { opacity: 1 !important; visibility: visible !important; transform: none !important; background: #fff !important; border: 1px solid rgba(217,182,74,0.22) !important; border-radius: 18px !important; padding: 0 !important; overflow: hidden !important; box-shadow: 0 6px 20px rgba(28,22,16,0.04) !important; transition: transform .25s ease, box-shadow .25s ease, border-color .25s ease !important; display: flex; flex-direction: column; justify-content: space-between; }
+#sg .spost:hover, #sg .card:hover { transform: translateY(-4px) !important; box-shadow: 0 14px 32px rgba(28,22,16,0.09) !important; border-color: rgba(217,182,74,0.5) !important; }
+#sg .spost img, #sg .card img { width: 100% !important; aspect-ratio: 1 / 1 !important; object-fit: cover !important; display: block !important; border-radius: 0 !important; background: #f9f6f0; }
+#sg .spost-body, #sg .card > div:not(:has(img)) { padding: 18px 20px 20px !important; flex: 1; display: flex; flex-direction: column; justify-content: space-between; }
 
 </style><script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script></head><body>
-<header><a href="/"><img class="lg" id="hlg" src="anh/logo-ly-hoang-makeup-artist-bien-hoa.webp" alt="Logo Lý Hoàng Makeup Artist"></a><b id="hbn">Lý Hoàng Makeup &amp; Academy</b><button id="bg" onclick="nav.classList.toggle('o')">☰</button>
+<header><a href="/"><img class="lg" id="hlg" src="anh/logo-ly-hoang-makeup-artist-bien-hoa.webp" alt="Logo Lý Hoàng Makeup Artist"></a><b id="hbn">Lý Hoàng Makeup &amp; Academy</b><button id="mbtn" type="button" aria-label="Mở menu" aria-controls="nav" onclick="nav.classList.toggle('o')">☰</button>
 <nav id="nav"><a href="/">Trang chủ</a><a href="/ve-master/">Về Master</a><a href="/dich-vu/">Dịch vụ Cưới & Tiệc</a><a href="/hoc-vien/">Học viện</a><a href="/lookbook/">Lookbook</a><a href="/blog/">Blog</a><a href="/cua-hang/">Cửa hàng</a><a href="#" onclick="openCart();return false">Giỏ (<span id="cc">0</span>)</a></nav></header>
 <main id="app"><div class="w"><div class="in"><div class="blog-hero"><p class="mute" style="font-size:13px;margin:0 0 10px"><a class="gold" href="/">Trang chủ</a> / <a class="gold" href="/blog/">Blog</a> / Kỹ thuật &amp; Xu hướng</p><h1>Kỹ Thuật Trang Điểm &amp; Xu Hướng Makeup Mới Nhất</h1><p>Hướng dẫn chi tiết cách đánh nền mịn mướt, xử lý nền mốc, trang điểm mắt một mí, mí lót, kẻ eyeliner và phối màu son chuẩn chuyên gia.</p></div><div class="blog-toolbar"><div class="blog-cats"><a class="blog-cat-pill" href="/blog/">Tất cả <span class="cnt">(16)</span></a><a class="blog-cat-pill" href="/blog/trang-diem-co-dau/">Trang điểm Cô dâu <span class="cnt">(7)</span></a><a class="blog-cat-pill active" href="/blog/ky-thuat-trang-diem/">Kỹ thuật &amp; Xu hướng <span class="cnt">(5)</span></a><a class="blog-cat-pill" href="/blog/cham-soc-da/">Chăm sóc da &amp; Tóc <span class="cnt">(1)</span></a><a class="blog-cat-pill" href="/blog/goc-hoc-vien/">Học nghề &amp; Dịch vụ <span class="cnt">(3)</span></a></div><div class="blog-search-wrap"><span class="blog-search-icon">🔍</span><input id="bsq" type="search" placeholder="Tìm bài viết, chủ đề..." oninput="blogF()"></div></div><div class="blog-subbar"><button type="button" class="blog-sub-chip active bcb" data-sub="all" onclick="blogSubCat(this)">Tất cả chủ đề (5)</button><button type="button" class="blog-sub-chip bcb" data-sub="son-moi-phoi-mau" onclick="blogSubCat(this)">Son môi &amp; Phối màu (1)</button><button type="button" class="blog-sub-chip bcb" data-sub="nen-che-khuyet-diem" onclick="blogSubCat(this)">Nền &amp; Che khuyết điểm (1)</button><button type="button" class="blog-sub-chip bcb" data-sub="trang-diem-mat" onclick="blogSubCat(this)">Trang điểm Mắt (2)</button><button type="button" class="blog-sub-chip bcb" data-sub="xu-huong-makeup" onclick="blogSubCat(this)">Xu hướng Makeup (1)</button></div><div class="gr" id="bg"><article class="card bpost" data-c="ky-thuat-xu-huong" data-sub="son-moi-phoi-mau" data-k="bi-quyet-chon-tong-son-theo-mau-vay-cuoi-hoan-hao-ly-hoang-makeup-bi-quyet-chon-tong-son-hoan-hao-theo-tung-mau-vay-cuoi-giup-co-dau-rang-ro-nhat-tu-van-va-trang-diem-co-dau-chuyen-nghiep-tai-tan-trieu-dong-nai-bien-hoa-ky-thuat-xu-huong-son-moi-phoi-mau" style="display:flex"><a class="bpost-img-wrap" href="/blog/bi-quyet-chon-tong-son-theo-mau-vay-cuoi-hoan-hao-ly-hoang-makeup/"><img src="/anh/makeup-tiec-su-kien-vay-do-toc-bup-cao-bien-hoa.webp" alt="bi-quyet-chon-tong-son-theo-mau-vay-cuoi-ly-hoang-makeup-dong-nai" loading="lazy"></a><div class="bpost-body"><div class="bpost-meta"><span>Kỹ thuật &amp; Xu hướng</span><span>·</span><span style="color:#6e6259;text-transform:none;letter-spacing:0;font-weight:500">Son môi &amp; Phối màu</span></div><h3 class="bpost-title"><a href="/blog/bi-quyet-chon-tong-son-theo-mau-vay-cuoi-hoan-hao-ly-hoang-makeup/">Bí Quyết Chọn Tông Son Theo Màu Váy Cưới Hoàn Hảo</a></h3><p class="bpost-desc">Bí quyết chọn tông son hoàn hảo theo từng màu váy cưới giúp cô dâu rạng rỡ nhất. Tư vấn và trang điểm cô dâu chuyên nghi…</p><div class="bpost-foot"><a href="/blog/bi-quyet-chon-tong-son-theo-mau-vay-cuoi-hoan-hao-ly-hoang-makeup/" style="color:inherit;text-decoration:none">Xem bài viết</a><span>→</span></div></div></article><article class="card bpost" data-c="ky-thuat-xu-huong" data-sub="nen-che-khuyet-diem" data-k="cach-xu-ly-lop-nen-bi-moc-nut-cuc-nhanh-cho-da-kho-dau-ly-hoang-makeup-meo-xu-ly-nhanh-lop-nen-bi-moc-cakey-nut-ne-cho-ca-da-kho-va-da-dau-giup-lop-trang-diem-min-mang-tu-nhien-tu-van-makeup-chuyen-nghiep-tai-tan-trieu-dong-nai-ky-thuat-xu-huong-nen-che-khuyet-diem" style="display:flex"><a class="bpost-img-wrap" href="/blog/cach-xu-ly-lop-nen-bi-moc-nut-cuc-nhanh-cho-da-kho-dau-ly-hoang-makeup/"><img src="/anh/makeup-douyin-tan-nhang-toc-den-dai-bien-hoa.webp" alt="cach-xu-ly-lop-nen-bi-moc-nut-ly-hoang-makeup-dong-nai" loading="lazy"></a><div class="bpost-body"><div class="bpost-meta"><span>Kỹ thuật &amp; Xu hướng</span><span>·</span><span style="color:#6e6259;text-transform:none;letter-spacing:0;font-weight:500">Nền &amp; Che khuyết điểm</span></div><h3 class="bpost-title"><a href="/blog/cach-xu-ly-lop-nen-bi-moc-nut-cuc-nhanh-cho-da-kho-dau-ly-hoang-makeup/">Cách Xử Lý Lớp Nền Bị Mốc Nứt Cực Nhanh Cho Da Khô &amp; Dầu</a></h3><p class="bpost-desc">Mẹo xử lý nhanh lớp nền bị mốc (cakey), nứt nẻ cho cả da khô và da dầu giúp lớp trang điểm mịn màng tự nhiên. Tư vấn mak…</p><div class="bpost-foot"><a href="/blog/cach-xu-ly-lop-nen-bi-moc-nut-cuc-nhanh-cho-da-kho-dau-ly-hoang-makeup/" style="color:inherit;text-decoration:none">Xem bài viết</a><span>→</span></div></div></article><article class="card bpost" data-c="ky-thuat-xu-huong" data-sub="trang-diem-mat" data-k="huong-dan-ky-thuat-ke-mat-eyeliner-cho-nguoi-moi-bat-dau-ly-hoang-makeup-huong-dan-chi-tiet-cach-ke-mat-eyeliner-don-gian-khong-bi-lem-va-cuc-ky-de-thuc-hien-cho-nguoi-moi-bat-dau-bi-quyet-tu-ly-hoang-makeup-tan-trieu-dong-nai-ky-thuat-xu-huong-trang-diem-mat" style="display:flex"><a class="bpost-img-wrap" href="/blog/huong-dan-ky-thuat-ke-mat-eyeliner-cho-nguoi-moi-bat-dau-ly-hoang-makeup/"><img src="/anh/makeup-douyin-mat-nhu-bien-long-mi-ma-hong-bien-hoa.webp" alt="huong-dan-ky-thuat-ke-mat-eyeliner-ly-hoang-makeup-dong-nai" loading="lazy"></a><div class="bpost-body"><div class="bpost-meta"><span>Kỹ thuật &amp; Xu hướng</span><span>·</span><span style="color:#6e6259;text-transform:none;letter-spacing:0;font-weight:500">Trang điểm Mắt</span></div><h3 class="bpost-title"><a href="/blog/huong-dan-ky-thuat-ke-mat-eyeliner-cho-nguoi-moi-bat-dau-ly-hoang-makeup/">Hướng Dẫn Kỹ Thuật Kẻ Mắt Eyeliner Cho Người Mới Bắt Đầu</a></h3><p class="bpost-desc">Hướng dẫn chi tiết cách kẻ mắt eyeliner đơn giản, không bị lem và cực kỳ dễ thực hiện cho người mới bắt đầu. Bí quyết từ…</p><div class="bpost-foot"><a href="/blog/huong-dan-ky-thuat-ke-mat-eyeliner-cho-nguoi-moi-bat-dau-ly-hoang-makeup/" style="color:inherit;text-decoration:none">Xem bài viết</a><span>→</span></div></div></article><article class="card bpost" data-c="ky-thuat-xu-huong" data-sub="xu-huong-makeup" data-k="xu-huong-trang-diem-thu-dong-tone-nau-am-nen-cang-mong-ly-hoang-makeup-cap-nhat-xu-huong-trang-diem-thu-dong-hot-trend-tone-nau-am-latte-makeup-son-berry-va-ky-thuat-tao-nen-cang-mong-dich-vu-makeup-uy-tin-tai-tan-trieu-dong-nai-ky-thuat-xu-huong-xu-huong-makeup" style="display:flex"><a class="bpost-img-wrap" href="/blog/xu-huong-trang-diem-thu-dong-tone-nau-am-nen-cang-mong-ly-hoang-makeup/"><img src="/anh/dich-vu-makeup-co-dau-bien-hoa-uy-tin.jpg" alt="xu-huong-trang-diem-thu-dong-tone-nau-am-ly-hoang-makeup-dong-nai" loading="lazy"></a><div class="bpost-body"><div class="bpost-meta"><span>Kỹ thuật &amp; Xu hướng</span><span>·</span><span style="color:#6e6259;text-transform:none;letter-spacing:0;font-weight:500">Xu hướng Makeup</span></div><h3 class="bpost-title"><a href="/blog/xu-huong-trang-diem-thu-dong-tone-nau-am-nen-cang-mong-ly-hoang-makeup/">Xu Hướng Trang Điểm Thu Đông: Tone Nâu Ấm &amp; Nền Căng Mọng</a></h3><p class="bpost-desc">Cập nhật xu hướng trang điểm Thu Đông hot trend: Tone nâu ấm (Latte Makeup), son berry và kỹ thuật tạo nền căng mọng. Dị…</p><div class="bpost-foot"><a href="/blog/xu-huong-trang-diem-thu-dong-tone-nau-am-nen-cang-mong-ly-hoang-makeup/" style="color:inherit;text-decoration:none">Xem bài viết</a><span>→</span></div></div></article><article class="card bpost" data-c="ky-thuat-xu-huong" data-sub="trang-diem-mat" data-k="cach-danh-phan-mat-cho-mat-mot-mi-mi-lot-mat-sau-ly-hoang-makeup-huong-dan-cach-danh-phan-mat-chuan-tung-dang-mat-mat-mot-mi-mi-lot-mat-sau-giup-doi-mat-to-tron-cuon-hut-hoc-trang-diem-ca-nhan-tai-tan-trieu-bien-hoa-ky-thuat-xu-huong-trang-diem-mat" style="display:flex"><a class="bpost-img-wrap" href="/blog/cach-danh-phan-mat-cho-mat-mot-mi-mi-lot-mat-sau-ly-hoang-makeup/"><img src="/anh/cach-danh-phan-mat-chuan-tung-dang-mat-bien-hoa.jpg" alt="cach-danh-phan-mat-chuan-tung-dang-mat-ly-hoang-makeup-bien-hoa" loading="lazy"></a><div class="bpost-body"><div class="bpost-meta"><span>Kỹ thuật &amp; Xu hướng</span><span>·</span><span style="color:#6e6259;text-transform:none;letter-spacing:0;font-weight:500">Trang điểm Mắt</span></div><h3 class="bpost-title"><a href="/blog/cach-danh-phan-mat-cho-mat-mot-mi-mi-lot-mat-sau-ly-hoang-makeup/">Cách Đánh Phấn Mắt Cho Mắt Một Mí, Mí Lót, Mắt Sâu</a></h3><p class="bpost-desc">Hướng dẫn cách đánh phấn mắt chuẩn từng dáng mắt: mắt một mí, mí lót, mắt sâu giúp đôi mắt to tròn, cuốn hút. Học trang …</p><div class="bpost-foot"><a href="/blog/cach-danh-phan-mat-cho-mat-mot-mi-mi-lot-mat-sau-ly-hoang-makeup/" style="color:inherit;text-decoration:none">Xem bài viết</a><span>→</span></div></div></article></div><p id="bn" class="c mute" style="display:none;padding:40px 0">Không tìm thấy bài viết phù hợp.</p></div></div></main>
 <a id="fab" class="btn" href="/dat-lich/">Đặt lịch</a>
@@ -455,7 +438,7 @@ function post(key){
     '</div></article>';
 }
 
-/* ---- shop */
+/* ---- shop (khôi phục theo cấu trúc dữ liệu data/shop.json: name/images/slug) */
 const CAT_META = {
   'trang-diem': { name: 'Trang điểm', h1: 'Mỹ Phẩm & Dụng Cụ Trang Điểm Chuyên Nghiệp', desc: 'Kem nền, phấn phủ, che khuyết điểm, bảng mắt, má hồng, son môi và cốp đồ nghề do Master Lý Hoàng tuyển chọn và sử dụng thực tế.' },
   'phu-kien-toc': { name: 'Phụ kiện tóc', h1: 'Phụ Kiện Tóc Cô Dâu, Máy Làm Tóc & Tạo Kiểu', desc: 'Gôm xịt giữ nếp, máy uốn duỗi chuyên nghiệp, lược chia tóc và phụ kiện cài tóc cô dâu sang trọng tại Lý Hoàng Makeup.' },
