@@ -257,7 +257,12 @@ paths.forEach(p => { const m = metaFor(p); seoMap[p] = { t: m.t, d: m.d, u: m.u 
 const seoScript = '<script>window.__SEO=' + JSON.stringify(seoMap).replace(/</g, '\\u003c') + ';</script>';
 const footer = applyText(els['#ft'].innerHTML);
 function renderBody(p) {
-  const h = p.indexOf('/blog') === 0 ? A.post(p.slice(5).replace(/^\//, '')) : p.indexOf('/cua-hang') === 0 ? A.product(p.slice(9).replace(/^\//, '')) : A.P[p]();
+  let h;
+  if (p === '/blog' || p === '/blog/') h = A.P['/blog']();
+  else if (p.indexOf('/blog/') === 0) h = A.post(p.slice(6).replace(/^\/+|\/+$/g, ''));
+  else if (p === '/cua-hang' || p === '/cua-hang/') h = A.P['/cua-hang']();
+  else if (p.indexOf('/cua-hang/') === 0) h = A.product(p.slice(10).replace(/^\/+|\/+$/g, ''));
+  else h = A.P[p]();
   return applyText(A.LK(h));
 }
 function write(file, content) { fs.mkdirSync(path.dirname(file), { recursive: true }); fs.writeFileSync(file, content); }

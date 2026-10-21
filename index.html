@@ -232,18 +232,27 @@ function md(s){
     if(h){ var l = h[1].length + 1; return '<h' + l + ' style="font-size:' + (l == 2 ? 24 : 20) + 'px;margin-top:28px">' + inl(h[2]) + '</h' + l + '>'; }
     if(/^[-*]\s+/.test(b)) return '<ul>' + b.split('\n').map(function(x){ return '<li>' + inl(x.replace(/^[-*]\s+/, '')) + '</li>'; }).join('') + '</ul>';
     var im = b.match(/^!\[(.*?)\]\((.*?)(?:\s+"(.*)")?\)/);
-    if(im){ var cap = im[3] ? '<figcaption class="c mute" style="font-size:13px;margin-top:6px">' + im[3] + '</figcaption>' : ''; return '<figure style="margin:18px 0"><img class="im im16" src="' + im[2] + '" alt="' + im[1] + '" loading="lazy">' + cap + '</figure>'; }
+    if(im){ var cap = im[3] ? '<figcaption class="c mute" style="font-size:13px;margin-top:6px">' + im[3] + '</figcaption>' : ''; return '<figure style="margin:18px 0"><img class="im im16" src="' + bimg(im[2]) + '" alt="' + im[1] + '" loading="lazy">' + cap + '</figure>'; }
     return '<p>' + inl(b).replace(/\n/g, '<br>') + '</p>';
   }).join('');
 }
 function posts(){
-  return Array.isArray(CFG.blog) ? CFG.blog : [];
+  var src = [];
+  if (typeof CFG !== 'undefined' && CFG) {
+    if (Array.isArray(CFG.blog)) src = CFG.blog;
+    else if (CFG.blog && Array.isArray(CFG.blog.posts)) src = CFG.blog.posts;
+  }
+  if (!src.length && typeof DEF !== 'undefined' && DEF) {
+    if (Array.isArray(DEF.blog)) src = DEF.blog;
+    else if (DEF.blog && Array.isArray(DEF.blog.posts)) src = DEF.blog.posts;
+  }
+  return src.filter(function(b){ return b && b.title && b.published !== false; });
 }
 const BLOG_CAT_META = {
-  'trang-diem-co-dau': { name: 'Trang điểm Cô dâu', h1: 'Cẩm Nang Trang Điểm & Làm Tóc Cô Dâu', desc: 'Bí quyết chọn layout cô dâu, kiểu tóc cưới và kinh nghiệm chuẩn bị trước ngày cưới.' },
-  'ky-thuat-trang-diem': { name: 'Kỹ thuật & Xu hướng', h1: 'Kỹ Thuật Trang Điểm & Xu Hướng Makeup Mới Nhất', desc: 'Hướng dẫn chi tiết cách đánh nền, kẻ mắt và xu hướng trang điểm mới nhất.' },
-  'cham-soc-da': { name: 'Chăm sóc da & Tóc', h1: 'Chăm Sóc Da Tiền Makeup & Phục Hồi Da', desc: 'Quy trình skincare trước khi đánh nền và phục hồi da cấp tốc cho cô dâu.' },
-  'goc-hoc-vien': { name: 'Học nghề & Dịch vụ', h1: 'Góc Học Viên Makeup & Kinh Nghiệm Đi Tiệc', desc: 'Chia sẻ kiến thức trang điểm và kinh nghiệm học nghề thực tế.' }
+  'trang-diem-co-dau': { name: 'Trang điểm Cô dâu', h1: 'Cẩm Nang Trang Điểm & Làm Tóc Cô Dâu', desc: 'Bí quyết chọn layout cô dâu, kiểu tóc cưới, trang điểm mẹ cô dâu và kinh nghiệm chuẩn bị hoàn hảo trước ngày trọng đại từ Master Lý Hoàng.' },
+  'ky-thuat-trang-diem': { name: 'Kỹ thuật & Xu hướng', h1: 'Kỹ Thuật Trang Điểm & Xu Hướng Makeup Mới Nhất', desc: 'Hướng dẫn chi tiết cách đánh nền mịn mướt, xử lý nền mốc, trang điểm mắt một mí, mí lót, kẻ eyeliner và phối màu son chuẩn chuyên gia.' },
+  'cham-soc-da': { name: 'Chăm sóc da & Tóc', h1: 'Chăm Sóc Da Tiền Makeup (Skin Prep) & Phục Hồi Da', desc: 'Quy trình skincare trước khi đánh nền, lộ trình phục hồi da cho cô dâu và bí quyết dưỡng da căng bóng giúp lớp makeup bền màu suốt ngày dài.' },
+  'goc-hoc-vien': { name: 'Học nghề & Dịch vụ', h1: 'Góc Học Viên Makeup & Kinh Nghiệm Đi Tiệc, Kỷ Yếu', desc: 'Chia sẻ kiến thức trang điểm cô dâu, kỹ thuật đánh nền, kẻ mắt, chăm sóc da và kinh nghiệm học nghề thực tế từ Master Lý Hoàng.' }
 };
 function bcatSlug(c){
   for(var k in BLOG_CAT_META){ if(BLOG_CAT_META[k].name === c) return k; }
@@ -256,33 +265,44 @@ function bimg(u){
 }
 function bcard(b, hide){
   var cat = b.category || 'Trang điểm Cô dâu', sub = b.subcategory || '', im = bimg(b.thumbnail);
-  var imgHtml = im ? '<img class="im im16" src="' + im + '" alt="' + esc(b.thumbnail_alt || b.title) + '" loading="lazy" style="border-radius:0;object-position:center 25%">' : '';
+  var postHref = '/blog/' + slug(b.title) + '/';
+  var imgHtml = im ? '<a href="' + postHref + '" style="display:block"><img class="im im16" src="' + im + '" alt="' + esc(b.thumbnail_alt || b.title) + '" loading="lazy" style="border-radius:0;object-position:center 25%;width:100%;display:block"></a>' : '';
   var subHtml = sub ? ' · <span class="gold">' + esc(sub) + '</span>' : '';
   var cleanTitle = esc(String(b.title || '').replace(/\s*\|\s*Lý Hoàng.*$/i, ''));
-  var descHtml = esc(clip(b.description, 115));
-  var styleAttr = 'padding:0;overflow:hidden' + (hide ? ';display:none' : '');
-  return '<a class="card bpost" href="#/blog/' + slug(b.title) + '" data-c="' + esc(cat) + '" data-sub="' + esc(sub) + '" data-k="' + slug(b.title + ' ' + (b.description || '') + ' ' + cat + ' ' + sub) + '" style="' + styleAttr + '">' + imgHtml + '<div style="padding:18px"><small class="mute" style="display:block;margin-bottom:6px">' + esc(cat) + subHtml + '</small><h3 style="font-size:18px;margin:0 0 8px;line-height:1.4">' + cleanTitle + '</h3><p class="mute" style="font-size:14px;margin:0">' + descHtml + '</p></div></a>';
+  var rawDesc = String(b.description || '');
+  var descText = rawDesc.length > 115 ? rawDesc.slice(0, 115) + '…' : rawDesc;
+  var styleAttr = 'padding:0;overflow:hidden;display:' + (hide ? 'none' : 'flex') + ';flex-direction:column;justify-content:space-between';
+  return '<article class="card bpost" data-c="' + esc(cat) + '" data-sub="' + esc(sub) + '" data-k="' + slug(b.title + ' ' + rawDesc + ' ' + cat + ' ' + sub) + '" style="' + styleAttr + '">' +
+    imgHtml +
+    '<div style="padding:18px;flex:1;display:flex;flex-direction:column">' +
+      '<small class="mute" style="display:block;margin-bottom:6px">' + esc(cat) + subHtml + '</small>' +
+      '<h3 style="font-size:18px;margin:0 0 8px;line-height:1.4"><a href="' + postHref + '" style="color:inherit;text-decoration:none">' + cleanTitle + '</a></h3>' +
+      '<p class="mute" style="font-size:14px;margin:0 0 12px;flex:1">' + esc(descText) + '</p>' +
+      '<a class="gold" href="' + postHref + '" style="font-size:13px;font-weight:600">Đọc chi tiết →</a>' +
+    '</div>' +
+  '</article>';
 }
 var blogC='Tất cả', blogSub='Tất cả', blogLim=9;
 function blog(catKey){
-  var info = catKey ? bcatInfoBySlug(catKey) : null;
+  var cleanKey = String(catKey || '').replace(/^\/+|\/+$/g, '');
+  var info = cleanKey ? bcatInfoBySlug(cleanKey) : null;
   blogC = info ? info.name : 'Tất cả';
   blogSub = 'Tất cả';
   blogLim = 9;
   var allB = posts();
   var L = info ? allB.filter(function(b){ return (b.category || 'Trang điểm Cô dâu') === info.name; }) : allB;
   var mainCats = [
-    {label: 'Tất cả (' + allB.length + ')', href: '#/blog', active: !info},
-    {label: 'Trang điểm Cô dâu (' + allB.filter(function(b){ return (b.category || 'Trang điểm Cô dâu') === 'Trang điểm Cô dâu'; }).length + ')', href: '#/blog/trang-diem-co-dau', active: catKey === 'trang-diem-co-dau'},
-    {label: 'Kỹ thuật & Xu hướng (' + allB.filter(function(b){ return b.category === 'Kỹ thuật & Xu hướng'; }).length + ')', href: '#/blog/ky-thuat-trang-diem', active: catKey === 'ky-thuat-trang-diem'},
-    {label: 'Chăm sóc da & Tóc (' + allB.filter(function(b){ return b.category === 'Chăm sóc da & Tóc'; }).length + ')', href: '#/blog/cham-soc-da', active: catKey === 'cham-soc-da'},
-    {label: 'Học nghề & Dịch vụ (' + allB.filter(function(b){ return b.category === 'Học nghề & Dịch vụ'; }).length + ')', href: '#/blog/goc-hoc-vien', active: catKey === 'goc-hoc-vien'}
+    {label: 'Tất cả (' + allB.length + ')', href: '/blog/', active: !info},
+    {label: 'Trang điểm Cô dâu (' + allB.filter(function(b){ return (b.category || 'Trang điểm Cô dâu') === 'Trang điểm Cô dâu'; }).length + ')', href: '/blog/trang-diem-co-dau/', active: cleanKey === 'trang-diem-co-dau'},
+    {label: 'Kỹ thuật & Xu hướng (' + allB.filter(function(b){ return b.category === 'Kỹ thuật & Xu hướng'; }).length + ')', href: '/blog/ky-thuat-trang-diem/', active: cleanKey === 'ky-thuat-trang-diem'},
+    {label: 'Chăm sóc da & Tóc (' + allB.filter(function(b){ return b.category === 'Chăm sóc da & Tóc'; }).length + ')', href: '/blog/cham-soc-da/', active: cleanKey === 'cham-soc-da'},
+    {label: 'Học nghề & Dịch vụ (' + allB.filter(function(b){ return b.category === 'Học nghề & Dịch vụ'; }).length + ')', href: '/blog/goc-hoc-vien/', active: cleanKey === 'goc-hoc-vien'}
   ];
   var subCats = ['Tất cả'];
   L.forEach(function(b){ if(b.subcategory && subCats.indexOf(b.subcategory) < 0) subCats.push(b.subcategory); });
   var h1 = info ? info.h1 : 'Blog Làm Đẹp & Cẩm Nang Makeup';
-  var desc = info ? info.desc : 'Chia sẻ kiến thức trang điểm cô dâu, kỹ thuật đánh nền, chăm sóc da từ Master Lý Hoàng.';
-  var bread = info ? '<p class="mute" style="font-size:13px;margin:0 0 12px"><a class="gold" href="#/">Trang chủ</a> / <a class="gold" href="#/blog">Blog</a> / ' + esc(info.name) + '</p>' : '';
+  var desc = info ? info.desc : 'Chia sẻ kiến thức trang điểm cô dâu, kỹ thuật đánh nền, kẻ mắt, chăm sóc da và kinh nghiệm học nghề thực tế từ Master Lý Hoàng.';
+  var bread = info ? '<p class="mute" style="font-size:13px;margin:0 0 12px"><a class="gold" href="/">Trang chủ</a> / <a class="gold" href="/blog/">Blog</a> / ' + esc(info.name) + '</p>' : '';
   var mainCatsHtml = mainCats.map(function(c){ return '<a class="btn ' + (c.active ? '' : 'b2') + '" href="' + c.href + '" style="padding:10px 18px;font-size:14px">' + esc(c.label) + '</a>'; }).join('');
   var subCatsHtml = subCats.map(function(sc, i){ var cnt = sc === 'Tất cả' ? L.length : L.filter(function(b){ return b.subcategory === sc; }).length; return '<button class="btn ' + (i ? 'b2' : '') + ' bcb" data-sub="' + esc(sc) + '" onclick="blogSubCat(this)" style="padding:7px 14px;font-size:13px">' + esc(sc) + ' (' + cnt + ')</button>'; }).join('');
   var cardsHtml = L.map(function(b, idx){ return bcard(b, idx >= 9); }).join('');
@@ -292,7 +312,7 @@ function blog(catKey){
     '<input id="bsq" type="search" placeholder="Tìm chủ đề, bài viết..." oninput="blogLim=9;blogF()" style="max-width:230px;margin:0 8px 0 0;background:#fff">' +
     subCatsHtml + '</div>' +
     '<div class="gr" id="bg">' + cardsHtml + '</div>' +
-    '<p id="bn" class="c mute" style="display:none">Không tìm thấy bài viết phù hợp.</p>' +
+    '<p id="bn" class="c mute" style="display:' + (L.length ? 'none' : 'block') + '">Không tìm thấy bài viết phù hợp.</p>' +
     '<div class="c" style="margin-top:28px;' + (L.length > 9 ? '' : 'display:none') + '" id="bmoreWrap"><button class="btn b2" onclick="blogMore()">Xem thêm bài viết ↓</button></div>' +
     '</div></div>';
 }
@@ -302,32 +322,37 @@ function blogF(){
   var q = slug((document.getElementById('bsq') || {}).value || ''), n = 0, shown = 0, cs = document.querySelectorAll('#bg .bpost');
   for(var i=0; i<cs.length; i++){
     var c = cs[i], match = (blogSub == 'Tất cả' || c.dataset.sub == blogSub) && (!q || c.dataset.k.indexOf(q) > -1);
-    if(match){ n++; if(shown < blogLim){ c.style.display = ''; shown++; } else { c.style.display = 'none'; } } else { c.style.display = 'none'; }
+    if(match){ n++; if(shown < blogLim){ c.style.display = 'flex'; shown++; } else { c.style.display = 'none'; } } else { c.style.display = 'none'; }
   }
   var e = document.getElementById('bn'); if(e) e.style.display = n > 0 ? 'none' : 'block';
   var mw = document.getElementById('bmoreWrap'); if(mw) mw.style.display = shown >= n ? 'none' : 'block';
 }
 function post(key){
-  if(BLOG_CAT_META[key]) return blog(key);
+  var cleanKey = String(key || '').replace(/^\/+|\/+$/g, '');
+  if(!cleanKey) return blog();
+  if(BLOG_CAT_META[cleanKey]) return blog(cleanKey);
   var L = posts(), i = -1;
-  for(var j=0; j<L.length; j++){ if(slug(L[j].title) == key){ i = j; break; } }
-  if(i < 0 && /^\d+$/.test(key)) i = +key;
+  for(var j=0; j<L.length; j++){
+    if(slug(L[j].title) === cleanKey || String(j) === cleanKey){ i = j; break; }
+  }
+  if(i < 0 && /^\d+$/.test(cleanKey)) i = +cleanKey;
   var b = L[i]; if(!b) return blog();
   var hv = b.cta == 'hv', cat = b.category || 'Trang điểm Cô dâu', sub = b.subcategory || '', cSlug = bcatSlug(cat);
   var rel = L.filter(function(x, idx){ return idx !== i && (x.category || 'Trang điểm Cô dâu') === cat && (sub ? x.subcategory === sub : true); }).slice(0, 3);
   if(rel.length < 3){ var more = L.filter(function(x, idx){ return idx !== i && (x.category || 'Trang điểm Cô dâu') === cat && rel.indexOf(x) < 0; }).slice(0, 3 - rel.length); rel = rel.concat(more); }
   var relHtml = rel.length ? '<h2 style="font-size:24px;margin-top:44px">Bài viết cùng chủ đề</h2><div class="gr">' + rel.map(function(x){ return bcard(x, false); }).join('') + '</div>' : '';
-  var nextHtml = i < L.length - 1 ? '<p class="c" style="margin-top:32px"><a class="gold" href="#/blog/' + slug(L[i+1].title) + '">Bài tiếp theo →</a></p>' : '';
+  var nextHtml = i < L.length - 1 ? '<p class="c" style="margin-top:32px"><a class="gold" href="/blog/' + slug(L[i+1].title) + '/">Bài tiếp theo →</a></p>' : '';
   var thumbHtml = b.thumbnail ? '<figure style="margin:0 0 24px"><img class="im im16" src="' + bimg(b.thumbnail) + '" alt="' + esc(b.thumbnail_alt || b.title) + '" style="object-position:center 25%"></figure>' : '';
   return '<article class="w"><div class="in" style="max-width:760px">' +
-    '<p class="mute" style="font-size:13px;margin:0 0 14px"><a class="gold" href="#/">Trang chủ</a> / <a class="gold" href="#/blog">Blog</a> / <a class="gold" href="#/blog/' + cSlug + '">' + esc(cat) + '</a>' + (sub ? ' / ' + esc(sub) : '') + '</p>' +
-    '<small class="mute"><a class="gold" href="#/blog/' + cSlug + '">' + esc(cat) + '</a>' + (sub ? ' · <span class="gold">' + esc(sub) + '</span>' : '') + '</small>' +
+    '<p class="mute" style="font-size:13px;margin:0 0 14px"><a class="gold" href="/">Trang chủ</a> / <a class="gold" href="/blog/">Blog</a> / <a class="gold" href="/blog/' + cSlug + '/">' + esc(cat) + '</a>' + (sub ? ' / ' + esc(sub) : '') + '</p>' +
+    '<small class="mute"><a class="gold" href="/blog/' + cSlug + '/">' + esc(cat) + '</a>' + (sub ? ' · <span class="gold">' + esc(sub) + '</span>' : '') + '</small>' +
     '<h1 style="margin-top:8px">' + esc(b.title) + '</h1>' +
     thumbHtml + md(b.body) +
     '<div class="card c" style="margin-top:36px"><h3>' + (hv ? 'Muốn học makeup bài bản 1:1?' : 'Muốn đặt lịch makeup cho gương mặt của bạn?') + '</h3><a class="btn" href="/dat-lich/?' + (hv ? 'hv' : 'cd') + '">' + (hv ? 'Nhận tư vấn lộ trình' : 'Đặt lịch makeup') + '</a> <a class="btn b2" href="' + Z + '" target="_blank">Nhắn Zalo</a></div>' +
     relHtml + nextHtml +
     '</div></article>';
 }
+
 /* ---- shop */
 const CAT_META = {
   'trang-diem': { name: 'Trang điểm', h1: 'Mỹ Phẩm & Dụng Cụ Trang Điểm Chuyên Nghiệp', desc: 'Kem nền, phấn phủ, che khuyết điểm, bảng mắt, má hồng, son môi và cốp đồ nghề do Master Lý Hoàng tuyển chọn và sử dụng thực tế.' },
@@ -415,12 +440,14 @@ function rc(){$('#cc').textContent=cartL.length;$('#ci').innerHTML=cartL.length?
 function route(){
 if(location.hash.indexOf('#/')==0){var hh=location.hash.slice(1),q='',i=hh.indexOf('?');if(i>-1){q=hh.slice(i);hh=hh.slice(0,i)}history.replaceState(null,'',(hh.replace(/\/+$/,'')||'')+'/'+q)}
 var p=curPath(),h;
-if(p.indexOf('/blog')==0){
-    var key = p.slice(5).replace(/^\//,'');
-    h = post(decodeURIComponent(key));
-  } else if(p.indexOf('/cua-hang')==0){
-    var key = p.slice(9).replace(/^\//,'');
-    h = product(decodeURIComponent(key));
+if(p === '/blog' || p === '/blog/'){
+    h = blog();
+  } else if(p.indexOf('/blog/') === 0){
+    h = post(decodeURIComponent(p.slice(6).replace(/^\/+|\/+$/g, '')));
+  } else if(p === '/cua-hang' || p === '/cua-hang/'){
+    h = shop();
+  } else if(p.indexOf('/cua-hang/') === 0){
+    h = product(decodeURIComponent(p.slice(10).replace(/^\/+|\/+$/g, '')));
   } else {
     h = (P[p] || P['/'])();
   }
