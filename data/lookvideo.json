@@ -1,0 +1,25 @@
+{
+  "videos": [
+    {
+      "src": "videos/video-co-dau-ao-dai-ren-do-bien-hoa.mp4",
+      "poster": "anh/anh-bia-video-co-dau-ao-dai-ren-do-bien-hoa.jpg",
+      "title": "Cô dâu áo dài ren đỏ",
+      "category": "Cô dâu",
+      "subcategory": "Truyền thống"
+    },
+    {
+      "src": "videos/video-makeup-ngoc-trai-bien-hoa.mp4",
+      "poster": "anh/anh-bia-video-makeup-ngoc-trai-bien-hoa.jpg",
+      "title": "Layout trong trẻo ngọc trai",
+      "category": "Phong cách makeup",
+      "subcategory": ""
+    },
+    {
+      "src": "videos/video-makeup-hoa-tuoi-bien-hoa.mp4",
+      "poster": "anh/anh-bia-video-makeup-hoa-tuoi-bien-hoa.jpg",
+      "title": "Layout hoa tươi",
+      "category": "Phong cách makeup",
+      "subcategory": ""
+    }
+  ]
+}

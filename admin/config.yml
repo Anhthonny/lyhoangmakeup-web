@@ -171,15 +171,23 @@ collections:
               { label: "Vì sao Lý Hoàng dùng sản phẩm này", name: "reason", widget: "text", required: false },
               { label: "Cách dùng", name: "usage", widget: "text", required: false } ] }
   - name: "lookbook"
-    label: "Lookbook (kho ảnh)"
-    description: "Thêm nhóm ảnh và ảnh vào Lookbook"
+    label: "Lookbook (kho ảnh & video)"
+    description: "Thêm ảnh và video vào Lookbook, phân theo ngành chính và ngành con"
     files:
-      - name: "lookbook"
-        label: "Lookbook (kho ảnh)"
+      - name: "lookbook_anh"
+        label: "Lookbook: Hình ảnh"
         file: "data/look.json"
         format: "json"
         fields:
-          - { label: "Nhóm ảnh", name: "categories", widget: "list", required: false, summary: "{{fields.title}}", fields: [{ label: "Tên nhóm", name: "title", widget: "string" }, { label: "Ảnh", name: "images", widget: "list", required: false, field: { label: "Ảnh", name: "image", widget: "image", hint: "Ảnh dọc tỉ lệ 3:4 (ví dụ 900×1200 px), dưới 300 KB, WebP hoặc JPG." } }] }
+          - { label: "Tiêu đề trang Lookbook", name: "hub_title", widget: "string", required: false, hint: "Ví dụ: Kho ảnh & video thực tế" }
+          - { label: "Mô tả ngắn trang Lookbook", name: "hub_intro", widget: "text", required: false }
+          - { label: "Hình ảnh Lookbook", name: "photos", widget: "list", required: false, collapsed: true, summary: "{{fields.category}} › {{fields.subcategory}} — {{fields.title}}", hint: "Bấm Add để thêm ảnh. Mỗi ảnh chọn 1 NGÀNH CHÍNH và gõ NGÀNH CON (cùng tên thì tự gom thành 1 nhóm lọc). Muốn tải nhiều ảnh cùng lúc: vào tab Tập tin, tải hàng loạt, rồi quay lại chọn ảnh.", fields: [{ label: "Ảnh", name: "image", widget: "image", hint: "KÍCH THƯỚC: 900 x 1200 px (ảnh dọc, tỉ lệ 3:4). Dưới 300 KB, WebP hoặc JPG." }, { label: "Tên / mô tả ngắn (hiện khi phóng to, tốt cho SEO)", name: "title", widget: "string", required: false }, { label: "Ngành chính", name: "category", widget: "select", default: "Cô dâu", options: ["Cô dâu", "Tiệc & Sự kiện", "Kỷ yếu & Chụp ảnh", "Phong cách makeup", "Học viên & Hậu trường"] }, { label: "Ngành con (ví dụ: Truyền thống, Hàn Quốc, Douyin, Tone Tây...)", name: "subcategory", widget: "string", required: false, hint: "Gõ giống hệt nhau ở các ảnh cùng nhóm. Để trống nếu không cần chia nhỏ." }] }
+      - name: "lookbook_video"
+        label: "Lookbook: Video"
+        file: "data/lookvideo.json"
+        format: "json"
+        fields:
+          - { label: "Video Lookbook", name: "videos", widget: "list", required: false, collapsed: true, summary: "{{fields.category}} › {{fields.subcategory}} — {{fields.title}}", hint: "Mỗi video: tải file mp4 HOẶC dán link YouTube / TikTok / Facebook. Chọn ngành chính và gõ ngành con để phân nhóm.", fields: [{ label: "Video tải lên (mp4)", name: "src", widget: "file", required: false, hint: "Tỉ lệ dọc 9:16 (720 x 1280 px), dưới 25 MB, định dạng MP4. Video nặng hơn nên đăng YouTube rồi dán link bên dưới." }, { label: "Hoặc dán link video (YouTube, TikTok, Facebook)", name: "link", widget: "string", required: false, hint: "Có link thì website dùng link này thay cho file mp4." }, { label: "Ảnh bìa", name: "poster", widget: "image", required: false, hint: "Ảnh dọc 3:4 (900 x 1200 px), dưới 300 KB. Để trống thì lấy khung hình đầu của video mp4." }, { label: "Tên / mô tả ngắn", name: "title", widget: "string", required: false }, { label: "Ngành chính", name: "category", widget: "select", default: "Cô dâu", options: ["Cô dâu", "Tiệc & Sự kiện", "Kỷ yếu & Chụp ảnh", "Phong cách makeup", "Học viên & Hậu trường"] }, { label: "Ngành con (ví dụ: Truyền thống, Hàn Quốc, Douyin...)", name: "subcategory", widget: "string", required: false }] }
   - name: "sua_chu"
     label: "Sửa / xóa câu chữ bất kỳ"
     description: "Dùng khi muốn đổi hoặc xóa một câu ở trang không có mục sửa riêng"

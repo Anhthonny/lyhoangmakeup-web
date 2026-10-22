@@ -4,7 +4,7 @@ const ROOT = __dirname;
 const SITE = 'https://lyhoangmakeup.com';
 const rd = f => { try { return JSON.parse(fs.readFileSync(path.join(ROOT, f), 'utf8')); } catch (e) { return null; } };
 const tpl = fs.readFileSync(path.join(ROOT, 'template.html'), 'utf8');
-const data = { site: rd('data/site.json'), home: rd('data/home.json'), price: rd('data/price.json'), blog: rd('data/blog.json'), shop: rd('data/shop.json'), look: rd('data/look.json'), rules: rd('data/rules.json'), seo: rd('data/seo.json') };
+const data = { site: rd('data/site.json'), home: rd('data/home.json'), price: rd('data/price.json'), blog: rd('data/blog.json'), shop: rd('data/shop.json'), look: rd('data/look.json'), lookv: rd('data/lookvideo.json'), rules: rd('data/rules.json'), seo: rd('data/seo.json') };
 
 const script = tpl.match(/<script>([\s\S]*?)<\/script>\s*<\/body>/)[1];
 const els = {};
@@ -17,12 +17,12 @@ const ctx = {
   fetch: () => new Promise(() => {}), console, Date, setTimeout, Promise
 };
 ctx.window = ctx; vm.createContext(ctx);
-vm.runInContext(script + ';globalThis.__api={P,CFG,post,posts,slug,CD,MK,applyCfg,rebuildShop,SV,H,V,LK,esc,product,shop,plist,pslug,pimg,pprice,CAT_META,BLOG_CAT_META,bcatSlug};', ctx);
+vm.runInContext(script + ';globalThis.__api={P,CFG,post,posts,slug,CD,MK,applyCfg,rebuildShop,SV,H,V,LK,esc,product,shop,plist,pslug,pimg,pprice,CAT_META,BLOG_CAT_META,bcatSlug,LB_CATS,lookPath,lbCatsWith};', ctx);
 const A = ctx.__api;
 const arr = (o, k) => (o && Array.isArray(o[k])) ? o[k] : null;
 A.CFG.site = data.site; A.CFG.home = data.home; A.CFG.price = data.price;
 A.CFG.blog = arr(data.blog, 'posts'); A.CFG.shop = arr(data.shop, 'products');
-A.CFG.look = arr(data.look, 'categories'); A.CFG.rules = arr(data.rules, 'rules');
+A.CFG.look = data.look; A.CFG.lookv = data.lookv; A.CFG.rules = arr(data.rules, 'rules');
 A.applyCfg(); A.rebuildShop();
 
 const SV = k => A.V('site', k), PV = k => A.V('price', k), HV = k => A.V('home', k);
@@ -91,6 +91,8 @@ let paths = Object.keys(A.P).filter(p => !SKIP.test(p));
 const posts = A.posts();
 Object.keys(BLOG_CAT_SEO).forEach(k => paths.push('/blog/' + k));
 posts.forEach(b => paths.push('/blog/' + A.slug(b.title)));
+A.lbCatsWith('photo').forEach(s => paths.push('/lookbook/hinh-anh/' + s));
+A.lbCatsWith('video').forEach(s => paths.push('/lookbook/video/' + s));
 Object.keys(CAT_SEO).forEach(k => paths.push('/cua-hang/' + k));
 A.plist().forEach(p => paths.push('/cua-hang/' + A.pslug(p)));
 paths = Array.from(new Set(paths));
@@ -116,6 +118,12 @@ function defMeta(p) {
   };
   if (M[p]) return { t: M[p][0], d: M[p][1] };
   let m;
+  if ((m = p.match(/^\/lookbook\/(hinh-anh|video)(?:\/([^/]+))?$/))) {
+    const v = m[1] === 'video', c = m[2] ? A.LB_CATS.filter(x => x.s === m[2])[0] : null;
+    if (m[2] && !c) return { t: `Lookbook | ${BRS}`, d: cut(`Lookbook makeup ${BRS}.`, 158) };
+    if (c) return { t: `${v ? 'Video' : 'Ảnh'} makeup ${c.name.toLowerCase()} | ${BRS}`, d: cut(`${c.desc} ${v ? 'Video' : 'Hình ảnh'} thực tế tại ${LOC}.`, 158) };
+    return v ? { t: `Video makeup cô dâu, tiệc, kỷ yếu thực tế | ${BRS}`, d: cut(`Video quá trình makeup và kết quả thực tế của Master Lý Hoàng tại ${LOC}: cô dâu, tiệc, kỷ yếu, các phong cách Hàn Quốc, Douyin.`, 158) } : { t: `Thư viện ảnh makeup cô dâu, tiệc, kỷ yếu | ${BRS}`, d: cut(`Ảnh layout makeup thực tế của Master Lý Hoàng tại ${LOC}: cô dâu, tiệc, kỷ yếu, phong cách Hàn Quốc, Douyin, tone Tây.`, 158) };
+  }
   if ((m = p.match(/^\/hoc-vien\/(.+)$/)) && CD[m[1]]) return { t: `${CD[m[1]][0]} | Học viện ${BRS.replace(' Makeup','')} Biên Hòa`, d: cut(`${CD[m[1]][2]} Học trực tiếp cùng Master Lý Hoàng tại ${LOC}.`, 158) };
   if ((m = p.match(/^\/ve-master\/(.+)$/)) && MK[m[1]]) return { t: `${MK[m[1]][0]} | Master Lý Hoàng`, d: cut(`${MK[m[1]][1]} Master Lý Hoàng, ${BR}, ${LOC}.`, 158) };
   if ((m = p.match(/^\/cua-hang\/(.+)$/))) {
@@ -226,7 +234,7 @@ function jsonld(p, m) {
     items.push({ '@type': 'ListItem', position: 3, name: bCat, item: SITE + '/blog/' + bSlug + '/' });
     items.push({ '@type': 'ListItem', position: 4, name: m.post.title.split(' | ')[0], item: m.u });
   } else {
-    parts.forEach((s, i) => { acc += '/' + s; const last = i === parts.length - 1; items.push({ '@type': 'ListItem', position: i + 2, name: last ? (m.cat ? m.cat.name : m.bcat ? m.bcat.name : m.t.split(' | ')[0]) : ({ 'cua-hang': 'Cửa hàng', 'dich-vu': 'Dịch vụ', 'hoc-vien': 'Học viện', 've-master': 'Về Master', blog: 'Blog', lookbook: 'Lookbook' }[s] || s.replace(/-/g, ' ')), item: SITE + acc + '/' }); });
+    parts.forEach((s, i) => { acc += '/' + s; const last = i === parts.length - 1; items.push({ '@type': 'ListItem', position: i + 2, name: last ? (m.cat ? m.cat.name : m.bcat ? m.bcat.name : m.t.split(' | ')[0]) : ({ 'cua-hang': 'Cửa hàng', 'dich-vu': 'Dịch vụ', 'hoc-vien': 'Học viện', 've-master': 'Về Master', blog: 'Blog', lookbook: 'Lookbook', 'hinh-anh': 'Hình ảnh', video: 'Video' }[s] || s.replace(/-/g, ' ')), item: SITE + acc + '/' }); });
   }
   out.push({ '@context': 'https://schema.org', '@type': 'BreadcrumbList', itemListElement: items });
   return out;
@@ -262,6 +270,7 @@ function renderBody(p) {
   else if (p.indexOf('/blog/') === 0) h = A.post(p.slice(6).replace(/^\/+|\/+$/g, ''));
   else if (p === '/cua-hang' || p === '/cua-hang/') h = A.P['/cua-hang']();
   else if (p.indexOf('/cua-hang/') === 0) h = A.product(p.slice(10).replace(/^\/+|\/+$/g, ''));
+  else if (p.indexOf('/lookbook/') === 0) h = A.lookPath(p);
   else h = A.P[p]();
   return applyText(A.LK(h));
 }
@@ -281,7 +290,7 @@ paths.forEach(p => {
 
 /* ---- sitemap, robots, 404 */
 const today = new Date().toISOString().slice(0, 10);
-const pri = p => p === '/' ? '1.0' : /^\/(dich-vu|hoc-vien|lookbook|cua-hang\/(trang-diem|phu-kien-toc|cham-soc-da|nuoc-hoa))(\/[^/]+)?$/.test(p) ? '0.8' : '0.6';
+const pri = p => p === '/' ? '1.0' : /^\/(dich-vu|hoc-vien|lookbook|cua-hang\/(trang-diem|phu-kien-toc|cham-soc-da|nuoc-hoa))(\/[^/]+){0,2}$/.test(p) ? '0.8' : '0.6';
 const urls = paths.filter(p => !NOINDEX.has(p)).map(p => `  <url><loc>${SITE}${p === '/' ? '/' : p + '/'}</loc><lastmod>${today}</lastmod><priority>${pri(p)}</priority></url>`);
 write(path.join(ROOT, 'sitemap.xml'), `<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n${urls.join('\n')}\n</urlset>\n`);
 write(path.join(ROOT, 'robots.txt'), `User-agent: *\nAllow: /\nDisallow: /admin/\n\nSitemap: ${SITE}/sitemap.xml\n`);
