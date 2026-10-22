@@ -2,6 +2,7 @@
   "gate2_title": "Kỷ Yếu & Chụp Ảnh",
   "btn_book_text": "Đặt lịch makeup",
   "gate2_image_right": "anh/makeup-ky-yeu-le-tot-nghiep-bien-hoa.webp",
+  "promo_cta": "Xem khóa học",
   "gate3_title": "Khởi Nghiệp Nghề Cầm Cọ",
   "gate1_image": "/anh/makeup-concept-hoa-do-toc-xoan-bup-bien-hoa.webp",
   "styles": [
@@ -32,6 +33,7 @@
   "price_note": "Giá mang tính tham khảo, có thể thay đổi theo layout và thời điểm. Nhắn Zalo để được báo giá chính xác.",
   "hero_image_1": "",
   "hero_image_2": "",
+  "promo_link": "/hoc-vien/co-ban-1-1/",
   "hero_image_3": "",
   "btn_course_text": "Xem khóa học",
   "sections": [
@@ -52,6 +54,7 @@
   ],
   "google_review_mark": "",
   "quiz_title": "Chọn layout hợp gương mặt",
+  "promo_enabled": true,
   "feedback_images": [],
   "google_title": "Đánh giá trên Google",
   "hero_title": "Đánh Thức Vẻ Đẹp Tiềm Ẩn, Tôn Vinh Khí Chất Riêng",
@@ -60,6 +63,7 @@
   "video_note": "Chạm vào video để bật hoặc tắt tiếng",
   "google_btn": "Viết đánh giá trên Google",
   "hero_desc": "Trang điểm cô dâu, tiệc và sự kiện theo từng gương mặt. Đào tạo học viên từ số 0 đến nhận khách thực tế.",
+  "promo_message": "Makeup Cá Nhân 1:1 còn 1.500.000đ · giới hạn 5 suất. Thời Gian Kết Thúc hết ngày 30/10/2026",
   "process_steps": [
     "Tư vấn dáng mặt & làn da",
     "Thử layout chuyên sâu",
@@ -118,9 +122,5 @@
       "label": "giải thưởng/chứng chỉ"
     }
   ],
-  "gate1_title": "Tỏa Sáng Ngày Cưới",
-  "promo_enabled": false,
-  "promo_message": "",
-  "promo_cta": "Xem khóa học",
-  "promo_link": "/hoc-vien/co-ban-1-1/"
+  "gate1_title": "Tỏa Sáng Ngày Cưới"
 }
