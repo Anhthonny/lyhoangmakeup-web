@@ -34,6 +34,13 @@ if(changed)i.files=dt.files},true);
   </label>
 </div>
 
+<!-- Tìm nhanh trong các danh sách nội dung đang mở -->
+<div id="content-search-bar" style="position:fixed;top:16px;right:18px;z-index:99999;display:none;gap:6px;align-items:center;background:#fffdf6;color:#2a2112;padding:8px 10px;border:1px solid #d9b64a;border-radius:12px;box-shadow:0 5px 18px #0002;font:13px sans-serif">
+  <strong>🔎 Tìm nhanh</strong>
+  <input id="content-search-input" type="search" placeholder="Tên, ngành, hashtag..." style="width:210px;margin:0;padding:7px 10px;border:1px solid #d9d0ba;border-radius:8px">
+  <button id="content-search-next" type="button" style="background:#8a6410;color:white;border:0;border-radius:8px;padding:8px 10px;cursor:pointer">Tìm tiếp</button>
+</div>
+
 <!-- 2. THANH CÔNG CỤ VIẾT BÀI NHANH: CHỈ HIỆN KHI Ở MỤC BLOG -->
 <div id="blog-admin-bar" style="position:fixed; bottom:20px; right:20px; z-index:99999; background:#1e1e2f; color:#fff; padding:12px 16px; border-radius:12px; box-shadow:0 8px 24px rgba(0,0,0,0.25); font-family:sans-serif; display:none; gap:10px; align-items:center; font-size:13px;">
   <strong style="color:#f5c542;">📝 Trợ lý Blog:</strong>
@@ -51,15 +58,28 @@ function updateAdminFloatingBars() {
   const h = window.location.hash || '';
   const excelBar = document.getElementById('excel-admin-bar');
   const blogBar = document.getElementById('blog-admin-bar');
+  const searchBar = document.getElementById('content-search-bar');
 
   // Chỉ hiện nút Excel khi người dùng đang mở trang chỉnh sửa Cửa hàng (cua_hang)
   const isShopPage = h.includes('/collections/cua_hang/entries/');
   // Chỉ hiện nút Viết bài nhanh khi người dùng đang mở trang chỉnh sửa Blog (blog)
   const isBlogPage = h.includes('/collections/blog/entries/');
+  const isLookPage = h.includes('/collections/lookbook_anh/entries/') || h.includes('/collections/lookbook_video/entries/');
+  if (searchBar) searchBar.style.display = (isShopPage || isBlogPage || isLookPage) ? 'flex' : 'none';
 
   if (excelBar) excelBar.style.display = isShopPage ? 'flex' : 'none';
   if (blogBar) blogBar.style.display = isBlogPage ? 'flex' : 'none';
 }
+
+document.getElementById('content-search-next').addEventListener('click', () => {
+  const q = (document.getElementById('content-search-input').value || '').trim();
+  if (!q) { document.getElementById('content-search-input').focus(); return; }
+  const found = window.find(q, false, false, true, false, false, false);
+  if (!found) alert('Chưa thấy nội dung này trong danh sách đang mở. Hãy thử tên rút gọn hoặc một hashtag.');
+});
+document.getElementById('content-search-input').addEventListener('keydown', e => {
+  if (e.key === 'Enter') document.getElementById('content-search-next').click();
+});
 
 window.addEventListener('hashchange', updateAdminFloatingBars);
 setInterval(updateAdminFloatingBars, 600);
@@ -115,6 +135,7 @@ document.getElementById('btn-export-excel').addEventListener('click', async () =
       'Hiện trên web (TRUE/FALSE)': p.published !== false,
       'Giá bán (VNĐ)': p.price !== undefined && p.price !== null ? p.price : '',
       'Mô tả ngắn': p.short_desc || '',
+      'Mô tả chi tiết (Markdown)': p.long_desc || '',
       'Danh sách Ảnh': (p.images || []).map(i => i.image).join(', '),
       'Video': p.video || '',
       'Đã kiểm duyệt (TRUE/FALSE)': Boolean(p.content_approved),
@@ -159,6 +180,7 @@ document.getElementById('input-import-excel').addEventListener('change', async (
         published: String(r['Hiện trên web (TRUE/FALSE)']).toLowerCase() !== 'false',
         ...(price !== null && !isNaN(price) ? { price } : {}),
         short_desc: String(r['Mô tả ngắn'] || '').trim(),
+        long_desc: String(r['Mô tả chi tiết (Markdown)'] || '').trim(),
         images: imgs,
         ...(r['Video'] ? { video: String(r['Video']).trim() } : {}),
         content_approved: String(r['Đã kiểm duyệt (TRUE/FALSE)']).toLowerCase() === 'true',

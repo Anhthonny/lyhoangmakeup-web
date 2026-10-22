@@ -118,5 +118,9 @@
       "label": "giải thưởng/chứng chỉ"
     }
   ],
-  "gate1_title": "Tỏa Sáng Ngày Cưới"
+  "gate1_title": "Tỏa Sáng Ngày Cưới",
+  "promo_enabled": false,
+  "promo_message": "",
+  "promo_cta": "Xem khóa học",
+  "promo_link": "/hoc-vien/co-ban-1-1/"
 }

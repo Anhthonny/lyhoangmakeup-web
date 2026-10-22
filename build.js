@@ -94,7 +94,9 @@ posts.forEach(b => paths.push('/blog/' + A.slug(b.title)));
 A.lbCatsWith('photo').forEach(s => paths.push('/lookbook/hinh-anh/' + s));
 A.lbCatsWith('video').forEach(s => paths.push('/lookbook/video/' + s));
 Object.keys(CAT_SEO).forEach(k => paths.push('/cua-hang/' + k));
+A.plist().forEach(p => { if (p.category && !Object.keys(CAT_SEO).some(k => CAT_SEO[k].name === p.category)) paths.push('/cua-hang/' + A.slug(p.category)); });
 A.plist().forEach(p => paths.push('/cua-hang/' + A.pslug(p)));
+posts.forEach(b => { if (b.category && !Object.keys(BLOG_CAT_SEO).some(k => BLOG_CAT_SEO[k].name === b.category)) paths.push('/blog/' + A.slug(b.category)); });
 paths = Array.from(new Set(paths));
 
 /* ---- tiêu đề + mô tả mặc định cho từng trang */
@@ -132,6 +134,8 @@ function defMeta(p) {
       const firstProd = A.plist().find(x => x.category === c.name);
       return { t: c.title, d: cut(c.desc, 158), img: firstProd ? A.pimg(firstProd, 0) : null, cat: c, catSlug: m[1] };
     }
+    const dynamicCat = A.plist().find(x => A.slug(x.category || '') === m[1]);
+    if (dynamicCat) { const c = { name: dynamicCat.category, title: `${dynamicCat.category} | ${BRS}`, desc: `Sản phẩm thuộc ngành hàng ${dynamicCat.category} do ${BRS} tuyển chọn.` }; return { t: c.title, d: cut(c.desc, 158), img: A.pimg(dynamicCat, 0), cat: c, catSlug: m[1] }; }
     const pp = A.plist().find(x => A.pslug(x) === m[1]);
     if (pp) return { t: cut(pp.name, 52) + ` | ${BRS}`, d: cut((String(pp.short_desc || '').split(/(?<=\.)\s/)[0] || pp.name), 125) + ` Sản phẩm ${BRS} chọn dùng.`, img: A.pimg(pp, 0), prod: pp };
   }
@@ -140,7 +144,10 @@ function defMeta(p) {
       const bc = BLOG_CAT_SEO[m[1]];
       const firstPost = posts.find(x => (x.category || 'Trang điểm Cô dâu') === bc.name);
       return { t: bc.title, d: cut(bc.desc, 158), img: firstPost ? firstPost.thumbnail : null, bcat: bc, bcatSlug: m[1] };
-    } const b = posts.find(x => A.slug(x.title) === m[1]); if (b) return { t: (String(b.title).indexOf(BRS) > -1 ? String(b.title) : `${b.title} | ${BRS}`), d: cut(String(b.description || '').length < 110 ? (b.description + ' Chia sẻ từ Master Lý Hoàng, ' + BRS + ' tại ' + LOC + '.') : b.description, 158), img: b.thumbnail, post: b }; }
+    }
+    const dynamicCatPost = posts.find(x => A.slug(x.category || '') === m[1]);
+    if (dynamicCatPost) { const bc = { name: dynamicCatPost.category, title: `${dynamicCatPost.category} | ${BRS}`, desc: `Bài viết thuộc chuyên mục ${dynamicCatPost.category} từ ${BRS}.` }; return { t: bc.title, d: cut(bc.desc, 158), img: dynamicCatPost.thumbnail, bcat: bc, bcatSlug: m[1] }; }
+    const b = posts.find(x => A.slug(x.title) === m[1]); if (b) return { t: (String(b.title).indexOf(BRS) > -1 ? String(b.title) : `${b.title} | ${BRS}`), d: cut(String(b.description || '').length < 110 ? (b.description + ' Chia sẻ từ Master Lý Hoàng, ' + BRS + ' tại ' + LOC + '.') : b.description, 158), img: b.thumbnail, post: b }; }
   return { t: BR, d: cut(HV('hero_desc'), 158) };
 }
 const seoOver = (data.seo && Array.isArray(data.seo.pages)) ? data.seo.pages : [];
@@ -280,6 +287,14 @@ paths.forEach(p => {
   const m = metaFor(p);
   let h = tpl;
   h = h.replace('<!--SEO-->', () => head(p, m) + '\n' + seoScript);
+  const promoOn = data.home && data.home.promo_enabled && String(data.home.promo_message || '').trim();
+  const promoLink = String((data.home && data.home.promo_link) || '/hoc-vien/').trim();
+  const safePromoLink = /^(https?:\/\/|\/)/.test(promoLink) ? promoLink : '/hoc-vien/';
+  const promoText = esc(data.home && data.home.promo_message || '');
+  const promoCta = esc(data.home && data.home.promo_cta || 'Tìm hiểu thêm');
+  const promoHtml = promoOn ? `<a href="${safePromoLink}"${/^https?:\/\//.test(safePromoLink) ? ' target="_blank" rel="noopener"' : ''}><span class="promo-track"><span><b>ƯU ĐÃI ĐẶC BIỆT</b> · ${promoText} · ${promoCta} →</span><span aria-hidden="true"><b>ƯU ĐÃI ĐẶC BIỆT</b> · ${promoText} · ${promoCta} →</span><span aria-hidden="true"><b>ƯU ĐÃI ĐẶC BIỆT</b> · ${promoText} · ${promoCta} →</span></span></a>` : '';
+  h = h.replace('<!--PROMO-->', () => promoHtml);
+  if (promoOn) h = h.replace('id="promo" class="promo-ticker"', 'id="promo" class="promo-ticker on"');
   h = h.replace('<!--APP-->', () => renderBody(p));
   h = h.replace('<!--FOOT-->', () => footer);
   h = h.replace(/(<img class="lg" id="hlg" src=")[^"]*(")/, (a, b, c) => b + esc(SV('logo') || 'anh/logo-ly-hoang-makeup-artist-bien-hoa.webp') + c);

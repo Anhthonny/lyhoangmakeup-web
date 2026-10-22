@@ -16,9 +16,10 @@
 h1,h2,h3{font-family:'Bodoni Moda',Georgia,serif;font-weight:400;line-height:1.25;margin:0 0 .5em}h1{font-size:clamp(30px,5vw,52px)}h2{font-size:clamp(25px,3.5vw,36px)}h3{font-size:20px}
 a{color:inherit;text-decoration:none}img{max-width:100%;display:block}
 header{position:sticky;top:0;z-index:20;background:color-mix(in srgb,var(--bg) 92%,transparent);backdrop-filter:blur(8px);border-bottom:1px solid var(--line);display:flex;align-items:center;gap:18px;padding:8px 5vw}
-header .lg{width:48px;height:48px;border-radius:50%;background:#fff}header b{font:500 15px 'Bodoni Moda',serif;white-space:nowrap}
+header .lg{width:62px;height:62px;border-radius:50%;background:#fff;object-fit:contain;padding:2px}header b{font:500 15px 'Bodoni Moda',serif;white-space:nowrap}
 nav{margin-left:auto;display:flex;gap:18px;align-items:center;font-size:13px;letter-spacing:.04em}nav a{color:var(--mute);transition:color .2s}nav a:hover,nav a.on{color:var(--gold)}
 #mbtn{display:none;margin-left:auto;cursor:pointer;font-size:18px;line-height:1;background:none;border:1px solid var(--line);border-radius:8px;padding:6px 10px;color:var(--ink)}
+@media(max-width:600px){header{gap:10px;padding:7px 4vw}header .lg{width:50px;height:50px}header b{font-size:14px}}
 @media(max-width:1200px){#mbtn{display:block}nav{display:none;position:absolute;top:100%;left:0;right:0;background:var(--bg);flex-direction:column;padding:16px;border-bottom:1px solid var(--line)}nav.o{display:flex}}
 .btn{display:inline-block;border:0;cursor:pointer;border-radius:999px;padding:12px 26px;background:var(--g);color:#2a2112;font:500 14px Montserrat;transition:transform .25s}.btn:hover{transform:translateY(-2px)}
 .b2{background:transparent;border:1px solid var(--gold);color:var(--gold)}
@@ -291,6 +292,15 @@ h1{font-size:clamp(34px,5.4vw,60px)}h2{font-size:clamp(28px,4vw,42px)}h3{font-si
 body.lb-lock{overflow:hidden}
 @media(max-width:700px){.lb-two{grid-template-columns:1fr}.lb-pg{columns:2 140px}.lb-vg{grid-template-columns:repeat(2,1fr)}.lb-bar{top:calc(env(safe-area-inset-top,0px) + 70px)}.lbx-p{left:6px}.lbx-n{right:6px}.lbx button{width:42px;height:42px}}
 </style><script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script></head><body>
+<style>
+.promo-ticker{display:none;background:#241b10;color:#f8e7b0;overflow:hidden;border-bottom:1px solid #8a6410;font-size:13px;line-height:1.4}
+.promo-ticker.on{display:block}.promo-ticker a{display:block;color:inherit}.promo-track{width:max-content;min-width:100%;display:flex;align-items:center;gap:28px;padding:10px 16px;animation:promo-scroll 24s linear infinite}.promo-track span{white-space:nowrap}.promo-track b{font-weight:600;color:#fff4cf}.promo-ticker:hover .promo-track,.promo-ticker:focus-within .promo-track{animation-play-state:paused}
+@keyframes promo-scroll{to{transform:translateX(-35%)}}
+@media(prefers-reduced-motion:reduce){.promo-track{animation:none;justify-content:center;width:auto;flex-wrap:wrap}}
+.lb-search{display:block;max-width:360px;margin:0 0 14px}.lb-search input{margin:0;background:#fff}
+.product-long th,.product-long td{padding:10px 12px;border:1px solid var(--line);text-align:left;vertical-align:top}.product-long th{background:var(--bg2)}.lb-tags{display:flex;flex-wrap:wrap;gap:6px;margin-top:7px}.lb-tags i{font-style:normal;border:1px solid var(--line);border-radius:999px;padding:2px 8px;font-size:11px;color:var(--gold)}
+</style>
+<div id="promo" class="promo-ticker" aria-label="Thông báo ưu đãi"></div>
 <header><a href="/"><img class="lg" id="hlg" src="anh/logo-ly-hoang-makeup-artist-bien-hoa.webp" alt="Logo Lý Hoàng Makeup Artist"></a><b id="hbn">Lý Hoàng Makeup &amp; Academy</b><button id="mbtn" type="button" aria-label="Mở menu" aria-controls="nav" onclick="nav.classList.toggle('o')">☰</button>
 <nav id="nav"><a href="/">Trang chủ</a><a href="/ve-master/">Về Master</a><a href="/dich-vu/">Dịch vụ Cưới & Tiệc</a><a href="/hoc-vien/">Học viện</a><a href="/lookbook/">Lookbook</a><a href="/blog/">Blog</a><a href="/cua-hang/">Cửa hàng</a><a href="#" onclick="openCart();return false">Giỏ (<span id="cc">0</span>)</a></nav></header>
 <main id="app"><div class="w"><div class="in"><h1>Học viện Lý Hoàng</h1><p class="q" style="margin:0 0 30px">Một nghề cầm cọ — một nguồn thu nhập vững vàng do chính bàn tay bạn tạo ra.</p><div class="gr"><div class="card"><span class="gold">Đang tuyển sinh</span><h3>Makeup Cá Nhân 1:1</h3><div class="pr">1.700.000đ</div><p>Cọc 500.000đ · 5 buổi (2–3h) · ca sáng 10h–13h hoặc tối 18h–20h30, Thứ 2–6. Mỹ phẩm hỗ trợ tại lớp, tặng 3 kiểu tóc cá nhân.</p><a class="btn" href="/hoc-vien/co-ban-1-1/">Xem lộ trình</a></div><div class="card"><h3>Khóa học cho người mới bắt đầu</h3><p class="mute">Nền tảng từ con số không: hiểu da, hiểu cọ, tự trang điểm gọn đẹp.</p><a class="btn b2" href="/hoc-vien/nguoi-moi/">Xem chi tiết</a></div><div class="card"><h3>Khóa học chuyên sâu</h3><p class="mute">Nâng kỹ thuật lên chuẩn chuyên nghiệp: nắn chỉnh khuôn mặt, nhiều phong cách.</p><a class="btn b2" href="/hoc-vien/chuyen-sau/">Xem chi tiết</a></div><div class="card"><h3>Khóa học cưới</h3><p class="mute">Chuyên đề cô dâu: nền bền cả ngày, làm tóc cô dâu, quy trình phục vụ trọn gói.</p><a class="btn b2" href="/hoc-vien/khoa-cuoi/">Xem chi tiết</a></div><div class="card"><h3>Lớp học riêng</h3><p class="mute">Lịch và nội dung thiết kế riêng theo mục tiêu, kèm 1:1 hoặc nhóm nhỏ.</p><a class="btn b2" href="/hoc-vien/lop-rieng/">Xem chi tiết</a></div></div>
@@ -471,6 +481,12 @@ function md(s){
     b = b.trim(); if(!b) return '';
     var h = b.match(/^(#{1,3})\s+(.*)/);
     if(h){ var l = h[1].length + 1; return '<h' + l + ' style="font-size:' + (l == 2 ? 24 : 20) + 'px;margin-top:28px">' + inl(h[2]) + '</h' + l + '>'; }
+    var tableLines=b.split('\n').map(function(x){return x.trim()}).filter(Boolean);
+    if(tableLines.length>1&&tableLines[1].split('|').filter(Boolean).every(function(x){return /^\s*:?-{3,}:?\s*$/.test(x)})){
+      var cells=function(line){return line.replace(/^\|/,'').replace(/\|$/,'').split('|').map(function(x){return inl(x.trim())})};
+      var head=cells(tableLines[0]),body=tableLines.slice(2).map(cells);
+      return '<div style="overflow-x:auto;margin:18px 0"><table><thead><tr>'+head.map(function(x){return '<th>'+x+'</th>'}).join('')+'</tr></thead><tbody>'+body.map(function(row){return '<tr>'+head.map(function(_,i){return '<td>'+(row[i]||'')+'</td>'}).join('')+'</tr>'}).join('')+'</tbody></table></div>';
+    }
     if(/^[-*]\s+/.test(b)) return '<ul>' + b.split('\n').map(function(x){ return '<li>' + inl(x.replace(/^[-*]\s+/, '')) + '</li>'; }).join('') + '</ul>';
     var im = b.match(/^!\[(.*?)\]\((.*?)(?:\s+"(.*)")?\)/);
     if(im){ var cap = im[3] ? '<figcaption class="c mute" style="font-size:13px;margin-top:6px">' + im[3] + '</figcaption>' : ''; return '<figure style="margin:18px 0"><img class="im im16" src="' + bimg(im[2]) + '" alt="' + im[1] + '" loading="lazy">' + cap + '</figure>'; }
@@ -510,7 +526,7 @@ function bcard(b, hide){
   var imgHtml = im ? '<a class="bpost-img-wrap" href="' + postHref + '"><img src="' + im + '" alt="' + esc(b.thumbnail_alt || b.title) + '" loading="lazy"></a>' : '';
   var subHtml = sub ? '<span>·</span><span style="color:#6e6259;text-transform:none;letter-spacing:0;font-weight:500">' + esc(sub) + '</span>' : '';
   var cleanTitle = esc(String(b.title || '').replace(/\s*\|\s*Lý Hoàng.*$/i, ''));
-  var rawDesc = String(b.description || '');
+  var rawDesc = String(b.description || ''), tags = String(b.tags || '');
   var descText = rawDesc.length > 120 ? rawDesc.slice(0, 120) + '…' : rawDesc;
   var styleAttr = hide ? 'display:none' : 'display:flex';
   return '<article class="card bpost" data-c="' + slug(cat) + '" data-sub="' + slug(sub || 'all') + '" data-k="' + slug(b.title + ' ' + rawDesc + ' ' + cat + ' ' + sub) + '" style="' + styleAttr + '">' +
@@ -527,18 +543,15 @@ var blogC='all', blogSub='all', blogLim=16;
 function blog(catKey){
   var cleanKey = String(catKey || '').replace(/^\/+|\/+$/g, '');
   var info = cleanKey ? bcatInfoBySlug(cleanKey) : null;
-  blogC = info ? info.name : 'Tất cả';
+  if(cleanKey&&!info){var dyn=posts().find(function(b){return slug(b.category||'Trang điểm Cô dâu')===cleanKey});if(dyn){var nm=dyn.category||'Chuyên mục';info={name:nm,h1:nm,desc:'Bài viết thuộc chuyên mục '+nm+' từ Lý Hoàng Makeup.'}}}
+  blogC = info ? slug(info.name) : 'all';
   blogSub = 'all';
   blogLim = 16;
   var allB = posts();
   var L = info ? allB.filter(function(b){ return slug(b.category || 'Trang điểm Cô dâu') === slug(info.name); }) : allB;
-  var mainCats = [
-    {label: 'Tất cả', cnt: allB.length, href: '/blog/', active: !info},
-    {label: 'Trang điểm Cô dâu', cnt: allB.filter(function(b){ return slug(b.category || 'Trang điểm Cô dâu') === slug('Trang điểm Cô dâu'); }).length, href: '/blog/trang-diem-co-dau/', active: cleanKey === 'trang-diem-co-dau'},
-    {label: 'Kỹ thuật & Xu hướng', cnt: allB.filter(function(b){ return slug(b.category || '') === slug('Kỹ thuật & Xu hướng'); }).length, href: '/blog/ky-thuat-trang-diem/', active: cleanKey === 'ky-thuat-trang-diem'},
-    {label: 'Chăm sóc da & Tóc', cnt: allB.filter(function(b){ return slug(b.category || '') === slug('Chăm sóc da & Tóc'); }).length, href: '/blog/cham-soc-da/', active: cleanKey === 'cham-soc-da'},
-    {label: 'Học nghề & Dịch vụ', cnt: allB.filter(function(b){ return slug(b.category || '') === slug('Học nghề & Dịch vụ'); }).length, href: '/blog/goc-hoc-vien/', active: cleanKey === 'goc-hoc-vien'}
-  ];
+  var categoryNames = [];
+  allB.forEach(function(b){var name=String(b.category||'Trang điểm Cô dâu').trim();if(name&&!categoryNames.some(function(x){return slug(x)===slug(name)}))categoryNames.push(name)});
+  var mainCats = [{label:'Tất cả', key:'all', cnt:allB.length}].concat(categoryNames.map(function(name){return {label:name,key:slug(name),cnt:allB.filter(function(b){return slug(b.category||'Trang điểm Cô dâu')===slug(name)}).length}}));
   var subCats = [{name: 'Tất cả chủ đề', key: 'all'}];
   L.forEach(function(b){
     if(b.subcategory){
@@ -550,7 +563,8 @@ function blog(catKey){
   var desc = info ? info.desc : 'Chia sẻ kiến thức trang điểm cô dâu, kỹ thuật đánh nền, kẻ mắt, chăm sóc da và kinh nghiệm học nghề thực tế từ Master Lý Hoàng.';
   var bread = info ? '<p class="mute" style="font-size:13px;margin:0 0 10px"><a class="gold" href="/">Trang chủ</a> / <a class="gold" href="/blog/">Blog</a> / ' + esc(info.name) + '</p>' : '';
   var mainCatsHtml = mainCats.map(function(c){
-    return '<a class="blog-cat-pill' + (c.active ? ' active' : '') + '" href="' + c.href + '">' + esc(c.label) + ' <span class="cnt">(' + c.cnt + ')</span></a>';
+    var active = (info ? slug(info.name) : 'all') === c.key;
+    return '<button type="button" class="blog-cat-pill' + (active ? ' active' : '') + ' bc-main" data-cat="' + esc(c.key) + '" onclick="blogMainCat(this)">' + esc(c.label) + ' <span class="cnt">(' + c.cnt + ')</span></button>';
   }).join('');
   var subCatsHtml = subCats.length > 2 ? '<div class="blog-subbar">' + subCats.map(function(sc, i){
     var cnt = sc.key === 'all' ? L.length : L.filter(function(b){ return slug(b.subcategory || '') === sc.key; }).length;
@@ -568,6 +582,11 @@ function blog(catKey){
     '<p id="bn" class="c mute" style="display:' + (L.length ? 'none' : 'block') + ';padding:40px 0">Không tìm thấy bài viết phù hợp.</p>' +
     '</div></div>';
 }
+function blogMainCat(b){
+  blogC=b.getAttribute('data-cat')||'all';blogSub='all';
+  document.querySelectorAll('.bc-main').forEach(function(x){x.classList.toggle('active',x===b)});
+  document.querySelectorAll('.bcb').forEach(function(x){x.classList.toggle('active',x.getAttribute('data-sub')==='all')});blogF();
+}
 function blogSubCat(b){
   blogSub = b.getAttribute('data-sub') || 'all';
   var bs = document.querySelectorAll('.bcb');
@@ -579,7 +598,8 @@ function blogF(){
   var q = slug((document.getElementById('bsq') || {}).value || ''), n = 0, cs = document.querySelectorAll('#bg .bpost');
   for(var i=0; i<cs.length; i++){
     var c = cs[i], cSub = c.getAttribute('data-sub') || '', cK = c.getAttribute('data-k') || '';
-    var match = (blogSub === 'all' || blogSub === 'Tất cả' || cSub === blogSub) && (!q || cK.indexOf(q) > -1);
+    var cCat = c.getAttribute('data-c') || '';
+    var match = (blogC === 'all' || cCat === blogC) && (blogSub === 'all' || blogSub === 'Tất cả' || cSub === blogSub) && (!q || cK.indexOf(q) > -1);
     if(match){ n++; c.style.display = 'flex'; } else { c.style.display = 'none'; }
   }
   var e = document.getElementById('bn'); if(e) e.style.display = n > 0 ? 'none' : 'block';
@@ -587,7 +607,7 @@ function blogF(){
 function post(key){
   var cleanKey = String(key || '').replace(/^\/+|\/+$/g, '');
   if(!cleanKey) return blog();
-  if(BLOG_CAT_META[cleanKey]) return blog(cleanKey);
+  if(BLOG_CAT_META[cleanKey] || posts().some(function(x){return slug(x.category||'')===cleanKey})) return blog(cleanKey);
   var L = posts(), i = -1;
   for(var j=0; j<L.length; j++){
     if(slug(L[j].title) === cleanKey || String(j) === cleanKey){ i = j; break; }
@@ -627,12 +647,13 @@ function money(n){return n.toLocaleString('vi-VN')+'đ'}
 function clip(s,n){s=String(s||'');return s.length>n?s.slice(0,n-1).replace(/\s+\S*$/,'')+'…':s}
 function prodArr(){return plist().map(function(p){return [p.code||'',p.name,pprice(p),p.short_desc||'',p.category||'Trang điểm',pimg(p,0),pslug(p),p.subcategory||'']})}
 function rebuildShop(){S.length=0;prodArr().forEach(function(x){S.push(x)})}
-function pcard(p){var pr=pprice(p),sub=p.subcategory||'';return `<a class="card pc" href="#/cua-hang/${pslug(p)}" data-c="${esc(p.category||'')}" data-sub="${esc(sub)}" data-k="${slug(p.name+' '+(p.code||'')+' '+sub)}"><div style="position:relative"><img class="im" style="aspect-ratio:1;border-radius:0" src="${pimg(p,0)}" alt="${esc(palt(p,0))}" loading="lazy">${p.video?'<span class="vb">▶ Video</span>':''}</div><div style="padding:16px"><small class="mute">${esc(p.category||'')}${sub?' · <span class="gold">'+esc(sub)+'</span>':''}</small><h3 style="font-size:17px;margin:4px 0 6px">${esc(p.name)}</h3><p class="mute" style="font-size:14px;margin:0 0 8px">${esc(clip(p.short_desc,90))}</p><div class="pr" style="font-size:20px">${pr?money(pr):'Liên hệ'}</div></div></a>`}
-var shopC='Tất cả',shopSub='Tất cả';
+function pcard(p){var pr=pprice(p),sub=p.subcategory||'';return `<a class="card pc" href="#/cua-hang/${pslug(p)}" data-c="${esc(p.category||'')}" data-sub="${esc(sub)}" data-k="${slug(p.name+' '+(p.code||'')+' '+p.category+' '+sub)}"><div style="position:relative"><img class="im" style="aspect-ratio:1;border-radius:0" src="${pimg(p,0)}" alt="${esc(palt(p,0))}" loading="lazy">${p.video?'<span class="vb">▶ Video</span>':''}</div><div style="padding:16px"><small class="mute">${esc(p.category||'')}${sub?' · <span class="gold">'+esc(sub)+'</span>':''}</small><h3 style="font-size:17px;margin:4px 0 6px">${esc(p.name)}</h3><p class="mute" style="font-size:14px;margin:0 0 8px">${esc(clip(p.short_desc,90))}</p><div class="pr" style="font-size:20px">${pr?money(pr):'Liên hệ'}</div></div></a>`}
+var shopC='Tất cả',shopSub='Tất cả',shopMain='Tất cả';
 function shop(catKey){
   var info=catKey?catInfoBySlug(catKey):null;
+  if(catKey&&!info){var dyn=plist().find(function(p){return slug(p.category||'')===catKey});if(dyn)info={name:dyn.category,h1:dyn.category,desc:'Sản phẩm thuộc ngành hàng '+dyn.category+' do Lý Hoàng Makeup tuyển chọn.'}}
   shopC=info?info.name:'Tất cả';
-  shopSub='Tất cả';
+  shopSub='Tất cả';shopMain=info?info.name:'Tất cả';
   var allL=plist();
   var L=info?allL.filter(function(p){return p.category===info.name}):allL;
   var mainCats=[
@@ -642,6 +663,8 @@ function shop(catKey){
     {label:'Chăm sóc da ('+allL.filter(p=>p.category==='Chăm sóc da').length+')', href:'#/cua-hang/cham-soc-da', active:catKey==='cham-soc-da'},
     {label:'Nước hoa ('+allL.filter(p=>p.category==='Nước hoa').length+')', href:'#/cua-hang/nuoc-hoa', active:catKey==='nuoc-hoa'}
   ];
+  var knownCats=['Trang điểm','Phụ kiện tóc','Chăm sóc da','Nước hoa'];
+  var extraCats=[];allL.forEach(function(p){var c=String(p.category||'').trim();if(c&&knownCats.indexOf(c)<0&&extraCats.indexOf(c)<0)extraCats.push(c)});
   var subCats=['Tất cả'];
   L.forEach(function(p){if(p.subcategory&&subCats.indexOf(p.subcategory)<0)subCats.push(p.subcategory)});
   var h1=info?info.h1:'Cửa hàng Mỹ Phẩm & Phụ Kiện Makeup';
@@ -650,6 +673,7 @@ function shop(catKey){
   return `<div class="w"><div class="in">${bread}<h1>${esc(h1)}</h1><p class="mute">${esc(desc)}</p>
   <div style="display:flex;gap:8px;flex-wrap:wrap;align-items:center;margin:18px 0 12px">
     ${mainCats.map(function(c){return `<a class="btn ${c.active?'':'b2'}" href="${c.href}" style="padding:10px 18px;font-size:14px">${esc(c.label)}</a>`}).join('')}
+    ${extraCats.map(function(c){return `<a class="btn b2" href="#/cua-hang/${slug(c)}" style="padding:10px 18px;font-size:14px">${esc(c)} (${allL.filter(p=>p.category===c).length})</a>`}).join('')}
   </div>
   <div style="display:flex;gap:8px;flex-wrap:wrap;align-items:center;margin:0 0 22px;padding:12px 14px;background:rgba(217,182,74,0.08);border-radius:14px">
     <input id="sq" type="search" placeholder="Tìm tên hoặc mã SP..." oninput="shopF()" style="max-width:220px;margin:0 8px 0 0;background:#fff">
@@ -658,10 +682,11 @@ function shop(catKey){
   <div class="gr" id="pg">${L.map(pcard).join('')}</div><p id="pn" class="c mute" hidden>Không có sản phẩm phù hợp.</p></div></div>`;
 }
 function shopSubCat(b){shopSub=b.dataset.sub;var bs=document.querySelectorAll('.cb');for(var i=0;i<bs.length;i++)bs[i].classList.toggle('b2',bs[i]!==b);shopF()}
-function shopF(){var q=slug((document.getElementById('sq')||{}).value||''),n=0,cs=document.querySelectorAll('#pg .pc');for(var i=0;i<cs.length;i++){var c=cs[i],ok=(shopSub=='Tất cả'||c.dataset.sub==shopSub)&&(!q||c.dataset.k.indexOf(q)>-1);c.hidden=!ok;if(ok)n++}var e=document.getElementById('pn');if(e)e.hidden=n>0}
+function shopCategory(b){shopMain=b.dataset.cat||'Tất cả';document.querySelectorAll('.shop-extra-cat').forEach(x=>x.classList.toggle('b2',x!==b));shopSub='Tất cả';document.querySelectorAll('.cb').forEach(x=>x.classList.add('b2'));shopF()}
+function shopF(){var q=slug((document.getElementById('sq')||{}).value||''),n=0,cs=document.querySelectorAll('#pg .pc');for(var i=0;i<cs.length;i++){var c=cs[i],ok=(shopMain=='Tất cả'||c.dataset.c==shopMain)&&(shopSub=='Tất cả'||c.dataset.sub==shopSub)&&(!q||c.dataset.k.indexOf(q)>-1);c.hidden=!ok;if(ok)n++}var e=document.getElementById('pn');if(e)e.hidden=n>0}
 function pmSet(t){var m=document.getElementById('pm');if(m){m.src=t.dataset.s;m.alt=t.alt}}
 function product(key){
-  if(CAT_META[key])return shop(key);
+  if(CAT_META[key]||plist().some(function(x){return slug(x.category||'')===key}))return shop(key);
   var L=plist(),p=null,i;for(i=0;i<L.length;i++)if(pslug(L[i])==key){p=L[i];break}if(!p)return shop();
   var imgs=[0,1,2,3,4].map(function(k){return pimg(p,k)}).filter(Boolean),pr=pprice(p),idx=S.findIndex(function(x){return x[6]==pslug(p)});
   var rel=L.filter(function(x){return x!==p&&x.category==p.category&&(p.subcategory?x.subcategory==p.subcategory:true)}).slice(0,3);
@@ -669,7 +694,7 @@ function product(key){
   var cSlug=catSlug(p.category);
   return `<div class="w"><div class="in"><p class="mute" style="font-size:13px;margin:0 0 16px"><a class="gold" href="#/">Trang chủ</a> / <a class="gold" href="#/cua-hang">Cửa hàng</a> / <a class="gold" href="#/cua-hang/${cSlug}">${esc(p.category||'')}</a>${p.subcategory?' / '+esc(p.subcategory):''}</p>
 <div class="gr" style="grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:36px;align-items:start"><div><img id="pm" class="im" style="aspect-ratio:1;object-position:center" src="${imgs[0]||''}" alt="${esc(palt(p,0))}">${imgs.length>1?`<div style="display:flex;gap:10px;margin-top:12px">${imgs.map(function(s,k){return `<img src="${s}" data-s="${s}" alt="${esc(palt(p,k))}" onclick="pmSet(this)" loading="lazy" style="width:84px;height:84px;object-fit:cover;border-radius:12px;cursor:pointer;border:2px solid var(--line)">`}).join('')}</div>`:''}</div>
-<div><small class="mute"><a class="gold" href="#/cua-hang/${cSlug}">${esc(p.category||'')}</a>${p.subcategory?' · '+esc(p.subcategory):''}${p.code?' · '+esc(p.code):''}</small><h1 style="font-size:clamp(26px,3.4vw,38px);margin:6px 0 12px">${esc(p.name)}</h1><div class="pr">${pr?money(pr):'Liên hệ'}</div><p>${nl(p.short_desc)}</p><p><a class="btn" href="${Z}" target="_blank" rel="noopener">Nhắn Zalo ${pr?'đặt hàng':'hỏi giá'}</a> ${pr&&idx>-1?`<button class="btn b2" onclick="add(${idx})">Đăng ký đặt trước</button>`:''}</p>${p.content_approved&&p.reason?`<h2 style="font-size:22px;margin-top:28px">Vì sao Lý Hoàng dùng sản phẩm này</h2><p>${nl(p.reason)}</p>`:''}${p.content_approved&&p.usage?`<h2 style="font-size:22px;margin-top:24px">Cách dùng</h2><p>${nl(p.usage)}</p>`:''}</div></div>
+<div><small class="mute"><a class="gold" href="#/cua-hang/${cSlug}">${esc(p.category||'')}</a>${p.subcategory?' · '+esc(p.subcategory):''}${p.code?' · '+esc(p.code):''}</small><h1 style="font-size:clamp(26px,3.4vw,38px);margin:6px 0 12px">${esc(p.name)}</h1><div class="pr">${pr?money(pr):'Liên hệ'}</div><p>${nl(p.short_desc)}</p><p><a class="btn" href="${Z}" target="_blank" rel="noopener">Nhắn Zalo ${pr?'đặt hàng':'hỏi giá'}</a> ${pr&&idx>-1?`<button class="btn b2" onclick="add(${idx})">Đăng ký đặt trước</button>`:''}</p>${p.content_approved&&p.reason?`<h2 style="font-size:22px;margin-top:28px">Vì sao Lý Hoàng dùng sản phẩm này</h2><p>${nl(p.reason)}</p>`:''}${p.content_approved&&p.usage?`<h2 style="font-size:22px;margin-top:24px">Cách dùng</h2><p>${nl(p.usage)}</p>`:''}${p.content_approved&&p.long_desc?`<section class="card" style="margin-top:28px"><h2 style="font-size:22px">Thông tin chi tiết</h2><div class="product-long">${md(p.long_desc)}</div></section>`:''}</div></div>
 ${p.video?`<h2 style="margin-top:44px">Xem video sản phẩm</h2><video src="${p.video}" poster="${imgs[0]||''}" controls playsinline preload="none" style="display:block;width:100%;max-width:360px;border-radius:18px;background:#000"></video>`:''}${rel.length?`<h2 style="margin-top:48px">Sản phẩm cùng phân loại</h2><div class="gr">${rel.map(pcard).join('')}</div>`:''}</div></div>`}
 /* ---- lookbook v2: kho ảnh + video, ngành chính / ngành con */
 const LB_CATS=[
@@ -683,13 +708,13 @@ function lbGuess(t){t=slug(t);return /dau|co-dau/.test(t)?'Cô dâu':/ky-yeu|tot
 function lbD(){var o=CFG.look;return(o&&typeof o==='object'&&!Array.isArray(o))?o:{}}
 function lbPhotos(){
 var o=lbD(),a=Array.isArray(o.photos)?o.photos.filter(x=>x&&x.image):[];
-if(a.length)return a.map(x=>({image:x.image,title:x.title||'',category:x.category||'Phong cách makeup',sub:String(x.subcategory||'').trim()}));
+if(a.length)return a.map(x=>({image:x.image,title:x.title||'',description:x.description||'',tags:String(x.tags||''),category:x.category||'Phong cách makeup',sub:String(x.subcategory||'').trim()}));
 var C=Array.isArray(o.categories)?o.categories:(Array.isArray(CFG.look)?CFG.look:DEF.look),r=[];
 (C||[]).forEach(function(c){(c.images||[]).forEach(function(im){r.push({image:im,title:c.title||'',category:lbGuess(c.title),sub:String(c.title||'').trim()})})});
 return r}
 function lbVideos(){
 var o=CFG.lookv,a=(o&&Array.isArray(o.videos))?o.videos.filter(x=>x&&(x.src||x.link)):[];
-return a.map(x=>({src:x.link||x.src,poster:x.poster||'',title:x.title||'',category:x.category||'Phong cách makeup',sub:String(x.subcategory||'').trim()}))}
+return a.map(x=>({src:x.link||x.src,poster:x.poster||'',title:x.title||'',description:x.description||'',tags:String(x.tags||''),category:x.category||'Phong cách makeup',sub:String(x.subcategory||'').trim()}))}
 function lbItems(kind){return kind=='video'?lbVideos():lbPhotos()}
 function lbCatOf(it){var s=slug(it.category);for(var i=0;i<LB_CATS.length;i++)if(LB_CATS[i].s==s||slug(LB_CATS[i].name)==s)return LB_CATS[i];return LB_CATS[3]}
 function lbCatsWith(kind){var it=lbItems(kind),m={};it.forEach(x=>m[lbCatOf(x).s]=1);return LB_CATS.filter(c=>m[c.s]).map(c=>c.s)}
@@ -722,20 +747,20 @@ var pills=lbPill(base,'Tất cả',all.length,!cat)+LB_CATS.filter(c=>cnt[c.s]).
 var subs={};list.forEach(x=>{if(x.sub)subs[x.sub]=(subs[x.sub]||0)+1});
 var sk=Object.keys(subs),subHtml=(cat&&sk.length>1)?`<div class="lb-sub" role="group" aria-label="Ngành con"><button type="button" class="lb-sp on" data-sub="all" onclick="lbSubSel(this)">Tất cả</button>${sk.map(s=>`<button type="button" class="lb-sp" data-sub="${esc(s)}" onclick="lbSubSel(this)">${esc(s)}<i>${subs[s]}</i></button>`).join('')}</div>`:'';
 var grid=list.map(function(x,i){var sub=esc(x.sub);
-if(!isV)return `<a class="lbi" href="${IM(x.image)}" data-sub="${sub}" data-t="${esc(x.title)}" onclick="return lbOpen(this,event)"><img src="${IM(x.image)}" alt="${esc(x.title||x.category)}" loading="lazy"><span>${esc(x.title||x.sub||'')}</span></a>`;
+if(!isV)return `<a class="lbi" href="${IM(x.image)}" data-sub="${sub}" data-k="${slug(x.title+' '+x.description+' '+x.tags+' '+x.category+' '+x.sub)}" data-t="${esc(x.title)}" data-d="${esc(x.description)}" data-tags="${esc(x.tags)}" onclick="return lbOpen(this,event)"><img src="${IM(x.image)}" alt="${esc(x.title||x.category)}" loading="lazy"><span>${esc(x.title||x.sub||'')}</span>${x.tags?`<span class="lb-tags">${x.tags.split(/[,，]/).filter(Boolean).map(t=>`<i>${esc(t.trim().replace(/^#/,''))}</i>`).join('')}</span>`:''}</a>`;
 var cover=x.poster?`<img src="${IM(x.poster)}" alt="${esc(x.title||x.category)}" loading="lazy">`:(lbEmbed(x.src).t=='video'?`<video src="${esc(lbEmbed(x.src).u)}#t=0.6" preload="metadata" muted playsinline></video>`:'<span class="lb-ph"></span>');
-return `<button type="button" class="lbv" data-sub="${sub}" data-src="${esc(x.src)}" data-t="${esc(x.title)}" onclick="lbPlay(this)">${cover}<b class="lb-play">▶</b><span>${esc(x.title||x.sub||'')}</span></button>`}).join('');
+return `<button type="button" class="lbv" data-sub="${sub}" data-src="${esc(x.src)}" data-k="${slug(x.title+' '+x.description+' '+x.tags+' '+x.category+' '+x.sub)}" data-t="${esc(x.title)}" data-d="${esc(x.description)}" data-tags="${esc(x.tags)}" onclick="lbPlay(this)">${cover}<b class="lb-play">▶</b><span>${esc(x.title||x.sub||'')}</span>${x.tags?`<span class="lb-tags">${x.tags.split(/[,，]/).filter(Boolean).map(t=>`<i>${esc(t.trim().replace(/^#/,''))}</i>`).join('')}</span>`:''}</button>`}).join('');
 var empty=`<div class="lb-empty">Chưa có ${isV?'video':'hình ảnh'} nào trong mục này. <a href="${Z}" target="_blank" rel="noopener">Nhắn Zalo</a> để xem thêm layout thực tế.</div>`;
 return `<div class="w lb"><div class="lb-in"><div class="lb-bc" aria-label="Điều hướng"><a href="/lookbook/">Lookbook</a> › <a href="${base}">${isV?'Video':'Hình ảnh'}</a>${cat?` › <span>${esc(cat.name)}</span>`:''}</div>
 <div class="lb-head"><h1>${esc(cat?cat.h1:(isV?'Video Makeup Thực Tế':'Thư Viện Ảnh Makeup'))}</h1><p>${esc(cat?cat.desc:(isV?'Video quá trình makeup và kết quả thực tế tại tiệm. Bấm vào video để xem.':'Ảnh layout thật của khách. Bấm vào ảnh để phóng to, lọc theo ngành để tìm nhanh.'))}</p>
 <div class="lb-switch"><a class="${isV?'':'on'}" href="${cat?'/lookbook/hinh-anh/'+cat.s+'/':'/lookbook/hinh-anh/'}">Hình ảnh</a><a class="${isV?'on':''}" href="${cat?'/lookbook/video/'+cat.s+'/':'/lookbook/video/'}">Video</a></div></div>
-<div class="lb-bar"><div class="lb-pills">${pills}</div>${subHtml}</div>
+<div class="lb-bar"><div class="lb-pills">${pills}</div>${subHtml}</div><label class="lb-search"><span class="mute" style="font-size:12px">Tìm theo nội dung hoặc hashtag</span><input id="lbsq" type="search" placeholder="Ví dụ: #tonecamdao, mặt tròn, cô dâu..." oninput="lbF()"></label>
 <p class="lb-count" id="lbc"></p><div class="${isV?'lb-vg':'lb-pg'}" id="lbg">${grid}</div>${list.length?'':empty}
 <p class="c"><button type="button" class="btn b2" id="lbm" onclick="lbMore()" style="display:none">Xem thêm</button></p>
 <div class="lb-cta rv"><p>Thích layout nào? Gửi mình ảnh hoặc tên layout, tiệm tư vấn và giữ lịch cho bạn.</p><a class="btn" href="/dat-lich/?cd">Đặt lịch makeup</a> <a class="btn b2" href="${Z}" target="_blank" rel="noopener">Nhắn Zalo</a></div></div></div>`}
 function lookPath(p){var m=String(p).match(/^\/lookbook\/(hinh-anh|video)(?:\/([^/]+))?\/?$/);if(!m)return lookHub();return lookPage(m[1]=='video'?'video':'photo',m[2]||'')}
-function lbF(){var g=document.getElementById('lbg');if(!g)return;var it=g.children,n=0,shown=0;
-for(var i=0;i<it.length;i++){var c=it[i],ok=lbSub=='all'||c.getAttribute('data-sub')==lbSub;
+function lbF(){var g=document.getElementById('lbg');if(!g)return;var it=g.children,n=0,shown=0,q=slug((document.getElementById('lbsq')||{}).value||'');
+for(var i=0;i<it.length;i++){var c=it[i],ok=(lbSub=='all'||c.getAttribute('data-sub')==lbSub)&&(!q||(c.getAttribute('data-k')||'').indexOf(q)>-1);
 if(ok){n++;if(shown<lbLim){c.hidden=false;shown++}else c.hidden=true}else c.hidden=true}
 var e=document.getElementById('lbc');if(e)e.textContent=n?('Đang hiển thị '+shown+' / '+n+(lbKind=='video'?' video':' ảnh')):'';
 var m=document.getElementById('lbm');if(m)m.style.display=n>shown?'inline-block':'none'}
@@ -748,8 +773,8 @@ b.addEventListener('click',function(e){if(e.target===b||e.target.id=='lbxm')lbCl
 var sx=0;b.addEventListener('touchstart',function(e){sx=e.touches[0].clientX},{passive:true});b.addEventListener('touchend',function(e){var d=e.changedTouches[0].clientX-sx;if(Math.abs(d)>50&&lbList.length>1)lbStep(d<0?1:-1)});
 document.addEventListener('keydown',function(e){if(b.hidden)return;if(e.key=='Escape')lbClose();else if(e.key=='ArrowLeft')lbStep(-1);else if(e.key=='ArrowRight')lbStep(1)});
 document.body.appendChild(b);return b}
-function lbShow(i){var a=lbList[i];if(!a)return;lbCur=i;var t=a.getAttribute('data-t')||'';
-document.getElementById('lbxm').innerHTML='<img src="'+a.getAttribute('href')+'" alt="'+esc(t)+'">'+(t?'<p>'+esc(t)+'</p>':'');
+function lbShow(i){var a=lbList[i];if(!a)return;lbCur=i;var t=a.getAttribute('data-t')||'',d=a.getAttribute('data-d')||'',tags=a.getAttribute('data-tags')||'';
+document.getElementById('lbxm').innerHTML='<img src="'+a.getAttribute('href')+'" alt="'+esc(t)+'">'+(t?'<p><b>'+esc(t)+'</b></p>':'')+(d?'<p>'+esc(d).replace(/\n/g,'<br>')+'</p>':'')+(tags?'<p class="gold">'+esc(tags)+'</p>':'');
 document.getElementById('lbxc').textContent=(i+1)+' / '+lbList.length}
 function lbOpen(a,e){if(e&&(e.metaKey||e.ctrlKey||e.shiftKey))return true;if(e)e.preventDefault();var b=lbBox();
 lbList=Array.prototype.filter.call(document.querySelectorAll('#lbg .lbi'),x=>!x.hidden);b.hidden=false;document.body.classList.add('lb-lock');lbShow(lbList.indexOf(a));return false}
@@ -758,8 +783,8 @@ function lbClose(){var b=document.getElementById('lbx');if(!b)return;b.hidden=tr
 function lbPlay(btn){var s=btn.getAttribute('data-src'),t=btn.getAttribute('data-t')||'',em=lbEmbed(s);
 if(em.t=='link'){window.open(em.u,'_blank','noopener');return}
 var b=lbBox();lbList=[];b.hidden=false;document.body.classList.add('lb-lock');
-var inner=em.t=='iframe'?'<iframe src="'+em.u+'" allow="autoplay; encrypted-media; picture-in-picture; fullscreen" allowfullscreen title="'+esc(t)+'"></iframe>':'<video src="'+esc(em.u)+'" controls autoplay playsinline></video>';
-document.getElementById('lbxm').innerHTML='<div class="lbx-v">'+inner+'</div>'+(t?'<p>'+esc(t)+'</p>':'');document.getElementById('lbxc').textContent=''}
+var inner=em.t=='iframe'?'<iframe src="'+em.u+'" allow="autoplay; encrypted-media; picture-in-picture; fullscreen" allowfullscreen title="'+esc(t)+'"></iframe>':'<video src="'+esc(em.u)+'" controls autoplay playsinline></video>',d=btn.getAttribute('data-d')||'',tags=btn.getAttribute('data-tags')||'';
+document.getElementById('lbxm').innerHTML='<div class="lbx-v">'+inner+'</div>'+(t?'<p><b>'+esc(t)+'</b></p>':'')+(d?'<p>'+esc(d).replace(/\n/g,'<br>')+'</p>':'')+(tags?'<p class="gold">'+esc(tags)+'</p>':'');document.getElementById('lbxc').textContent=''}
 function lookbook(){return lookHub()}
 
 /* ---- boot */
