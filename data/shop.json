@@ -1,10 +1,11 @@
 {
   "products": [
     {
-      "code": "LH-001",
+      "usage": "Lắc đều, xịt cách tóc khoảng 25 đến 30 cm, che mặt cô dâu khi xịt. Tránh xa lửa và nơi nhiệt độ cao (nhãn có cảnh báo).",
+      "reason": "Tóc cô dâu phải giữ nếp từ lúc làm đến hết tiệc, nên mình dùng gôm này để cố định kiểu tóc ở bước cuối.",
       "name": "Gôm xịt tóc Power Point (Nhật Bản)",
       "slug": "gom-xit-toc-power-point-nhat-ban",
-      "category": "Phụ kiện tóc",
+      "code": "LH-001",
       "published": true,
       "short_desc": "Gôm xịt tóc dạng bình xịt để cố định kiểu tóc sau khi tạo kiểu. Có 2 dung tích, tiện dùng tại tiệm và mang đi makeup tại nhà.",
       "images": [
@@ -23,15 +24,15 @@
       ],
       "video": "/media/gom-xit-toc-power-point-nhat-ban.mp4",
       "content_approved": false,
-      "reason": "Tóc cô dâu phải giữ nếp từ lúc làm đến hết tiệc, nên mình dùng gôm này để cố định kiểu tóc ở bước cuối.",
-      "usage": "Lắc đều, xịt cách tóc khoảng 25 đến 30 cm, che mặt cô dâu khi xịt. Tránh xa lửa và nơi nhiệt độ cao (nhãn có cảnh báo).",
+      "category": "Phụ kiện tóc",
       "subcategory": "Gôm & Xịt tạo kiểu"
     },
     {
-      "code": "LH-002",
+      "usage": "Xịt Freeze sau khi tạo kiểu để giữ nếp. Xịt Sparkler lên bề mặt tóc từ khoảng cách 20 đến 30 cm để tạo độ bóng.",
+      "reason": "Mình dùng Freeze để khóa nếp tóc và Sparkler để tóc lên hình bóng đẹp, vì tóc cô dâu cần vừa giữ nếp vừa có độ bóng.",
       "name": "Xịt tóc Schwarzkopf Professional OSiS+ Sparkler và Freeze",
       "slug": "xit-toc-schwarzkopf-osis-sparkler-freeze",
-      "category": "Phụ kiện tóc",
+      "code": "LH-002",
       "published": true,
       "short_desc": "Hai chai xịt tóc chuyên nghiệp của Schwarzkopf Professional: Sparkler giúp tóc bóng, Freeze giúp giữ nếp. Phù hợp làm tóc cô dâu và tóc tiệc.",
       "images": [
@@ -50,42 +51,59 @@
       ],
       "video": "/media/xit-toc-schwarzkopf-osis-sparkler-freeze.mp4",
       "content_approved": false,
-      "reason": "Mình dùng Freeze để khóa nếp tóc và Sparkler để tóc lên hình bóng đẹp, vì tóc cô dâu cần vừa giữ nếp vừa có độ bóng.",
-      "usage": "Xịt Freeze sau khi tạo kiểu để giữ nếp. Xịt Sparkler lên bề mặt tóc từ khoảng cách 20 đến 30 cm để tạo độ bóng.",
+      "category": "Phụ kiện tóc",
       "subcategory": "Gôm & Xịt tạo kiểu"
     },
     {
-      "code": "LH-003",
-      "name": "Xịt tạo kiểu tóc dạng gel lỏng RE-F3Z3",
+      "usage": "Xịt đều lên tóc ẩm hoặc khô rồi chải hoặc tạo kiểu. Tránh để dính vào mắt.",
+      "reason": "Mình dùng khi cần tạo nếp nhanh cho tóc mà không muốn tóc bị cứng như dùng gôm.",
+      "price": 145000,
+      "name": "Xịt tạo phồng tóc REf323 muối biển – nâng chân tóc, giảm tĩnh điện, tóc bồng bềnh tự nhiên",
       "slug": "xit-tao-kieu-toc-gel-long-re-f3z3",
-      "category": "Phụ kiện tóc",
+      "code": "LH-003",
       "published": true,
-      "short_desc": "Chai xịt dạng gel lỏng màu xanh ngọc dùng khi tạo kiểu tóc, vòi xịt dễ dùng.",
+      "short_desc": "Tên sản phẩm:\n\nXịt tạo phồng tóc REF323 muối biển – nâng chân tóc, giảm tĩnh điện, tóc bồng bềnh tự nhiên\n\n\n\n✪ Thông tin sản phẩm\n\nTên sản phẩm: Nước muối biển REF323 dạng xịt tạo kiểu tóc\n\nDung tích:200ml\n\nDạng: Xịt phồng tóc\n\nPhù hợp: Mọi loại tóc (tóc mỏng, tóc thưa, tóc dày)\n\n\n\n✪ Công dụng nổi bật\n\nTạo độ phồng tự nhiên: Nâng chân tóc, giúp mái tóc bồng bềnh, dày dặn.\n\nGiữ nếp lâu dài: Duy trì form tóc ổn định cả ngày mà không cần tạo kiểu lại.\n\nKhông gây bết dính: Công thức nhẹ nhàng, không làm tóc nặng hay khó chịu.\n\nChống tĩnh điện, dưỡng ẩm: Chiết xuất muối biển cung cấp độ ẩm, bảo vệ tóc khỏi khô xơ, hư tổn.\n\nPhù hợp với mọi loại tóc: Tóc thưa, mỏng hay dày đều có thể sử dụng hiệu quả.\n\n\n\n✪ Hướng dẫn sử dụng\n\nLắc đều chai trước khi dùng.\n\nXịt trực tiếp lên chân tóc đã lau khô hoặc tóc còn hơi ẩm.\n\nMassage nhẹ nhàng để tinh chất thấm đều.\n\nSấy hoặc tạo kiểu bằng lược để đạt độ phồng tối ưu.\n\n\n\n✪ Bảo quản\n\nĐể nơi khô ráo, thoáng mát, tránh ánh nắng trực tiếp.\n\nĐậy kín nắp sau khi sử dụng.\n\n\n\n#nuocmuoibien #ref323 #xitphongtoctunhien #nuocxittoctaoform #xittochongbetdinhtoc #muoibientaoformtoc #toctunhienbongben #stylinghair #tocdepmoingay #nuocxitphongchan toc",
       "images": [
         {
+          "image": "/media/xit-tao-kieu-toc-gel-long-muoi-bien-re-f3z3.webp",
+          "alt": "Xịt tạo phồng tóc REf323 muối biển RE-F323 do Lý Hoàng Makeup chọn dùng"
+        },
+        {
           "image": "/media/xit-tao-kieu-toc-gel-long-re-f3z3-1.jpg",
-          "alt": "Xịt tạo kiểu tóc dạng gel lỏng RE-F3Z3 do Lý Hoàng Makeup chọn dùng"
+          "alt": "Xịt tạo kiểu tóc dạng gel lỏng RE-F323 do Lý Hoàng Makeup chọn dùng"
         },
         {
           "image": "/media/xit-tao-kieu-toc-gel-long-re-f3z3-2.jpg",
-          "alt": "Xịt tạo kiểu tóc dạng gel lỏng RE-F3Z3 do Lý Hoàng Makeup chọn dùng"
+          "alt": "Xịt tạo kiểu tóc dạng gel lỏng RE-F323 do Lý Hoàng Makeup chọn dùng"
         },
         {
           "image": "/media/xit-tao-kieu-toc-gel-long-re-f3z3-3.jpg",
           "alt": "Xịt tạo kiểu tóc dạng gel lỏng RE-F3Z3 do Lý Hoàng Makeup chọn dùng"
+        },
+        {
+          "image": "/media/xit-tao-kieu-toc-gel-long-muoi-bien-re-f3z3-2.webp",
+          "alt": "Xịt tạo phồng tóc REf323 muối biển RE-F323 do Lý Hoàng Makeup chọn dùng"
+        },
+        {
+          "image": "/media/xit-tao-kieu-toc-gel-long-muoi-bien-re-f3z3-3.webp",
+          "alt": "Xịt tạo phồng tóc REf323 muối biển RE-F323 do Lý Hoàng Makeup chọn dùng"
+        },
+        {
+          "image": "/media/xit-tao-kieu-toc-gel-long-muoi-bien-re-f3z3-4.webp",
+          "alt": "Xịt tạo phồng tóc REf323 muối biển RE-F323 do Lý Hoàng Makeup chọn dùng"
         }
       ],
       "video": "/media/xit-tao-kieu-toc-gel-long-re-f3z3.mp4",
-      "content_approved": false,
-      "reason": "Mình dùng khi cần tạo nếp nhanh cho tóc mà không muốn tóc bị cứng như dùng gôm.",
-      "usage": "Xịt đều lên tóc ẩm hoặc khô rồi chải hoặc tạo kiểu. Tránh để dính vào mắt.",
+      "content_approved": true,
+      "category": "Phụ kiện tóc",
       "subcategory": "Gôm & Xịt tạo kiểu"
     },
     {
-      "code": "LH-004",
+      "usage": "Lắc đều, lấy một lượng bọt vừa đủ, vuốt đều lên tóc rồi sấy hoặc tạo kiểu.",
+      "reason": "Mousse giúp mình tạo độ phồng và nếp mềm cho tóc trước khi sấy hoặc uốn, tóc không bị bết.",
       "name": "Mousse tạo kiểu tóc Styling Mousse 250ml",
       "slug": "mousse-tao-kieu-toc-styling-mousse-250ml",
-      "category": "Phụ kiện tóc",
+      "code": "LH-004",
       "published": true,
       "short_desc": "Mousse dạng bọt tạo kiểu tóc, dung tích 250 ml, giúp tóc vào nếp và có độ phồng.",
       "images": [
@@ -104,15 +122,15 @@
       ],
       "video": "/media/mousse-tao-kieu-toc-styling-mousse-250ml.mp4",
       "content_approved": false,
-      "reason": "Mousse giúp mình tạo độ phồng và nếp mềm cho tóc trước khi sấy hoặc uốn, tóc không bị bết.",
-      "usage": "Lắc đều, lấy một lượng bọt vừa đủ, vuốt đều lên tóc rồi sấy hoặc tạo kiểu.",
+      "category": "Phụ kiện tóc",
       "subcategory": "Gôm & Xịt tạo kiểu"
     },
     {
-      "code": "LH-005",
+      "usage": "Rắc một lượng nhỏ lên chân tóc rồi dùng ngón tay xoa nhẹ. Dùng ít một để tóc không bị khô.",
+      "reason": "Chai nhỏ gọn bỏ vừa túi đồ nghề, mình dùng để tạo độ phồng cho tóc mỏng hoặc xẹp ngay tại nhà cô dâu.",
       "name": "Bột tạo phồng chân tóc Volumize PRO 4g",
       "slug": "bot-tao-phong-chan-toc-volumize-pro-4g",
-      "category": "Phụ kiện tóc",
+      "code": "LH-005",
       "published": true,
       "short_desc": "Bột tạo phồng chân tóc dạng chai nhỏ 4 g, rắc lên chân tóc là tóc có độ phồng ngay.",
       "images": [
@@ -131,15 +149,16 @@
       ],
       "video": "/media/bot-tao-phong-chan-toc-volumize-pro-4g.mp4",
       "content_approved": false,
-      "reason": "Chai nhỏ gọn bỏ vừa túi đồ nghề, mình dùng để tạo độ phồng cho tóc mỏng hoặc xẹp ngay tại nhà cô dâu.",
-      "usage": "Rắc một lượng nhỏ lên chân tóc rồi dùng ngón tay xoa nhẹ. Dùng ít một để tóc không bị khô.",
+      "category": "Phụ kiện tóc",
       "subcategory": "Gôm & Xịt tạo kiểu"
     },
     {
-      "code": "LH-006",
+      "usage": "Thấm ra bông tẩy trang, lau nhẹ mặt, mắt và môi, không cần rửa lại với nước.",
+      "reason": "Mình tẩy lớp nền cũ và dọn da cho cô dâu trước khi trang điểm lại. Chai lớn dùng đỡ tốn, cứ thấm bông là lau.",
+      "price": 449000,
       "name": "Nước tẩy trang Garnier SkinActive Micellar Cleansing Water 700ml (nắp hồng)",
       "slug": "nuoc-tay-trang-garnier-micellar-700ml-nap-hong",
-      "category": "Chăm sóc da",
+      "code": "LH-006",
       "published": true,
       "short_desc": "Nước tẩy trang Garnier công nghệ micellar, làm sạch và tẩy trang trong một bước, không cần rửa lại. Bản 700 ml dùng được lâu.",
       "images": [
@@ -158,16 +177,16 @@
       ],
       "video": "/media/nuoc-tay-trang-garnier-micellar-700ml-nap-hong.mp4",
       "content_approved": false,
-      "reason": "Mình tẩy lớp nền cũ và dọn da cho cô dâu trước khi trang điểm lại. Chai lớn dùng đỡ tốn, cứ thấm bông là lau.",
-      "usage": "Thấm ra bông tẩy trang, lau nhẹ mặt, mắt và môi, không cần rửa lại với nước.",
-      "price": 449000,
+      "category": "Chăm sóc da",
       "subcategory": "Tẩy trang & Làm sạch"
     },
     {
-      "code": "LH-007",
+      "usage": "Giữ chai cách mặt khoảng 20 đến 30 cm, nhắm mắt và xịt đều. Có thể dùng sau bước làm sạch hoặc sau trang điểm.",
+      "reason": "Mình xịt để da căng ẩm trước khi đánh nền và xịt nhẹ sau makeup để lớp nền bớt mốc.",
+      "price": 275000,
       "name": "Xịt khoáng dưỡng ẩm Torriden Dive-In Glow Mist 120ml",
       "slug": "xit-khoang-duong-am-torriden-dive-in-glow-mist-120ml",
-      "category": "Chăm sóc da",
+      "code": "LH-007",
       "published": true,
       "short_desc": "Xịt dưỡng cấp ẩm Torriden của Hàn Quốc chứa phức hợp Hyaluronic Acid, hạt sương mịn, không bết dính. Dùng được như lớp mist nhẹ trước hoặc sau trang điểm.",
       "images": [
@@ -186,16 +205,15 @@
       ],
       "video": "/media/xit-khoang-duong-am-torriden-dive-in-glow-mist-120ml.mp4",
       "content_approved": false,
-      "reason": "Mình xịt để da căng ẩm trước khi đánh nền và xịt nhẹ sau makeup để lớp nền bớt mốc.",
-      "usage": "Giữ chai cách mặt khoảng 20 đến 30 cm, nhắm mắt và xịt đều. Có thể dùng sau bước làm sạch hoặc sau trang điểm.",
-      "price": 275000,
+      "category": "Chăm sóc da",
       "subcategory": "Xịt khoáng & Dưỡng ẩm"
     },
     {
-      "code": "LH-008",
+      "usage": "Cần bạn bổ sung cách dùng theo nhãn.",
+      "reason": "",
       "name": "Xịt dưỡng chai trong nắp vàng (chưa rõ tên)",
       "slug": "xit-duong-chai-trong-nap-vang",
-      "category": "Chăm sóc da",
+      "code": "LH-008",
       "published": false,
       "short_desc": "Chai xịt dạng nước trong, nắp vàng, vòi phun sương mịn.",
       "images": [
@@ -214,15 +232,16 @@
       ],
       "video": "/media/xit-duong-chai-trong-nap-vang.mp4",
       "content_approved": false,
-      "reason": "",
-      "usage": "Cần bạn bổ sung cách dùng theo nhãn.",
+      "category": "Chăm sóc da",
       "subcategory": "Xịt khoáng & Dưỡng ẩm"
     },
     {
-      "code": "LH-009",
+      "usage": "Xịt cách mặt khoảng 20 cm, nhắm mắt. Có thể dùng trước hoặc sau trang điểm, thấm nhẹ nếu thấy ướt.",
+      "reason": "Giá dễ chịu, xịt được nhiều lần trong ngày. Mình xịt cho da cô dâu trước khi makeup để lớp nền mịn hơn.",
+      "price": 75000,
       "name": "Xịt khoáng Aspasia Moist Up Face Mist Snail ốc sên 150ml",
       "slug": "xit-khoang-aspasia-moist-up-face-mist-snail-150ml",
-      "category": "Chăm sóc da",
+      "code": "LH-009",
       "published": true,
       "short_desc": "Xịt khoáng Hàn Quốc dòng Moist Up chiết xuất ốc sên, bổ sung độ ẩm và làm dịu da.",
       "images": [
@@ -241,16 +260,15 @@
       ],
       "video": "/media/xit-khoang-aspasia-moist-up-face-mist-snail-150ml.mp4",
       "content_approved": false,
-      "reason": "Giá dễ chịu, xịt được nhiều lần trong ngày. Mình xịt cho da cô dâu trước khi makeup để lớp nền mịn hơn.",
-      "usage": "Xịt cách mặt khoảng 20 cm, nhắm mắt. Có thể dùng trước hoặc sau trang điểm, thấm nhẹ nếu thấy ướt.",
-      "price": 75000,
+      "category": "Chăm sóc da",
       "subcategory": "Xịt khoáng & Dưỡng ẩm"
     },
     {
-      "code": "LH-010",
+      "usage": "Dùng đầu mút lấy một lượng nhỏ, chấm lên sống mũi, gò má và đuôi mắt rồi vỗ nhẹ cho tan.",
+      "reason": "Chai nhỏ, đầu mút tiện chấm đúng vị trí. Mình dùng để tạo điểm sáng cho layout trong trẻo.",
       "name": "Phấn bắt sáng dạng bột Gege Bear Flash Ribbon (đầu mút)",
       "slug": "phan-bat-sang-gege-bear-flash-ribbon",
-      "category": "Trang điểm",
+      "code": "LH-010",
       "published": true,
       "short_desc": "Phấn bắt sáng dạng bột nhũ của Gege Bear, chai nhỏ có đầu mút lấy phấn, dùng tạo điểm sáng trên gương mặt.",
       "images": [
@@ -269,15 +287,15 @@
       ],
       "video": "/media/phan-bat-sang-gege-bear-flash-ribbon.mp4",
       "content_approved": false,
-      "reason": "Chai nhỏ, đầu mút tiện chấm đúng vị trí. Mình dùng để tạo điểm sáng cho layout trong trẻo.",
-      "usage": "Dùng đầu mút lấy một lượng nhỏ, chấm lên sống mũi, gò má và đuôi mắt rồi vỗ nhẹ cho tan.",
+      "category": "Trang điểm",
       "subcategory": "Mắt - Má - Tạo khối"
     },
     {
-      "code": "LH-011",
+      "usage": "Xịt đều lên mặt từ khoảng cách 20 đến 30 cm, nhắm mắt.",
+      "reason": "Mình dùng để cấp ẩm nhanh cho da khi trời nóng hoặc phòng máy lạnh.",
       "name": "Xịt dưỡng ẩm M'AYCREATE 150ml",
       "slug": "xit-duong-am-maycreate-150ml",
-      "category": "Chăm sóc da",
+      "code": "LH-011",
       "published": false,
       "short_desc": "Xịt dưỡng ẩm M'AYCREATE dung tích 150 ml, chai màu hồng tím chuyển sắc.",
       "images": [
@@ -296,15 +314,16 @@
       ],
       "video": "/media/xit-duong-am-maycreate-150ml.mp4",
       "content_approved": false,
-      "reason": "Mình dùng để cấp ẩm nhanh cho da khi trời nóng hoặc phòng máy lạnh.",
-      "usage": "Xịt đều lên mặt từ khoảng cách 20 đến 30 cm, nhắm mắt.",
+      "category": "Chăm sóc da",
       "subcategory": "Xịt khoáng & Dưỡng ẩm"
     },
     {
-      "code": "LH-012",
+      "usage": "Xịt cách mặt khoảng 20 cm, nhắm mắt. Dùng bất cứ lúc nào da cần cấp ẩm.",
+      "reason": "Bản nha đam mát và nhẹ, mình xịt để làm dịu da cô dâu sau khi tẩy trang hoặc khi da hơi nóng.",
+      "price": 72000,
       "name": "Xịt khoáng Aspasia Moist Up Face Mist Aloe nha đam 150ml",
       "slug": "xit-khoang-aspasia-moist-up-face-mist-aloe-150ml",
-      "category": "Chăm sóc da",
+      "code": "LH-012",
       "published": true,
       "short_desc": "Xịt khoáng Hàn Quốc dòng Moist Up chiết xuất nha đam, làm dịu mát và cấp ẩm tức thì cho da.",
       "images": [
@@ -323,16 +342,15 @@
       ],
       "video": "/media/xit-khoang-aspasia-moist-up-face-mist-aloe-150ml.mp4",
       "content_approved": false,
-      "reason": "Bản nha đam mát và nhẹ, mình xịt để làm dịu da cô dâu sau khi tẩy trang hoặc khi da hơi nóng.",
-      "usage": "Xịt cách mặt khoảng 20 cm, nhắm mắt. Dùng bất cứ lúc nào da cần cấp ẩm.",
-      "price": 72000,
+      "category": "Chăm sóc da",
       "subcategory": "Xịt khoáng & Dưỡng ẩm"
     },
     {
-      "code": "LH-013",
+      "usage": "Lắc đều, nhắm mắt, xịt theo hình chữ X và T ở khoảng cách khoảng 20 cm rồi để khô tự nhiên.",
+      "reason": "Cô dâu phải giữ makeup từ sáng đến tối, nên mình xịt khóa nền ở bước cuối để lớp nền bền hơn.",
       "name": "Xịt khóa nền Urban Decay All Nighter Long-Lasting Makeup Setting Spray",
       "slug": "xit-khoa-nen-urban-decay-all-nighter",
-      "category": "Trang điểm",
+      "code": "LH-013",
       "published": true,
       "short_desc": "Xịt khóa nền Urban Decay giúp lớp trang điểm giữ lâu, không trôi, không xỉn màu, phù hợp mọi loại da.",
       "images": [
@@ -351,15 +369,15 @@
       ],
       "video": "/media/xit-khoa-nen-urban-decay-all-nighter.mp4",
       "content_approved": false,
-      "reason": "Cô dâu phải giữ makeup từ sáng đến tối, nên mình xịt khóa nền ở bước cuối để lớp nền bền hơn.",
-      "usage": "Lắc đều, nhắm mắt, xịt theo hình chữ X và T ở khoảng cách khoảng 20 cm rồi để khô tự nhiên.",
+      "category": "Trang điểm",
       "subcategory": "Nền & Che khuyết điểm"
     },
     {
-      "code": "LH-014",
+      "usage": "Thoa lên da khô, massage nhẹ theo vòng tròn đến khi vón thành cặn rồi rửa sạch. Dùng 1 đến 2 lần mỗi tuần.",
+      "reason": "Da mịn thì lớp nền mới đều. Mình dùng để chăm da định kỳ trước ngày makeup quan trọng.",
       "name": "Gel tẩy tế bào chết Arrahan Aloe Vera Peeling Gel 180ml",
       "slug": "gel-tay-te-bao-chet-arrahan-aloe-vera-peeling-gel-180ml",
-      "category": "Chăm sóc da",
+      "code": "LH-014",
       "published": true,
       "short_desc": "Gel tẩy tế bào chết chiết xuất nha đam của Arrahan, dung tích 180 ml, giúp da sạch và mịn.",
       "images": [
@@ -378,15 +396,15 @@
       ],
       "video": "/media/gel-tay-te-bao-chet-arrahan-aloe-vera-peeling-gel-180ml.mp4",
       "content_approved": false,
-      "reason": "Da mịn thì lớp nền mới đều. Mình dùng để chăm da định kỳ trước ngày makeup quan trọng.",
-      "usage": "Thoa lên da khô, massage nhẹ theo vòng tròn đến khi vón thành cặn rồi rửa sạch. Dùng 1 đến 2 lần mỗi tuần.",
+      "category": "Chăm sóc da",
       "subcategory": "Tẩy trang & Làm sạch"
     },
     {
-      "code": "LH-015",
+      "usage": "Thấm ra bông tẩy trang, lau nhẹ mặt, mắt và môi. Dùng cho bước làm sạch.",
+      "reason": "Chai nhỏ gọn, mình mang theo đi makeup tại nhà để lau nhanh khi cần chỉnh sửa.",
       "name": "Nước tẩy trang L'Oréal Paris Revitalift Hyaluronic Acid Micellar Water",
       "slug": "nuoc-tay-trang-loreal-revitalift-hyaluronic-acid-micellar",
-      "category": "Chăm sóc da",
+      "code": "LH-015",
       "published": true,
       "short_desc": "Nước tẩy trang L'Oréal Paris dòng Revitalift Hyaluronic Acid, làm sạch, cấp ẩm và tẩy trang trong một bước.",
       "images": [
@@ -405,15 +423,16 @@
       ],
       "video": "/media/nuoc-tay-trang-loreal-revitalift-hyaluronic-acid-micellar.mp4",
       "content_approved": false,
-      "reason": "Chai nhỏ gọn, mình mang theo đi makeup tại nhà để lau nhanh khi cần chỉnh sửa.",
-      "usage": "Thấm ra bông tẩy trang, lau nhẹ mặt, mắt và môi. Dùng cho bước làm sạch.",
+      "category": "Chăm sóc da",
       "subcategory": "Tẩy trang & Làm sạch"
     },
     {
-      "code": "LH-016",
+      "usage": "Sau bước làm sạch và toner, bơm một lượng vừa đủ, thoa đều lên mặt và cổ, sáng và tối.",
+      "reason": "Da cô dâu cần đủ ẩm thì lớp nền mới mịn, nên mình dùng lotion này để dưỡng trước khi trang điểm.",
+      "price": 770000,
       "name": "Lotion dưỡng ẩm Clinique Dramatically Different Moisturizing Lotion+ (chai vòi pump)",
       "slug": "lotion-duong-am-clinique-dramatically-different-moisturizing-lotion-plus",
-      "category": "Chăm sóc da",
+      "code": "LH-016",
       "published": true,
       "short_desc": "Lotion dưỡng ẩm không chứa dầu của Clinique, chai có vòi pump dễ lấy. Thường dùng cho da khô đến hỗn hợp thiên khô.",
       "images": [
@@ -432,16 +451,15 @@
       ],
       "video": "/media/lotion-duong-am-clinique-dramatically-different-moisturizing-lotion-plus.mp4",
       "content_approved": false,
-      "reason": "Da cô dâu cần đủ ẩm thì lớp nền mới mịn, nên mình dùng lotion này để dưỡng trước khi trang điểm.",
-      "usage": "Sau bước làm sạch và toner, bơm một lượng vừa đủ, thoa đều lên mặt và cổ, sáng và tối.",
-      "price": 770000,
+      "category": "Chăm sóc da",
       "subcategory": "Xịt khoáng & Dưỡng ẩm"
     },
     {
-      "code": "LH-017",
+      "usage": "Lấy một lượng nhỏ, thoa đều lên mặt sau bước làm sạch hoặc toner.",
+      "reason": "Tuýp nhỏ gọn, mình mang đi makeup tại nhà để dưỡng nhanh cho cô dâu da dầu trước khi đánh nền.",
       "name": "Gel dưỡng ẩm Clinique Dramatically Different Moisturizing Gel 50ml",
       "slug": "gel-duong-am-clinique-dramatically-different-moisturizing-gel-50ml",
-      "category": "Chăm sóc da",
+      "code": "LH-017",
       "published": true,
       "short_desc": "Gel dưỡng ẩm dạng tuýp 50 ml của Clinique, kết cấu mỏng nhẹ, thường dùng cho da hỗn hợp thiên dầu.",
       "images": [
@@ -460,15 +478,15 @@
       ],
       "video": "/media/gel-duong-am-clinique-dramatically-different-moisturizing-gel-50ml.mp4",
       "content_approved": false,
-      "reason": "Tuýp nhỏ gọn, mình mang đi makeup tại nhà để dưỡng nhanh cho cô dâu da dầu trước khi đánh nền.",
-      "usage": "Lấy một lượng nhỏ, thoa đều lên mặt sau bước làm sạch hoặc toner.",
+      "category": "Chăm sóc da",
       "subcategory": "Xịt khoáng & Dưỡng ẩm"
     },
     {
-      "code": "LH-018",
+      "usage": "Thấm ra bông hoặc vỗ trực tiếp lên da sau bước làm sạch.",
+      "reason": "Chai mini gọn, mình dùng để cấp ẩm cho da trước khi dưỡng và trang điểm khi đi làm ngoài.",
       "name": "Nước cân bằng Klairs Supple Preparation Unscented Toner (chai mini)",
       "slug": "nuoc-can-bang-klairs-supple-preparation-unscented-toner-mini",
-      "category": "Chăm sóc da",
+      "code": "LH-018",
       "published": true,
       "short_desc": "Toner dưỡng ẩm của Klairs không mùi, nhãn ghi không chứa tinh dầu, cân bằng độ pH và thuần chay. Đây là chai kích thước nhỏ.",
       "images": [
@@ -487,15 +505,15 @@
       ],
       "video": "/media/nuoc-can-bang-klairs-supple-preparation-unscented-toner-mini.mp4",
       "content_approved": false,
-      "reason": "Chai mini gọn, mình dùng để cấp ẩm cho da trước khi dưỡng và trang điểm khi đi làm ngoài.",
-      "usage": "Thấm ra bông hoặc vỗ trực tiếp lên da sau bước làm sạch.",
+      "category": "Chăm sóc da",
       "subcategory": "Xịt khoáng & Dưỡng ẩm"
     },
     {
-      "code": "LH-019",
+      "usage": "Lấy lượng nhỏ, chấm lên các điểm trên mặt và tán đều bằng mút hoặc cọ.",
+      "reason": "Với cô dâu thích da căng bóng tự nhiên, mình chọn nền này cho layout trong trẻo.",
       "name": "Kem nền Espoir Be Glow Foundation SPF27 PA++ 30g",
       "slug": "kem-nen-espoir-be-glow-foundation-spf27-30g",
-      "category": "Trang điểm",
+      "code": "LH-019",
       "published": true,
       "short_desc": "Kem nền của Espoir cho lớp nền căng sáng, nhãn ghi hiệu ứng da sáng khỏe 24 giờ và có chống nắng SPF27 PA++. Dung tích 30 g.",
       "images": [
@@ -514,15 +532,16 @@
       ],
       "video": "/media/kem-nen-espoir-be-glow-foundation-spf27-30g.mp4",
       "content_approved": false,
-      "reason": "Với cô dâu thích da căng bóng tự nhiên, mình chọn nền này cho layout trong trẻo.",
-      "usage": "Lấy lượng nhỏ, chấm lên các điểm trên mặt và tán đều bằng mút hoặc cọ.",
+      "category": "Trang điểm",
       "subcategory": "Nền & Che khuyết điểm"
     },
     {
-      "code": "LH-020",
+      "usage": "Lấy lượng nhỏ, tán từ giữa mặt ra ngoài bằng mút ẩm hoặc cọ.",
+      "reason": "Khi cô dâu da nhiều lỗ chân lông hoặc cần nền lì mịn, mình dùng dòng Be Velvet vì lớp nền lên mịn và giữ lâu.",
+      "price": 509000,
       "name": "Kem nền Espoir Be Velvet Foundation SPF22 PA++ 30g",
       "slug": "kem-nen-espoir-be-velvet-foundation-spf22-30g",
-      "category": "Trang điểm",
+      "code": "LH-020",
       "published": true,
       "short_desc": "Kem nền Espoir che phủ lỗ chân lông, nhãn ghi bền 72 giờ, độ che phủ thoáng, có chống nắng SPF22 PA++. Dung tích 30 g.",
       "images": [
@@ -541,16 +560,15 @@
       ],
       "video": "/media/kem-nen-espoir-be-velvet-foundation-spf22-30g.mp4",
       "content_approved": false,
-      "reason": "Khi cô dâu da nhiều lỗ chân lông hoặc cần nền lì mịn, mình dùng dòng Be Velvet vì lớp nền lên mịn và giữ lâu.",
-      "usage": "Lấy lượng nhỏ, tán từ giữa mặt ra ngoài bằng mút ẩm hoặc cọ.",
-      "price": 509000,
+      "category": "Trang điểm",
       "subcategory": "Nền & Che khuyết điểm"
     },
     {
-      "code": "LH-021",
+      "usage": "Cần bạn bổ sung cách dùng theo nhãn.",
+      "reason": "",
       "name": "Kem nền dạng lỏng Dopi Foundation (nút tròn)",
       "slug": "kem-nen-dang-long-dopi-foundation",
-      "category": "Trang điểm",
+      "code": "LH-021",
       "published": false,
       "short_desc": "Kem nền dạng lỏng của Dopi, chai nhám đầu nút tròn, dùng tạo lớp nền.",
       "images": [
@@ -569,15 +587,15 @@
       ],
       "video": "/media/kem-nen-dang-long-dopi-foundation.mp4",
       "content_approved": false,
-      "reason": "",
-      "usage": "Cần bạn bổ sung cách dùng theo nhãn.",
+      "category": "Trang điểm",
       "subcategory": "Nền & Che khuyết điểm"
     },
     {
-      "code": "LH-022",
+      "usage": "Sau dưỡng da, lấy một lượng nhỏ thoa đều lên mặt rồi chờ vài phút trước khi đánh nền.",
+      "reason": "Mình dùng như bước lót dưỡng để lớp nền lên đều và không bị khô.",
       "name": "Kem lót dưỡng Bobbi Brown Vitamin Enriched Face Base",
       "slug": "kem-lot-duong-bobbi-brown-vitamin-enriched-face-base",
-      "category": "Trang điểm",
+      "code": "LH-022",
       "published": true,
       "short_desc": "Kem lót kiêm dưỡng ẩm của Bobbi Brown, nhãn ghi là primer và moisturizer trong một, giúp da mềm trước khi đánh nền.",
       "images": [
@@ -596,15 +614,15 @@
       ],
       "video": "/media/kem-lot-duong-bobbi-brown-vitamin-enriched-face-base.mp4",
       "content_approved": false,
-      "reason": "Mình dùng như bước lót dưỡng để lớp nền lên đều và không bị khô.",
-      "usage": "Sau dưỡng da, lấy một lượng nhỏ thoa đều lên mặt rồi chờ vài phút trước khi đánh nền.",
+      "category": "Trang điểm",
       "subcategory": "Nền & Che khuyết điểm"
     },
     {
-      "code": "LH-023",
+      "usage": "Lấy một ít bằng mút hoặc cọ to, dặm nhẹ lên vùng chữ T và cả mặt.",
+      "reason": "Phấn bột trong suốt không đổi màu nền, mình dùng ở bước cuối để khóa nền cho cô dâu.",
       "name": "Phấn phủ dạng bột AERY JO Loose Translucent Face Powder",
       "slug": "phan-phu-bot-aery-jo-loose-translucent-face-powder",
-      "category": "Trang điểm",
+      "code": "LH-023",
       "published": true,
       "short_desc": "Phấn phủ dạng bột trong suốt của Aery Jo, dùng cố định lớp nền và kiềm dầu nhẹ.",
       "images": [
@@ -623,15 +641,15 @@
       ],
       "video": "/media/phan-phu-bot-aery-jo-loose-translucent-face-powder.mp4",
       "content_approved": false,
-      "reason": "Phấn bột trong suốt không đổi màu nền, mình dùng ở bước cuối để khóa nền cho cô dâu.",
-      "usage": "Lấy một ít bằng mút hoặc cọ to, dặm nhẹ lên vùng chữ T và cả mặt.",
+      "category": "Trang điểm",
       "subcategory": "Nền & Che khuyết điểm"
     },
     {
-      "code": "LH-024",
+      "usage": "Lấy một ít bằng mút hoặc cọ, phủ nhẹ lên mặt, nhất là vùng chữ T.",
+      "reason": "Mình dùng khi cần lớp nền mịn và lên hình đẹp ở bước phủ phấn cuối.",
       "name": "Phấn phủ dạng bột Make Up For Ever HD Skin Setting Powder",
       "slug": "phan-phu-bot-make-up-for-ever-hd-skin-setting-powder",
-      "category": "Trang điểm",
+      "code": "LH-024",
       "published": true,
       "short_desc": "Phấn phủ dạng bột của Make Up For Ever, nhãn ghi HD Skin Setting Powder, dùng cố định lớp nền.",
       "images": [
@@ -650,15 +668,15 @@
       ],
       "video": "/media/phan-phu-bot-make-up-for-ever-hd-skin-setting-powder.mp4",
       "content_approved": false,
-      "reason": "Mình dùng khi cần lớp nền mịn và lên hình đẹp ở bước phủ phấn cuối.",
-      "usage": "Lấy một ít bằng mút hoặc cọ, phủ nhẹ lên mặt, nhất là vùng chữ T.",
+      "category": "Trang điểm",
       "subcategory": "Nền & Che khuyết điểm"
     },
     {
-      "code": "LH-025",
+      "usage": "Cần bạn bổ sung cách dùng.",
+      "reason": "",
       "name": "Sản phẩm Judydoll dạng bình có đầu mút (chưa rõ loại)",
       "slug": "san-pham-judydoll-dang-binh-dau-mut",
-      "category": "Trang điểm",
+      "code": "LH-025",
       "published": false,
       "short_desc": "Sản phẩm trang điểm của Judydoll dạng bình trụ màu be, có nắp mở và đầu mút.",
       "images": [
@@ -677,15 +695,15 @@
       ],
       "video": "/media/san-pham-judydoll-dang-binh-dau-mut.mp4",
       "content_approved": false,
-      "reason": "",
-      "usage": "Cần bạn bổ sung cách dùng.",
+      "category": "Trang điểm",
       "subcategory": "Mỹ phẩm khác"
     },
     {
-      "code": "LH-026",
+      "usage": "Cần bạn bổ sung cách dùng.",
+      "reason": "",
       "name": "Sản phẩm Rock Sweet dạng ống hồng (chưa rõ loại)",
       "slug": "san-pham-rock-sweet-dang-ong-hong",
-      "category": "Trang điểm",
+      "code": "LH-026",
       "published": false,
       "short_desc": "Sản phẩm dạng ống màu hồng chuyển sắc của Rock Sweet.",
       "images": [
@@ -704,15 +722,15 @@
       ],
       "video": "/media/san-pham-rock-sweet-dang-ong-hong.mp4",
       "content_approved": false,
-      "reason": "",
-      "usage": "Cần bạn bổ sung cách dùng.",
+      "category": "Trang điểm",
       "subcategory": "Mỹ phẩm khác"
     },
     {
-      "code": "LH-027",
+      "usage": "Cần bạn bổ sung cách dùng.",
+      "reason": "",
       "name": "Sản phẩm R&B Red & Black 5ml dạng chai trong (chưa rõ loại)",
       "slug": "san-pham-rb-red-black-5ml-chai-trong",
-      "category": "Trang điểm",
+      "code": "LH-027",
       "published": false,
       "short_desc": "Sản phẩm dạng lỏng trong 5 ml của R&B Red & Black, chai trong nắp đen vuông có que thoa.",
       "images": [
@@ -731,15 +749,15 @@
       ],
       "video": "/media/san-pham-rb-red-black-5ml-chai-trong.mp4",
       "content_approved": false,
-      "reason": "",
-      "usage": "Cần bạn bổ sung cách dùng.",
+      "category": "Trang điểm",
       "subcategory": "Mỹ phẩm khác"
     },
     {
-      "code": "LH-028",
+      "usage": "Chấm lên môi, tán bằng đầu cọ hoặc ngón tay, có thể tán mỏng hoặc đánh dày tùy độ đậm.",
+      "reason": "Tông cam đào tươi, hợp layout cô dâu trong trẻo và dễ dặm lại khi ăn uống.",
       "name": "Son kem rom&nd Blur Fudge Tint (màu cam đào)",
       "slug": "son-kem-romand-blur-fudge-tint-cam-dao",
-      "category": "Trang điểm",
+      "code": "LH-028",
       "published": true,
       "short_desc": "Son kem tint của rom&nd dòng Blur Fudge Tint, màu cam đào, thân nhám mờ.",
       "images": [
@@ -758,15 +776,15 @@
       ],
       "video": "/media/son-kem-romand-blur-fudge-tint-cam-dao.mp4",
       "content_approved": false,
-      "reason": "Tông cam đào tươi, hợp layout cô dâu trong trẻo và dễ dặm lại khi ăn uống.",
-      "usage": "Chấm lên môi, tán bằng đầu cọ hoặc ngón tay, có thể tán mỏng hoặc đánh dày tùy độ đậm.",
+      "category": "Trang điểm",
       "subcategory": "Son môi"
     },
     {
-      "code": "LH-029",
+      "usage": "Chấm lên môi, tán đều bằng đầu cọ hoặc ngón tay.",
+      "reason": "Tông hồng nâu nhẹ nhàng, hợp cô dâu muốn môi tự nhiên.",
       "name": "Son kem rom&nd tint màu hồng nâu (cần xác nhận dòng)",
       "slug": "son-kem-romand-tint-hong-nau",
-      "category": "Trang điểm",
+      "code": "LH-029",
       "published": false,
       "short_desc": "Son kem tint của rom&nd, thân nhám mờ, màu hồng nâu.",
       "images": [
@@ -785,15 +803,16 @@
       ],
       "video": "/media/son-kem-romand-tint-hong-nau.mp4",
       "content_approved": false,
-      "reason": "Tông hồng nâu nhẹ nhàng, hợp cô dâu muốn môi tự nhiên.",
-      "usage": "Chấm lên môi, tán đều bằng đầu cọ hoặc ngón tay.",
+      "category": "Trang điểm",
       "subcategory": "Son môi"
     },
     {
-      "code": "LH-030",
+      "usage": "Chấm lên môi, tán từ giữa ra ngoài. Tán mỏng cho môi lì mờ, thoa dày hơn cho màu đậm.",
+      "reason": "Màu đỏ gạch dễ lên hình và hợp nhiều tông da, mình dùng cho cô dâu muốn môi nổi bật nhưng không quá đậm.",
+      "price": 149000,
       "name": "Son kem rom&nd Zero Velvet Tint #05 Witty (cam đỏ gạch) 5.5g",
       "slug": "son-kem-romand-zero-velvet-tint-05-witty",
-      "category": "Trang điểm",
+      "code": "LH-030",
       "published": true,
       "short_desc": "Son kem lì rom&nd Zero Velvet Tint, màu 05 Witty cam đỏ gạch, kết cấu nhung mềm, nhẹ môi. Dung tích 5.5 g.",
       "images": [
@@ -812,16 +831,15 @@
       ],
       "video": "/media/son-kem-romand-zero-velvet-tint-05-witty.mp4",
       "content_approved": false,
-      "reason": "Màu đỏ gạch dễ lên hình và hợp nhiều tông da, mình dùng cho cô dâu muốn môi nổi bật nhưng không quá đậm.",
-      "usage": "Chấm lên môi, tán từ giữa ra ngoài. Tán mỏng cho môi lì mờ, thoa dày hơn cho màu đậm.",
-      "price": 149000,
+      "category": "Trang điểm",
       "subcategory": "Son môi"
     },
     {
-      "code": "LH-031",
+      "usage": "Cần bạn bổ sung cách dùng.",
+      "reason": "",
       "name": "Son kem thân nhám mờ màu đỏ gạch (chưa rõ thương hiệu)",
       "slug": "son-kem-than-nham-mo-mau-do-gach-chua-ro-thuong-hieu",
-      "category": "Trang điểm",
+      "code": "LH-031",
       "published": true,
       "short_desc": "Son kem dạng tuýp thân nhám mờ, màu đỏ gạch.",
       "images": [
@@ -838,17 +856,18 @@
           "alt": "Son kem thân nhám mờ màu đỏ gạch (chưa rõ thương hiệu) do Lý Hoàng Makeup chọn dùng"
         }
       ],
-      "content_approved": true,
-      "reason": "",
-      "usage": "Cần bạn bổ sung cách dùng.",
       "video": "/media/son-kem-than-nham-mo-do-gach.mp4",
+      "content_approved": true,
+      "category": "Trang điểm",
       "subcategory": "Son môi"
     },
     {
-      "code": "LH-032",
+      "usage": "Chấm lên vùng cần che, dùng đầu cọ hoặc mút vỗ nhẹ cho tiệp vào da, không kéo mạnh.",
+      "reason": "",
+      "price": 109000,
       "name": "Kem che khuyết điểm The Saem Cover Perfection Tip Concealer (bộ 5 màu)",
       "slug": "kem-che-khuyet-diem-the-saem-cover-perfection-tip-concealer-bo-5-mau",
-      "category": "Trang điểm",
+      "code": "LH-032",
       "published": true,
       "short_desc": "Kem che khuyết điểm dạng tuýp có đầu cọ, độ che phủ cao, kết cấu mềm mỏng nhẹ, có chống nắng SPF28 PA++. Dung tích 6.5 g mỗi tuýp.",
       "images": [
@@ -865,18 +884,17 @@
           "alt": "Kem che khuyết điểm The Saem Cover Perfection Tip Concealer (bộ 5 màu) do Lý Hoàng Makeup chọn dùng"
         }
       ],
-      "content_approved": true,
-      "reason": "",
-      "usage": "Chấm lên vùng cần che, dùng đầu cọ hoặc mút vỗ nhẹ cho tiệp vào da, không kéo mạnh.",
       "video": "/media/kem-che-khuyet-diem-the-saem-cover-perfection-tip-concealer.mp4",
-      "price": 109000,
+      "content_approved": true,
+      "category": "Trang điểm",
       "subcategory": "Nền & Che khuyết điểm"
     },
     {
-      "code": "LH-033",
+      "usage": "Dùng cọ lấy màu nâu tạo khối ở hai bên mặt, màu sáng chấm lên sống mũi và gò má rồi tán đều.",
+      "reason": "",
       "name": "Bảng tạo khối và bắt sáng Judydoll 4 ô (2 bảng màu)",
       "slug": "bang-tao-khoi-va-bat-sang-judydoll-4-o-2-bang-mau",
-      "category": "Trang điểm",
+      "code": "LH-033",
       "published": true,
       "short_desc": "Bảng phấn 4 ô của Judydoll gồm phấn bắt sáng, tạo khối và các tông phụ, có gương trong nắp. Ảnh chụp 2 bảng màu khác nhau.",
       "images": [
@@ -893,17 +911,17 @@
           "alt": "Bảng tạo khối và bắt sáng Judydoll 4 ô (2 bảng màu) do Lý Hoàng Makeup chọn dùng"
         }
       ],
-      "content_approved": true,
-      "reason": "",
-      "usage": "Dùng cọ lấy màu nâu tạo khối ở hai bên mặt, màu sáng chấm lên sống mũi và gò má rồi tán đều.",
       "video": "/media/bang-tao-khoi-bat-sang-judydoll-4-o.mp4",
+      "content_approved": true,
+      "category": "Trang điểm",
       "subcategory": "Mắt - Má - Tạo khối"
     },
     {
-      "code": "LH-034",
+      "usage": "Cần bạn bổ sung cách dùng.",
+      "reason": "",
       "name": "Má hồng nén Spenny (hộp tròn hồng)",
       "slug": "ma-hong-nen-spenny-hop-tron-hong",
-      "category": "Trang điểm",
+      "code": "LH-034",
       "published": true,
       "short_desc": "Má hồng dạng nén của Spenny trong hộp tròn màu hồng nhạt, màu hồng nâu, khối lượng 6.2 g ghi ở đáy hộp.",
       "images": [
@@ -921,15 +939,15 @@
         }
       ],
       "content_approved": true,
-      "reason": "",
-      "usage": "Cần bạn bổ sung cách dùng.",
+      "category": "Trang điểm",
       "subcategory": "Mắt - Má - Tạo khối"
     },
     {
-      "code": "LH-035",
+      "usage": "Cần bạn bổ sung cách dùng.",
+      "reason": "",
       "name": "Má hồng nén hộp vuông vỏ nâu (chưa rõ tên)",
       "slug": "ma-hong-nen-hop-vuong-vo-nau-chua-ro-ten",
-      "category": "Trang điểm",
+      "code": "LH-035",
       "published": true,
       "short_desc": "Má hồng dạng nén trong hộp chữ nhật vỏ nâu.",
       "images": [
@@ -939,15 +957,15 @@
         }
       ],
       "content_approved": true,
-      "reason": "",
-      "usage": "Cần bạn bổ sung cách dùng.",
+      "category": "Trang điểm",
       "subcategory": "Mắt - Má - Tạo khối"
     },
     {
-      "code": "LH-036",
+      "usage": "Cần bạn bổ sung cách dùng.",
+      "reason": "",
       "name": "Má hồng nén hộp vỏ hồng nhạt, mặt vân caro (chưa rõ tên)",
       "slug": "ma-hong-nen-hop-vo-hong-nhat-mat-van-caro-chua-ro-ten",
-      "category": "Trang điểm",
+      "code": "LH-036",
       "published": true,
       "short_desc": "Má hồng dạng nén màu hồng đất, mặt phấn có vân caro, hộp chữ nhật vỏ hồng nhạt.",
       "images": [
@@ -957,15 +975,15 @@
         }
       ],
       "content_approved": true,
-      "reason": "",
-      "usage": "Cần bạn bổ sung cách dùng.",
+      "category": "Trang điểm",
       "subcategory": "Mắt - Má - Tạo khối"
     },
     {
-      "code": "LH-037",
+      "usage": "Cần bạn bổ sung cách dùng.",
+      "reason": "",
       "name": "Má hồng nén Moon Eyes (màu đỏ gạch)",
       "slug": "ma-hong-nen-moon-eyes-mau-do-gach",
-      "category": "Trang điểm",
+      "code": "LH-037",
       "published": true,
       "short_desc": "Má hồng dạng nén Moon Eyes màu đỏ gạch, hộp chữ nhật vỏ nâu.",
       "images": [
@@ -975,15 +993,15 @@
         }
       ],
       "content_approved": true,
-      "reason": "",
-      "usage": "Cần bạn bổ sung cách dùng.",
+      "category": "Trang điểm",
       "subcategory": "Mắt - Má - Tạo khối"
     },
     {
-      "code": "LH-038",
+      "usage": "Cần bạn bổ sung cách dùng.",
+      "reason": "",
       "name": "Bộ 4 bảng phấn mắt nhiều tông màu (chưa rõ tên)",
       "slug": "bo-4-bang-phan-mat-nhieu-tong-mau-chua-ro-ten",
-      "category": "Trang điểm",
+      "code": "LH-038",
       "published": true,
       "short_desc": "Bộ 4 bảng phấn mắt có vỏ kem, tím, hồng và nâu, màu đa dạng từ tông nude đến tông đậm.",
       "images": [
@@ -1000,17 +1018,17 @@
           "alt": "Bộ 4 bảng phấn mắt nhiều tông màu (chưa rõ tên) do Lý Hoàng Makeup chọn dùng"
         }
       ],
-      "content_approved": true,
-      "reason": "",
-      "usage": "Cần bạn bổ sung cách dùng.",
       "video": "/media/bo-4-bang-phan-mat-nhieu-tong-mau.mp4",
+      "content_approved": true,
+      "category": "Trang điểm",
       "subcategory": "Mắt - Má - Tạo khối"
     },
     {
-      "code": "LH-039",
+      "usage": "Dùng cọ lấy phấn, đánh lên gò má, sống mũi và đuôi mắt rồi tán nhẹ.",
+      "reason": "",
       "name": "Bảng bắt sáng Golden Rose Strobing Highlighter Baked Trio Palette",
       "slug": "bang-bat-sang-golden-rose-strobing-highlighter-baked-trio-palette",
-      "category": "Trang điểm",
+      "code": "LH-039",
       "published": true,
       "short_desc": "Bảng 3 ô phấn bắt sáng dạng nung của Golden Rose, nhãn ghi Strobing Highlighter Baked Trio Palette, tổng 3 x 2.8 g, có gương.",
       "images": [
@@ -1027,17 +1045,17 @@
           "alt": "Bảng bắt sáng Golden Rose Strobing Highlighter Baked Trio Palette do Lý Hoàng Makeup chọn dùng"
         }
       ],
-      "content_approved": true,
-      "reason": "",
-      "usage": "Dùng cọ lấy phấn, đánh lên gò má, sống mũi và đuôi mắt rồi tán nhẹ.",
       "video": "/media/bang-bat-sang-golden-rose-strobing-highlighter-baked-trio.mp4",
+      "content_approved": true,
+      "category": "Trang điểm",
       "subcategory": "Mắt - Má - Tạo khối"
     },
     {
-      "code": "LH-040",
+      "usage": "Cần bạn bổ sung cách dùng.",
+      "reason": "",
       "name": "Bảng phấn mắt vỏ cam đỏ 14 ô (chưa rõ tên)",
       "slug": "bang-phan-mat-vo-cam-do-14-o-chua-ro-ten",
-      "category": "Trang điểm",
+      "code": "LH-040",
       "published": true,
       "short_desc": "Bảng phấn mắt vỏ cam đỏ gồm khoảng 14 ô màu từ hồng, nâu đến nhũ ánh kim, có gương trong nắp.",
       "images": [
@@ -1054,17 +1072,17 @@
           "alt": "Bảng phấn mắt vỏ cam đỏ 14 ô (chưa rõ tên) do Lý Hoàng Makeup chọn dùng"
         }
       ],
-      "content_approved": true,
-      "reason": "",
-      "usage": "Cần bạn bổ sung cách dùng.",
       "video": "/media/bang-phan-mat-vo-cam-do-14-o.mp4",
+      "content_approved": true,
+      "category": "Trang điểm",
       "subcategory": "Mắt - Má - Tạo khối"
     },
     {
-      "code": "LH-041",
+      "usage": "Dùng cọ phấn mắt lấy màu, tán từ khoảng gần mí lên, dặm nhũ ở giữa mí.",
+      "reason": "",
       "name": "Bảng phấn mắt Perfect Diary họa tiết bướm 12 ô",
       "slug": "bang-phan-mat-perfect-diary-hoa-tiet-buom-12-o",
-      "category": "Trang điểm",
+      "code": "LH-041",
       "published": true,
       "short_desc": "Bảng phấn mắt 12 ô của Perfect Diary, nắp họa tiết cánh bướm, tông hồng, tím và nâu.",
       "images": [
@@ -1081,17 +1099,17 @@
           "alt": "Bảng phấn mắt Perfect Diary họa tiết bướm 12 ô do Lý Hoàng Makeup chọn dùng"
         }
       ],
-      "content_approved": true,
-      "reason": "",
-      "usage": "Dùng cọ phấn mắt lấy màu, tán từ khoảng gần mí lên, dặm nhũ ở giữa mí.",
       "video": "/media/bang-phan-mat-perfect-diary-hoa-tiet-buom-12-o.mp4",
+      "content_approved": true,
+      "category": "Trang điểm",
       "subcategory": "Mắt - Má - Tạo khối"
     },
     {
-      "code": "LH-042",
+      "usage": "Dùng cọ lấy màu, tán từ ngoài vào trong, dặm nhũ ở giữa mí.",
+      "reason": "",
       "name": "Bảng phấn mắt Lemonade Aesthetic Eyeshadow Palette 16 ô",
       "slug": "bang-phan-mat-lemonade-aesthetic-eyeshadow-palette-16-o",
-      "category": "Trang điểm",
+      "code": "LH-042",
       "published": true,
       "short_desc": "Bảng phấn mắt 16 ô của Lemonade, nhãn ghi Aesthetic Eyeshadow Palette, màu đa dạng từ cam, nâu đến vàng nhũ.",
       "images": [
@@ -1108,17 +1126,17 @@
           "alt": "Bảng phấn mắt Lemonade Aesthetic Eyeshadow Palette 16 ô do Lý Hoàng Makeup chọn dùng"
         }
       ],
-      "content_approved": true,
-      "reason": "",
-      "usage": "Dùng cọ lấy màu, tán từ ngoài vào trong, dặm nhũ ở giữa mí.",
       "video": "/media/bang-phan-mat-lemonade-aesthetic-16-o.mp4",
+      "content_approved": true,
+      "category": "Trang điểm",
       "subcategory": "Mắt - Má - Tạo khối"
     },
     {
-      "code": "LH-043",
+      "usage": "Lấy bằng đầu ngón tay hoặc mút, vỗ lên gò má và tán đều ra phía thái dương.",
+      "reason": "",
       "name": "Bảng má hồng Mona Blush Palette 3 ô",
       "slug": "bang-ma-hong-mona-blush-palette-3-o",
-      "category": "Trang điểm",
+      "code": "LH-043",
       "published": true,
       "short_desc": "Bảng 3 ô má hồng dạng kem của Mona, hộp thiếc họa tiết caro hồng, có gương, màu từ hồng nhạt đến hồng cam.",
       "images": [
@@ -1135,17 +1153,17 @@
           "alt": "Bảng má hồng Mona Blush Palette 3 ô do Lý Hoàng Makeup chọn dùng"
         }
       ],
-      "content_approved": true,
-      "reason": "",
-      "usage": "Lấy bằng đầu ngón tay hoặc mút, vỗ lên gò má và tán đều ra phía thái dương.",
       "video": "/media/bang-ma-hong-mona-blush-palette-3-o.mp4",
+      "content_approved": true,
+      "category": "Trang điểm",
       "subcategory": "Mắt - Má - Tạo khối"
     },
     {
-      "code": "LH-044",
+      "usage": "Rửa cọ định kỳ, để khô tự nhiên, cất vào túi khi cọ đã khô hẳn.",
+      "reason": "",
       "name": "Bộ cọ trang điểm LAHA Make Up Tools kèm túi da",
       "slug": "bo-co-trang-diem-laha-make-up-tools-kem-tui-da",
-      "category": "Trang điểm",
+      "code": "LH-044",
       "published": true,
       "short_desc": "Bộ cọ trang điểm nhiều cây cán nâu, đựng trong túi da đen có khóa kéo, có logo LAHA Make Up Tools.",
       "images": [
@@ -1162,17 +1180,17 @@
           "alt": "Bộ cọ trang điểm LAHA Make Up Tools kèm túi da do Lý Hoàng Makeup chọn dùng"
         }
       ],
-      "content_approved": true,
-      "reason": "",
-      "usage": "Rửa cọ định kỳ, để khô tự nhiên, cất vào túi khi cọ đã khô hẳn.",
       "video": "/media/bo-co-trang-diem-laha-make-up-tools-kem-tui-da.mp4",
+      "content_approved": true,
+      "category": "Trang điểm",
       "subcategory": "Cọ & Cốp đồ nghề"
     },
     {
-      "code": "LH-045",
+      "usage": "Phân loại ghim, kẹp vào từng ngăn, đóng nắp khi mang đi.",
+      "reason": "",
       "name": "Hộp đựng kẹp, ghim tóc nhiều ngăn",
       "slug": "hop-dung-kep-ghim-toc-nhieu-ngan",
-      "category": "Phụ kiện tóc",
+      "code": "LH-045",
       "published": true,
       "short_desc": "Hộp nhựa nhiều ngăn đựng kẹp ghim và kẹp cá sấu, gọn gàng và dễ lấy khi làm tóc.",
       "images": [
@@ -1189,17 +1207,17 @@
           "alt": "Hộp đựng kẹp, ghim tóc nhiều ngăn do Lý Hoàng Makeup chọn dùng"
         }
       ],
-      "content_approved": true,
-      "reason": "",
-      "usage": "Phân loại ghim, kẹp vào từng ngăn, đóng nắp khi mang đi.",
       "video": "/media/hop-dung-kep-ghim-toc-nhieu-ngan.mp4",
+      "content_approved": true,
+      "category": "Phụ kiện tóc",
       "subcategory": "Lược & Kẹp chia tóc"
     },
     {
-      "code": "LH-046",
+      "usage": "Phân loại đồ trước khi cho vào túi, lau túi bằng khăn ẩm khi bẩn.",
+      "reason": "",
       "name": "Túi PVC trong suốt đựng đồ trang điểm có quai xách",
       "slug": "tui-pvc-trong-suot-dung-do-trang-diem-co-quai-xach",
-      "category": "Trang điểm",
+      "code": "LH-046",
       "published": true,
       "short_desc": "Túi PVC trong suốt có quai xách, khóa kéo, nhìn thấy đồ bên trong, dùng đựng dụng cụ trang điểm.",
       "images": [
@@ -1216,17 +1234,17 @@
           "alt": "Túi PVC trong suốt đựng đồ trang điểm có quai xách do Lý Hoàng Makeup chọn dùng"
         }
       ],
-      "content_approved": true,
-      "reason": "",
-      "usage": "Phân loại đồ trước khi cho vào túi, lau túi bằng khăn ẩm khi bẩn.",
       "video": "/media/tui-pvc-trong-suot-dung-do-trang-diem-co-quai.mp4",
+      "content_approved": true,
+      "category": "Trang điểm",
       "subcategory": "Cọ & Cốp đồ nghề"
     },
     {
-      "code": "LH-047",
+      "usage": "Cho đồ vào, kéo khóa, lau sạch bằng khăn ẩm khi cần.",
+      "reason": "",
       "name": "Túi PVC trong suốt dạng pouch đựng đồ trang điểm",
       "slug": "tui-pvc-trong-suot-dang-pouch-dung-do-trang-diem",
-      "category": "Trang điểm",
+      "code": "LH-047",
       "published": true,
       "short_desc": "Túi PVC trong suốt dạng pouch khóa kéo, đựng mỹ phẩm và dụng cụ nhỏ.",
       "images": [
@@ -1243,17 +1261,17 @@
           "alt": "Túi PVC trong suốt dạng pouch đựng đồ trang điểm do Lý Hoàng Makeup chọn dùng"
         }
       ],
-      "content_approved": true,
-      "reason": "",
-      "usage": "Cho đồ vào, kéo khóa, lau sạch bằng khăn ẩm khi cần.",
       "video": "/media/tui-pvc-trong-suot-dang-pouch-dung-do-trang-diem.mp4",
+      "content_approved": true,
+      "category": "Trang điểm",
       "subcategory": "Cọ & Cốp đồ nghề"
     },
     {
-      "code": "LH-048",
+      "usage": "Thấm đủ nước tẩy trang hoặc toner rồi lau nhẹ theo chiều từ trong ra ngoài.",
+      "reason": "",
       "name": "Bông tẩy trang LerSii Organic Cotton Ultra-Soft 201 miếng",
       "slug": "bong-tay-trang-lersii-organic-cotton-ultra-soft-201-mieng",
-      "category": "Chăm sóc da",
+      "code": "LH-048",
       "published": true,
       "short_desc": "Bông tẩy trang LerSii từ cotton hữu cơ, mềm mại, túi 201 miếng.",
       "images": [
@@ -1270,17 +1288,17 @@
           "alt": "Bông tẩy trang LerSii Organic Cotton Ultra-Soft 201 miếng do Lý Hoàng Makeup chọn dùng"
         }
       ],
-      "content_approved": true,
-      "reason": "",
-      "usage": "Thấm đủ nước tẩy trang hoặc toner rồi lau nhẹ theo chiều từ trong ra ngoài.",
       "video": "/media/bong-tay-trang-lersii-organic-cotton-201-mieng.mp4",
+      "content_approved": true,
+      "category": "Chăm sóc da",
       "subcategory": "Tẩy trang & Làm sạch"
     },
     {
-      "code": "LH-049",
+      "usage": "Chải từ ngọn lên gốc, giữ cán chắc tay. Gỡ tóc rụng giữa răng lược sau mỗi lần dùng.",
+      "reason": "",
       "name": "Lược đệm khí (paddle) đen bản lớn chải tóc",
       "slug": "luoc-dem-khi-paddle-den-ban-lon-chai-toc",
-      "category": "Phụ kiện tóc",
+      "code": "LH-049",
       "published": true,
       "short_desc": "Lược đệm khí màu đen, bản lớn, răng nhựa có đầu bi tròn, cán dài có lỗ treo.",
       "images": [
@@ -1297,17 +1315,17 @@
           "alt": "Lược đệm khí (paddle) đen bản lớn chải tóc do Lý Hoàng Makeup chọn dùng"
         }
       ],
-      "content_approved": true,
-      "reason": "",
-      "usage": "Chải từ ngọn lên gốc, giữ cán chắc tay. Gỡ tóc rụng giữa răng lược sau mỗi lần dùng.",
       "video": "/media/luoc-dem-khi-paddle-den-ban-lon-chai-toc.mp4",
+      "content_approved": true,
+      "category": "Phụ kiện tóc",
       "subcategory": "Lược & Kẹp chia tóc"
     },
     {
-      "code": "LH-050",
+      "usage": "Chải nhẹ theo chiều tóc để tóc vào nếp và bóng mượt. Làm sạch lông lược định kỳ.",
+      "reason": "",
       "name": "Lược chải bóng tóc lông mềm cán đen",
       "slug": "luoc-chai-bong-toc-long-mem-can-den",
-      "category": "Phụ kiện tóc",
+      "code": "LH-050",
       "published": true,
       "short_desc": "Lược chải bóng tóc có hàng lông mềm dày, cán đen cong cầm vừa tay.",
       "images": [
@@ -1324,17 +1342,17 @@
           "alt": "Lược chải bóng tóc lông mềm cán đen do Lý Hoàng Makeup chọn dùng"
         }
       ],
-      "content_approved": true,
-      "reason": "",
-      "usage": "Chải nhẹ theo chiều tóc để tóc vào nếp và bóng mượt. Làm sạch lông lược định kỳ.",
       "video": "/media/luoc-chai-bong-toc-long-mem-can-den.mp4",
+      "content_approved": true,
+      "category": "Phụ kiện tóc",
       "subcategory": "Lược & Kẹp chia tóc"
     },
     {
-      "code": "LH-051",
+      "usage": "Dùng phần cán nhọn để chia ngôi và chia lớp, phần răng để chải mịn. Tránh để cán kim loại gần mắt.",
+      "reason": "",
       "name": "Lược đuôi chuột cán kim loại chia tóc",
       "slug": "luoc-duoi-chuot-can-kim-loai-chia-toc",
-      "category": "Phụ kiện tóc",
+      "code": "LH-051",
       "published": true,
       "short_desc": "Lược đuôi chuột răng mịn, cán kim loại nhọn dùng chia ngôi và chia lớp tóc chính xác.",
       "images": [
@@ -1351,17 +1369,17 @@
           "alt": "Lược đuôi chuột cán kim loại chia tóc do Lý Hoàng Makeup chọn dùng"
         }
       ],
-      "content_approved": true,
-      "reason": "",
-      "usage": "Dùng phần cán nhọn để chia ngôi và chia lớp, phần răng để chải mịn. Tránh để cán kim loại gần mắt.",
       "video": "/media/luoc-duoi-chuot-can-kim-loai-chia-toc.mp4",
+      "content_approved": true,
+      "category": "Phụ kiện tóc",
       "subcategory": "Lược & Kẹp chia tóc"
     },
     {
-      "code": "LH-052",
+      "usage": "Luồn các răng dài vào gốc tóc, nâng nhẹ lên để tạo phồng, chải phần ngọn cho mượt.",
+      "reason": "",
       "name": "Lược carbon 4 răng chia tóc và tạo phồng chân tóc",
       "slug": "luoc-carbon-4-rang-chia-toc-va-tao-phong-chan-toc",
-      "category": "Phụ kiện tóc",
+      "code": "LH-052",
       "published": true,
       "short_desc": "Lược carbon đen một đầu răng mịn, một đầu 4 răng dài để chia lớp và tạo độ phồng chân tóc.",
       "images": [
@@ -1378,17 +1396,17 @@
           "alt": "Lược carbon 4 răng chia tóc và tạo phồng chân tóc do Lý Hoàng Makeup chọn dùng"
         }
       ],
-      "content_approved": true,
-      "reason": "",
-      "usage": "Luồn các răng dài vào gốc tóc, nâng nhẹ lên để tạo phồng, chải phần ngọn cho mượt.",
       "video": "/media/luoc-carbon-4-rang-chia-toc-tao-phong-chan-toc.mp4",
+      "content_approved": true,
+      "category": "Phụ kiện tóc",
       "subcategory": "Lược & Kẹp chia tóc"
     },
     {
-      "code": "LH-053",
+      "usage": "Cuốn từng lọn tóc quanh lược, sấy đều rồi để nguội vài giây trước khi nhả lược để nếp giữ lâu.",
+      "reason": "",
       "name": "Lược tròn sấy tóc lõi nhôm Nano Technology",
       "slug": "luoc-tron-say-toc-loi-nhom-nano-technology",
-      "category": "Phụ kiện tóc",
+      "code": "LH-053",
       "published": true,
       "short_desc": "Lược tròn lõi nhôm có ghi Nano Technology, cán có đệm chống trượt, dùng khi sấy và uốn tóc.",
       "images": [
@@ -1405,17 +1423,17 @@
           "alt": "Lược tròn sấy tóc lõi nhôm Nano Technology do Lý Hoàng Makeup chọn dùng"
         }
       ],
-      "content_approved": true,
-      "reason": "",
-      "usage": "Cuốn từng lọn tóc quanh lược, sấy đều rồi để nguội vài giây trước khi nhả lược để nếp giữ lâu.",
       "video": "/media/luoc-tron-say-toc-loi-nhom-nano-technology.mp4",
+      "content_approved": true,
+      "category": "Phụ kiện tóc",
       "subcategory": "Lược & Kẹp chia tóc"
     },
     {
-      "code": "LH-054",
+      "usage": "Cắm cọ khô hẳn vào ống, đặt trên mặt phẳng. Nên để cọ lông xuống dưới nếu cần phơi khô.",
+      "reason": "",
       "name": "Ống lưới kim loại đựng cọ và lược (cặp 2 ống)",
       "slug": "ong-luoi-kim-loai-dung-co-va-luoc-cap-2-ong",
-      "category": "Trang điểm",
+      "code": "LH-054",
       "published": true,
       "short_desc": "Cặp ống lưới kim loại màu đen, đứng vững, dùng cắm cọ trang điểm và lược.",
       "images": [
@@ -1432,17 +1450,18 @@
           "alt": "Ống lưới kim loại đựng cọ và lược (cặp 2 ống) do Lý Hoàng Makeup chọn dùng"
         }
       ],
-      "content_approved": true,
-      "reason": "",
-      "usage": "Cắm cọ khô hẳn vào ống, đặt trên mặt phẳng. Nên để cọ lông xuống dưới nếu cần phơi khô.",
       "video": "/media/ong-luoi-kim-loai-dung-co-va-luoc-cap-2-ong.mp4",
+      "content_approved": true,
+      "category": "Trang điểm",
       "subcategory": "Cọ & Cốp đồ nghề"
     },
     {
-      "code": "LH-055",
+      "usage": "Xịt vào cổ tay, sau tai và cổ, cách da khoảng 15 cm, không chà xát hai tay.",
+      "reason": "",
+      "price": 3492000,
       "name": "Nước hoa nữ Jean Paul Gaultier So Scandal! EDP",
       "slug": "nuoc-hoa-nu-jean-paul-gaultier-so-scandal-edp",
-      "category": "Nước hoa",
+      "code": "LH-055",
       "published": true,
       "short_desc": "Nước hoa nữ Eau de Parfum ra mắt năm 2020 của Jean Paul Gaultier, mùi hương theo các nguồn bán hàng gồm mâm xôi, hoa huệ, hoa cam, nhài và sữa. Chai có dáng chân thon đặc trưng.",
       "images": [
@@ -1459,18 +1478,17 @@
           "alt": "Nước hoa nữ Jean Paul Gaultier So Scandal! EDP do Lý Hoàng Makeup chọn dùng"
         }
       ],
-      "content_approved": true,
-      "reason": "",
-      "usage": "Xịt vào cổ tay, sau tai và cổ, cách da khoảng 15 cm, không chà xát hai tay.",
       "video": "/media/nuoc-hoa-nu-jean-paul-gaultier-so-scandal-edp.mp4",
-      "price": 3492000,
+      "content_approved": true,
+      "category": "Nước hoa",
       "subcategory": "Nước hoa Nữ"
     },
     {
-      "code": "LH-056",
+      "usage": "Xịt vào cổ tay, sau tai và cổ, cách da khoảng 15 cm.",
+      "reason": "",
       "name": "Nước hoa Maison Alhambra B.A.D Femme",
       "slug": "nuoc-hoa-maison-alhambra-b-a-d-femme",
-      "category": "Nước hoa",
+      "code": "LH-056",
       "published": true,
       "short_desc": "Nước hoa nữ của Maison Alhambra, dòng B.A.D Femme, chai đen vàng có nắp trong suốt.",
       "images": [
@@ -1487,17 +1505,17 @@
           "alt": "Nước hoa Maison Alhambra B.A.D Femme do Lý Hoàng Makeup chọn dùng"
         }
       ],
-      "content_approved": true,
-      "reason": "",
-      "usage": "Xịt vào cổ tay, sau tai và cổ, cách da khoảng 15 cm.",
       "video": "/media/nuoc-hoa-maison-alhambra-bad-femme.mp4",
+      "content_approved": true,
+      "category": "Nước hoa",
       "subcategory": "Nước hoa Nữ"
     },
     {
-      "code": "LH-057",
+      "usage": "Xịt vào cổ tay, sau tai và cổ, cách da khoảng 15 cm.",
+      "reason": "",
       "name": "Nước hoa Yves Saint Laurent Libre EDP",
       "slug": "nuoc-hoa-yves-saint-laurent-libre-edp",
-      "category": "Nước hoa",
+      "code": "LH-057",
       "published": true,
       "short_desc": "Nước hoa nữ của Yves Saint Laurent dòng Libre, chai trong mờ với logo YSL màu vàng.",
       "images": [
@@ -1514,17 +1532,17 @@
           "alt": "Nước hoa Yves Saint Laurent Libre EDP do Lý Hoàng Makeup chọn dùng"
         }
       ],
-      "content_approved": true,
-      "reason": "",
-      "usage": "Xịt vào cổ tay, sau tai và cổ, cách da khoảng 15 cm.",
       "video": "/media/nuoc-hoa-yves-saint-laurent-libre-edp.mp4",
+      "content_approved": true,
+      "category": "Nước hoa",
       "subcategory": "Nước hoa Nữ"
     },
     {
-      "code": "LH-058",
+      "usage": "Xịt vào cổ tay, sau tai và cổ, cách da khoảng 15 cm.",
+      "reason": "",
       "name": "Nước hoa Yves Saint Laurent Black Opium Over Red",
       "slug": "nuoc-hoa-yves-saint-laurent-black-opium-over-red",
-      "category": "Nước hoa",
+      "code": "LH-058",
       "published": true,
       "short_desc": "Nước hoa của Yves Saint Laurent dòng Black Opium, phiên bản chai màu đỏ.",
       "images": [
@@ -1541,17 +1559,17 @@
           "alt": "Nước hoa Yves Saint Laurent Black Opium Over Red do Lý Hoàng Makeup chọn dùng"
         }
       ],
-      "content_approved": true,
-      "reason": "",
-      "usage": "Xịt vào cổ tay, sau tai và cổ, cách da khoảng 15 cm.",
       "video": "/media/nuoc-hoa-yves-saint-laurent-black-opium-over-red.mp4",
+      "content_approved": true,
+      "category": "Nước hoa",
       "subcategory": "Nước hoa Nữ"
     },
     {
-      "code": "LH-059",
+      "usage": "Xịt vào cổ tay, sau tai và cổ, cách da khoảng 15 cm.",
+      "reason": "",
       "name": "Nước hoa nam Bleu de Chanel Eau de Parfum",
       "slug": "nuoc-hoa-nam-bleu-de-chanel-eau-de-parfum",
-      "category": "Nước hoa",
+      "code": "LH-059",
       "published": true,
       "short_desc": "Nước hoa nam nồng độ Eau de Parfum của Chanel, dòng Bleu de Chanel, chai vuông màu xanh đậm.",
       "images": [
@@ -1568,17 +1586,17 @@
           "alt": "Nước hoa nam Bleu de Chanel Eau de Parfum do Lý Hoàng Makeup chọn dùng"
         }
       ],
-      "content_approved": true,
-      "reason": "",
-      "usage": "Xịt vào cổ tay, sau tai và cổ, cách da khoảng 15 cm.",
       "video": "/media/nuoc-hoa-nam-bleu-de-chanel-eau-de-parfum.mp4",
+      "content_approved": true,
+      "category": "Nước hoa",
       "subcategory": "Nước hoa Nam & Unisex"
     },
     {
-      "code": "LH-060",
+      "usage": "Xịt vào cổ tay, sau tai và cổ, cách da khoảng 15 cm.",
+      "reason": "",
       "name": "Nước hoa nam Polo Blue Eau de Parfum (Ralph Lauren)",
       "slug": "nuoc-hoa-nam-polo-blue-eau-de-parfum-ralph-lauren",
-      "category": "Nước hoa",
+      "code": "LH-060",
       "published": true,
       "short_desc": "Nước hoa nam nồng độ Eau de Parfum, chai xanh đậm nắp bạc có logo người chơi polo.",
       "images": [
@@ -1595,17 +1613,18 @@
           "alt": "Nước hoa nam Polo Blue Eau de Parfum (Ralph Lauren) do Lý Hoàng Makeup chọn dùng"
         }
       ],
-      "content_approved": true,
-      "reason": "",
-      "usage": "Xịt vào cổ tay, sau tai và cổ, cách da khoảng 15 cm.",
       "video": "/media/nuoc-hoa-nam-polo-blue-eau-de-parfum-ralph-lauren.mp4",
+      "content_approved": true,
+      "category": "Nước hoa",
       "subcategory": "Nước hoa Nam & Unisex"
     },
     {
-      "code": "LH-061",
+      "usage": "Xịt vào cổ tay và sau tai, cách da khoảng 15 cm.",
+      "reason": "",
+      "price": 785000,
       "name": "Nước hoa Le Labo Another 13 dạng chai chiết (ống nhỏ)",
       "slug": "nuoc-hoa-le-labo-another-13-dang-chai-chiet-ong-nho",
-      "category": "Nước hoa",
+      "code": "LH-061",
       "published": true,
       "short_desc": "Chai nước hoa chiết dạng ống nhỏ màu đen, nhãn ghi Le Labo Another 13, tiện mang theo người.",
       "images": [
@@ -1622,18 +1641,18 @@
           "alt": "Nước hoa Le Labo Another 13 dạng chai chiết (ống nhỏ) do Lý Hoàng Makeup chọn dùng"
         }
       ],
-      "content_approved": true,
-      "reason": "",
-      "usage": "Xịt vào cổ tay và sau tai, cách da khoảng 15 cm.",
       "video": "/media/nuoc-hoa-le-labo-another-13-chai-chiet-ong-nho.mp4",
-      "price": 785000,
+      "content_approved": true,
+      "category": "Nước hoa",
       "subcategory": "Nước hoa Chiết / Mini"
     },
     {
-      "code": "LH-062",
+      "usage": "Xịt vào cổ tay và sau tai, cách da khoảng 15 cm.",
+      "reason": "",
+      "price": 3800000,
       "name": "Nước hoa Le Labo Another 13 Eau de Parfum 30ml",
       "slug": "nuoc-hoa-le-labo-another-13-eau-de-parfum-30ml",
-      "category": "Nước hoa",
+      "code": "LH-062",
       "published": true,
       "short_desc": "Nước hoa unisex Le Labo Another 13 nồng độ Eau de Parfum, chai trong 30 ml nắp bạc, nhãn dán có chữ Ả Rập. Hương theo các nguồn: xạ hương, hổ phách, Iso E Super.",
       "images": [
@@ -1650,18 +1669,17 @@
           "alt": "Nước hoa Le Labo Another 13 Eau de Parfum 30ml do Lý Hoàng Makeup chọn dùng"
         }
       ],
-      "content_approved": true,
-      "reason": "",
-      "usage": "Xịt vào cổ tay và sau tai, cách da khoảng 15 cm.",
       "video": "/media/nuoc-hoa-le-labo-another-13-eau-de-parfum-30ml.mp4",
-      "price": 3800000,
+      "content_approved": true,
+      "category": "Nước hoa",
       "subcategory": "Nước hoa Nam & Unisex"
     },
     {
-      "code": "LH-063",
+      "usage": "Rửa mặt sạch, đắp mặt nạ khoảng 15 đến 20 phút, bỏ ra và vỗ nhẹ cho tinh chất thấm.",
+      "reason": "",
       "name": "Mặt nạ giấy BanoBagi Stem Cell Vitamin Mask Whitening & Aqua Hydrating",
       "slug": "mat-na-giay-banobagi-stem-cell-vitamin-mask-whitening-aqua-hydrating",
-      "category": "Chăm sóc da",
+      "code": "LH-063",
       "published": true,
       "short_desc": "Mặt nạ giấy BanoBagi dòng Stem Cell Vitamin Mask, nhãn ghi làm sáng da và cấp ẩm.",
       "images": [
@@ -1678,17 +1696,17 @@
           "alt": "Mặt nạ giấy BanoBagi Stem Cell Vitamin Mask Whitening & Aqua Hydrating do Lý Hoàng Makeup chọn dùng"
         }
       ],
-      "content_approved": true,
-      "reason": "",
-      "usage": "Rửa mặt sạch, đắp mặt nạ khoảng 15 đến 20 phút, bỏ ra và vỗ nhẹ cho tinh chất thấm.",
       "video": "/media/mat-na-giay-banobagi-stem-cell-vitamin-mask-whitening-aqua-hydrating.mp4",
+      "content_approved": true,
+      "category": "Chăm sóc da",
       "subcategory": "Mặt nạ dưỡng da"
     },
     {
-      "code": "LH-064",
+      "usage": "Rửa mặt sạch, đắp mặt nạ khoảng 15 đến 20 phút, bỏ ra và vỗ nhẹ cho tinh chất thấm.",
+      "reason": "",
       "name": "Mặt nạ giấy LBB Soothing Care In Serum Mask",
       "slug": "mat-na-giay-lbb-soothing-care-in-serum-mask",
-      "category": "Chăm sóc da",
+      "code": "LH-064",
       "published": true,
       "short_desc": "Mặt nạ giấy tẩm tinh chất của LBB, nhãn ghi làm dịu nhanh và cấp ẩm, dung tích 25 ml.",
       "images": [
@@ -1705,17 +1723,17 @@
           "alt": "Mặt nạ giấy LBB Soothing Care In Serum Mask do Lý Hoàng Makeup chọn dùng"
         }
       ],
-      "content_approved": true,
-      "reason": "",
-      "usage": "Rửa mặt sạch, đắp mặt nạ khoảng 15 đến 20 phút, bỏ ra và vỗ nhẹ cho tinh chất thấm.",
       "video": "/media/mat-na-giay-lbb-soothing-care-in-serum-mask.mp4",
+      "content_approved": true,
+      "category": "Chăm sóc da",
       "subcategory": "Mặt nạ dưỡng da"
     },
     {
-      "code": "LH-065",
+      "usage": "Rửa mặt sạch, đắp mặt nạ khoảng 15 đến 20 phút, bỏ ra và vỗ nhẹ cho tinh chất thấm.",
+      "reason": "",
       "name": "Mặt nạ giấy Lucenbase 377 Whitening Moisturizing Mask",
       "slug": "mat-na-giay-lucenbase-377-whitening-moisturizing-mask",
-      "category": "Chăm sóc da",
+      "code": "LH-065",
       "published": true,
       "short_desc": "Mặt nạ giấy Lucenbase 377 gói bạc, nhãn ghi làm sáng và dưỡng ẩm, có Niacinamide và Tranexamic acid.",
       "images": [
@@ -1732,17 +1750,17 @@
           "alt": "Mặt nạ giấy Lucenbase 377 Whitening Moisturizing Mask do Lý Hoàng Makeup chọn dùng"
         }
       ],
-      "content_approved": true,
-      "reason": "",
-      "usage": "Rửa mặt sạch, đắp mặt nạ khoảng 15 đến 20 phút, bỏ ra và vỗ nhẹ cho tinh chất thấm.",
       "video": "/media/mat-na-giay-lucenbase-377-whitening-moisturizing-mask.mp4",
+      "content_approved": true,
+      "category": "Chăm sóc da",
       "subcategory": "Mặt nạ dưỡng da"
     },
     {
-      "code": "LH-066",
+      "usage": "Đặt trên mặt phẳng, xếp đồ đứng thẳng vào từng ngăn, lau bằng khăn ẩm khi bám bụi.",
+      "reason": "",
       "name": "Kệ acrylic nhiều ngăn đựng kem nền, che khuyết điểm và mỹ phẩm",
       "slug": "ke-acrylic-nhieu-ngan-dung-kem-nen-che-khuyet-diem-va-my-pham",
-      "category": "Trang điểm",
+      "code": "LH-066",
       "published": true,
       "short_desc": "Kệ acrylic trong suốt nhiều ngăn đứng, xếp được kem nền, che khuyết điểm, kem lót và nhiều mỹ phẩm dạng tuýp, chai.",
       "images": [
@@ -1759,17 +1777,17 @@
           "alt": "Kệ acrylic nhiều ngăn đựng kem nền, che khuyết điểm và mỹ phẩm do Lý Hoàng Makeup chọn dùng"
         }
       ],
-      "content_approved": true,
-      "reason": "",
-      "usage": "Đặt trên mặt phẳng, xếp đồ đứng thẳng vào từng ngăn, lau bằng khăn ẩm khi bám bụi.",
       "video": "/media/ke-acrylic-nhieu-ngan-dung-kem-nen-che-khuyet-diem.mp4",
+      "content_approved": true,
+      "category": "Trang điểm",
       "subcategory": "Nền & Che khuyết điểm"
     },
     {
-      "code": "LH-067",
+      "usage": "Xếp son đứng thẳng vào từng ngăn, đặt nơi tránh nắng, lau sạch khi cần.",
+      "reason": "",
       "name": "Kệ acrylic nhiều ngăn đựng son và tint",
       "slug": "ke-acrylic-nhieu-ngan-dung-son-va-tint",
-      "category": "Trang điểm",
+      "code": "LH-067",
       "published": true,
       "short_desc": "Kệ acrylic trong suốt nhiều ngăn nhỏ, xếp được nhiều thỏi son và son kem thành hàng.",
       "images": [
@@ -1786,17 +1804,17 @@
           "alt": "Kệ acrylic nhiều ngăn đựng son và tint do Lý Hoàng Makeup chọn dùng"
         }
       ],
-      "content_approved": true,
-      "reason": "",
-      "usage": "Xếp son đứng thẳng vào từng ngăn, đặt nơi tránh nắng, lau sạch khi cần.",
       "video": "/media/ke-acrylic-nhieu-ngan-dung-son-va-tint.mp4",
+      "content_approved": true,
+      "category": "Trang điểm",
       "subcategory": "Son môi"
     },
     {
-      "code": "LH-068",
+      "usage": "Xếp bảng phấn đứng vào từng khe, hộp nhỏ để ngăn dưới, lau sạch bằng khăn khô.",
+      "reason": "",
       "name": "Kệ acrylic đứng đựng bảng phấn mắt, phấn má",
       "slug": "ke-acrylic-dung-dung-bang-phan-mat-phan-ma",
-      "category": "Trang điểm",
+      "code": "LH-068",
       "published": true,
       "short_desc": "Kệ acrylic trong suốt có các khe đứng xếp bảng phấn mắt và phấn má, hộp phấn nhỏ để ngăn dưới.",
       "images": [
@@ -1813,17 +1831,17 @@
           "alt": "Kệ acrylic đứng đựng bảng phấn mắt, phấn má do Lý Hoàng Makeup chọn dùng"
         }
       ],
-      "content_approved": true,
-      "reason": "",
-      "usage": "Xếp bảng phấn đứng vào từng khe, hộp nhỏ để ngăn dưới, lau sạch bằng khăn khô.",
       "video": "/media/ke-acrylic-dung-dung-bang-phan-mat-phan-ma.mp4",
+      "content_approved": true,
+      "category": "Trang điểm",
       "subcategory": "Mắt - Má - Tạo khối"
     },
     {
-      "code": "LH-069",
+      "usage": "Cắm cọ khô hẳn vào ống, lau bằng khăn mềm khi bám bụi.",
+      "reason": "",
       "name": "Cặp ống pha lê đựng cọ trang điểm",
       "slug": "cap-ong-pha-le-dung-co-trang-diem",
-      "category": "Trang điểm",
+      "code": "LH-069",
       "published": true,
       "short_desc": "Cặp ống tròn mặt pha lê ánh bạc, đứng vững, dùng cắm cọ trang điểm và dụng cụ nhỏ.",
       "images": [
@@ -1840,17 +1858,18 @@
           "alt": "Cặp ống pha lê đựng cọ trang điểm do Lý Hoàng Makeup chọn dùng"
         }
       ],
-      "content_approved": true,
-      "reason": "",
-      "usage": "Cắm cọ khô hẳn vào ống, lau bằng khăn mềm khi bám bụi.",
       "video": "/media/cap-ong-pha-le-dung-co-trang-diem.mp4",
+      "content_approved": true,
+      "category": "Trang điểm",
       "subcategory": "Cọ & Cốp đồ nghề"
     },
     {
-      "code": "LH-070",
+      "usage": "Dùng trên tóc khô, kẹp từng lọn nhỏ và kéo từ gốc đến ngọn. Để máy nguội hẳn trước khi cất.",
+      "reason": "",
+      "price": 520000,
       "name": "Máy duỗi tóc May Young bản lớn màu vàng",
       "slug": "may-duoi-toc-may-young-ban-lon-mau-vang",
-      "category": "Phụ kiện tóc",
+      "code": "LH-070",
       "published": true,
       "short_desc": "Máy duỗi tóc May Young màu vàng, bản kẹp lớn, có dây điện dài, dùng ép thẳng tóc.",
       "images": [
@@ -1867,18 +1886,17 @@
           "alt": "Máy duỗi tóc May Young bản lớn màu vàng do Lý Hoàng Makeup chọn dùng"
         }
       ],
-      "content_approved": true,
-      "reason": "",
-      "usage": "Dùng trên tóc khô, kẹp từng lọn nhỏ và kéo từ gốc đến ngọn. Để máy nguội hẳn trước khi cất.",
       "video": "/media/may-duoi-toc-may-young-ban-lon-mau-vang.mp4",
-      "price": 520000,
+      "content_approved": true,
+      "category": "Phụ kiện tóc",
       "subcategory": "Máy làm tóc"
     },
     {
-      "code": "LH-071",
+      "usage": "Kẹp từng lọn tóc ở chân tóc hoặc thân tóc, giữ vài giây rồi nhả. Để máy nguội trước khi cất.",
+      "reason": "",
       "name": "Máy dập xù tạo sóng tóc RUIDA",
       "slug": "may-dap-xu-tao-song-toc-ruida",
-      "category": "Phụ kiện tóc",
+      "code": "LH-071",
       "published": true,
       "short_desc": "Máy kẹp tạo sóng (dập xù) của RUIDA, bản kẹp lượn sóng màu vàng, thân đen.",
       "images": [
@@ -1895,17 +1913,18 @@
           "alt": "Máy dập xù tạo sóng tóc RUIDA do Lý Hoàng Makeup chọn dùng"
         }
       ],
-      "content_approved": true,
-      "reason": "",
-      "usage": "Kẹp từng lọn tóc ở chân tóc hoặc thân tóc, giữ vài giây rồi nhả. Để máy nguội trước khi cất.",
       "video": "/media/may-dap-xu-tao-song-toc-ruida.mp4",
+      "content_approved": true,
+      "category": "Phụ kiện tóc",
       "subcategory": "Máy làm tóc"
     },
     {
-      "code": "LH-072",
+      "usage": "Quấn lọn tóc vào trục uốn, giữ vài giây rồi nhả. Chỉnh nhiệt thấp cho tóc yếu.",
+      "reason": "",
+      "price": 369000,
       "name": "Máy uốn tóc May Young màu vàng (trục uốn)",
       "slug": "may-uon-toc-may-young-mau-vang-truc-uon",
-      "category": "Phụ kiện tóc",
+      "code": "LH-072",
       "published": true,
       "short_desc": "Máy uốn tóc May Young màu vàng, trục uốn tròn, có dây điện dài và bảng chỉnh nhiệt.",
       "images": [
@@ -1922,18 +1941,17 @@
           "alt": "Máy uốn tóc May Young màu vàng (trục uốn) do Lý Hoàng Makeup chọn dùng"
         }
       ],
-      "content_approved": true,
-      "reason": "",
-      "usage": "Quấn lọn tóc vào trục uốn, giữ vài giây rồi nhả. Chỉnh nhiệt thấp cho tóc yếu.",
       "video": "/media/may-uon-toc-may-young-mau-vang-truc-uon.mp4",
-      "price": 369000,
+      "content_approved": true,
+      "category": "Phụ kiện tóc",
       "subcategory": "Máy làm tóc"
     },
     {
-      "code": "LH-073",
+      "usage": "Cần bạn bổ sung cách dùng.",
+      "reason": "",
       "name": "Máy kẹp duỗi tóc mini màu đen đỏ (chưa rõ thương hiệu)",
       "slug": "may-kep-duoi-toc-mini-mau-den-do-chua-ro-thuong-hieu",
-      "category": "Phụ kiện tóc",
+      "code": "LH-073",
       "published": true,
       "short_desc": "Máy kẹp duỗi tóc nhỏ gọn màu đen, bản kẹp đỏ, thân có hạt chống trượt.",
       "images": [
@@ -1950,17 +1968,18 @@
           "alt": "Máy kẹp duỗi tóc mini màu đen đỏ (chưa rõ thương hiệu) do Lý Hoàng Makeup chọn dùng"
         }
       ],
-      "content_approved": true,
-      "reason": "",
-      "usage": "Cần bạn bổ sung cách dùng.",
       "video": "/media/may-kep-duoi-toc-mini-mau-den-do.mp4",
+      "content_approved": true,
+      "category": "Phụ kiện tóc",
       "subcategory": "Máy làm tóc"
     },
     {
-      "code": "LH-074",
+      "usage": "Chọn nhiệt phù hợp, quấn lọn tóc vào trục uốn, giữ vài giây rồi nhả.",
+      "reason": "",
+      "price": 369000,
       "name": "Máy uốn tóc May Young màu vàng có màn hình nhiệt",
       "slug": "may-uon-toc-may-young-mau-vang-co-man-hinh-nhiet",
-      "category": "Phụ kiện tóc",
+      "code": "LH-074",
       "published": true,
       "short_desc": "Máy uốn tóc May Young màu vàng có màn hình hiển thị nhiệt và nút chỉnh.",
       "images": [
@@ -1977,18 +1996,17 @@
           "alt": "Máy uốn tóc May Young màu vàng có màn hình nhiệt do Lý Hoàng Makeup chọn dùng"
         }
       ],
-      "content_approved": true,
-      "reason": "",
-      "usage": "Chọn nhiệt phù hợp, quấn lọn tóc vào trục uốn, giữ vài giây rồi nhả.",
       "video": "/media/may-uon-toc-may-young-mau-vang-man-hinh-nhiet.mp4",
-      "price": 369000,
+      "content_approved": true,
+      "category": "Phụ kiện tóc",
       "subcategory": "Máy làm tóc"
     },
     {
-      "code": "LH-075",
+      "usage": "Xếp đồ nặng ở tầng dưới, khóa bánh xe khi đang làm việc.",
+      "reason": "",
       "name": "Xe đẩy 3 tầng đựng đồ làm tóc và makeup",
       "slug": "xe-day-3-tang-dung-do-lam-toc-va-makeup",
-      "category": "Trang điểm",
+      "code": "LH-075",
       "published": true,
       "short_desc": "Xe đẩy 3 tầng khung đen có bánh xe, mặt trên bằng gỗ, dùng đặt máy làm tóc, cọ, xịt và dụng cụ.",
       "images": [
@@ -2005,17 +2023,17 @@
           "alt": "Xe đẩy 3 tầng đựng đồ làm tóc và makeup do Lý Hoàng Makeup chọn dùng"
         }
       ],
-      "content_approved": true,
-      "reason": "",
-      "usage": "Xếp đồ nặng ở tầng dưới, khóa bánh xe khi đang làm việc.",
       "video": "/media/xe-day-3-tang-dung-do-lam-toc-va-makeup.mp4",
+      "content_approved": true,
+      "category": "Trang điểm",
       "subcategory": "Cọ & Cốp đồ nghề"
     },
     {
-      "code": "LH-076",
+      "usage": "Xếp đồ vào, khóa kéo, lau bằng khăn ẩm khi bẩn.",
+      "reason": "",
       "name": "Ba lô PVC trong suốt đựng đồ makeup",
       "slug": "ba-lo-pvc-trong-suot-dung-do-makeup",
-      "category": "Trang điểm",
+      "code": "LH-076",
       "published": true,
       "short_desc": "Ba lô PVC trong suốt có khóa kéo, quai đeo vai, nhìn thấy đồ bên trong.",
       "images": [
@@ -2032,17 +2050,17 @@
           "alt": "Ba lô PVC trong suốt đựng đồ makeup do Lý Hoàng Makeup chọn dùng"
         }
       ],
-      "content_approved": true,
-      "reason": "",
-      "usage": "Xếp đồ vào, khóa kéo, lau bằng khăn ẩm khi bẩn.",
       "video": "/media/ba-lo-pvc-trong-suot-dung-do-makeup.mp4",
+      "content_approved": true,
+      "category": "Trang điểm",
       "subcategory": "Cọ & Cốp đồ nghề"
     },
     {
-      "code": "LH-077",
+      "usage": "Chia ngăn cho từng nhóm đồ, kéo tay kéo lên hết cỡ khi di chuyển.",
+      "reason": "",
       "name": "Vali kéo đen đựng đồ makeup",
       "slug": "vali-keo-den-dung-do-makeup",
-      "category": "Trang điểm",
+      "code": "LH-077",
       "published": true,
       "short_desc": "Vali kéo màu đen có tay xách, tay kéo và dây đeo vai, bên trong có ngăn chia mềm.",
       "images": [
@@ -2059,17 +2077,17 @@
           "alt": "Vali kéo đen đựng đồ makeup do Lý Hoàng Makeup chọn dùng"
         }
       ],
-      "content_approved": true,
-      "reason": "",
-      "usage": "Chia ngăn cho từng nhóm đồ, kéo tay kéo lên hết cỡ khi di chuyển.",
       "video": "/media/vali-keo-den-dung-do-makeup.mp4",
+      "content_approved": true,
+      "category": "Trang điểm",
       "subcategory": "Cọ & Cốp đồ nghề"
     },
     {
-      "code": "LH-078",
+      "usage": "Gắp từng cụm, chấm keo vào chân mi, đặt sát chân mi thật và giữ vài giây.",
+      "reason": "",
       "name": "Mi giả cụm Faneyes Cute (hộp vàng)",
       "slug": "mi-gia-cum-faneyes-cute-hop-vang",
-      "category": "Trang điểm",
+      "code": "LH-078",
       "published": true,
       "short_desc": "Mi giả dạng cụm của Faneyes, nhiều kiểu trong một hộp, dùng dán từng cụm để tạo độ dày và dài cho mắt.",
       "images": [
@@ -2086,17 +2104,17 @@
           "alt": "Mi giả cụm Faneyes Cute (hộp vàng) do Lý Hoàng Makeup chọn dùng"
         }
       ],
-      "content_approved": true,
-      "reason": "",
-      "usage": "Gắp từng cụm, chấm keo vào chân mi, đặt sát chân mi thật và giữ vài giây.",
       "video": "/media/mi-gia-cum-faneyes-cute-hop-vang.mp4",
+      "content_approved": true,
+      "category": "Trang điểm",
       "subcategory": "Mắt - Má - Tạo khối"
     },
     {
-      "code": "LH-079",
+      "usage": "Cần bạn bổ sung cách dùng.",
+      "reason": "",
       "name": "Kính áp tròng màu kèm hộp đựng và kẹp gắp",
       "slug": "kinh-ap-trong-mau-kem-hop-dung-va-kep-gap",
-      "category": "Trang điểm",
+      "code": "LH-079",
       "published": true,
       "short_desc": "Bộ kính áp tròng nhiều độ và nhiều màu, kèm hộp đựng lens và kẹp gắp.",
       "images": [
@@ -2113,17 +2131,17 @@
           "alt": "Kính áp tròng màu kèm hộp đựng và kẹp gắp do Lý Hoàng Makeup chọn dùng"
         }
       ],
-      "content_approved": true,
-      "reason": "",
-      "usage": "Cần bạn bổ sung cách dùng.",
       "video": "/media/kinh-ap-trong-mau-kem-hop-dung-va-kep-gap.mp4",
+      "content_approved": true,
+      "category": "Trang điểm",
       "subcategory": "Mắt - Má - Tạo khối"
     },
     {
-      "code": "LH-080",
+      "usage": "Xếp phụ kiện vào túi, kéo khóa, cất vào hộp hoặc vali.",
+      "reason": "",
       "name": "Túi lưới khóa kéo đựng phụ kiện cô dâu",
       "slug": "tui-luoi-khoa-keo-dung-phu-kien-co-dau",
-      "category": "Trang điểm",
+      "code": "LH-080",
       "published": true,
       "short_desc": "Túi lưới đen khóa kéo, trong suốt nhìn thấy đồ bên trong, dùng đựng hoa cài và phụ kiện nhỏ.",
       "images": [
@@ -2140,17 +2158,17 @@
           "alt": "Túi lưới khóa kéo đựng phụ kiện cô dâu do Lý Hoàng Makeup chọn dùng"
         }
       ],
-      "content_approved": true,
-      "reason": "",
-      "usage": "Xếp phụ kiện vào túi, kéo khóa, cất vào hộp hoặc vali.",
       "video": "/media/tui-luoi-khoa-keo-dung-phu-kien-co-dau.mp4",
+      "content_approved": true,
+      "category": "Trang điểm",
       "subcategory": "Cọ & Cốp đồ nghề"
     },
     {
-      "code": "LH-081",
+      "usage": "Mở nắp, đặt gương nghiêng khi dùng, lau mặt gương bằng khăn mềm.",
+      "reason": "",
       "name": "Gương hộp gập Hello Kitty",
       "slug": "guong-hop-gap-hello-kitty",
-      "category": "Trang điểm",
+      "code": "LH-081",
       "published": true,
       "short_desc": "Gương hộp gập có nắp, mặt nắp in hình Hello Kitty màu tím.",
       "images": [
@@ -2167,17 +2185,17 @@
           "alt": "Gương hộp gập Hello Kitty do Lý Hoàng Makeup chọn dùng"
         }
       ],
-      "content_approved": true,
-      "reason": "",
-      "usage": "Mở nắp, đặt gương nghiêng khi dùng, lau mặt gương bằng khăn mềm.",
       "video": "/media/guong-hop-gap-hello-kitty.mp4",
+      "content_approved": true,
+      "category": "Trang điểm",
       "subcategory": "Cọ & Cốp đồ nghề"
     },
     {
-      "code": "LH-082",
+      "usage": "Kẹp chắc từng lớp tóc, bỏ lại vào ống khi dùng xong.",
+      "reason": "",
       "name": "Kẹp vịt kim loại kèm ống lưới đựng",
       "slug": "kep-vit-kim-loai-kem-ong-luoi-dung",
-      "category": "Phụ kiện tóc",
+      "code": "LH-082",
       "published": true,
       "short_desc": "Kẹp vịt (kẹp cá sấu) kim loại dùng chia lớp tóc, đựng trong ống lưới đen.",
       "images": [
@@ -2194,17 +2212,17 @@
           "alt": "Kẹp vịt kim loại kèm ống lưới đựng do Lý Hoàng Makeup chọn dùng"
         }
       ],
-      "content_approved": true,
-      "reason": "",
-      "usage": "Kẹp chắc từng lớp tóc, bỏ lại vào ống khi dùng xong.",
       "video": "/media/kep-vit-kim-loai-kem-ong-luoi-dung.mp4",
+      "content_approved": true,
+      "category": "Phụ kiện tóc",
       "subcategory": "Lược & Kẹp chia tóc"
     },
     {
-      "code": "LH-083",
+      "usage": "Giữ máy cách tóc khoảng 10 đến 15 cm, di chuyển liên tục, không bịt cửa hút gió.",
+      "reason": "",
       "name": "Máy sấy tóc CWELL màu xám ánh tím",
       "slug": "may-say-toc-cwell-mau-xam-anh-tim",
-      "category": "Phụ kiện tóc",
+      "code": "LH-083",
       "published": true,
       "short_desc": "Máy sấy tóc CWELL vỏ xám, viền tím, dây điện dài.",
       "images": [
@@ -2221,17 +2239,17 @@
           "alt": "Máy sấy tóc CWELL màu xám ánh tím do Lý Hoàng Makeup chọn dùng"
         }
       ],
-      "content_approved": true,
-      "reason": "",
-      "usage": "Giữ máy cách tóc khoảng 10 đến 15 cm, di chuyển liên tục, không bịt cửa hút gió.",
       "video": "/media/may-say-toc-cwell-mau-xam-anh-tim.mp4",
+      "content_approved": true,
+      "category": "Phụ kiện tóc",
       "subcategory": "Máy làm tóc"
     },
     {
-      "code": "LH-084",
+      "usage": "Cuốn lọn tóc vào lô, giữ vài phút rồi gỡ. Dùng với tóc khô hoặc vừa sấy xong.",
+      "reason": "",
       "name": "Lô cuốn tóc bản lớn mặt gai bám",
       "slug": "lo-cuon-toc-ban-lon-mat-gai-bam",
-      "category": "Phụ kiện tóc",
+      "code": "LH-084",
       "published": true,
       "short_desc": "Lô cuốn tóc bản lớn lõi nhựa trắng, mặt ngoài đen có gai bám, giữ chân tóc phồng.",
       "images": [
@@ -2248,17 +2266,17 @@
           "alt": "Lô cuốn tóc bản lớn mặt gai bám do Lý Hoàng Makeup chọn dùng"
         }
       ],
-      "content_approved": true,
-      "reason": "",
-      "usage": "Cuốn lọn tóc vào lô, giữ vài phút rồi gỡ. Dùng với tóc khô hoặc vừa sấy xong.",
       "video": "/media/lo-cuon-toc-ban-lon-mat-gai-bam.mp4",
+      "content_approved": true,
+      "category": "Phụ kiện tóc",
       "subcategory": "Lược & Kẹp chia tóc"
     },
     {
-      "code": "LH-085",
+      "usage": "Kẹp từng phần chân tóc ở nhiệt độ vừa phải, giữ vài giây rồi nhả.",
+      "reason": "",
       "name": "Máy kẹp tạo phồng chân tóc màu hồng",
       "slug": "may-kep-tao-phong-chan-toc-mau-hong",
-      "category": "Phụ kiện tóc",
+      "code": "LH-085",
       "published": true,
       "short_desc": "Máy kẹp tạo phồng chân tóc màu hồng, bản kẹp có nhiều khối vuông, có bảng chỉnh nhiệt.",
       "images": [
@@ -2275,17 +2293,17 @@
           "alt": "Máy kẹp tạo phồng chân tóc màu hồng do Lý Hoàng Makeup chọn dùng"
         }
       ],
-      "content_approved": true,
-      "reason": "",
-      "usage": "Kẹp từng phần chân tóc ở nhiệt độ vừa phải, giữ vài giây rồi nhả.",
       "video": "/media/may-kep-tao-phong-chan-toc-mau-hong.mp4",
+      "content_approved": true,
+      "category": "Phụ kiện tóc",
       "subcategory": "Máy làm tóc"
     },
     {
-      "code": "LH-086",
+      "usage": "Mở chân tripod, chỉnh độ cao, bật đèn và chỉnh độ sáng theo nhu cầu.",
+      "reason": "",
       "name": "Đèn vòng LED kèm chân tripod",
       "slug": "den-vong-led-kem-chan-tripod",
-      "category": "Trang điểm",
+      "code": "LH-086",
       "published": true,
       "short_desc": "Đèn vòng LED có giá đỡ điện thoại ở giữa và chân tripod cao.",
       "images": [
@@ -2302,17 +2320,17 @@
           "alt": "Đèn vòng LED kèm chân tripod do Lý Hoàng Makeup chọn dùng"
         }
       ],
-      "content_approved": true,
-      "reason": "",
-      "usage": "Mở chân tripod, chỉnh độ cao, bật đèn và chỉnh độ sáng theo nhu cầu.",
       "video": "/media/den-vong-led-kem-chan-tripod.mp4",
+      "content_approved": true,
+      "category": "Trang điểm",
       "subcategory": "Cọ & Cốp đồ nghề"
     },
     {
-      "code": "LH-087",
+      "usage": "Cài vào chân búi tóc, xoay nhẹ để giữ chắc.",
+      "reason": "",
       "name": "Trâm cài tóc ngọc trai và hoa cô dâu",
       "slug": "tram-cai-toc-ngoc-trai-va-hoa-co-dau",
-      "category": "Phụ kiện tóc",
+      "code": "LH-087",
       "published": true,
       "short_desc": "Trâm cài tóc kim loại gắn chuỗi ngọc trai và hoa nhỏ, dùng làm tóc cô dâu.",
       "images": [
@@ -2329,17 +2347,17 @@
           "alt": "Trâm cài tóc ngọc trai và hoa cô dâu do Lý Hoàng Makeup chọn dùng"
         }
       ],
-      "content_approved": true,
-      "reason": "",
-      "usage": "Cài vào chân búi tóc, xoay nhẹ để giữ chắc.",
       "video": "/media/tram-cai-toc-ngoc-trai-va-hoa-co-dau.mp4",
+      "content_approved": true,
+      "category": "Phụ kiện tóc",
       "subcategory": "Phụ kiện tóc cô dâu"
     },
     {
-      "code": "LH-088",
+      "usage": "Cài chắc vào chân búi tóc hoặc bên tóc đã búi.",
+      "reason": "",
       "name": "Phụ kiện cài tóc pha lê bạc cô dâu",
       "slug": "phu-kien-cai-toc-pha-le-bac-co-dau",
-      "category": "Phụ kiện tóc",
+      "code": "LH-088",
       "published": true,
       "short_desc": "Phụ kiện cài tóc cô dâu màu bạc gắn pha lê, dạng nhành lá và hoa nhỏ.",
       "images": [
@@ -2356,17 +2374,17 @@
           "alt": "Phụ kiện cài tóc pha lê bạc cô dâu do Lý Hoàng Makeup chọn dùng"
         }
       ],
-      "content_approved": true,
-      "reason": "",
-      "usage": "Cài chắc vào chân búi tóc hoặc bên tóc đã búi.",
       "video": "/media/phu-kien-cai-toc-pha-le-bac-co-dau.mp4",
+      "content_approved": true,
+      "category": "Phụ kiện tóc",
       "subcategory": "Phụ kiện tóc cô dâu"
     },
     {
-      "code": "LH-089",
+      "usage": "Đội lên đỉnh đầu, cố định bằng kẹp nhỏ nếu cần.",
+      "reason": "",
       "name": "Băng đô pha lê cô dâu",
       "slug": "bang-do-pha-le-co-dau",
-      "category": "Phụ kiện tóc",
+      "code": "LH-089",
       "published": true,
       "short_desc": "Băng đô kim loại gắn pha lê lấp lánh dạng giọt và nhành, dùng cho cô dâu.",
       "images": [
@@ -2383,10 +2401,9 @@
           "alt": "Băng đô pha lê cô dâu do Lý Hoàng Makeup chọn dùng"
         }
       ],
-      "content_approved": true,
-      "reason": "",
-      "usage": "Đội lên đỉnh đầu, cố định bằng kẹp nhỏ nếu cần.",
       "video": "/media/bang-do-pha-le-co-dau.mp4",
+      "content_approved": true,
+      "category": "Phụ kiện tóc",
       "subcategory": "Phụ kiện tóc cô dâu"
     }
   ]
