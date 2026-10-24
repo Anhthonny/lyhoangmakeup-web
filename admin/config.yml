@@ -2,12 +2,12 @@
 backend:
   name: git-gateway
   branch: main
-  # Mỗi lần bấm "Publish" trong Admin chỉ LƯU bài, KHÔNG tự deploy (tiết kiệm credit Netlify).
-  # Khi muốn đưa lên web: Netlify > Deploys > Trigger deploy (xem hướng dẫn).
+  # Công bố nội dung sẽ tự kích hoạt Netlify deploy để cập nhật giá và website.
+  # Upload media riêng vẫn giữ skip ci; lưu nội dung sau đó sẽ deploy.
   commit_messages:
-    create: 'Create {{collection}} "{{slug}}" [skip ci]'
-    update: 'Update {{collection}} "{{slug}}" [skip ci]'
-    delete: 'Delete {{collection}} "{{slug}}" [skip ci]'
+    create: 'Create {{collection}} "{{slug}}"'
+    update: 'Update {{collection}} "{{slug}}"'
+    delete: 'Delete {{collection}} "{{slug}}"'
     uploadMedia: 'Upload "{{path}}" [skip ci]'
     deleteMedia: 'Delete "{{path}}" [skip ci]'
 
@@ -152,15 +152,17 @@ collections:
   - name: "cua_hang"
     label: "Cửa hàng (sản phẩm, ảnh, video, giá)"
     description: "Thêm, sửa, ẩn sản phẩm. Để trống giá thì trang hiện chữ Liên hệ."
+    editor:
+      preview: false
     files:
       - name: "cua_hang"
         label: "Cửa hàng"
-        file: "data/shop.json"
+        file: "data/shop-admin.json"
         format: "json"
         media_folder: "/media"
         public_folder: "/media"
         fields:
-          - { label: "Sản phẩm", name: "products", widget: "list", collapsed: true, minimize_collapsed: true, required: false, summary: "{{fields.code}} · [{{fields.category}} - {{fields.subcategory}}] {{fields.name}}", fields: [
+          - { label: "Sản phẩm", name: "products", widget: "ly-shop-manager", collapsed: true, minimize_collapsed: true, required: false, summary: "{{fields.code}} · [{{fields.category}} - {{fields.subcategory}}] {{fields.name}}", fields: [
               { label: "Mã SP", name: "code", widget: "string", required: false },
               { label: "Tên sản phẩm", name: "name", widget: "string" },
               { label: "Địa chỉ trang (viết không dấu, nối gạch ngang)", name: "slug", widget: "string", required: false, hint: "Trang sản phẩm sẽ là lyhoangmakeup.com/cua-hang/(địa chỉ này)/. Nên giữ nguyên sau khi đã đăng. Để trống thì tự lấy từ tên." },

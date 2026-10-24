@@ -1,12 +1,17 @@
 <!doctype html>
 <html lang="vi"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><meta name="robots" content="noindex"><title>Quản trị Lý Hoàng Makeup</title>
-<script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script><link rel="cms-config-url" type="text/yaml" href="/admin/config.yml?v=20261024-blog2">
+<script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script><link rel="cms-config-url" type="text/yaml" href="/admin/config.yml?v=20261024-shop1">
 <link rel="stylesheet" href="/admin/blog-manager.css?v=20261024-blog2">
+<link rel="stylesheet" href="/admin/shop-manager.css?v=20261024-shop1">
 </head>
 <body><!-- LY-BLOG-V2 -->
 <script>window.CMS_MANUAL_INIT=true;</script>
 <script src="https://unpkg.com/decap-cms@3.9.0/dist/decap-cms.js"></script>
 <script src="/admin/blog-manager.js?v=20261024-blog2"></script>
+<!-- LY-SHOP-V1 -->
+<script src="/admin/vendor/xlsx.full.min.js?v=0.20.1"></script>
+<script src="/admin/shop-core.js?v=20261024-shop1"></script>
+<script src="/admin/shop-manager.js?v=20261024-shop1"></script>
 <script>window.initCMS();</script>
 
 <script>
@@ -27,7 +32,7 @@ if(changed)i.files=dt.files},true);
 </script>
 
 <!-- Thư viện SheetJS xử lý Excel trực tiếp trên trình duyệt -->
-<script src="https://cdn.sheetjs.com/xlsx-0.20.1/package/dist/xlsx.full.min.js"></script>
+
 
 <!-- 1. THANH CÔNG CỤ EXCEL: CHỈ HIỆN KHI Ở MỤC CỬA HÀNG -->
 <div id="excel-admin-bar" style="position:fixed; bottom:20px; right:20px; z-index:99999; background:#1e1e2f; color:#fff; padding:12px 16px; border-radius:12px; box-shadow:0 8px 24px rgba(0,0,0,0.25); font-family:sans-serif; display:none; gap:10px; align-items:center; font-size:13px;">
